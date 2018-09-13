@@ -1,0 +1,8 @@
+-cp src/
+-cp linc_yoga/
+
+-lib mmvc
+
+-lib linc_nanovg
+
+-cpp bin
