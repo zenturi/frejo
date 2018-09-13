@@ -11,128 +11,121 @@ import nanovg.Nvg.NvgContext;
  *  - Manages event signals
  */
 class View {
-    /**
-     * Unique Identifier for this view
-     */
-    public var id(default, null):String;
+	/**
+	 * Unique Identifier for this view
+	 */
+	public var id(default, null):String;
 
 	/**
 	 * private counter to maintain unique identifieds for created views
 	 */
 	static var idCounter:Int = 0;
 
-    /**
-     * Reference to the postion of this view in th hierarchy.
-     * defaults to -1 when view has no parent
-     */
-    public var index(default, set):Int;
+	/**
+	 * Reference to the postion of this view in th hierarchy.
+	 * defaults to -1 when view has no parent
+	 */
+	public var index(default, set):Int;
 
-    /**
-     * Refrence to the parent view
-     */
-    public var parent(default, null):View;
+	/**
+	 * Refrence to the parent view
+	 */
+	public var parent(default, null):View;
 
-    /**
-     * An array of child views
-     */
-    public var children:Array<View>;
+	/**
+	 * An array of child views
+	 */
+	public var children:Array<View>;
 
-    /**
-     * Name of this view class
-     */
-    public var className:String;
+	/**
+	 * Name of this view class
+	 */
+	public var className:String;
 
+	// Events
 
-    // Events
+	/**
+	 * Event type dispatched when view is added
+	 */
+	inline public static var ADDED:String = "added";
 
-    /**
-     * Event type dispatched when view is added
-     */
-    inline public static var ADDED:String = "added";
+	/**
+	 * Event type dispatched when view is removed
+	 */
+	inline public static var REMOVED:String = "removed";
 
+	/**
+	 * Event type dispatched when view is actioned
+	 */
+	inline public static var ACTIONED:String = "actioned";
 
-    /**
-     * Event type dispatched when view is removed
-     */
-    inline public static var REMOVED:String = "removed";
+	/**
+	 * Signal used for dispatching view events
+	 */
+	public var signal(default, null):Signal2<String, View>;
 
-    /**
-     * Event type dispatched when view is actioned
-     */
-    inline public static var ACTIONED:String = "actioned";
+	private var node:frejo.display.Node;
 
+	public function new() {
+		// set thie unique identifier
+		id = "view" + (idCounter++);
 
-    /**
-     * Signal used for dispatching view events
-     */
-    public var signal(default, null):Signal2<String, View>;
+		// set the default index of this class
+		Reflect.setField(this, "index", -1);
 
-    private var node:frejo.display.Node;
+		className = Type.getClassName(Type.getClass(this)).split(".").pop();
 
+		children = [];
 
-    public function new(){
-        // set thie unique identifier
-        id = "view" + (idCounter ++);
+		signal = new Signal2<String, View>();
 
-        // set the default index of this class
-        Reflect.setField(this, "index", -1);
+		node = new frejo.display.Node();
 
-        className = Type.getClassName(Type.getClass(this)).split(".").pop();
+		init();
+	}
 
-        children = [];
+	/**
+	 * Initialize necessary properties
+	 */
+	function init() {}
 
-        signal = new Signal2<String, View>();
+	/**
+	 * dispatches a view event via the signal
+	 * @param event
+	 * @param view
+	 */
+	public function dispatch(event:String, view:View) {
+		if (view == null)
+			view = this;
+		signal.dispatch(event, view);
+	}
 
-        node = new frejo.display.Node();
+	function toString():String {
+		return '${className}(${id})';
+	}
 
-        init();
-    }
+	function set_index(i:Int):Int {
+		if (index != i) {
+			index = i;
+		}
 
-    /**
-     * Initialize necessary properties
-     */
-    function init(){
+		return index;
+	}
 
-    }
+	/**
+	 * Adds a child view to the display heirachy.
+	 *
+	 * Dispatches an ADDED event on completion.
+	 * @param view
+	 */
+	public function addChild(view:View) {
+		view.signal.add(this.dispatch);
+		view.parent = this;
+		view.index = children.length;
 
-    /**
-     * dispatches a view event via the signal
-     * @param event 
-     * @param view 
-     */
-    public function dispatch(event:String, view:View) {
-        if (view == null) view = this;
-        signal.dispatch(event, view);
-    }
+		node.addChild(view.node);
 
-
-    function toString():String {
-        return '${className}(${id})';
-    }
-
-
-    function set_index(i:Int):Int {
-        if(index != i){
-            index = i;
-        }
-
-        return index;
-    }
-
-    /**
-     * Adds a child view to the display heirachy.
-     * 
-     * Dispatches an ADDED event on completion.
-     * @param view 
-     */
-    public function addChild(view:View){
-        view.signal.add(this.dispatch);
-        view.parent = this;
-        view.index = children.length;
-
-        node.addChild(view.node);
-
-        children.push(view);
-        dispatch(ADDED, view);
-    }
+		children.push(view);
+		dispatch(ADDED, view);
+	}
 }

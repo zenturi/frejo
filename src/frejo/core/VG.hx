@@ -2,13 +2,15 @@ package frejo.core;
 
 import nanovg.Nvg;
 
+import cpp.*;
+
 /**
  * Main NanoVG wrapper
  */
 class VG {
 	var context:cpp.Pointer<NvgContext>;
 
-	static var vg:Nvg;
+	static var vg:VG;
 
 	public static function getInstance():VG {
 		if (vg == null) {
@@ -91,7 +93,7 @@ class VG {
 	}
 
 	public function fillColor(color:NvgColor):Void {
-		Nvg.fillColor(context, fillColor);
+		Nvg.fillColor(context, color);
 	}
 
 	public function fillPaint(paint:NvgPaint):Void {
@@ -147,7 +149,7 @@ class VG {
     }
 
 	public function currentTransform(xForm:Float):Void {
-        Nvg.currentTransform(context, xform);
+        Nvg.currentTransform(context, xForm);
     }
 
 	public function transformIdentity(dst:Float):Void {
@@ -191,11 +193,11 @@ class VG {
     }
 
 	public function degToRad(deg:Float):Float {
-        Nvg.degToRad(deg);
+        return Nvg.degToRad(deg);
     }
 
 	public function radToDeg(rad:Float):Float {
-        Nvg.radToDeg(rad);
+        return Nvg.radToDeg(rad);
     }
 
 	public function createImage(filename:String):Int {
@@ -223,7 +225,7 @@ class VG {
     }
 
 	public function linearGradient(sx:Float, sy:Float, ex:Float, ey:Float, icol:NvgColor, ocol:NvgColor):NvgPaint {
-        return Nvg.linearGradient(sx, sy, ex, ey, icol, ocol);
+        return Nvg.linearGradient(context, sx, sy, ex, ey, icol, ocol);
     }
 
 	public function boxGradient(x:Float, y:Float, w:Float, h:Float, r:Float, f:Float, icol:NvgColor, ocol:NvgColor):NvgPaint {
@@ -235,7 +237,7 @@ class VG {
     }
 
 	public function imagePattern(ox:Float, oy:Float, ex:Float, ey:Float, angle:Float, image:Int, repeat:Int, alpha:Float):NvgPaint {
-        return Nvg.imagePattern(context, ox, oy, ex, ey, ange, image, repeat, alpha);
+        return Nvg.imagePattern(context, ox, oy, ex, ey, angle, image, repeat, alpha);
     }
 
 	public function scissor(x:Float, y:Float, w:Float, h:Float):Void {
