@@ -122,6 +122,11 @@ class Node {
 		computeLayout();
 		layout = flexNode.getLayout();
 
+		position = {
+			x: Yoga.nodeLayoutGetLeft(flexNode),
+			y: Yoga.nodeLayoutGetTop(flexNode)
+		}
+
 		Yoga.nodeFreeRecursive(flexNode);
     	Yoga.configFree(flexConfig);		
 	}

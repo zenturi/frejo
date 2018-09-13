@@ -67,10 +67,7 @@ class View {
      */
     public var signal(default, null):Signal2<String, View>;
 
-    /**
-     * NanoVG context
-     */
-    public var vg:cpp.Pointer<NvgContext>;
+    private var node:frejo.display.Node;
 
 
     public function new(){
@@ -85,6 +82,8 @@ class View {
         children = [];
 
         signal = new Signal2<String, View>();
+
+        node = new frejo.display.Node();
 
         init();
     }
@@ -131,9 +130,7 @@ class View {
         view.parent = this;
         view.index = children.length;
 
-        /**
-         * Todo: add view to the GL : we are using nanovg
-         */
+        node.addChild(view.node);
 
         children.push(view);
         dispatch(ADDED, view);
