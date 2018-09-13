@@ -6,6 +6,7 @@ import facebook.Yoga;
 import facebook.yoga.*;
 
 using facebook.yoga.Enums;
+using frejo.display.Color;
 
 /**
  * Base node for display objects
@@ -15,18 +16,23 @@ class Node {
 	var flexNode:facebook.yoga.Node;
 	var flexConfig:Config;
 
+	/**
+	 * default background color;
+	 */
+	var bgColor:ColorRGBA;
+
 	public var style(default, set):facebook.yoga.Style;
 	public var layout(default, null):facebook.yoga.Layout;
 
 	/**
 	 * Node width
 	 */
-	public var width(get, set):Float;
+	@:isVar public var width(get, set):Float;
 
 	/**
 	 * Node height
 	 */
-	public var height(get, set):Float;
+	@:isVar public var height(get, set):Float;
 
 	/**
 	 * Node point in space
@@ -50,9 +56,15 @@ class Node {
 		name = Type.getClassName(Type.getClass(this)).split(".").pop();
 		vg = VG.getInstance();
 		flexConfig = Config.init();
-		style = Style.init();
 		flexNode = Yoga.newNodeWithConfig(flexConfig);
+		style = flexNode.getStyle();
 		children = [];
+		bgColor = {
+			r: 28,
+			g: 30,
+			b: 34,
+			a: 192
+		};
 	}
 
 	function set_position(p:Point):Point {
@@ -61,11 +73,13 @@ class Node {
 	}
 
 	function get_position():Point {
-		return p;
+		return position;
 	}
 
 	function set_width(w:Float):Float {
 		width = w;
+		Yoga.nodeStyleSetWidth(flexNode, w);
+		initStyle();
 		return width;
 	}
 
@@ -73,15 +87,25 @@ class Node {
 		return width;
 	}
 
+	function set_height(h:Float):Float {
+		height = h;
+		Yoga.nodeStyleSetHeight(flexNode, h);
+		initStyle();
+		return height;
+	}
+
+	function get_height():Float {
+		return height;
+	}
+
 	function set_style(style:Style):Style {
 		this.style = style;
-		dispatch(STYLE_CHANGED, this);
 		initStyle();
 		return style;
 	}
 
 	public function addChild(child:Node):Void {
-		children.addChildAt(child, children.length);
+		addChildAt(child, children.length);
 	}
 
 	public function addChildAt(child:Node, index:Int):Void {
@@ -117,13 +141,20 @@ class Node {
 
 	public function initStyle() {
 		flexNode.setStyle(style);
+		dispatch(STYLE_CHANGED, this);
 		computeLayout();
 		layout = flexNode.getLayout();
 
-		position = {
+		var position = {
 			x: Yoga.nodeLayoutGetLeft(flexNode),
 			y: Yoga.nodeLayoutGetTop(flexNode)
-		}
+		};
+
+		Reflect.setField(this, "position", position);
+
+		Reflect.setField(this, "width", Yoga.nodeLayoutGetWidth(flexNode));
+		Reflect.setField(this, "height", Yoga.nodeLayoutGetHeight(flexNode));
+		Reflect.setField(this, "style", flexNode.getStyle());
 
 		Yoga.nodeFreeRecursive(flexNode);
 		Yoga.configFree(flexConfig);
@@ -140,5 +171,10 @@ class Node {
 	/**
 	 * Draw the node
 	 */
-	public function draw() {}
+	public function draw() {
+		vg.save();
+		vg.rect(position.x, position.y, width, height);
+		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
+		vg.fill();
+	}
 }
