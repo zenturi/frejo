@@ -1,6 +1,8 @@
 package frejo.core;
 
+import facebook.yoga.Enums.PositionType;
 import msignal.Signal;
+import snow.types.Types;
 import nanovg.Nvg;
 import nanovg.Nvg.NvgContext;
 
@@ -80,6 +82,9 @@ class View {
 		signal = new Signal2<String, View>();
 
 		node = new frejo.display.Node();
+        node.width = 100;
+        node.height = 100;
+        node.style.positionType = PositionType.Absolute;
 
 		init();
 	}
@@ -99,6 +104,11 @@ class View {
 			view = this;
 		signal.dispatch(event, view);
 	}
+
+
+    public function system_event(event:SystemEvent) {
+        
+    }
 
 	function toString():String {
 		return '${className}(${id})';
