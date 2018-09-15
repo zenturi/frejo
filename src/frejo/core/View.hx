@@ -92,20 +92,35 @@ class View {
 		signal = new Signal2<String, View>();
 
 		var flexConfig = Config.init();
+		var flexParentNode = Yoga.newNodeWithConfig(flexConfig);
 		var flexNode = Yoga.newNodeWithConfig(flexConfig);
 
-		// compute view style layout
-		Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
-		Yoga.nodeStyleSetWidth(flexNode, app.window_width);
-		Yoga.nodeStyleSetHeight(flexNode, app.window_width);
+		Yoga.nodeStyleSetFlexDirection(flexParentNode, FlexDirection.Row);
+		Yoga.nodeStyleSetWidth(flexParentNode, app.window_width);
+		Yoga.nodeStyleSetHeight(flexParentNode, app.window_height);
+		Yoga.nodeStyleSetJustifyContent(flexParentNode, Justify.FlexStart);
+		Yoga.nodeStyleSetAlignItems(flexParentNode, Align.Stretch);
 
-		Yoga.nodeCalculateLayout(flexNode, Constants.Undefined, Constants.Undefined, Direction.LTR);
+		
+		
+
+		// compute view style layout
+		//Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
+		Yoga.nodeStyleSetWidth(flexNode, 100);
+		Yoga.nodeStyleSetHeight(flexNode, 100);
+
+		Yoga.nodeInsertChild(flexParentNode, flexNode, 0);
+		
+		Yoga.nodeCalculateLayout(flexParentNode, Constants.Undefined, Constants.Undefined, Direction.LTR);
+
+		trace(Yoga.nodeLayoutGetLeft(flexNode));
+		trace(Yoga.nodeLayoutGetTop(flexNode));
 
 		node = new frejo.display.Node();
-		node.style = flexNode.getStyle();
+		node.flexNode = flexNode;
 
-		node.width = app.window_width;
-		node.height = app.window_height;
+		node.width = Yoga.nodeLayoutGetWidth(flexNode);
+		node.height = Yoga.nodeLayoutGetHeight(flexNode);
 	}
 
 	/**
@@ -178,7 +193,7 @@ class View {
 	 * Draw UI elements
 	 */
 	public function draw() {
-		node.draw(app);
+		node.draw();
 	}
 
 	/**

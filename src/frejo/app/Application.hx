@@ -10,13 +10,35 @@ class Application extends snow.App {
 	public var applicationContext:Context;
 	public var applicationView:View;
 
+	public var pixelRatio:Float;
+
+	public var render_width:Int;
+	public var render_height:Int;
+
 	var signal:Signal1<SystemEvent>;
 
-	public function new() {}
+	static var instance:Application;
+
+	public static function getInstance():Application {
+		if(instance == null){
+			return new Application();
+		} else {
+			return instance;
+		}
+	}
+
+	public function new() {
+		instance = this;
+	}
 
 	override function ready() {
-		window_width = app.runtime.window_width();
-		window_height = app.runtime.window_height();
+		pixelRatio = app.runtime.window_device_pixel_ratio();
+        render_width = app.runtime.window_width();
+        render_height = app.runtime.window_height();
+
+		window_width = Math.floor(render_width/pixelRatio);
+		window_height = Math.floor(render_height/pixelRatio);
+        
 
 		applicationView = new View();
 		applicationView.app = this;
@@ -27,8 +49,10 @@ class Application extends snow.App {
 	}
 
 	override function config(config:AppConfig):AppConfig {
-		window_width = config.window.width;
-		window_height = config.window.height;
+		render_width = config.window.width;
+		render_height = config.window.height;
+
+
 
 		// currently required for GLES3.x
 		config.render.opengl.profile = gles;
@@ -50,7 +74,7 @@ class Application extends snow.App {
 
 	// draw views
 	function draw() {
-		GL.viewport(0, 0, window_width, window_height);
+		GL.viewport(0, 0, render_width, render_height);
 		GL.clearColor(0, 1.0, 1.0, 1.0);
 		GL.clear(GL.COLOR_BUFFER_BIT);
 

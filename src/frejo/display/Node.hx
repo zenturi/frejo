@@ -1,6 +1,7 @@
 package frejo.display;
 
-import snow.App;
+
+import frejo.app.Application;
 import frejo.core.VG;
 import msignal.Signal;
 import facebook.Yoga;
@@ -15,9 +16,12 @@ using frejo.display.Color;
 class Node {
 	var vg:VG;
 	@:unreflective
-	var flexNode:facebook.yoga.Node;
+	public var flexNode:facebook.yoga.Node;
 	@:unreflective
 	var flexConfig:Config;
+
+
+	var app:Application;
 
 	/**
 	 * default background color;
@@ -56,12 +60,13 @@ class Node {
 	}
 
 	private function init() {
+		app = Application.getInstance();
 		children = new Array<Node>();
 		name = Type.getClassName(Type.getClass(this)).split(".").pop();
 		vg = VG.getInstance();
 		flexConfig = Config.init();
 		flexNode = Yoga.newNodeWithConfig(flexConfig);
-		style = flexNode.getStyle();
+		layout = flexNode.getLayout();
 		bgColor = {
 			r: 28,
 			g: 30,
@@ -113,6 +118,13 @@ class Node {
 		return style;
 	}
 
+
+	// public function set_layout(layout:Layout):Layout {
+	// 	this.layout = layout;
+	// 	initStyle();
+	// 	return layout;
+	// }
+
 	public function getLayout():Layout {
 		return layout;
 	}
@@ -153,10 +165,8 @@ class Node {
 	}
 
 	public function initStyle() {
-		flexNode.setStyle(style);
 		dispatch(STYLE_CHANGED, this);
 		computeLayout();
-		layout = flexNode.getLayout();
 
 		var position = {
 			x: Yoga.nodeLayoutGetLeft(flexNode),
@@ -164,13 +174,11 @@ class Node {
 		};
 
 		Reflect.setField(this, "position", position);
-
+		trace(position);
+		
 		Reflect.setField(this, "width", Yoga.nodeLayoutGetWidth(flexNode));
 		Reflect.setField(this, "height", Yoga.nodeLayoutGetHeight(flexNode));
-		Reflect.setField(this, "style", flexNode.getStyle());
 
-		trace(style.positionType == PositionType.Absolute);
-		trace('dimensions:{width:${style.dimensions[0].value}, height:${style.dimensions[1].value}}');
 	}
 
 	function computeLayout() {
@@ -187,21 +195,16 @@ class Node {
 	/**
 	 * Draw the node
 	 */
-	public function draw(ctx:App) {
-		var dpr = ctx.app.runtime.window_device_pixel_ratio();
-        var render_w = ctx.app.runtime.window_width();
-        var render_h = ctx.app.runtime.window_height();
-        var window_width = Math.floor(render_w/dpr);
-        var window_height = Math.floor(render_h/dpr);
-
-		vg.beginFrame(window_width, window_height, dpr);
+	public function draw() {
+		vg.beginFrame(app.window_width, app.window_height, app.pixelRatio);
 		vg.save();
+		var dpr = app.pixelRatio;
 		vg.rect(position.x, position.y, width, height);
 		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
 		vg.fill();
 
 		for (child in children) {
-			child.draw(ctx);
+			child.draw();
 		}
 
 		vg.endFrame();
