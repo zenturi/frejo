@@ -1,10 +1,47 @@
+-main snow.App
+-cpp bin/mac64.build/cpp
+-D no-compilation
+-D mac
+-D target-cpp
+-D arch-64
+-D desktop
+-D hxcpp_static_std
+-D opengl_es3
+-D snow_use_glew
+-D snow_native
+-D snow
+-D linc_nanovg
+-D linc_yoga
+-D mmvc
+-D minject
+-D msignal
+-D hxcpp
+-D linc_openal
+-D linc_timestamp
+-D linc_stb
+-D linc_ogg
+-D linc_sdl
+-D linc_opengl
+-cp bin/mac64.build/haxe
 -cp src/
--cp linc_yoga/
-
+-lib hxcpp
+-lib msignal
+-lib minject
+-lib msignal
+-lib minject
 -lib mmvc
-
+-lib linc_yoga
 -lib linc_nanovg
-
+-lib linc_opengl
+-lib linc_sdl
+-lib linc_ogg
+-lib linc_stb
+-lib linc_timestamp
+-lib linc_openal
 -lib snow
-
--cpp bin
+--macro snow.Set.assets("snow.core.native.assets.Assets")
+--macro snow.Set.runtime("snow.modules.sdl.Runtime")
+--macro snow.Set.audio("snow.modules.openal.Audio")
+--macro snow.Set.io("snow.modules.sdl.IO")
+-dce std
+bin/mac64.build/snow.hxml

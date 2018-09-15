@@ -148,11 +148,11 @@ class VG {
         Nvg.scale(context, x, y);
     }
 
-	public function currentTransform(xForm:Float):Void {
+	public function currentTransform(xForm:Pointer<Float32>):Void {
         Nvg.currentTransform(context, xForm);
     }
 
-	public function transformIdentity(dst:Float):Void {
+	public function transformIdentity(dst:Pointer<Float32>):Void {
         Nvg.transformIdentity(dst);
     }
 
@@ -200,16 +200,16 @@ class VG {
         return Nvg.radToDeg(rad);
     }
 
-	public function createImage(filename:String):Int {
-        return Nvg.createImage(context, filename);
+	public function createImage(filename:String, imageFlags:Int):Int {
+        return Nvg.createImage(context, filename, imageFlags);
     }
 
-	public function createImageMem(data:cpp.Pointer<UInt8>, ndata:Int):Int {
-        return Nvg.createImageMem(context, data, ndata);
+	public function createImageMem(imageFlags:Int, data:cpp.Pointer<UInt8>, ndata:Int):Int {
+        return Nvg.createImageMem(context, imageFlags, data, ndata);
     }
 
-	public function createImageRGBA(w:Int, h:Int, data:cpp.Pointer<UInt8>):Int {
-        return Nvg.createImageRGBA(context, w, h, data);
+	public function createImageRGBA(w:Int, h:Int, imageFlags:Int, data:cpp.Pointer<UInt8>):Int {
+        return Nvg.createImageRGBA(context, w, h, imageFlags, data);
     }
 
 	public function updateImage(image:Int, data:cpp.Pointer<UInt8>):Void {
@@ -236,8 +236,8 @@ class VG {
         return Nvg.radialGradient(context, cx, cy, inr, outr, icol, ocol);
     }
 
-	public function imagePattern(ox:Float, oy:Float, ex:Float, ey:Float, angle:Float, image:Int, repeat:Int, alpha:Float):NvgPaint {
-        return Nvg.imagePattern(context, ox, oy, ex, ey, angle, image, repeat, alpha);
+	public function imagePattern(ox:Float, oy:Float, ex:Float, ey:Float, angle:Float, image:Int, alpha:Float):NvgPaint {
+        return Nvg.imagePattern(context, ox, oy, ex, ey, angle, image, alpha);
     }
 
 	public function scissor(x:Float, y:Float, w:Float, h:Float):Void {

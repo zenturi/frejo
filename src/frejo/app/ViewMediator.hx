@@ -1,7 +1,5 @@
 package frejo.app;
 
-import nanovg.Nvg;
-
 /**
  * Main application view mediator
  */
@@ -15,11 +13,12 @@ class ViewMediator extends mmvc.impl.Mediator<View> {
 	 */
 	override function onRegister() {
 		super.onRegister();
-
 		view.render();
 	}
 
 	override function onRemove() {
 		super.onRemove();
+
+		view.destroy();
 	}
 }

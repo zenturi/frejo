@@ -20,8 +20,7 @@ class View extends frejo.core.View implements IViewContainer {
 	/**
 	 * Create views
 	 */
-	public function render() {
-    }
+	public function render() {}
 
 	/**
 		Required by IViewContainer

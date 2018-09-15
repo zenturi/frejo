@@ -13,7 +13,9 @@ using frejo.display.Color;
  */
 class Node {
 	var vg:VG;
+	@:unreflective
 	var flexNode:facebook.yoga.Node;
+	@:unreflective
 	var flexConfig:Config;
 
 	/**
@@ -21,8 +23,8 @@ class Node {
 	 */
 	var bgColor:ColorRGBA;
 
-	public var style(default, set):facebook.yoga.Style;
-	public var layout(default, null):facebook.yoga.Layout;
+	@:isVar public var style(get, set):facebook.yoga.Style;
+	public var layout:facebook.yoga.Layout;
 
 	/**
 	 * Node width
@@ -49,22 +51,24 @@ class Node {
 	public function dispatch(event:String, node:Node) {}
 
 	public function new() {
-		init()
+		init();
 	}
 
 	private function init() {
+		children = new Array<Node>();
 		name = Type.getClassName(Type.getClass(this)).split(".").pop();
 		vg = VG.getInstance();
 		flexConfig = Config.init();
 		flexNode = Yoga.newNodeWithConfig(flexConfig);
 		style = flexNode.getStyle();
-		children = [];
 		bgColor = {
 			r: 28,
 			g: 30,
 			b: 34,
 			a: 192
 		};
+		width = 0.0;
+		height = 0.0;
 	}
 
 	function set_position(p:Point):Point {
@@ -98,10 +102,18 @@ class Node {
 		return height;
 	}
 
-	function set_style(style:Style):Style {
+	public function set_style(style:Style):Style {
 		this.style = style;
 		initStyle();
 		return style;
+	}
+
+	public function get_style():Style {
+		return style;
+	}
+
+	public function getLayout():Layout {
+		return layout;
 	}
 
 	public function addChild(child:Node):Void {
@@ -156,15 +168,18 @@ class Node {
 		Reflect.setField(this, "height", Yoga.nodeLayoutGetHeight(flexNode));
 		Reflect.setField(this, "style", flexNode.getStyle());
 
-		Yoga.nodeFreeRecursive(flexNode);
-		Yoga.configFree(flexConfig);
+		trace(style.positionType == PositionType.Absolute);
+		trace('dimensions:{width:${style.dimensions[0].value}, height:${style.dimensions[1].value}}');
 	}
 
 	function computeLayout() {
-		for (child in children) {
-			child.initStyle();
-			Yoga.nodeInsertChild(flexNode, child.flexNode, children.indexOf(child));
+		if (children.length > 0) {
+			for (child in children) {
+				child.initStyle();
+				Yoga.nodeInsertChild(flexNode, child.flexNode, children.indexOf(child));
+			}
 		}
+
 		Yoga.nodeCalculateLayout(flexNode, Constants.Undefined, Constants.Undefined, Direction.LTR);
 	}
 
@@ -176,5 +191,20 @@ class Node {
 		vg.rect(position.x, position.y, width, height);
 		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
 		vg.fill();
+
+		for (child in children) {
+			child.draw();
+		}
+	}
+
+	public function update(dt:Float) {}
+
+	public function destroy() {
+		Yoga.nodeFreeRecursive(flexNode);
+		Yoga.configFree(flexConfig);
+
+		for (child in children) {
+			removeChild(child);
+		}
 	}
 }

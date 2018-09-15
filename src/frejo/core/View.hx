@@ -1,10 +1,13 @@
 package frejo.core;
 
-import facebook.yoga.Enums.PositionType;
+import frejo.app.Application;
+import facebook.Yoga;
+import facebook.yoga.*;
+
+using facebook.yoga.Enums;
+
 import msignal.Signal;
 import snow.types.Types;
-import nanovg.Nvg;
-import nanovg.Nvg.NvgContext;
 
 /**
  * Application view implementation
@@ -64,11 +67,18 @@ class View {
 	/**
 	 * Signal used for dispatching view events
 	 */
-	public var signal(default, null):Signal2<String, View>;
+	@:isVar public var signal(default, null):Signal2<String, View>;
 
-	private var node:frejo.display.Node;
+	private var node:frejo.display.Node = null;
 
-	public function new() {
+	public var app:Application = null;
+
+	public function new() {}
+
+	/**
+	 * Initialize necessary properties
+	 */
+	public function init() {
 		// set thie unique identifier
 		id = "view" + (idCounter++);
 
@@ -81,18 +91,22 @@ class View {
 
 		signal = new Signal2<String, View>();
 
+		var flexConfig = Config.init();
+		var flexNode = Yoga.newNodeWithConfig(flexConfig);
+
+		// compute view style layout
+		Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
+		Yoga.nodeStyleSetWidth(flexNode, app.window_width);
+		Yoga.nodeStyleSetHeight(flexNode, app.window_width);
+
+		Yoga.nodeCalculateLayout(flexNode, Constants.Undefined, Constants.Undefined, Direction.LTR);
+
 		node = new frejo.display.Node();
-        node.width = 100;
-        node.height = 100;
-        node.style.positionType = PositionType.Absolute;
+		node.style = flexNode.getStyle();
 
-		init();
+		node.width = app.window_width;
+		node.height = app.window_height;
 	}
-
-	/**
-	 * Initialize necessary properties
-	 */
-	function init() {}
 
 	/**
 	 * dispatches a view event via the signal
@@ -105,10 +119,9 @@ class View {
 		signal.dispatch(event, view);
 	}
 
-
-    public function system_event(event:SystemEvent) {
-        
-    }
+	public function system_event(event:SystemEvent) {
+		trace(event);
+	}
 
 	function toString():String {
 		return '${className}(${id})';
@@ -129,6 +142,7 @@ class View {
 	 * @param view
 	 */
 	public function addChild(view:View) {
+		view.init();
 		view.signal.add(this.dispatch);
 		view.parent = this;
 		view.index = children.length;
@@ -137,5 +151,42 @@ class View {
 
 		children.push(view);
 		dispatch(ADDED, view);
+	}
+
+	/**
+	 * Remove a child from the display heirarchy
+	 *
+	 * Dispatches an ADDED event on completion.
+	 * @param child
+	 */
+	public function removeChild(child:View) {
+		child.destroy();
+		children.remove(child);
+		node.removeChild(child.node);
+		dispatch(REMOVED, child);
+	}
+
+	/**
+	 * UI update frame rate
+	 * @param dt
+	 */
+	public function update(dt:Float) {
+		node.update(dt);
+	}
+
+	/**
+	 * Draw UI elements
+	 */
+	public function draw() {
+		node.draw();
+	}
+
+	/**
+	 * Destroy the view when it's no longer in use.
+	 */
+	public function destroy() {
+		for (child in children) {
+			removeChild(child);
+		}
 	}
 }
