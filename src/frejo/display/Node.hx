@@ -1,5 +1,6 @@
 package frejo.display;
 
+import snow.App;
 import frejo.core.VG;
 import msignal.Signal;
 import facebook.Yoga;
@@ -65,7 +66,7 @@ class Node {
 			r: 28,
 			g: 30,
 			b: 34,
-			a: 192
+			a: 255
 		};
 		width = 0.0;
 		height = 0.0;
@@ -186,15 +187,24 @@ class Node {
 	/**
 	 * Draw the node
 	 */
-	public function draw() {
+	public function draw(ctx:App) {
+		var dpr = ctx.app.runtime.window_device_pixel_ratio();
+        var render_w = ctx.app.runtime.window_width();
+        var render_h = ctx.app.runtime.window_height();
+        var window_width = Math.floor(render_w/dpr);
+        var window_height = Math.floor(render_h/dpr);
+
+		vg.beginFrame(window_width, window_height, dpr);
 		vg.save();
 		vg.rect(position.x, position.y, width, height);
 		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
 		vg.fill();
 
 		for (child in children) {
-			child.draw();
+			child.draw(ctx);
 		}
+
+		vg.endFrame();
 	}
 
 	public function update(dt:Float) {}

@@ -178,7 +178,7 @@ class View {
 	 * Draw UI elements
 	 */
 	public function draw() {
-		node.draw();
+		node.draw(app);
 	}
 
 	/**
