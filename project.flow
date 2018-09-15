@@ -1,0 +1,43 @@
+{
+
+  snow : {
+    config: {
+      config_path: '',
+      log: 1
+    }
+  },
+
+  project : {
+    name : 'Frejo Test',
+    version : '0.0.1',
+    author : 'Darmie Akinlaja',
+
+    app : {
+      name : 'frejo_test',
+      package : 'com.frejo.test',
+    },
+
+    //HAH
+
+    build : {
+      flags:['-dce std'],
+      dependencies : {
+        snow : '*',
+        "linc_nanovg": "*",
+        "linc_yoga": "*",
+        "mmvc": "*",
+        "minject": "*",
+        "msignal": "*"
+      },
+      
+      // define opengl version
+      defines : ['opengl_es2']
+    }
+
+    //files : {
+      //assets : 'assets/'
+    //}
+
+  }
+
+}
