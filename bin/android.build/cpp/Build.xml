@@ -1,0 +1,1434 @@
+<xml>
+<set name="HXCPP_API_LEVEL" value="332" />
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/sys/FileSystem.cpp" >
+   <depend name="include/sys/FileSystem.h"/>
+  </file>
+  <file name="src/snow/types/_Types/InputEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/InputEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/WindowEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/WindowEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/SystemEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/SystemEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/GamepadDeviceEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/GamepadDeviceEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/TextEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/TextEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/GamepadEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/GamepadEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/TouchEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/TouchEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/MouseEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/MouseEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/KeyEventType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/KeyEventType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/ModState.cpp" >
+   <depend name="include/snow/types/ModState.h"/>
+  </file>
+  <file name="src/snow/types/InputEvent.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/types/GamepadEvent.h"/>
+   <depend name="include/snow/types/InputEvent.h"/>
+   <depend name="include/snow/types/KeyEvent.h"/>
+   <depend name="include/snow/types/MouseEvent.h"/>
+   <depend name="include/snow/types/TextEvent.h"/>
+   <depend name="include/snow/types/TouchEvent.h"/>
+  </file>
+  <file name="src/snow/types/GamepadEvent.cpp" >
+   <depend name="include/snow/types/GamepadEvent.h"/>
+  </file>
+  <file name="src/snow/types/TouchEvent.cpp" >
+   <depend name="include/snow/types/TouchEvent.h"/>
+  </file>
+  <file name="src/snow/types/MouseEvent.cpp" >
+   <depend name="include/snow/types/MouseEvent.h"/>
+  </file>
+  <file name="src/snow/types/TextEvent.cpp" >
+   <depend name="include/snow/types/TextEvent.h"/>
+  </file>
+  <file name="src/snow/types/KeyEvent.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/types/KeyEvent.h"/>
+   <depend name="include/snow/types/ModState.h"/>
+  </file>
+  <file name="src/snow/types/WindowEvent.cpp" >
+   <depend name="include/snow/types/WindowEvent.h"/>
+  </file>
+  <file name="src/snow/types/SystemEvent.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/types/InputEvent.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/snow/types/WindowEvent.h"/>
+  </file>
+  <file name="src/snow/types/_Types/OpenGLProfile_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/OpenGLProfile_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/AudioState_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/AudioState_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/AudioEvent_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/AudioEvent_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/AudioFormatType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/AudioFormatType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/ImageData.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/types/ImageData.h"/>
+  </file>
+  <file name="src/snow/types/_Types/AssetType_Impl_.cpp" >
+   <depend name="include/snow/types/_Types/AssetType_Impl_.h"/>
+  </file>
+  <file name="src/snow/types/_Types/ExtensionsInit.cpp" >
+   <depend name="include/snow/types/_Types/ExtensionsInit.h"/>
+  </file>
+  <file name="src/snow/types/Error.cpp" >
+   <depend name="include/snow/types/Error.h"/>
+  </file>
+  <file name="src/snow/types/Config.cpp" >
+   <depend name="include/snow/types/Config.h"/>
+  </file>
+  <file name="src/snow/systems/io/IO.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Serializer.h"/>
+   <depend name="include/haxe/Unserializer.h"/>
+   <depend name="include/haxe/crypto/Base64.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/sys/FileSystem.h"/>
+  </file>
+  <file name="src/snow/systems/input/Scancodes.cpp" >
+   <depend name="include/snow/systems/input/Scancodes.h"/>
+  </file>
+  <file name="src/snow/systems/input/Keycodes.cpp" >
+   <depend name="include/haxe/Utf8.h"/>
+   <depend name="include/snow/systems/input/Keycodes.h"/>
+   <depend name="include/snow/systems/input/Scancodes.h"/>
+  </file>
+  <file name="src/snow/systems/input/Input.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/systems/input/Input.h"/>
+   <depend name="include/snow/types/GamepadEvent.h"/>
+   <depend name="include/snow/types/InputEvent.h"/>
+   <depend name="include/snow/types/KeyEvent.h"/>
+   <depend name="include/snow/types/ModState.h"/>
+   <depend name="include/snow/types/MouseEvent.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/snow/types/TextEvent.h"/>
+   <depend name="include/snow/types/TouchEvent.h"/>
+  </file>
+  <file name="src/snow/systems/audio/AudioSource.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/systems/audio/AudioInstance.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/systems/audio/Audio.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Emitter.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/snow/types/WindowEvent.h"/>
+  </file>
+  <file name="src/snow/systems/assets/Assets.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/assets/Assets.h"/>
+   <depend name="include/snow/modules/interfaces/Assets.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetAudio.h"/>
+   <depend name="include/snow/systems/assets/AssetBytes.h"/>
+   <depend name="include/snow/systems/assets/AssetImage.h"/>
+   <depend name="include/snow/systems/assets/AssetJSON.h"/>
+   <depend name="include/snow/systems/assets/AssetText.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+  </file>
+  <file name="src/snow/systems/assets/AssetJSON.cpp" >
+   <depend name="include/haxe/format/JsonParser.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetJSON.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Error.h"/>
+  </file>
+  <file name="src/snow/systems/assets/AssetText.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetText.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Error.h"/>
+  </file>
+  <file name="src/snow/systems/assets/AssetBytes.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetBytes.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+  </file>
+  <file name="src/snow/systems/assets/AssetAudio.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetAudio.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/systems/assets/AssetImage.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/assets/Assets.h"/>
+   <depend name="include/snow/modules/interfaces/Assets.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetImage.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/types/ImageData.h"/>
+  </file>
+  <file name="src/snow/systems/assets/Asset.cpp" >
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+  </file>
+  <file name="src/snow/modules/sdl/Runtime.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/sdl/_SDL/SDL_helper.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+   <depend name="include/snow/systems/input/Input.h"/>
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/types/ModState.h"/>
+  </file>
+  <file name="src/snow/modules/sdl/IO.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/types/Config.h"/>
+  </file>
+  <file name="src/snow/modules/openal/Audio.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openal/ALError.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/NativeAudioData.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/modules/openal/ALSound.h"/>
+   <depend name="include/snow/modules/openal/ALStream.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/modules/openal/ALStream.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/openal/ALError.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/modules/openal/ALSound.h"/>
+   <depend name="include/snow/modules/openal/ALStream.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/modules/openal/ALSound.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openal/ALError.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/modules/openal/ALSound.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/io/IO.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/crypto/Base64.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/sys/FileSystem.h"/>
+  </file>
+  <file name="src/snow/modules/interfaces/IO.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/NativeAudioData.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/NativeAudioData.h"/>
+   <depend name="include/snow/core/native/audio/OGG.h"/>
+   <depend name="include/snow/core/native/audio/PCM.h"/>
+   <depend name="include/snow/core/native/audio/WAV.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+   <depend name="include/snow/types/Error.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/WAV.cpp" >
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataWAV.h"/>
+   <depend name="include/snow/core/native/audio/WAV.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/AudioDataWAV.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataWAV.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/PCM.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataPCM.h"/>
+   <depend name="include/snow/core/native/audio/PCM.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/AudioDataPCM.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataPCM.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/OGG.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/ogg/_Ogg/Ogg_helper.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataOGG.h"/>
+   <depend name="include/snow/core/native/audio/OGG.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/audio/AudioDataOGG.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/native/audio/AudioDataOGG.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/types/AudioData.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/types/AudioData.h"/>
+  </file>
+  <file name="src/snow/core/native/assets/Assets.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/core/native/assets/Assets.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/Assets.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/types/ImageData.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/modules/interfaces/Assets.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/Assets.h"/>
+   <depend name="include/snow/types/ImageData.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/core/native/Runtime.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+  </file>
+  <file name="src/snow/core/Runtime.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+  </file>
+  <file name="src/snow/core/Extension.cpp" >
+   <depend name="include/snow/core/Extension.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/core/Audio.cpp" >
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/Audio.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/modules/interfaces/Audio.cpp" >
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/systems/audio/AudioInstance.h"/>
+   <depend name="include/snow/systems/audio/AudioSource.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Uint8ClampedArray/Uint8ClampedArray_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Uint8ClampedArray/Uint8ClampedArray_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Uint8Array/Uint8Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Uint8Array/Uint8Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Uint32Array/Uint32Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Uint32Array/Uint32Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Uint16Array/Uint16Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Uint16Array/Uint16Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/TAError.cpp" >
+   <depend name="include/snow/api/buffers/TAError.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Int8Array/Int8Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Int8Array/Int8Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Int32Array/Int32Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Int32Array/Int32Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Int16Array/Int16Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Int16Array/Int16Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Float64Array/Float64Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Float64Array/Float64Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_Float32Array/Float32Array_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/buffers/_Float32Array/Float32Array_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/buffers/DataView.cpp" >
+   <depend name="include/snow/api/buffers/ArrayBufferIO.h"/>
+   <depend name="include/snow/api/buffers/DataView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+  </file>
+  <file name="src/snow/api/buffers/ArrayBufferView.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferIO.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+  </file>
+  <file name="src/snow/api/buffers/ArrayBufferIO.cpp" >
+   <depend name="include/snow/api/buffers/ArrayBufferIO.h"/>
+  </file>
+  <file name="src/snow/api/buffers/_ArrayBuffer/ArrayBuffer_Impl_.cpp" >
+   <depend name="include/snow/api/buffers/_ArrayBuffer/ArrayBuffer_Impl_.h"/>
+  </file>
+  <file name="src/snow/api/Timer.cpp" >
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/snow/api/Timer.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+  </file>
+  <file name="src/snow/api/PromiseError.cpp" >
+   <depend name="include/snow/api/PromiseError.h"/>
+  </file>
+  <file name="src/snow/api/Promises.cpp" >
+   <depend name="include/snow/api/Promises.h"/>
+  </file>
+  <file name="src/snow/api/Promise.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/PromiseError.h"/>
+   <depend name="include/snow/api/Promises.h"/>
+  </file>
+  <file name="src/snow/api/Emitter.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/List.h"/>
+   <depend name="include/haxe/ds/_List/ListNode.h"/>
+   <depend name="include/snow/api/Emitter.h"/>
+  </file>
+  <file name="src/snow/api/DebugError.cpp" >
+   <depend name="include/snow/api/DebugError.h"/>
+  </file>
+  <file name="src/snow/api/Debug.cpp" >
+   <depend name="include/snow/api/Debug.h"/>
+  </file>
+  <file name="src/snow/api/_Debug/LogError.cpp" >
+   <depend name="include/snow/api/_Debug/LogError.h"/>
+  </file>
+  <file name="src/snow/Snow.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/Promise.h"/>
+   <depend name="include/snow/api/Promises.h"/>
+   <depend name="include/snow/api/Timer.h"/>
+   <depend name="include/snow/api/buffers/ArrayBufferView.h"/>
+   <depend name="include/snow/core/Extension.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/core/native/io/IO.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/modules/sdl/IO.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+   <depend name="include/snow/systems/assets/Asset.h"/>
+   <depend name="include/snow/systems/assets/AssetJSON.h"/>
+   <depend name="include/snow/systems/assets/Assets.h"/>
+   <depend name="include/snow/systems/audio/Audio.h"/>
+   <depend name="include/snow/systems/input/Input.h"/>
+   <depend name="include/snow/systems/io/IO.h"/>
+   <depend name="include/snow/types/Config.h"/>
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/types/InputEvent.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+   <depend name="include/snow/types/WindowEvent.h"/>
+  </file>
+  <file name="src/sdl/_SDL/SDL_helper.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/sdl/_SDL/SDL_helper.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLUniformLocation_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLUniformLocation_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLTexture_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLTexture_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLShader_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLShader_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLRenderbuffer_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLRenderbuffer_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLProgram_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLProgram_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLFramebuffer_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLFramebuffer_Impl_.h"/>
+  </file>
+  <file name="src/opengl/_WebGL/GLBuffer_Impl_.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+   <depend name="include/opengl/_WebGL/GLBuffer_Impl_.h"/>
+  </file>
+  <file name="src/opengl/GLObject.cpp" >
+   <depend name="include/opengl/GLObject.h"/>
+  </file>
+  <file name="src/opengl/_GL/IntRef_Impl_.cpp" >
+   <depend name="include/opengl/_GL/IntRef_Impl_.h"/>
+  </file>
+  <file name="src/openal/ALCError.cpp" >
+   <depend name="include/openal/ALCError.h"/>
+  </file>
+  <file name="src/openal/ALError.cpp" >
+   <depend name="include/openal/ALError.h"/>
+  </file>
+  <file name="src/ogg/_Ogg/Ogg_helper.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/ogg/_Ogg/Ogg_helper.h"/>
+  </file>
+  <file name="src/nanovg/NvgImageFlags.cpp" >
+   <depend name="include/nanovg/NvgImageFlags.h"/>
+  </file>
+  <file name="src/nanovg/NvgAlign.cpp" >
+   <depend name="include/nanovg/NvgAlign.h"/>
+  </file>
+  <file name="src/nanovg/NvgPatternRepeat.cpp" >
+   <depend name="include/nanovg/NvgPatternRepeat.h"/>
+  </file>
+  <file name="src/nanovg/NvgLineCap.cpp" >
+   <depend name="include/nanovg/NvgLineCap.h"/>
+  </file>
+  <file name="src/nanovg/NvgSolidity.cpp" >
+   <depend name="include/nanovg/NvgSolidity.h"/>
+  </file>
+  <file name="src/nanovg/NvgWinding.cpp" >
+   <depend name="include/nanovg/NvgWinding.h"/>
+  </file>
+  <file name="src/nanovg/NvgMode.cpp" >
+   <depend name="include/nanovg/NvgMode.h"/>
+  </file>
+  <file name="src/msignal/SlotList.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+  </file>
+  <file name="src/msignal/Slot2.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal2.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot2.h"/>
+  </file>
+  <file name="src/msignal/Slot1.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal1.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot1.h"/>
+  </file>
+  <file name="src/msignal/Slot0.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal0.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot0.h"/>
+  </file>
+  <file name="src/msignal/Slot.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Slot.h"/>
+  </file>
+  <file name="src/msignal/Signal2.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal2.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot2.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+  </file>
+  <file name="src/msignal/Signal1.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal1.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot1.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+  </file>
+  <file name="src/msignal/Signal0.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal0.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot0.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+  </file>
+  <file name="src/msignal/Signal.cpp" >
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+  </file>
+  <file name="src/mmvc/impl/TriggerCommand.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/ICommand.h"/>
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/ITriggerMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/impl/TriggerCommand.h"/>
+  </file>
+  <file name="src/mmvc/base/ViewMap.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/api/IViewMap.h"/>
+   <depend name="include/mmvc/base/ViewMap.h"/>
+   <depend name="include/mmvc/base/ViewMapBase.h"/>
+  </file>
+  <file name="src/mmvc/base/TriggerMap.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/EnumValueMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/ICommand.h"/>
+   <depend name="include/mmvc/api/ITriggerMap.h"/>
+   <depend name="include/mmvc/base/TriggerMap.h"/>
+   <depend name="include/mmvc/impl/TriggerCommand.h"/>
+  </file>
+  <file name="src/mmvc/base/MappingConfig.cpp" >
+   <depend name="include/mmvc/base/MappingConfig.h"/>
+  </file>
+  <file name="src/mmvc/base/MediatorMap.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/minject/InjecteeSet.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/Reflector.h"/>
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/base/ContextError.h"/>
+   <depend name="include/mmvc/base/MappingConfig.h"/>
+   <depend name="include/mmvc/base/MediatorMap.h"/>
+   <depend name="include/mmvc/base/ViewMapBase.h"/>
+  </file>
+  <file name="src/mmvc/base/ViewMapBase.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/base/ViewMapBase.h"/>
+  </file>
+  <file name="src/mmvc/base/ContextError.cpp" >
+   <depend name="include/mmvc/base/ContextError.h"/>
+  </file>
+  <file name="src/mmvc/base/CommandMap.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/minject/InjecteeSet.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/ICommand.h"/>
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/mmvc/base/CommandMap.h"/>
+   <depend name="include/msignal/Signal.h"/>
+  </file>
+  <file name="src/mmvc/api/IViewMap.cpp" >
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/api/IViewMap.h"/>
+  </file>
+  <file name="src/mmvc/api/ITriggerMap.cpp" >
+   <depend name="include/mmvc/api/ITriggerMap.h"/>
+  </file>
+  <file name="src/mmvc/api/IMediatorMap.cpp" >
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+  </file>
+  <file name="src/mmvc/api/ICommandMap.cpp" >
+   <depend name="include/mmvc/api/ICommand.h"/>
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/msignal/Signal.h"/>
+  </file>
+  <file name="src/mmvc/api/ICommand.cpp" >
+   <depend name="include/mmvc/api/ICommand.h"/>
+  </file>
+  <file name="src/minject/result/InjectValueResult.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectValueResult.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/result/InjectSingletonResult.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectSingletonResult.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/result/InjectOtherRuleResult.cpp" >
+   <depend name="include/minject/InjectionConfig.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectOtherRuleResult.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/result/InjectClassResult.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectClassResult.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/result/InjectionResult.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/point/PropertyInjectionPoint.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/InjectionConfig.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/PropertyInjectionPoint.h"/>
+  </file>
+  <file name="src/minject/point/PostConstructInjectionPoint.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/PostConstructInjectionPoint.h"/>
+  </file>
+  <file name="src/minject/point/NoParamsConstructorInjectionPoint.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/NoParamsConstructorInjectionPoint.h"/>
+  </file>
+  <file name="src/minject/point/ConstructorInjectionPoint.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/ConstructorInjectionPoint.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/MethodInjectionPoint.h"/>
+  </file>
+  <file name="src/minject/point/MethodInjectionPoint.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/InjectionConfig.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/MethodInjectionPoint.h"/>
+  </file>
+  <file name="src/minject/point/InjectionPoint.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+  </file>
+  <file name="src/minject/Reflector.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/Reflector.h"/>
+  </file>
+  <file name="src/minject/InjecteeDescription.cpp" >
+   <depend name="include/minject/InjecteeDescription.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+  </file>
+  <file name="src/minject/InjecteeSet.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/minject/InjecteeSet.h"/>
+  </file>
+  <file name="src/minject/Injector.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/rtti/Meta.h"/>
+   <depend name="include/minject/InjecteeDescription.h"/>
+   <depend name="include/minject/InjecteeSet.h"/>
+   <depend name="include/minject/InjectionConfig.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/point/ConstructorInjectionPoint.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/minject/point/MethodInjectionPoint.h"/>
+   <depend name="include/minject/point/NoParamsConstructorInjectionPoint.h"/>
+   <depend name="include/minject/point/PostConstructInjectionPoint.h"/>
+   <depend name="include/minject/point/PropertyInjectionPoint.h"/>
+   <depend name="include/minject/result/InjectClassResult.h"/>
+   <depend name="include/minject/result/InjectOtherRuleResult.h"/>
+   <depend name="include/minject/result/InjectSingletonResult.h"/>
+   <depend name="include/minject/result/InjectValueResult.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/minject/InjectionConfig.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/minject/InjectionConfig.h"/>
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/result/InjectionResult.h"/>
+  </file>
+  <file name="src/hxcpp/StaticZlib.cpp" >
+   <depend name="include/hxcpp/StaticZlib.h"/>
+  </file>
+  <file name="src/hxcpp/StaticStd.cpp" >
+   <depend name="include/hxcpp/StaticStd.h"/>
+  </file>
+  <file name="src/hxcpp/StaticRegexp.cpp" >
+   <depend name="include/hxcpp/StaticRegexp.h"/>
+  </file>
+  <file name="src/haxe/rtti/Meta.cpp" >
+   <depend name="include/haxe/rtti/Meta.h"/>
+  </file>
+  <file name="src/haxe/io/Path.cpp" >
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/io/Path.h"/>
+  </file>
+  <file name="src/haxe/io/Error.cpp" >
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/format/JsonParser.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/format/JsonParser.h"/>
+  </file>
+  <file name="src/haxe/ds/StringMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/haxe/ds/ObjectMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+  </file>
+  <file name="src/haxe/ds/_List/ListIterator.cpp" >
+   <depend name="include/haxe/ds/_List/ListIterator.h"/>
+   <depend name="include/haxe/ds/_List/ListNode.h"/>
+  </file>
+  <file name="src/haxe/ds/_List/ListNode.cpp" >
+   <depend name="include/haxe/ds/_List/ListNode.h"/>
+  </file>
+  <file name="src/haxe/ds/List.cpp" >
+   <depend name="include/haxe/ds/List.h"/>
+   <depend name="include/haxe/ds/_List/ListIterator.h"/>
+   <depend name="include/haxe/ds/_List/ListNode.h"/>
+  </file>
+  <file name="src/haxe/ds/IntMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+  </file>
+  <file name="src/haxe/ds/EnumValueMap.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/EnumValueMap.h"/>
+  </file>
+  <file name="src/haxe/ds/TreeNode.cpp" >
+   <depend name="include/haxe/ds/TreeNode.h"/>
+  </file>
+  <file name="src/haxe/ds/BalancedTree.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/TreeNode.h"/>
+  </file>
+  <file name="src/haxe/crypto/BaseCode.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/crypto/BaseCode.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/crypto/Base64.cpp" >
+   <depend name="include/haxe/crypto/Base64.h"/>
+   <depend name="include/haxe/crypto/BaseCode.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/io/Bytes.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/Utf8.cpp" >
+   <depend name="include/haxe/Utf8.h"/>
+  </file>
+  <file name="src/haxe/Unserializer.cpp" >
+   <depend name="include/Date.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Unserializer.h"/>
+   <depend name="include/haxe/_Unserializer/DefaultResolver.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/List.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/_Unserializer/DefaultResolver.cpp" >
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/_Unserializer/DefaultResolver.h"/>
+  </file>
+  <file name="src/haxe/Serializer.cpp" >
+   <depend name="include/Date.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Serializer.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/List.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/ds/_List/ListNode.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/MainLoop.cpp" >
+   <depend name="include/haxe/MainEvent.h"/>
+   <depend name="include/haxe/MainLoop.h"/>
+  </file>
+  <file name="src/haxe/MainEvent.cpp" >
+   <depend name="include/haxe/MainEvent.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/haxe/EntryPoint.cpp" >
+   <depend name="include/cpp/vm/Lock.h"/>
+   <depend name="include/cpp/vm/Mutex.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+   <depend name="include/haxe/MainLoop.h"/>
+  </file>
+  <file name="src/haxe/IMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+  </file>
+  <file name="src/frejo/display/Node.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/frejo/core/VG.h"/>
+   <depend name="include/frejo/display/Node.h"/>
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal2.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot2.h"/>
+   <depend name="include/snow/App.h"/>
+  </file>
+  <file name="src/frejo/core/VG.cpp" >
+   <depend name="include/frejo/core/VG.h"/>
+  </file>
+  <file name="src/frejo/app/ViewMediator.cpp" >
+   <depend name="include/frejo/app/View.h"/>
+   <depend name="include/frejo/app/ViewMediator.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/base/MediatorBase.h"/>
+   <depend name="include/mmvc/impl/Mediator.h"/>
+  </file>
+  <file name="src/mmvc/impl/Mediator.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/base/MediatorBase.h"/>
+   <depend name="include/mmvc/impl/Mediator.h"/>
+  </file>
+  <file name="src/mmvc/base/MediatorBase.cpp" >
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/base/MediatorBase.h"/>
+   <depend name="include/msignal/Slot.h"/>
+  </file>
+  <file name="src/mmvc/api/IMediator.cpp" >
+   <depend name="include/mmvc/api/IMediator.h"/>
+  </file>
+  <file name="src/frejo/app/View.cpp" >
+   <depend name="include/frejo/app/View.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+  </file>
+  <file name="src/mmvc/api/IViewContainer.cpp" >
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+  </file>
+  <file name="src/frejo/core/View.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/frejo/display/Node.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal2.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot2.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/frejo/app/Context.cpp" >
+   <depend name="include/frejo/app/Context.h"/>
+   <depend name="include/frejo/app/View.h"/>
+   <depend name="include/frejo/app/ViewMediator.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/mmvc/api/IContext.h"/>
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/base/MediatorBase.h"/>
+   <depend name="include/mmvc/impl/Context.h"/>
+   <depend name="include/mmvc/impl/Mediator.h"/>
+  </file>
+  <file name="src/mmvc/impl/Context.cpp" >
+   <depend name="include/minject/Injector.h"/>
+   <depend name="include/minject/Reflector.h"/>
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/mmvc/api/IContext.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/ITriggerMap.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/api/IViewMap.h"/>
+   <depend name="include/mmvc/base/CommandMap.h"/>
+   <depend name="include/mmvc/base/MediatorMap.h"/>
+   <depend name="include/mmvc/base/TriggerMap.h"/>
+   <depend name="include/mmvc/base/ViewMap.h"/>
+   <depend name="include/mmvc/base/ViewMapBase.h"/>
+   <depend name="include/mmvc/impl/Context.h"/>
+  </file>
+  <file name="src/mmvc/api/IContext.cpp" >
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/mmvc/api/IContext.h"/>
+  </file>
+  <file name="src/facebook/yoga/Enums.cpp" >
+   <depend name="include/facebook/yoga/Enums.h"/>
+  </file>
+  <file name="src/cpp/vm/Thread.cpp" >
+   <depend name="include/cpp/vm/Thread.h"/>
+  </file>
+  <file name="src/cpp/vm/Mutex.cpp" >
+   <depend name="include/cpp/vm/Mutex.h"/>
+  </file>
+  <file name="src/cpp/vm/Lock.cpp" >
+   <depend name="include/cpp/vm/Lock.h"/>
+  </file>
+  <file name="src/Type.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/ValueType.cpp" >
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/Sys.cpp" >
+   <depend name="include/Sys.h"/>
+  </file>
+  <file name="src/StringTools.cpp" >
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/StringBuf.cpp" >
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Std.cpp" >
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp" >
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/Main.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/snow/App.h"/>
+  </file>
+  <file name="src/frejo/app/Application.cpp" >
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/frejo/app/Context.h"/>
+   <depend name="include/frejo/app/View.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/mmvc/api/IContext.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/mmvc/impl/Context.h"/>
+   <depend name="include/msignal/Signal.h"/>
+   <depend name="include/msignal/Signal1.h"/>
+   <depend name="include/msignal/Slot.h"/>
+   <depend name="include/msignal/Slot1.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/snow/App.cpp" >
+   <depend name="include/Main.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/frejo/app/Application.h"/>
+   <depend name="include/snow/App.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/native/Runtime.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+   <depend name="include/snow/types/ModState.h"/>
+   <depend name="include/snow/types/SystemEvent.h"/>
+  </file>
+  <file name="src/Date.cpp" >
+   <depend name="include/Date.h"/>
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/__boot__.cpp" >
+   <depend name="include/snow/types/Error.h"/>
+   <depend name="include/snow/api/buffers/TAError.h"/>
+   <depend name="include/snow/api/PromiseError.h"/>
+   <depend name="include/snow/api/DebugError.h"/>
+   <depend name="include/snow/api/_Debug/LogError.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/snow/types/_Types/InputEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/WindowEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/SystemEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/GamepadDeviceEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/TextEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/GamepadEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/TouchEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/MouseEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/KeyEventType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/OpenGLProfile_Impl_.h"/>
+   <depend name="include/snow/types/_Types/AudioState_Impl_.h"/>
+   <depend name="include/snow/types/_Types/AudioEvent_Impl_.h"/>
+   <depend name="include/snow/types/_Types/AudioFormatType_Impl_.h"/>
+   <depend name="include/snow/types/_Types/AssetType_Impl_.h"/>
+   <depend name="include/snow/types/Config.h"/>
+   <depend name="include/snow/systems/input/Scancodes.h"/>
+   <depend name="include/snow/systems/input/Keycodes.h"/>
+   <depend name="include/snow/modules/sdl/Runtime.h"/>
+   <depend name="include/snow/modules/openal/Audio.h"/>
+   <depend name="include/snow/modules/interfaces/IO.h"/>
+   <depend name="include/snow/core/native/audio/WAV.h"/>
+   <depend name="include/snow/modules/interfaces/Assets.h"/>
+   <depend name="include/snow/core/Runtime.h"/>
+   <depend name="include/snow/core/Extension.h"/>
+   <depend name="include/snow/modules/interfaces/Audio.h"/>
+   <depend name="include/snow/api/buffers/_Uint8ClampedArray/Uint8ClampedArray_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Uint8Array/Uint8Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Uint32Array/Uint32Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Uint16Array/Uint16Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Int8Array/Int8Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Int32Array/Int32Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Int16Array/Int16Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Float64Array/Float64Array_Impl_.h"/>
+   <depend name="include/snow/api/buffers/_Float32Array/Float32Array_Impl_.h"/>
+   <depend name="include/snow/api/Timer.h"/>
+   <depend name="include/snow/api/Promises.h"/>
+   <depend name="include/snow/api/Debug.h"/>
+   <depend name="include/snow/Snow.h"/>
+   <depend name="include/sdl/_SDL/SDL_helper.h"/>
+   <depend name="include/openal/ALCError.h"/>
+   <depend name="include/openal/ALError.h"/>
+   <depend name="include/ogg/_Ogg/Ogg_helper.h"/>
+   <depend name="include/nanovg/NvgImageFlags.h"/>
+   <depend name="include/nanovg/NvgAlign.h"/>
+   <depend name="include/nanovg/NvgPatternRepeat.h"/>
+   <depend name="include/nanovg/NvgLineCap.h"/>
+   <depend name="include/nanovg/NvgSolidity.h"/>
+   <depend name="include/nanovg/NvgWinding.h"/>
+   <depend name="include/nanovg/NvgMode.h"/>
+   <depend name="include/msignal/SlotList.h"/>
+   <depend name="include/mmvc/impl/TriggerCommand.h"/>
+   <depend name="include/mmvc/api/IViewMap.h"/>
+   <depend name="include/mmvc/api/ITriggerMap.h"/>
+   <depend name="include/mmvc/api/IMediatorMap.h"/>
+   <depend name="include/mmvc/api/ICommandMap.h"/>
+   <depend name="include/mmvc/api/ICommand.h"/>
+   <depend name="include/minject/point/InjectionPoint.h"/>
+   <depend name="include/haxe/crypto/Base64.h"/>
+   <depend name="include/haxe/Unserializer.h"/>
+   <depend name="include/haxe/Serializer.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/mmvc/impl/Mediator.h"/>
+   <depend name="include/mmvc/api/IMediator.h"/>
+   <depend name="include/mmvc/api/IViewContainer.h"/>
+   <depend name="include/frejo/core/View.h"/>
+   <depend name="include/mmvc/api/IContext.h"/>
+   <depend name="include/facebook/yoga/Enums.h"/>
+  </file>
+  <file name="src/__files__.cpp" if='HXCPP_DEBUGGER'>
+  </file>
+   <file name="${HXCPP}/src/hx/NoFiles.cpp" unless="HXCPP_DEBUGGER" />
+  <file name="src/__resources__.cpp" >
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp" >
+   <depend name="include/haxe/EntryPoint.h"/>
+   <depend name="include/snow/App.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp" >
+   <depend name="include/haxe/EntryPoint.h"/>
+   <depend name="include/snow/App.h"/>
+  </file>
+</files>
+<files id="__resources__">
+</files>
+<files id="__externs__">
+</files>
+<set name="HAXE_OUTPUT" value="App" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<set name="LINC_YOGA_PATH" value="/Users/damilare/Documents/projects/frejo/linc_yoga/"/>
+<include name="${LINC_YOGA_PATH}linc/linc_yoga.xml" />
+<set name="LINC_NANOVG_PATH" value="/usr/local/lib/haxe/lib/linc_nanovg/git/"/>
+<include name="${LINC_NANOVG_PATH}linc/linc_nanovg.xml" />
+<set name="LINC_OGG_PATH" value="/usr/local/lib/haxe/lib/linc_ogg/git/"/>
+<include name="${LINC_OGG_PATH}linc/linc_ogg.xml" />
+<set name="LINC_OPENAL_PATH" value="/usr/local/lib/haxe/lib/linc_openal/git/"/>
+<include name="${LINC_OPENAL_PATH}linc/linc_openal.xml" />
+<set name="LINC_OPENGL_PATH" value="/usr/local/lib/haxe/lib/linc_opengl/git/"/>
+<include name="${LINC_OPENGL_PATH}linc/linc_opengl.xml" />
+<set name="LINC_SDL_PATH" value="/usr/local/lib/haxe/lib/linc_sdl/git/"/>
+<include name="${LINC_SDL_PATH}linc/linc_sdl.xml" />
+<set name="LINC_STB_IMAGE_PATH" value="/usr/local/lib/haxe/lib/linc_stb/git/"/>
+<include name="${LINC_STB_IMAGE_PATH}linc/linc_stb_image.xml" />
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<set name="LINC_TIMESTAMP_PATH" value="/usr/local/lib/haxe/lib/linc_timestamp/git/"/>
+<include name="${LINC_TIMESTAMP_PATH}linc/linc_timestamp.xml" />
+</xml>

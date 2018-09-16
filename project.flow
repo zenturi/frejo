@@ -15,6 +15,10 @@
     app : {
       name : 'frejo_test',
       package : 'com.frejo.test',
+      mobile: {
+        fullscreen: false,
+        orientation: 'portrait'
+      }
     },
 
     //HAH
@@ -31,13 +35,26 @@
       },
       
       // define opengl version
-      defines : ['opengl_es2']
+      defines : ['HXCPP_CPP11']
     }
 
     //files : {
       //assets : 'assets/'
     //}
 
+  },
+
+  if :{
+    "ios || iphoneos || iphonesim || iphone || android":{
+      build :{
+        defines : ['opengl_es2']
+      }
+    },
+    "desktop || mac || linux || windows":{
+      build :{
+        defines : ['opengl_2']
+      }
+    }
   }
 
 }

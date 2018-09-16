@@ -1,12 +1,12 @@
 -main snow.App
--cpp bin/mac64.build/cpp
+-cpp bin/ios.build/cpp
 -D no-compilation
 -D mac
 -D target-cpp
 -D arch-64
 -D desktop
 -D hxcpp_static_std
--D opengl_es3
+-D opengl_es2
 -D snow_use_glew
 -D snow_native
 -D snow
@@ -44,4 +44,4 @@
 --macro snow.Set.audio("snow.modules.openal.Audio")
 --macro snow.Set.io("snow.modules.sdl.IO")
 -dce std
-bin/mac64.build/snow.hxml
+bin/ios.build/snow.hxml

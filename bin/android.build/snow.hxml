@@ -1,0 +1,6 @@
+--macro snow.Set.main("Main")
+--macro snow.Set.ident("com.frejo.test")
+--macro snow.api.Debug.level(1)
+
+
+

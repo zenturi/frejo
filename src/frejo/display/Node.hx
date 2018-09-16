@@ -73,8 +73,8 @@ class Node {
 			b: 34,
 			a: 255
 		};
-		width = 0.0;
-		height = 0.0;
+		width = app.window_width;
+		height = app.window_height;
 	}
 
 	function set_position(p:Point):Point {
@@ -174,7 +174,7 @@ class Node {
 		};
 
 		Reflect.setField(this, "position", position);
-		trace(position);
+
 		
 		Reflect.setField(this, "width", Yoga.nodeLayoutGetWidth(flexNode));
 		Reflect.setField(this, "height", Yoga.nodeLayoutGetHeight(flexNode));

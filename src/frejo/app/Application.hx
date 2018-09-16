@@ -36,9 +36,11 @@ class Application extends snow.App {
         render_width = app.runtime.window_width();
         render_height = app.runtime.window_height();
 
+
 		window_width = Math.floor(render_width/pixelRatio);
 		window_height = Math.floor(render_height/pixelRatio);
         
+		app.runtime.window_fullscreen(false, false);
 
 		applicationView = new View();
 		applicationView.app = this;
@@ -53,9 +55,10 @@ class Application extends snow.App {
 		render_height = config.window.height;
 
 
-
 		// currently required for GLES3.x
+		#if mobile
 		config.render.opengl.profile = gles;
+		#end
 
 		// required for nanovg
 		config.render.stencil = 8;
@@ -75,8 +78,8 @@ class Application extends snow.App {
 	// draw views
 	function draw() {
 		GL.viewport(0, 0, render_width, render_height);
-		GL.clearColor(0, 1.0, 1.0, 1.0);
-		GL.clear(GL.COLOR_BUFFER_BIT);
+		GL.clearColor(1.0/2, 1.0/3, 1.0, 1.0);
+		GL.clear(GL.COLOR_BUFFER_BIT | GL.DEPTH_BUFFER_BIT | GL.STENCIL_BUFFER_BIT);
 
 		applicationView.draw();
 	}

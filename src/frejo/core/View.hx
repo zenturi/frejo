@@ -106,15 +106,12 @@ class View {
 
 		// compute view style layout
 		//Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
-		Yoga.nodeStyleSetWidth(flexNode, 100);
-		Yoga.nodeStyleSetHeight(flexNode, 100);
+		Yoga.nodeStyleSetWidth(flexNode, app.window_width);
+		Yoga.nodeStyleSetHeight(flexNode, app.window_height * 0.1);
 
 		Yoga.nodeInsertChild(flexParentNode, flexNode, 0);
 		
 		Yoga.nodeCalculateLayout(flexParentNode, Constants.Undefined, Constants.Undefined, Direction.LTR);
-
-		trace(Yoga.nodeLayoutGetLeft(flexNode));
-		trace(Yoga.nodeLayoutGetTop(flexNode));
 
 		node = new frejo.display.Node();
 		node.flexNode = flexNode;
