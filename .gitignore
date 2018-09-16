@@ -1,0 +1,2 @@
+# ios debug binaries are too large for git
+*.a
