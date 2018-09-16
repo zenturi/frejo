@@ -141,20 +141,20 @@ HXDLIN(  73)		this->applicationView->update(dt);
 
 void Application_obj::tick(Float dt){
             	HX_STACKFRAME(&_hx_pos_19a1259070094d70_77_tick)
-HXDLIN(  77)		this->draw();
+HXDLIN(  77)		this->draw(dt);
             	}
 
 
-void Application_obj::draw(){
+void Application_obj::draw(Float tick){
             	HX_STACKFRAME(&_hx_pos_19a1259070094d70_81_draw)
 HXLINE(  82)		glViewport(0,0,this->render_width,this->render_height);
 HXLINE(  83)		glClearColor(( (float)(((Float)0.7)) ),( (float)(((Float)0.7)) ),( (float)(((Float)0.7)) ),( (float)(((Float)0.3)) ));
 HXLINE(  84)		glClear(17664);
-HXLINE(  86)		this->applicationView->draw();
+HXLINE(  86)		this->applicationView->draw(tick);
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC0(Application_obj,draw,(void))
+HX_DEFINE_DYNAMIC_FUNC1(Application_obj,draw,(void))
 
 void Application_obj::onevent( ::snow::types::SystemEvent event){
             	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_89_onevent)

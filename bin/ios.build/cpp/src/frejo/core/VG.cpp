@@ -13,7 +13,6 @@ HX_DEFINE_STACK_FRAME(_hx_pos_9b09dd08190ad881_24_new,"frejo.core.VG","new",0xe4
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_32_beginFrame,"frejo.core.VG","beginFrame",0x31f79fe2,"frejo.core.VG.beginFrame","frejo/core/VG.hx",32,0xc25e6b4e)
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_36_endFrame,"frejo.core.VG","endFrame",0x864a9d70,"frejo.core.VG.endFrame","frejo/core/VG.hx",36,0xc25e6b4e)
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_48_rgba,"frejo.core.VG","rgba",0x6ee6fcd2,"frejo.core.VG.rgba","frejo/core/VG.hx",48,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_76_save,"frejo.core.VG","save",0x6f8bb75b,"frejo.core.VG.save","frejo/core/VG.hx",76,0xc25e6b4e)
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_96_fillColor,"frejo.core.VG","fillColor",0x279abf02,"frejo.core.VG.fillColor","frejo/core/VG.hx",96,0xc25e6b4e)
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_288_rect,"frejo.core.VG","rect",0x6ee57942,"frejo.core.VG.rect","frejo/core/VG.hx",288,0xc25e6b4e)
 HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_304_fill,"frejo.core.VG","fill",0x66f9faa1,"frejo.core.VG.fill","frejo/core/VG.hx",304,0xc25e6b4e)
@@ -64,15 +63,6 @@ HX_DEFINE_DYNAMIC_FUNC0(VG_obj,endFrame,(void))
 HXDLIN(  48)		return ::nvgRGBA(r,g,b,a);
             	}
 
-
-void VG_obj::save(){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_76_save)
-HXDLIN(  76)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN(  76)		::nvgSave(tmp);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(VG_obj,save,(void))
 
 void VG_obj::fillColor( NVGcolor color){
             	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_96_fillColor)
@@ -147,7 +137,6 @@ hx::Val VG_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"save") ) { return hx::Val( save_dyn() ); }
 		if (HX_FIELD_EQ(inName,"rect") ) { return hx::Val( rect_dyn() ); }
 		if (HX_FIELD_EQ(inName,"fill") ) { return hx::Val( fill_dyn() ); }
 		break;
@@ -214,7 +203,6 @@ static ::String VG_obj_sMemberFields[] = {
 	HX_("context",ef,95,77,19),
 	HX_("beginFrame",44,89,4c,7c),
 	HX_("endFrame",52,0a,81,04),
-	HX_("save",3d,8b,4d,4c),
 	HX_("rect",24,4d,a7,4b),
 	HX_("fill",83,ce,bb,43),
 	::String(null()) };

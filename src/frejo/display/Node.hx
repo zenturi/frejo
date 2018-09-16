@@ -15,7 +15,12 @@ using frejo.display.Color;
  */
 @:keepSub
 class Node {
-	var vg:VG;
+
+	/**
+	 * Node vector graphics handle responsible for drawing 
+	 */
+	public var vg:VG;
+
 	@:unreflective
 	public var flexNode:facebook.yoga.Node;
 	@:unreflective
@@ -27,7 +32,7 @@ class Node {
 	/**
 	 * default background color;
 	 */
-	var bgColor:ColorRGBA;
+	public var background:ColorRGBA;
 
 	@:isVar public var style(get, set):facebook.yoga.Style;
 	public var layout:facebook.yoga.Layout;
@@ -68,12 +73,7 @@ class Node {
 		flexConfig = Config.init();
 		flexNode = Yoga.newNodeWithConfig(flexConfig);
 		layout = flexNode.getLayout();
-		bgColor = {
-			r: 255,
-			g: 255,
-			b: 255,
-			a: 255
-		};
+		background = Color.TRANSPARENT;
 		width = app.window_width;
 		height = app.window_height;
 	}
@@ -196,16 +196,15 @@ class Node {
 	/**
 	 * Draw the node
 	 */
-	public function draw() {
+	public function draw(?tick:Float) {
+		var bgColor = background;
 		vg.beginFrame(app.window_width, app.window_height, app.pixelRatio);
-		vg.save();
-		var dpr = app.pixelRatio;
 		vg.rect(position.x, position.y, width, height);
 		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
 		vg.fill();
 
 		for (child in children) {
-			child.draw();
+			child.draw(tick);
 		}
 
 		vg.endFrame();

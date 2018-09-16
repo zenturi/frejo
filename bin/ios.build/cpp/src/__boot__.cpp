@@ -91,6 +91,9 @@
 #ifndef INCLUDED_haxe_IMap
 #include <haxe/IMap.h>
 #endif
+#ifndef INCLUDED_frejo_display_Color
+#include <frejo/display/Color.h>
+#endif
 #ifndef INCLUDED_mmvc_impl_Mediator
 #include <mmvc/impl/Mediator.h>
 #endif
@@ -416,6 +419,7 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::Log_obj::__register();
 ::haxe::EntryPoint_obj::__register();
 ::haxe::IMap_obj::__register();
+::frejo::display::Color_obj::__register();
 ::mmvc::impl::Mediator_obj::__register();
 ::mmvc::api::IMediator_obj::__register();
 ::mmvc::api::IViewContainer_obj::__register();
@@ -523,6 +527,7 @@ hx::RegisterResources( hx::GetResources() );
 ::mmvc::api::IViewContainer_obj::__boot();
 ::mmvc::api::IMediator_obj::__boot();
 ::mmvc::impl::Mediator_obj::__boot();
+::frejo::display::Color_obj::__boot();
 ::haxe::IMap_obj::__boot();
 ::haxe::EntryPoint_obj::__boot();
 ::minject::point::InjectionPoint_obj::__boot();

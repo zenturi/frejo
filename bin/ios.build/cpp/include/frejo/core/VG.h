@@ -63,9 +63,6 @@ class HXCPP_CLASS_ATTRIBUTES VG_obj : public hx::Object
 
 		 NVGcolor rgba(unsigned char r,unsigned char g,unsigned char b,unsigned char a);
 
-		void save();
-		::Dynamic save_dyn();
-
 		void fillColor( NVGcolor color);
 
 		void rect(Float x,Float y,Float w,Float h);

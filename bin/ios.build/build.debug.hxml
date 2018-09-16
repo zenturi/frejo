@@ -9,7 +9,6 @@
 -D xcode-build
 -D hxcpp_static_std
 -D HXCPP_CPP11
--D NO_PRECOMPILED_HEADERS
 -D opengl_es2
 -D snow_native
 -D linc_opengl_GLES

@@ -74,16 +74,16 @@ class Application extends snow.App {
 	}
 
 	override function tick(dt:Float) {
-		draw();
+		draw(dt);
 	}
 
 	// draw views
-	function draw() {
+	function draw(tick:Float) {
 		GL.viewport(0, 0, render_width, render_height);
 		GL.clearColor(0.7, 0.7, 0.7, 0.3);
 		GL.clear(GL.COLOR_BUFFER_BIT | GL.DEPTH_BUFFER_BIT | GL.STENCIL_BUFFER_BIT);
 
-		applicationView.draw();
+		applicationView.draw(tick);
 	}
 
 	override public function onevent(event:SystemEvent) {

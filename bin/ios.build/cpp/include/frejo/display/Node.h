@@ -57,7 +57,7 @@ class HXCPP_CLASS_ATTRIBUTES Node_obj : public hx::Object
 		 YGNodeRef flexNode;
 		 YGConfigRef flexConfig;
 		 ::frejo::app::Application app;
-		 ::Dynamic bgColor;
+		 ::Dynamic background;
 		 YGStyle style;
 		 YGLayout layout;
 		Float width;
@@ -118,7 +118,7 @@ class HXCPP_CLASS_ATTRIBUTES Node_obj : public hx::Object
 		void computeLayout();
 		::Dynamic computeLayout_dyn();
 
-		void draw();
+		void draw( ::Dynamic tick);
 		::Dynamic draw_dyn();
 
 		void update(Float dt);

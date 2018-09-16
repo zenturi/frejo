@@ -1,6 +1,7 @@
 package frejo.core;
 
 import frejo.app.Application;
+import frejo.display.*;
 import facebook.Yoga;
 import facebook.yoga.*;
 
@@ -108,7 +109,7 @@ class View {
 		// compute view style layout
 		//Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
 		Yoga.nodeStyleSetWidth(flexNode, app.window_width);
-		Yoga.nodeStyleSetHeight(flexNode, app.window_height * 0.1);
+		Yoga.nodeStyleSetHeight(flexNode, app.window_height);
 
 		Yoga.nodeInsertChild(flexParentNode, flexNode, 0);
 		
@@ -116,6 +117,7 @@ class View {
 
 		node = new frejo.display.Node();
 		node.flexNode = flexNode;
+		node.background = Color.LIGHT;
 
 		node.width = Yoga.nodeLayoutGetWidth(flexNode);
 		node.height = Yoga.nodeLayoutGetHeight(flexNode);
@@ -190,8 +192,8 @@ class View {
 	/**
 	 * Draw UI elements
 	 */
-	public function draw() {
-		node.draw();
+	public function draw(?tick:Float) {
+		node.draw(tick);
 	}
 
 	/**

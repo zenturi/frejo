@@ -81,7 +81,7 @@ class HXCPP_CLASS_ATTRIBUTES Application_obj : public  ::snow::App_obj
 
 		void tick(Float dt);
 
-		void draw();
+		void draw(Float tick);
 		::Dynamic draw_dyn();
 
 		void onevent( ::snow::types::SystemEvent event);

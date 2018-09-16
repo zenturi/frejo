@@ -1,2 +1,2 @@
 # ios debug binaries are too large for git
-bin/ios.build/cpp/*.a
+*.a

@@ -89,7 +89,7 @@ class HXCPP_CLASS_ATTRIBUTES View_obj : public hx::Object
 		void update(Float dt);
 		::Dynamic update_dyn();
 
-		void draw();
+		void draw( ::Dynamic tick);
 		::Dynamic draw_dyn();
 
 		void destroy();

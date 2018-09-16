@@ -25,6 +25,9 @@
 #ifndef INCLUDED_frejo_core_VG
 #include <frejo/core/VG.h>
 #endif
+#ifndef INCLUDED_frejo_display_Color
+#include <frejo/display/Color.h>
+#endif
 #ifndef INCLUDED_frejo_display_Node
 #include <frejo/display/Node.h>
 #endif
@@ -45,8 +48,8 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_17_new,"frejo.display.Node","new",0x488ed790,"frejo.display.Node.new","frejo/display/Node.hx",17,0xcf58e51e)
-HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_57_dispatch,"frejo.display.Node","dispatch",0xd0f0b98a,"frejo.display.Node.dispatch","frejo/display/Node.hx",57,0xcf58e51e)
-HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_63_init,"frejo.display.Node","init",0x31267de0,"frejo.display.Node.init","frejo/display/Node.hx",63,0xcf58e51e)
+HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_62_dispatch,"frejo.display.Node","dispatch",0xd0f0b98a,"frejo.display.Node.dispatch","frejo/display/Node.hx",62,0xcf58e51e)
+HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_68_init,"frejo.display.Node","init",0x31267de0,"frejo.display.Node.init","frejo/display/Node.hx",68,0xcf58e51e)
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_81_set_position,"frejo.display.Node","set_position",0x04b00af6,"frejo.display.Node.set_position","frejo/display/Node.hx",81,0xcf58e51e)
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_87_get_position,"frejo.display.Node","get_position",0xefb6e782,"frejo.display.Node.get_position","frejo/display/Node.hx",87,0xcf58e51e)
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_90_set_width,"frejo.display.Node","set_width",0x7a1d8999,"frejo.display.Node.set_width","frejo/display/Node.hx",90,0xcf58e51e)
@@ -62,17 +65,17 @@ HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_157_removeChild,"frejo.display.Nod
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_168_initStyle,"frejo.display.Node","initStyle",0x28704b31,"frejo.display.Node.initStyle","frejo/display/Node.hx",168,0xcf58e51e)
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_185_computeLayout,"frejo.display.Node","computeLayout",0x01ccc0b1,"frejo.display.Node.computeLayout","frejo/display/Node.hx",185,0xcf58e51e)
 HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_199_draw,"frejo.display.Node","draw",0x2ddb6ed4,"frejo.display.Node.draw","frejo/display/Node.hx",199,0xcf58e51e)
-HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_214_update,"frejo.display.Node","update",0x95e31cd9,"frejo.display.Node.update","frejo/display/Node.hx",214,0xcf58e51e)
-HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_216_destroy,"frejo.display.Node","destroy",0x178c8c2a,"frejo.display.Node.destroy","frejo/display/Node.hx",216,0xcf58e51e)
+HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_213_update,"frejo.display.Node","update",0x95e31cd9,"frejo.display.Node.update","frejo/display/Node.hx",213,0xcf58e51e)
+HX_LOCAL_STACK_FRAME(_hx_pos_278ec2878a2b9d2b_215_destroy,"frejo.display.Node","destroy",0x178c8c2a,"frejo.display.Node.destroy","frejo/display/Node.hx",215,0xcf58e51e)
 namespace frejo{
 namespace display{
 
 void Node_obj::__construct(){
             	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_17_new)
-HXLINE(  55)		this->STYLE_CHANGED = HX_("Style_Changed",66,40,c6,7d);
-HXLINE(  54)		this->REMOVED = HX_("Removed",80,47,51,c0);
-HXLINE(  53)		this->ADDED = HX_("Added",a0,44,71,af);
-HXLINE(  60)		this->init();
+HXLINE(  60)		this->STYLE_CHANGED = HX_("Style_Changed",66,40,c6,7d);
+HXLINE(  59)		this->REMOVED = HX_("Removed",80,47,51,c0);
+HXLINE(  58)		this->ADDED = HX_("Added",a0,44,71,af);
+HXLINE(  65)		this->init();
             	}
 
 Dynamic Node_obj::__CreateEmpty() { return new Node_obj; }
@@ -91,26 +94,22 @@ bool Node_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void Node_obj::dispatch(::String event, ::frejo::display::Node node){
-            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_57_dispatch)
+            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_62_dispatch)
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(Node_obj,dispatch,(void))
 
 void Node_obj::init(){
-            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_63_init)
-HXLINE(  64)		this->app = ::frejo::app::Application_obj::getInstance();
-HXLINE(  65)		this->children = ::Array_obj< ::Dynamic>::__new();
-HXLINE(  66)		this->name = ( (::String)(::Type_obj::getClassName(::Type_obj::getClass(hx::ObjectPtr<OBJ_>(this))).split(HX_(".",2e,00,00,00))->pop()) );
-HXLINE(  67)		this->vg = ::frejo::core::VG_obj::getInstance();
-HXLINE(  68)		this->flexConfig = ::linc::yoga::NewConfig();
-HXLINE(  69)		this->flexNode = ::YGNodeNewWithConfig(this->flexConfig);
-HXLINE(  70)		this->layout = this->flexNode->getLayout();
-HXLINE(  71)		this->bgColor =  ::Dynamic(hx::Anon_obj::Create(4)
-            			->setFixed(0,HX_("a",61,00,00,00),255)
-            			->setFixed(1,HX_("b",62,00,00,00),255)
-            			->setFixed(2,HX_("g",67,00,00,00),255)
-            			->setFixed(3,HX_("r",72,00,00,00),255));
+            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_68_init)
+HXLINE(  69)		this->app = ::frejo::app::Application_obj::getInstance();
+HXLINE(  70)		this->children = ::Array_obj< ::Dynamic>::__new();
+HXLINE(  71)		this->name = ( (::String)(::Type_obj::getClassName(::Type_obj::getClass(hx::ObjectPtr<OBJ_>(this))).split(HX_(".",2e,00,00,00))->pop()) );
+HXLINE(  72)		this->vg = ::frejo::core::VG_obj::getInstance();
+HXLINE(  73)		this->flexConfig = ::linc::yoga::NewConfig();
+HXLINE(  74)		this->flexNode = ::YGNodeNewWithConfig(this->flexConfig);
+HXLINE(  75)		this->layout = this->flexNode->getLayout();
+HXLINE(  76)		this->background = ::frejo::display::Color_obj::TRANSPARENT;
 HXLINE(  77)		this->set_width(( (Float)(this->app->window_width) ));
 HXLINE(  78)		this->set_height(( (Float)(this->app->window_height) ));
             	}
@@ -296,52 +295,51 @@ HXLINE( 193)		::YGNodeCalculateLayout(this->flexNode,( (Float)(YGUndefined) ),( 
 
 HX_DEFINE_DYNAMIC_FUNC0(Node_obj,computeLayout,(void))
 
-void Node_obj::draw(){
+void Node_obj::draw( ::Dynamic tick){
             	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_199_draw)
-HXLINE( 200)		this->vg->beginFrame(this->app->window_width,this->app->window_height,this->app->pixelRatio);
-HXLINE( 201)		this->vg->save();
-HXLINE( 202)		Float dpr = this->app->pixelRatio;
-HXLINE( 203)		 ::frejo::core::VG _hx_tmp = this->vg;
-HXDLIN( 203)		Float _hx_tmp1 = ( (Float)(this->position->__Field(HX_("x",78,00,00,00),hx::paccDynamic)) );
-HXDLIN( 203)		Float _hx_tmp2 = ( (Float)(this->position->__Field(HX_("y",79,00,00,00),hx::paccDynamic)) );
-HXDLIN( 203)		Float _hx_tmp3 = this->get_width();
-HXDLIN( 203)		_hx_tmp->rect(_hx_tmp1,_hx_tmp2,_hx_tmp3,this->get_height());
-HXLINE( 204)		 ::frejo::core::VG _hx_tmp4 = this->vg;
-HXDLIN( 204)		_hx_tmp4->fillColor(this->vg->rgba(( (unsigned char)(this->bgColor->__Field(HX_("r",72,00,00,00),hx::paccDynamic)) ),( (unsigned char)(this->bgColor->__Field(HX_("g",67,00,00,00),hx::paccDynamic)) ),( (unsigned char)(this->bgColor->__Field(HX_("b",62,00,00,00),hx::paccDynamic)) ),( (unsigned char)(this->bgColor->__Field(HX_("a",61,00,00,00),hx::paccDynamic)) )));
-HXLINE( 205)		this->vg->fill();
-HXLINE( 207)		{
-HXLINE( 207)			int _g = 0;
-HXDLIN( 207)			::Array< ::Dynamic> _g1 = this->children;
-HXDLIN( 207)			while((_g < _g1->length)){
-HXLINE( 207)				 ::frejo::display::Node child = _g1->__get(_g).StaticCast<  ::frejo::display::Node >();
-HXDLIN( 207)				_g = (_g + 1);
-HXLINE( 208)				child->draw();
+HXLINE( 200)		 ::Dynamic bgColor = this->background;
+HXLINE( 201)		this->vg->beginFrame(this->app->window_width,this->app->window_height,this->app->pixelRatio);
+HXLINE( 202)		 ::frejo::core::VG _hx_tmp = this->vg;
+HXDLIN( 202)		Float _hx_tmp1 = ( (Float)(this->position->__Field(HX_("x",78,00,00,00),hx::paccDynamic)) );
+HXDLIN( 202)		Float _hx_tmp2 = ( (Float)(this->position->__Field(HX_("y",79,00,00,00),hx::paccDynamic)) );
+HXDLIN( 202)		Float _hx_tmp3 = this->get_width();
+HXDLIN( 202)		_hx_tmp->rect(_hx_tmp1,_hx_tmp2,_hx_tmp3,this->get_height());
+HXLINE( 203)		 ::frejo::core::VG _hx_tmp4 = this->vg;
+HXDLIN( 203)		_hx_tmp4->fillColor(this->vg->rgba(( (unsigned char)(bgColor->__Field(HX_("r",72,00,00,00),hx::paccDynamic)) ),( (unsigned char)(bgColor->__Field(HX_("g",67,00,00,00),hx::paccDynamic)) ),( (unsigned char)(bgColor->__Field(HX_("b",62,00,00,00),hx::paccDynamic)) ),( (unsigned char)(bgColor->__Field(HX_("a",61,00,00,00),hx::paccDynamic)) )));
+HXLINE( 204)		this->vg->fill();
+HXLINE( 206)		{
+HXLINE( 206)			int _g = 0;
+HXDLIN( 206)			::Array< ::Dynamic> _g1 = this->children;
+HXDLIN( 206)			while((_g < _g1->length)){
+HXLINE( 206)				 ::frejo::display::Node child = _g1->__get(_g).StaticCast<  ::frejo::display::Node >();
+HXDLIN( 206)				_g = (_g + 1);
+HXLINE( 207)				child->draw(tick);
             			}
             		}
-HXLINE( 211)		this->vg->endFrame();
+HXLINE( 210)		this->vg->endFrame();
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC0(Node_obj,draw,(void))
+HX_DEFINE_DYNAMIC_FUNC1(Node_obj,draw,(void))
 
 void Node_obj::update(Float dt){
-            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_214_update)
+            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_213_update)
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(Node_obj,update,(void))
 
 void Node_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_216_destroy)
-HXLINE( 217)		::YGNodeFreeRecursive(this->flexNode);
-HXLINE( 218)		::YGConfigFree(this->flexConfig);
-HXLINE( 220)		{
-HXLINE( 220)			int _g = 0;
-HXDLIN( 220)			::Array< ::Dynamic> _g1 = this->children;
-HXDLIN( 220)			while((_g < _g1->length)){
-HXLINE( 220)				 ::frejo::display::Node child = _g1->__get(_g).StaticCast<  ::frejo::display::Node >();
-HXDLIN( 220)				_g = (_g + 1);
-HXLINE( 221)				this->removeChild(child);
+            	HX_STACKFRAME(&_hx_pos_278ec2878a2b9d2b_215_destroy)
+HXLINE( 216)		::YGNodeFreeRecursive(this->flexNode);
+HXLINE( 217)		::YGConfigFree(this->flexConfig);
+HXLINE( 219)		{
+HXLINE( 219)			int _g = 0;
+HXDLIN( 219)			::Array< ::Dynamic> _g1 = this->children;
+HXDLIN( 219)			while((_g < _g1->length)){
+HXLINE( 219)				 ::frejo::display::Node child = _g1->__get(_g).StaticCast<  ::frejo::display::Node >();
+HXDLIN( 219)				_g = (_g + 1);
+HXLINE( 220)				this->removeChild(child);
             			}
             		}
             	}
@@ -374,7 +372,7 @@ void Node_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(flexNode,"flexNode");
 	HX_MARK_MEMBER_NAME(flexConfig,"flexConfig");
 	HX_MARK_MEMBER_NAME(app,"app");
-	HX_MARK_MEMBER_NAME(bgColor,"bgColor");
+	HX_MARK_MEMBER_NAME(background,"background");
 	HX_MARK_MEMBER_NAME(style,"style");
 	HX_MARK_MEMBER_NAME(layout,"layout");
 	HX_MARK_MEMBER_NAME(width,"width");
@@ -396,7 +394,7 @@ void Node_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(flexNode,"flexNode");
 	HX_VISIT_MEMBER_NAME(flexConfig,"flexConfig");
 	HX_VISIT_MEMBER_NAME(app,"app");
-	HX_VISIT_MEMBER_NAME(bgColor,"bgColor");
+	HX_VISIT_MEMBER_NAME(background,"background");
 	HX_VISIT_MEMBER_NAME(style,"style");
 	HX_VISIT_MEMBER_NAME(layout,"layout");
 	HX_VISIT_MEMBER_NAME(width,"width");
@@ -438,7 +436,6 @@ hx::Val Node_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		if (HX_FIELD_EQ(inName,"update") ) { return hx::Val( update_dyn() ); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"bgColor") ) { return hx::Val( bgColor ); }
 		if (HX_FIELD_EQ(inName,"REMOVED") ) { return hx::Val( REMOVED ); }
 		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
 		break;
@@ -457,6 +454,7 @@ hx::Val Node_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		if (HX_FIELD_EQ(inName,"initStyle") ) { return hx::Val( initStyle_dyn() ); }
 		break;
 	case 10:
+		if (HX_FIELD_EQ(inName,"background") ) { return hx::Val( background ); }
 		if (HX_FIELD_EQ(inName,"set_height") ) { return hx::Val( set_height_dyn() ); }
 		if (HX_FIELD_EQ(inName,"get_height") ) { return hx::Val( get_height_dyn() ); }
 		if (HX_FIELD_EQ(inName,"addChildAt") ) { return hx::Val( addChildAt_dyn() ); }
@@ -499,12 +497,14 @@ hx::Val Node_obj::__SetField(const ::String &inName,const hx::Val &inValue,hx::P
 		if (HX_FIELD_EQ(inName,"signal") ) { signal=inValue.Cast<  ::msignal::Signal2 >(); return inValue; }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"bgColor") ) { bgColor=inValue.Cast<  ::Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"REMOVED") ) { REMOVED=inValue.Cast< ::String >(); return inValue; }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"position") ) { if (inCallProp == hx::paccAlways) return hx::Val( set_position(inValue.Cast<  ::Dynamic >()) );position=inValue.Cast<  ::Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"children") ) { children=inValue.Cast< ::Array< ::Dynamic> >(); return inValue; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"background") ) { background=inValue.Cast<  ::Dynamic >(); return inValue; }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"STYLE_CHANGED") ) { STYLE_CHANGED=inValue.Cast< ::String >(); return inValue; }
@@ -518,7 +518,7 @@ void Node_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("flexNode",db,d5,2b,03));
 	outFields->push(HX_("flexConfig",db,8a,e1,a6));
 	outFields->push(HX_("app",a1,fc,49,00));
-	outFields->push(HX_("bgColor",5e,81,83,f7));
+	outFields->push(HX_("background",ee,93,1d,26));
 	outFields->push(HX_("style",31,a5,1d,84));
 	outFields->push(HX_("layout",aa,ae,b8,58));
 	outFields->push(HX_("width",06,b6,62,ca));
@@ -540,7 +540,7 @@ static hx::StorageInfo Node_obj_sMemberStorageInfo[] = {
 	{hx::fsObject /*YGNodeRef*/ ,(int)offsetof(Node_obj,flexNode),HX_("flexNode",db,d5,2b,03)},
 	{hx::fsObject /*YGConfigRef*/ ,(int)offsetof(Node_obj,flexConfig),HX_("flexConfig",db,8a,e1,a6)},
 	{hx::fsObject /*::frejo::app::Application*/ ,(int)offsetof(Node_obj,app),HX_("app",a1,fc,49,00)},
-	{hx::fsObject /*Dynamic*/ ,(int)offsetof(Node_obj,bgColor),HX_("bgColor",5e,81,83,f7)},
+	{hx::fsObject /*Dynamic*/ ,(int)offsetof(Node_obj,background),HX_("background",ee,93,1d,26)},
 	{hx::fsObject /*YGStyle*/ ,(int)offsetof(Node_obj,style),HX_("style",31,a5,1d,84)},
 	{hx::fsObject /*YGLayout*/ ,(int)offsetof(Node_obj,layout),HX_("layout",aa,ae,b8,58)},
 	{hx::fsFloat,(int)offsetof(Node_obj,width),HX_("width",06,b6,62,ca)},
@@ -561,7 +561,7 @@ static hx::StaticInfo *Node_obj_sStaticStorageInfo = 0;
 static ::String Node_obj_sMemberFields[] = {
 	HX_("vg",31,67,00,00),
 	HX_("app",a1,fc,49,00),
-	HX_("bgColor",5e,81,83,f7),
+	HX_("background",ee,93,1d,26),
 	HX_("style",31,a5,1d,84),
 	HX_("layout",aa,ae,b8,58),
 	HX_("width",06,b6,62,ca),
