@@ -5,9 +5,6 @@
 #define INCLUDED_0a05af74edef3e68
 #include "linc_timestamp.h"
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_snow_api_Timer
 #include <snow/api/Timer.h>
 #endif
@@ -23,11 +20,7 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_15_new,"snow.api.Timer","new",0x41f1af18,"snow.api.Timer.new","snow/api/Timer.hx",15,0x0ea8a1da)
 HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_32___default_run,"snow.api.Timer","__default_run",0x373caf25,"snow.api.Timer.__default_run","snow/api/Timer.hx",32,0x0ea8a1da)
-HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_36_stop,"snow.api.Timer","stop",0x74e0f24a,"snow.api.Timer.stop","snow/api/Timer.hx",36,0x0ea8a1da)
-HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_24_measure,"snow.api.Timer","measure",0xf7899616,"snow.api.Timer.measure","snow/api/Timer.hx",24,0x0ea8a1da)
 HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_44_update,"snow.api.Timer","update",0x9c85aa51,"snow.api.Timer.update","snow/api/Timer.hx",44,0x0ea8a1da)
-HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_63_delay,"snow.api.Timer","delay",0x2303d43b,"snow.api.Timer.delay","snow/api/Timer.hx",63,0x0ea8a1da)
-HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_60_delay,"snow.api.Timer","delay",0x2303d43b,"snow.api.Timer.delay","snow/api/Timer.hx",60,0x0ea8a1da)
 HX_LOCAL_STACK_FRAME(_hx_pos_85b1fb275ca65ad7_9_boot,"snow.api.Timer","boot",0x69a0867a,"snow.api.Timer.boot","snow/api/Timer.hx",9,0x0ea8a1da)
 namespace snow{
 namespace api{
@@ -63,32 +56,7 @@ void _hx_run(){
 HX_END_LOCAL_FUNC0((void))
 HX_END_DEFAULT_FUNC
 
-void Timer_obj::stop(){
-            	HX_STACKFRAME(&_hx_pos_85b1fb275ca65ad7_36_stop)
-HXDLIN(  36)		if (this->running) {
-HXLINE(  37)			this->running = false;
-HXLINE(  38)			::snow::api::Timer_obj::running_timers->remove(hx::ObjectPtr<OBJ_>(this));
-            		}
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Timer_obj,stop,(void))
-
 ::Array< ::Dynamic> Timer_obj::running_timers;
-
- ::Dynamic Timer_obj::measure( ::Dynamic f, ::Dynamic pos){
-            	HX_STACKFRAME(&_hx_pos_85b1fb275ca65ad7_24_measure)
-HXLINE(  25)		Float t0 = linc::timestamp::now();
-HXDLIN(  25)		Float t01 = (t0 - ::snow::modules::sdl::Runtime_obj::timestamp_start);
-HXLINE(  26)		 ::Dynamic r = f();
-HXLINE(  27)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN(  27)		Float _hx_tmp1 = linc::timestamp::now();
-HXDLIN(  27)		_hx_tmp((((_hx_tmp1 - ::snow::modules::sdl::Runtime_obj::timestamp_start) - t01) + HX_("s",73,00,00,00)),pos);
-HXLINE(  28)		return r;
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(Timer_obj,measure,return )
 
 void Timer_obj::update(){
             	HX_STACKFRAME(&_hx_pos_85b1fb275ca65ad7_44_update)
@@ -113,24 +81,6 @@ HXLINE(  52)						timer->run();
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Timer_obj,update,(void))
-
- ::snow::api::Timer Timer_obj::delay(Float _time, ::Dynamic _f){
-            		HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_hx_Closure_0, ::snow::api::Timer,t, ::Dynamic,_f) HXARGC(0)
-            		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_85b1fb275ca65ad7_63_delay)
-HXLINE(  64)			t->stop();
-HXLINE(  65)			_f();
-            		}
-            		HX_END_LOCAL_FUNC0((void))
-
-            	HX_GC_STACKFRAME(&_hx_pos_85b1fb275ca65ad7_60_delay)
-HXLINE(  62)		 ::snow::api::Timer t =  ::snow::api::Timer_obj::__alloc( HX_CTX ,_time);
-HXLINE(  63)		t->run =  ::Dynamic(new _hx_Closure_0(t,_f));
-HXLINE(  68)		return t;
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(Timer_obj,delay,return )
 
 
 void Timer_obj::__alloc_dynamic_functions(hx::Ctx *_hx_ctx,Timer_obj *_hx_obj) {
@@ -181,7 +131,6 @@ hx::Val Timer_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"time") ) { return hx::Val( time ); }
-		if (HX_FIELD_EQ(inName,"stop") ) { return hx::Val( stop_dyn() ); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"fire_at") ) { return hx::Val( fire_at ); }
@@ -193,14 +142,8 @@ hx::Val Timer_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 bool Timer_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"delay") ) { outValue = delay_dyn(); return true; }
-		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"update") ) { outValue = update_dyn(); return true; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"measure") ) { outValue = measure_dyn(); return true; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"running_timers") ) { outValue = ( running_timers ); return true; }
@@ -260,7 +203,6 @@ static ::String Timer_obj_sMemberFields[] = {
 	HX_("fire_at",1c,4d,bf,73),
 	HX_("running",ff,6d,69,eb),
 	HX_("run",4b,e7,56,00),
-	HX_("stop",02,f0,5b,4c),
 	::String(null()) };
 
 static void Timer_obj_sMarkStatics(HX_MARK_PARAMS) {
@@ -278,9 +220,7 @@ hx::Class Timer_obj::__mClass;
 
 static ::String Timer_obj_sStaticFields[] = {
 	HX_("running_timers",8e,fe,d6,44),
-	HX_("measure",5e,fb,e9,3c),
 	HX_("update",09,86,05,87),
-	HX_("delay",83,d7,26,d7),
 	::String(null())
 };
 

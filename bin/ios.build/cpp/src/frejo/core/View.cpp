@@ -46,28 +46,28 @@
 #include <snow/types/SystemEvent.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_18_new,"frejo.core.View","new",0xda0db516,"frejo.core.View.new","frejo/core/View.hx",18,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_81_init,"frejo.core.View","init",0xeea9759a,"frejo.core.View.init","frejo/core/View.hx",81,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_128_dispatch,"frejo.core.View","dispatch",0x89431644,"frejo.core.View.dispatch","frejo/core/View.hx",128,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_135_system_event,"frejo.core.View","system_event",0xcf07d814,"frejo.core.View.system_event","frejo/core/View.hx",135,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_139_toString,"frejo.core.View","toString",0xa34e1836,"frejo.core.View.toString","frejo/core/View.hx",139,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_142_set_index,"frejo.core.View","set_index",0xfd8e34ab,"frejo.core.View.set_index","frejo/core/View.hx",142,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_156_addChild,"frejo.core.View","addChild",0x29f61745,"frejo.core.View.addChild","frejo/core/View.hx",156,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_174_removeChild,"frejo.core.View","removeChild",0xf7cc116e,"frejo.core.View.removeChild","frejo/core/View.hx",174,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_186_update,"frejo.core.View","update",0xf3def713,"frejo.core.View.update","frejo/core/View.hx",186,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_193_draw,"frejo.core.View","draw",0xeb5e668e,"frejo.core.View.draw","frejo/core/View.hx",193,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_200_destroy,"frejo.core.View","destroy",0xf5efa4b0,"frejo.core.View.destroy","frejo/core/View.hx",200,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_27_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",27,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_55_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",55,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_60_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",60,0x3428eeba)
-HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_65_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",65,0x3428eeba)
+HX_DEFINE_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_19_new,"frejo.core.View","new",0xda0db516,"frejo.core.View.new","frejo/core/View.hx",19,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_82_init,"frejo.core.View","init",0xeea9759a,"frejo.core.View.init","frejo/core/View.hx",82,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_129_dispatch,"frejo.core.View","dispatch",0x89431644,"frejo.core.View.dispatch","frejo/core/View.hx",129,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_136_system_event,"frejo.core.View","system_event",0xcf07d814,"frejo.core.View.system_event","frejo/core/View.hx",136,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_140_toString,"frejo.core.View","toString",0xa34e1836,"frejo.core.View.toString","frejo/core/View.hx",140,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_143_set_index,"frejo.core.View","set_index",0xfd8e34ab,"frejo.core.View.set_index","frejo/core/View.hx",143,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_157_addChild,"frejo.core.View","addChild",0x29f61745,"frejo.core.View.addChild","frejo/core/View.hx",157,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_175_removeChild,"frejo.core.View","removeChild",0xf7cc116e,"frejo.core.View.removeChild","frejo/core/View.hx",175,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_187_update,"frejo.core.View","update",0xf3def713,"frejo.core.View.update","frejo/core/View.hx",187,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_194_draw,"frejo.core.View","draw",0xeb5e668e,"frejo.core.View.draw","frejo/core/View.hx",194,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_201_destroy,"frejo.core.View","destroy",0xf5efa4b0,"frejo.core.View.destroy","frejo/core/View.hx",201,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_28_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",28,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_56_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",56,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_61_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",61,0x3428eeba)
+HX_LOCAL_STACK_FRAME(_hx_pos_2bf6e5ed7dffa95e_66_boot,"frejo.core.View","boot",0xea09bebc,"frejo.core.View.boot","frejo/core/View.hx",66,0x3428eeba)
 namespace frejo{
 namespace core{
 
 void View_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_18_new)
-HXLINE(  74)		this->app = null();
-HXLINE(  72)		this->node = null();
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_19_new)
+HXLINE(  75)		this->app = null();
+HXLINE(  73)		this->node = null();
             	}
 
 Dynamic View_obj::__CreateEmpty() { return new View_obj; }
@@ -86,122 +86,122 @@ bool View_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void View_obj::init(){
-            	HX_GC_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_81_init)
-HXLINE(  83)		this->id = (HX_("view",65,32,4f,4e) + ::frejo::core::View_obj::idCounter++);
-HXLINE(  86)		::Reflect_obj::setField(hx::ObjectPtr<OBJ_>(this),HX_("index",12,9b,14,be),-1);
-HXLINE(  88)		this->className = ( (::String)(::Type_obj::getClassName(::Type_obj::getClass(hx::ObjectPtr<OBJ_>(this))).split(HX_(".",2e,00,00,00))->pop()) );
-HXLINE(  90)		this->children = ::Array_obj< ::Dynamic>::__new(0);
-HXLINE(  92)		this->signal =  ::msignal::Signal2_obj::__alloc( HX_CTX ,null(),null());
-HXLINE(  94)		 YGConfigRef flexConfig = ::linc::yoga::NewConfig();
-HXLINE(  95)		 YGNodeRef flexParentNode = ::YGNodeNewWithConfig(flexConfig);
-HXLINE(  96)		 YGNodeRef flexNode = ::YGNodeNewWithConfig(flexConfig);
-HXLINE(  98)		::YGNodeStyleSetFlexDirection(flexParentNode,YGFlexDirectionRow);
-HXLINE(  99)		::YGNodeStyleSetWidth(flexParentNode,( (Float)(this->app->window_width) ));
-HXLINE( 100)		::YGNodeStyleSetHeight(flexParentNode,( (Float)(this->app->window_height) ));
-HXLINE( 101)		::YGNodeStyleSetJustifyContent(flexParentNode,YGJustifyFlexStart);
-HXLINE( 102)		::YGNodeStyleSetAlignItems(flexParentNode,YGAlignStretch);
-HXLINE( 109)		::YGNodeStyleSetWidth(flexNode,( (Float)(this->app->window_width) ));
-HXLINE( 110)		::YGNodeStyleSetHeight(flexNode,(this->app->window_height * ((Float)0.1)));
-HXLINE( 112)		::YGNodeInsertChild(flexParentNode,flexNode,0);
-HXLINE( 114)		::YGNodeCalculateLayout(flexParentNode,( (Float)(YGUndefined) ),( (Float)(YGUndefined) ),YGDirectionLTR);
-HXLINE( 116)		this->node =  ::frejo::display::Node_obj::__alloc( HX_CTX );
-HXLINE( 117)		this->node->flexNode = flexNode;
-HXLINE( 119)		 ::frejo::display::Node _hx_tmp = this->node;
-HXDLIN( 119)		_hx_tmp->set_width(::YGNodeLayoutGetWidth(flexNode));
-HXLINE( 120)		 ::frejo::display::Node _hx_tmp1 = this->node;
-HXDLIN( 120)		_hx_tmp1->set_height(::YGNodeLayoutGetHeight(flexNode));
+            	HX_GC_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_82_init)
+HXLINE(  84)		this->id = (HX_("view",65,32,4f,4e) + ::frejo::core::View_obj::idCounter++);
+HXLINE(  87)		::Reflect_obj::setField(hx::ObjectPtr<OBJ_>(this),HX_("index",12,9b,14,be),-1);
+HXLINE(  89)		this->className = ( (::String)(::Type_obj::getClassName(::Type_obj::getClass(hx::ObjectPtr<OBJ_>(this))).split(HX_(".",2e,00,00,00))->pop()) );
+HXLINE(  91)		this->children = ::Array_obj< ::Dynamic>::__new(0);
+HXLINE(  93)		this->signal =  ::msignal::Signal2_obj::__alloc( HX_CTX ,null(),null());
+HXLINE(  95)		 YGConfigRef flexConfig = ::linc::yoga::NewConfig();
+HXLINE(  96)		 YGNodeRef flexParentNode = ::YGNodeNewWithConfig(flexConfig);
+HXLINE(  97)		 YGNodeRef flexNode = ::YGNodeNewWithConfig(flexConfig);
+HXLINE(  99)		::YGNodeStyleSetFlexDirection(flexParentNode,YGFlexDirectionRow);
+HXLINE( 100)		::YGNodeStyleSetWidth(flexParentNode,( (Float)(this->app->window_width) ));
+HXLINE( 101)		::YGNodeStyleSetHeight(flexParentNode,( (Float)(this->app->window_height) ));
+HXLINE( 102)		::YGNodeStyleSetJustifyContent(flexParentNode,YGJustifyFlexStart);
+HXLINE( 103)		::YGNodeStyleSetAlignItems(flexParentNode,YGAlignStretch);
+HXLINE( 110)		::YGNodeStyleSetWidth(flexNode,( (Float)(this->app->window_width) ));
+HXLINE( 111)		::YGNodeStyleSetHeight(flexNode,(this->app->window_height * ((Float)0.1)));
+HXLINE( 113)		::YGNodeInsertChild(flexParentNode,flexNode,0);
+HXLINE( 115)		::YGNodeCalculateLayout(flexParentNode,( (Float)(YGUndefined) ),( (Float)(YGUndefined) ),YGDirectionLTR);
+HXLINE( 117)		this->node =  ::frejo::display::Node_obj::__alloc( HX_CTX );
+HXLINE( 118)		this->node->flexNode = flexNode;
+HXLINE( 120)		 ::frejo::display::Node _hx_tmp = this->node;
+HXDLIN( 120)		_hx_tmp->set_width(::YGNodeLayoutGetWidth(flexNode));
+HXLINE( 121)		 ::frejo::display::Node _hx_tmp1 = this->node;
+HXDLIN( 121)		_hx_tmp1->set_height(::YGNodeLayoutGetHeight(flexNode));
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(View_obj,init,(void))
 
 void View_obj::dispatch(::String event, ::frejo::core::View view){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_128_dispatch)
-HXLINE( 129)		if (hx::IsNull( view )) {
-HXLINE( 130)			view = hx::ObjectPtr<OBJ_>(this);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_129_dispatch)
+HXLINE( 130)		if (hx::IsNull( view )) {
+HXLINE( 131)			view = hx::ObjectPtr<OBJ_>(this);
             		}
-HXLINE( 131)		this->signal->dispatch(event,view);
+HXLINE( 132)		this->signal->dispatch(event,view);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC2(View_obj,dispatch,(void))
 
 void View_obj::system_event( ::snow::types::SystemEvent event){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_135_system_event)
-HXDLIN( 135)		::haxe::Log_obj::trace(event,hx::SourceInfo(HX_("src/frejo/core/View.hx",45,5e,fa,87),135,HX_("frejo.core.View",24,32,e4,35),HX_("system_event",8a,03,2d,20)));
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_136_system_event)
+HXDLIN( 136)		::haxe::Log_obj::trace(event,hx::SourceInfo(HX_("src/frejo/core/View.hx",45,5e,fa,87),136,HX_("frejo.core.View",24,32,e4,35),HX_("system_event",8a,03,2d,20)));
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(View_obj,system_event,(void))
 
 ::String View_obj::toString(){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_139_toString)
-HXDLIN( 139)		return ((((HX_("",00,00,00,00) + this->className) + HX_("(",28,00,00,00)) + this->id) + HX_(")",29,00,00,00));
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_140_toString)
+HXDLIN( 140)		return ((((HX_("",00,00,00,00) + this->className) + HX_("(",28,00,00,00)) + this->id) + HX_(")",29,00,00,00));
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(View_obj,toString,return )
 
 int View_obj::set_index(int i){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_142_set_index)
-HXLINE( 143)		if ((this->index != i)) {
-HXLINE( 144)			this->index = i;
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_143_set_index)
+HXLINE( 144)		if ((this->index != i)) {
+HXLINE( 145)			this->index = i;
             		}
-HXLINE( 147)		return this->index;
+HXLINE( 148)		return this->index;
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(View_obj,set_index,return )
 
 void View_obj::addChild( ::frejo::core::View view){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_156_addChild)
-HXLINE( 157)		view->init();
-HXLINE( 158)		view->signal->add(this->dispatch_dyn()).StaticCast<  ::msignal::Slot2 >();
-HXLINE( 159)		view->parent = hx::ObjectPtr<OBJ_>(this);
-HXLINE( 160)		view->set_index(this->children->length);
-HXLINE( 162)		this->node->addChild(view->node);
-HXLINE( 164)		this->children->push(view);
-HXLINE( 165)		this->dispatch(HX_("added",c0,d4,43,1c),view);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_157_addChild)
+HXLINE( 158)		view->init();
+HXLINE( 159)		view->signal->add(this->dispatch_dyn()).StaticCast<  ::msignal::Slot2 >();
+HXLINE( 160)		view->parent = hx::ObjectPtr<OBJ_>(this);
+HXLINE( 161)		view->set_index(this->children->length);
+HXLINE( 163)		this->node->addChild(view->node);
+HXLINE( 165)		this->children->push(view);
+HXLINE( 166)		this->dispatch(HX_("added",c0,d4,43,1c),view);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(View_obj,addChild,(void))
 
 void View_obj::removeChild( ::frejo::core::View child){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_174_removeChild)
-HXLINE( 175)		child->destroy();
-HXLINE( 176)		this->children->remove(child);
-HXLINE( 177)		this->node->removeChild(child->node);
-HXLINE( 178)		this->dispatch(HX_("removed",a0,1f,00,f3),child);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_175_removeChild)
+HXLINE( 176)		child->destroy();
+HXLINE( 177)		this->children->remove(child);
+HXLINE( 178)		this->node->removeChild(child->node);
+HXLINE( 179)		this->dispatch(HX_("removed",a0,1f,00,f3),child);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(View_obj,removeChild,(void))
 
 void View_obj::update(Float dt){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_186_update)
-HXDLIN( 186)		this->node->update(dt);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_187_update)
+HXDLIN( 187)		this->node->update(dt);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(View_obj,update,(void))
 
 void View_obj::draw(){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_193_draw)
-HXDLIN( 193)		this->node->draw();
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_194_draw)
+HXDLIN( 194)		this->node->draw();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(View_obj,draw,(void))
 
 void View_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_200_destroy)
-HXDLIN( 200)		int _g = 0;
-HXDLIN( 200)		::Array< ::Dynamic> _g1 = this->children;
-HXDLIN( 200)		while((_g < _g1->length)){
-HXDLIN( 200)			 ::frejo::core::View child = _g1->__get(_g).StaticCast<  ::frejo::core::View >();
-HXDLIN( 200)			_g = (_g + 1);
-HXLINE( 201)			this->removeChild(child);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_201_destroy)
+HXDLIN( 201)		int _g = 0;
+HXDLIN( 201)		::Array< ::Dynamic> _g1 = this->children;
+HXDLIN( 201)		while((_g < _g1->length)){
+HXDLIN( 201)			 ::frejo::core::View child = _g1->__get(_g).StaticCast<  ::frejo::core::View >();
+HXDLIN( 201)			_g = (_g + 1);
+HXLINE( 202)			this->removeChild(child);
             		}
             	}
 
@@ -462,20 +462,20 @@ void View_obj::__register()
 void View_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_27_boot)
-HXDLIN(  27)		idCounter = 0;
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_28_boot)
+HXDLIN(  28)		idCounter = 0;
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_55_boot)
-HXDLIN(  55)		ADDED = HX_("added",c0,d4,43,1c);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_56_boot)
+HXDLIN(  56)		ADDED = HX_("added",c0,d4,43,1c);
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_60_boot)
-HXDLIN(  60)		REMOVED = HX_("removed",a0,1f,00,f3);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_61_boot)
+HXDLIN(  61)		REMOVED = HX_("removed",a0,1f,00,f3);
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_65_boot)
-HXDLIN(  65)		ACTIONED = HX_("actioned",95,6d,15,e1);
+            	HX_STACKFRAME(&_hx_pos_2bf6e5ed7dffa95e_66_boot)
+HXDLIN(  66)		ACTIONED = HX_("actioned",95,6d,15,e1);
             	}
 }
 

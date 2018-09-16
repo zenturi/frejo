@@ -9,6 +9,7 @@
 -D xcode-build
 -D hxcpp_static_std
 -D HXCPP_CPP11
+-D NO_PRECOMPILED_HEADERS
 -D opengl_es2
 -D snow_native
 -D linc_opengl_GLES
@@ -18,6 +19,7 @@
 -D mmvc
 -D minject
 -D msignal
+-D actuate
 -D hxcpp
 -D linc_openal
 -D linc_timestamp
@@ -28,6 +30,7 @@
 -cp bin/ios.build/haxe
 -cp src/
 -lib hxcpp
+-lib actuate
 -lib msignal
 -lib minject
 -lib msignal
@@ -46,6 +49,6 @@
 --macro snow.Set.runtime("snow.modules.sdl.Runtime")
 --macro snow.Set.audio("snow.modules.openal.Audio")
 --macro snow.Set.io("snow.modules.sdl.IO")
--dce std
+-dce full
 -debug
 bin/ios.build/snow.hxml

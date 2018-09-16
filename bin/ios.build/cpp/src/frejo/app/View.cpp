@@ -42,7 +42,6 @@ bool View_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::mmvc::api::IViewContainer_obj _hx_frejo_app_View__hx_mmvc_api_IViewContainer= {
-	( bool (hx::Object::*)( ::Dynamic))&::frejo::app::View_obj::isAdded,
 };
 
 void *View_obj::_hx_getInterface(int inHash) {

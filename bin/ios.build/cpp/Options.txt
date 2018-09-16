@@ -1,4 +1,6 @@
 HXCPP_CPP11=1
+NO_PRECOMPILED_HEADERS=1
+actuate=1.8.7
 arch-armv7=1
 arch_armv7=1
 haxe3=1

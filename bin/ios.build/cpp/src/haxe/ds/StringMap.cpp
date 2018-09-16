@@ -13,7 +13,6 @@ HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_60_set,"haxe.ds.StringMap","set",0
 HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_64_get,"haxe.ds.StringMap","get",0x0f0ea0fc,"haxe.ds.StringMap.get","/usr/local/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",64,0x61d6228c)
 HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_68_exists,"haxe.ds.StringMap","exists",0xd35fc136,"haxe.ds.StringMap.exists","/usr/local/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",68,0x61d6228c)
 HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_72_remove,"haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/local/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",72,0x61d6228c)
-HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_75_keys,"haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/local/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",75,0x61d6228c)
 HX_LOCAL_STACK_FRAME(_hx_pos_8577865ab46301b9_80_iterator,"haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/local/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",80,0x61d6228c)
 namespace haxe{
 namespace ds{
@@ -83,15 +82,6 @@ HXDLIN(  72)		return  ::__string_hash_remove(this->h,key);
 
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,remove,return )
 
- ::Dynamic StringMap_obj::keys(){
-            	HX_STACKFRAME(&_hx_pos_8577865ab46301b9_75_keys)
-HXLINE(  76)		::Array< ::String > a =  ::__string_hash_keys(this->h);
-HXLINE(  77)		return a->iterator();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,keys,return )
-
  ::Dynamic StringMap_obj::iterator(){
             	HX_STACKFRAME(&_hx_pos_8577865ab46301b9_80_iterator)
 HXLINE(  81)		::cpp::VirtualArray a =  ::__string_hash_values(this->h);
@@ -141,9 +131,6 @@ hx::Val StringMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
 		if (HX_FIELD_EQ(inName,"get") ) { return hx::Val( get_dyn() ); }
 		break;
-	case 4:
-		if (HX_FIELD_EQ(inName,"keys") ) { return hx::Val( keys_dyn() ); }
-		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"exists") ) { return hx::Val( exists_dyn() ); }
 		if (HX_FIELD_EQ(inName,"remove") ) { return hx::Val( remove_dyn() ); }
@@ -183,7 +170,6 @@ static ::String StringMap_obj_sMemberFields[] = {
 	HX_("get",96,80,4e,00),
 	HX_("exists",dc,1d,e0,bf),
 	HX_("remove",44,9c,88,04),
-	HX_("keys",f4,e1,06,47),
 	HX_("iterator",ee,49,9a,93),
 	::String(null()) };
 

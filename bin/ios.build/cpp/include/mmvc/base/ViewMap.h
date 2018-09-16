@@ -60,31 +60,12 @@ class HXCPP_CLASS_ATTRIBUTES ViewMap_obj : public  ::mmvc::base::ViewMapBase_obj
 		::cpp::VirtualArray mappedPackages;
 		 ::haxe::ds::ObjectMap mappedTypes;
 		 ::haxe::ds::ObjectMap injectedViews;
-		void mapPackage(::String packageName);
-		::Dynamic mapPackage_dyn();
-
-		void unmapPackage(::String packageName);
-		::Dynamic unmapPackage_dyn();
-
-		void mapType(hx::Class type);
-		::Dynamic mapType_dyn();
-
-		void unmapType(hx::Class type);
-		::Dynamic unmapType_dyn();
-
-		bool hasType(hx::Class type);
-		::Dynamic hasType_dyn();
-
-		bool hasPackage(::String packageName);
-		::Dynamic hasPackage_dyn();
-
 		void addListeners();
 
 		void removeListeners();
 
 		void onViewAdded( ::Dynamic view);
-
-		void onViewRemoved( ::Dynamic view);
+		::Dynamic onViewAdded_dyn();
 
 		void injectInto( ::Dynamic view);
 		::Dynamic injectInto_dyn();

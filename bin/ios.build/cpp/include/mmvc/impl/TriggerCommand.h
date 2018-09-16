@@ -61,13 +61,6 @@ class HXCPP_CLASS_ATTRIBUTES TriggerCommand_obj : public hx::Object
 		 ::minject::Injector injector;
 		::Dynamic mediatorMap;
 		::Dynamic triggerMap;
-		 ::Dynamic trigger;
-		void execute();
-		::Dynamic execute_dyn();
-
-		void dispatch( ::Dynamic trigger);
-		::Dynamic dispatch_dyn();
-
 };
 
 } // end namespace mmvc

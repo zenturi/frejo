@@ -15,8 +15,6 @@ HX_DEFINE_STACK_FRAME(_hx_pos_18d450fbef7d72d5_484_new,"minject.InjecteeSet","ne
 HX_LOCAL_STACK_FRAME(_hx_pos_18d450fbef7d72d5_491_add,"minject.InjecteeSet","add",0x1008f054,"minject.InjecteeSet.add","minject/Injector.hx",491,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_18d450fbef7d72d5_500_contains,"minject.InjecteeSet","contains",0x55d7030c,"minject.InjecteeSet.contains","minject/Injector.hx",500,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_18d450fbef7d72d5_509_remove,"minject.InjecteeSet","remove",0xe5723ff1,"minject.InjecteeSet.remove","minject/Injector.hx",509,0x21627919)
-HX_LOCAL_STACK_FRAME(_hx_pos_18d450fbef7d72d5_516_delete,"minject.InjecteeSet","delete",0x4bc263d8,"minject.InjecteeSet.delete","minject/Injector.hx",516,0x21627919)
-HX_LOCAL_STACK_FRAME(_hx_pos_18d450fbef7d72d5_526_iterator,"minject.InjecteeSet","iterator",0xbcf5f2db,"minject.InjecteeSet.iterator","minject/Injector.hx",526,0x21627919)
 namespace minject{
 
 void InjecteeSet_obj::__construct(){
@@ -63,22 +61,6 @@ HXDLIN( 509)		this->map->remove(value);
 
 HX_DEFINE_DYNAMIC_FUNC1(InjecteeSet_obj,remove,(void))
 
-void InjecteeSet_obj::_hx_delete( ::Dynamic value){
-            	HX_STACKFRAME(&_hx_pos_18d450fbef7d72d5_516_delete)
-HXDLIN( 516)		this->remove(value);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(InjecteeSet_obj,_hx_delete,(void))
-
- ::Dynamic InjecteeSet_obj::iterator(){
-            	HX_STACKFRAME(&_hx_pos_18d450fbef7d72d5_526_iterator)
-HXDLIN( 526)		return this->map->iterator();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(InjecteeSet_obj,iterator,return )
-
 
 hx::ObjectPtr< InjecteeSet_obj > InjecteeSet_obj::__new() {
 	hx::ObjectPtr< InjecteeSet_obj > __this = new InjecteeSet_obj();
@@ -118,11 +100,9 @@ hx::Val InjecteeSet_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"remove") ) { return hx::Val( remove_dyn() ); }
-		if (HX_FIELD_EQ(inName,"delete") ) { return hx::Val( _hx_delete_dyn() ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"contains") ) { return hx::Val( contains_dyn() ); }
-		if (HX_FIELD_EQ(inName,"iterator") ) { return hx::Val( iterator_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -155,8 +135,6 @@ static ::String InjecteeSet_obj_sMemberFields[] = {
 	HX_("add",21,f2,49,00),
 	HX_("contains",1f,5a,7b,2c),
 	HX_("remove",44,9c,88,04),
-	HX_("delete",2b,c0,d8,6a),
-	HX_("iterator",ee,49,9a,93),
 	::String(null()) };
 
 hx::Class InjecteeSet_obj::__mClass;

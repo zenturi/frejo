@@ -25,7 +25,6 @@ HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_42_getResponse,"minject.InjectionC
 HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_55_hasResponse,"minject.InjectionConfig","hasResponse",0x3c903c36,"minject.InjectionConfig.hasResponse","minject/InjectionConfig.hx",55,0x0282ba76)
 HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_60_hasOwnResponse,"minject.InjectionConfig","hasOwnResponse",0xa69df452,"minject.InjectionConfig.hasOwnResponse","minject/InjectionConfig.hx",60,0x0282ba76)
 HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_64_setResult,"minject.InjectionConfig","setResult",0x3f10719a,"minject.InjectionConfig.setResult","minject/InjectionConfig.hx",64,0x0282ba76)
-HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_79_setInjector,"minject.InjectionConfig","setInjector",0x172ca3f1,"minject.InjectionConfig.setInjector","minject/InjectionConfig.hx",79,0x0282ba76)
 HX_LOCAL_STACK_FRAME(_hx_pos_1810769a69ce048d_83_toString,"minject.InjectionConfig","toString",0x08088591,"minject.InjectionConfig.toString","minject/InjectionConfig.hx",83,0x0282ba76)
 namespace minject{
 
@@ -105,14 +104,6 @@ HXLINE(  74)		this->result = result;
 
 HX_DEFINE_DYNAMIC_FUNC1(InjectionConfig_obj,setResult,(void))
 
-void InjectionConfig_obj::setInjector( ::minject::Injector injector){
-            	HX_STACKFRAME(&_hx_pos_1810769a69ce048d_79_setInjector)
-HXDLIN(  79)		this->injector = injector;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(InjectionConfig_obj,setInjector,(void))
-
 ::String InjectionConfig_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_1810769a69ce048d_83_toString)
 HXLINE(  84)		::String named;
@@ -191,7 +182,6 @@ hx::Val InjectionConfig_obj::__Field(const ::String &inName,hx::PropertyAccess i
 	case 11:
 		if (HX_FIELD_EQ(inName,"getResponse") ) { return hx::Val( getResponse_dyn() ); }
 		if (HX_FIELD_EQ(inName,"hasResponse") ) { return hx::Val( hasResponse_dyn() ); }
-		if (HX_FIELD_EQ(inName,"setInjector") ) { return hx::Val( setInjector_dyn() ); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"injectionName") ) { return hx::Val( injectionName ); }
@@ -249,7 +239,6 @@ static ::String InjectionConfig_obj_sMemberFields[] = {
 	HX_("hasResponse",fb,93,c3,74),
 	HX_("hasOwnResponse",ad,05,12,54),
 	HX_("setResult",1f,de,2b,68),
-	HX_("setInjector",b6,fb,5f,4f),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

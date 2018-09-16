@@ -62,8 +62,6 @@ class HXCPP_CLASS_ATTRIBUTES AudioDataOGG_obj : public  ::snow::types::AudioData
 
 		::cpp::Pointer<  SDL_RWops > handle;
 		::cpp::Pointer<  OggVorbis_File > oggfile;
-		void destroy();
-
 		bool seek(int _to);
 
 		::Array< int > portion( ::snow::api::buffers::ArrayBufferView _into,int _start,int _len,::Array< int > _into_result);

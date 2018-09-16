@@ -4,14 +4,8 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_snow_Snow
 #include <snow/Snow.h>
-#endif
-#ifndef INCLUDED_snow_systems_audio_Audio
-#include <snow/systems/audio/Audio.h>
 #endif
 #ifndef INCLUDED_snow_systems_audio_AudioInstance
 #include <snow/systems/audio/AudioInstance.h>
@@ -28,7 +22,6 @@ HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_42_instance,"snow.systems.audio.Au
 HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_55_bytes_to_seconds,"snow.systems.audio.AudioSource","bytes_to_seconds",0x78a40c19,"snow.systems.audio.AudioSource.bytes_to_seconds","snow/systems/audio/AudioSource.hx",55,0x74a7e05d)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_65_seconds_to_bytes,"snow.systems.audio.AudioSource","seconds_to_bytes",0x3f4e0971,"snow.systems.audio.AudioSource.seconds_to_bytes","snow/systems/audio/AudioSource.hx",65,0x74a7e05d)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_77_duration,"snow.systems.audio.AudioSource","duration",0x3686825e,"snow.systems.audio.AudioSource.duration","snow/systems/audio/AudioSource.hx",77,0x74a7e05d)
-HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_81_destroy,"snow.systems.audio.AudioSource","destroy",0x67426930,"snow.systems.audio.AudioSource.destroy","snow/systems/audio/AudioSource.hx",81,0x74a7e05d)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad66cd40eb68e048_114_instance_killed,"snow.systems.audio.AudioSource","instance_killed",0xe0207c5d,"snow.systems.audio.AudioSource.instance_killed","snow/systems/audio/AudioSource.hx",114,0x74a7e05d)
 namespace snow{
 namespace systems{
@@ -36,7 +29,6 @@ namespace audio{
 
 void AudioSource_obj::__construct( ::snow::Snow _app, ::snow::types::AudioData _data){
             	HX_STACKFRAME(&_hx_pos_ad66cd40eb68e048_8_new)
-HXLINE(  21)		this->destroyed = false;
 HXLINE(  19)		this->stream_buffer_count = 2;
 HXLINE(  16)		this->stream_buffer_length = 176400;
 HXLINE(  31)		this->app = _app;
@@ -112,32 +104,6 @@ HXDLIN(  77)		return this->bytes_to_seconds(this->data->length);
 
 HX_DEFINE_DYNAMIC_FUNC0(AudioSource_obj,duration,return )
 
-void AudioSource_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_ad66cd40eb68e048_81_destroy)
-HXLINE(  83)		if (this->destroyed) {
-HXLINE(  84)			 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN(  84)			_hx_tmp((HX_("i / audiosource / ",08,f6,89,12) + HX_("destroying already destroyed source!",1f,cb,87,83)),hx::SourceInfo(HX_("snow/systems/audio/AudioSource.hx",5d,e0,a7,74),84,HX_("snow.systems.audio.AudioSource",a4,76,9e,c4),HX_("destroy",fa,2c,86,24)));
-HXLINE(  85)			return;
-            		}
-HXLINE(  88)		this->destroyed = true;
-HXLINE(  90)		int c = this->instances->length;
-HXLINE(  91)		int i = 0;
-HXLINE(  95)		while((i < c)){
-HXLINE(  96)			 ::snow::systems::audio::AudioInstance _instance = this->instances->pop().StaticCast<  ::snow::systems::audio::AudioInstance >();
-HXLINE(  97)			_instance->destroy();
-HXLINE(  98)			_instance = null();
-HXLINE(  99)			i = (i + 1);
-            		}
-HXLINE( 102)		this->app->audio->emit_snow_systems_audio_AudioSource(2,hx::ObjectPtr<OBJ_>(this));
-HXLINE( 104)		this->data->destroy();
-HXLINE( 105)		this->data = null();
-HXLINE( 106)		this->instances = null();
-HXLINE( 107)		this->app = null();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(AudioSource_obj,destroy,(void))
-
 void AudioSource_obj::instance_killed( ::snow::systems::audio::AudioInstance _instance){
             	HX_STACKFRAME(&_hx_pos_ad66cd40eb68e048_114_instance_killed)
 HXDLIN( 114)		this->instances->remove(_instance);
@@ -171,7 +137,6 @@ void AudioSource_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(data,"data");
 	HX_MARK_MEMBER_NAME(stream_buffer_length,"stream_buffer_length");
 	HX_MARK_MEMBER_NAME(stream_buffer_count,"stream_buffer_count");
-	HX_MARK_MEMBER_NAME(destroyed,"destroyed");
 	HX_MARK_MEMBER_NAME(source_id,"source_id");
 	HX_MARK_MEMBER_NAME(instances,"instances");
 	HX_MARK_END_CLASS();
@@ -183,7 +148,6 @@ void AudioSource_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(data,"data");
 	HX_VISIT_MEMBER_NAME(stream_buffer_length,"stream_buffer_length");
 	HX_VISIT_MEMBER_NAME(stream_buffer_count,"stream_buffer_count");
-	HX_VISIT_MEMBER_NAME(destroyed,"destroyed");
 	HX_VISIT_MEMBER_NAME(source_id,"source_id");
 	HX_VISIT_MEMBER_NAME(instances,"instances");
 }
@@ -197,15 +161,11 @@ hx::Val AudioSource_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 	case 4:
 		if (HX_FIELD_EQ(inName,"data") ) { return hx::Val( data ); }
 		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
-		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"instance") ) { return hx::Val( instance_dyn() ); }
 		if (HX_FIELD_EQ(inName,"duration") ) { return hx::Val( duration_dyn() ); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"destroyed") ) { return hx::Val( destroyed ); }
 		if (HX_FIELD_EQ(inName,"source_id") ) { return hx::Val( source_id ); }
 		if (HX_FIELD_EQ(inName,"instances") ) { return hx::Val( instances ); }
 		break;
@@ -235,7 +195,6 @@ hx::Val AudioSource_obj::__SetField(const ::String &inName,const hx::Val &inValu
 		if (HX_FIELD_EQ(inName,"data") ) { data=inValue.Cast<  ::snow::types::AudioData >(); return inValue; }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"destroyed") ) { destroyed=inValue.Cast< bool >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"source_id") ) { source_id=inValue.Cast< ::String >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"instances") ) { instances=inValue.Cast< ::Array< ::Dynamic> >(); return inValue; }
 		break;
@@ -254,7 +213,6 @@ void AudioSource_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("data",2a,56,63,42));
 	outFields->push(HX_("stream_buffer_length",46,6e,35,c0));
 	outFields->push(HX_("stream_buffer_count",6f,b7,d9,d0));
-	outFields->push(HX_("destroyed",d9,37,27,f4));
 	outFields->push(HX_("source_id",ff,7b,06,69));
 	outFields->push(HX_("instances",3e,83,1a,4b));
 	super::__GetFields(outFields);
@@ -266,7 +224,6 @@ static hx::StorageInfo AudioSource_obj_sMemberStorageInfo[] = {
 	{hx::fsObject /*::snow::types::AudioData*/ ,(int)offsetof(AudioSource_obj,data),HX_("data",2a,56,63,42)},
 	{hx::fsInt,(int)offsetof(AudioSource_obj,stream_buffer_length),HX_("stream_buffer_length",46,6e,35,c0)},
 	{hx::fsInt,(int)offsetof(AudioSource_obj,stream_buffer_count),HX_("stream_buffer_count",6f,b7,d9,d0)},
-	{hx::fsBool,(int)offsetof(AudioSource_obj,destroyed),HX_("destroyed",d9,37,27,f4)},
 	{hx::fsString,(int)offsetof(AudioSource_obj,source_id),HX_("source_id",ff,7b,06,69)},
 	{hx::fsObject /*Array< ::Dynamic >*/ ,(int)offsetof(AudioSource_obj,instances),HX_("instances",3e,83,1a,4b)},
 	{ hx::fsUnknown, 0, null()}
@@ -279,14 +236,12 @@ static ::String AudioSource_obj_sMemberFields[] = {
 	HX_("data",2a,56,63,42),
 	HX_("stream_buffer_length",46,6e,35,c0),
 	HX_("stream_buffer_count",6f,b7,d9,d0),
-	HX_("destroyed",d9,37,27,f4),
 	HX_("source_id",ff,7b,06,69),
 	HX_("instances",3e,83,1a,4b),
 	HX_("instance",95,1f,e1,59),
 	HX_("bytes_to_seconds",0f,7f,12,ef),
 	HX_("seconds_to_bytes",67,7c,bc,b5),
 	HX_("duration",54,0f,8e,14),
-	HX_("destroy",fa,2c,86,24),
 	HX_("instance_killed",27,1a,dc,6d),
 	::String(null()) };
 

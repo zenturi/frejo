@@ -6,7 +6,6 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_b4793fdf819cc060_603_new,"snow.types.WindowEvent","new",0xbcf7e3bc,"snow.types.WindowEvent.new","snow/types/Types.hx",603,0x72b41ce7)
-HX_LOCAL_STACK_FRAME(_hx_pos_b4793fdf819cc060_618_set,"snow.types.WindowEvent","set",0xbcfbaefe,"snow.types.WindowEvent.set","snow/types/Types.hx",618,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_b4793fdf819cc060_626_toString,"snow.types.WindowEvent","toString",0xb9fb0fd0,"snow.types.WindowEvent.toString","snow/types/Types.hx",626,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -32,18 +31,6 @@ Dynamic WindowEvent_obj::__Create(hx::DynamicArray inArgs)
 bool WindowEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x1a0debd4;
 }
-
-void WindowEvent_obj::set(int _type,Float _timestamp,int _window_id, ::Dynamic _x, ::Dynamic _y){
-            	HX_STACKFRAME(&_hx_pos_b4793fdf819cc060_618_set)
-HXLINE( 619)		this->type = _type;
-HXLINE( 620)		this->timestamp = _timestamp;
-HXLINE( 621)		this->window_id = _window_id;
-HXLINE( 622)		this->x = _x;
-HXLINE( 623)		this->y = _y;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC5(WindowEvent_obj,set,(void))
 
 ::String WindowEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_b4793fdf819cc060_626_toString)
@@ -152,9 +139,6 @@ hx::Val WindowEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 		if (HX_FIELD_EQ(inName,"x") ) { return hx::Val( x ); }
 		if (HX_FIELD_EQ(inName,"y") ) { return hx::Val( y ); }
 		break;
-	case 3:
-		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
-		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"type") ) { return hx::Val( type ); }
 		break;
@@ -213,7 +197,6 @@ static ::String WindowEvent_obj_sMemberFields[] = {
 	HX_("window_id",0a,f4,3c,96),
 	HX_("x",78,00,00,00),
 	HX_("y",79,00,00,00),
-	HX_("set",a2,9b,57,00),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

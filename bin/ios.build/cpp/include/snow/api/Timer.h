@@ -49,23 +49,14 @@ class HXCPP_CLASS_ATTRIBUTES Timer_obj : public hx::Object
 
 		static void __boot();
 		static ::Array< ::Dynamic> running_timers;
-		static  ::Dynamic measure( ::Dynamic f, ::Dynamic pos);
-		static ::Dynamic measure_dyn();
-
 		static void update();
 		static ::Dynamic update_dyn();
-
-		static  ::snow::api::Timer delay(Float _time, ::Dynamic _f);
-		static ::Dynamic delay_dyn();
 
 		Float time;
 		Float fire_at;
 		bool running;
 		::Dynamic run;
 		inline ::Dynamic &run_dyn() {return run; }
-
-		void stop();
-		::Dynamic stop_dyn();
 
 };
 

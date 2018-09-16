@@ -9,12 +9,6 @@
 #ifndef INCLUDED_mmvc_api_ITriggerMap
 #include <mmvc/api/ITriggerMap.h>
 #endif
-HX_DECLARE_CLASS1(haxe,IMap)
-HX_DECLARE_CLASS2(haxe,ds,BalancedTree)
-HX_DECLARE_CLASS2(haxe,ds,EnumValueMap)
-HX_DECLARE_CLASS2(haxe,ds,IntMap)
-HX_DECLARE_CLASS2(haxe,ds,ObjectMap)
-HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS1(minject,Injector)
 HX_DECLARE_CLASS2(mmvc,api,ITriggerMap)
 HX_DECLARE_CLASS2(mmvc,base,TriggerMap)
@@ -57,83 +51,6 @@ class HXCPP_CLASS_ATTRIBUTES TriggerMap_obj : public hx::Object
 		::String __ToString() const { return HX_("TriggerMap",64,84,93,da); }
 
 		 ::minject::Injector injector;
-		 ::haxe::ds::StringMap classToCommand;
-		 ::haxe::ds::StringMap stringToCommand;
-		 ::haxe::ds::EnumValueMap enumValueToCommand;
-		 ::haxe::ds::IntMap intToCommand;
-		 ::haxe::ds::ObjectMap instanceToCommand;
-		void map( ::Dynamic trigger,hx::Class command);
-		::Dynamic map_dyn();
-
-		void unmap( ::Dynamic trigger,hx::Class command);
-		::Dynamic unmap_dyn();
-
-		void dispatch( ::Dynamic trigger);
-		::Dynamic dispatch_dyn();
-
-		void mapClass(hx::Class trigger,hx::Class command);
-		::Dynamic mapClass_dyn();
-
-		void unmapClass(hx::Class trigger,hx::Class command);
-		::Dynamic unmapClass_dyn();
-
-		void dispatchClass( ::Dynamic trigger);
-		::Dynamic dispatchClass_dyn();
-
-		void mapString(::String trigger,hx::Class command);
-		::Dynamic mapString_dyn();
-
-		void unmapString(::String trigger,hx::Class command);
-		::Dynamic unmapString_dyn();
-
-		void dispatchString(::String trigger);
-		::Dynamic dispatchString_dyn();
-
-		void mapEnumValue( ::Dynamic trigger,hx::Class command);
-		::Dynamic mapEnumValue_dyn();
-
-		void unmapEnumValue( ::Dynamic trigger,hx::Class command);
-		::Dynamic unmapEnumValue_dyn();
-
-		void dispatchEnumValue( ::Dynamic trigger);
-		::Dynamic dispatchEnumValue_dyn();
-
-		void mapInt(int trigger,hx::Class command);
-		::Dynamic mapInt_dyn();
-
-		void unmapInt(int trigger,hx::Class command);
-		::Dynamic unmapInt_dyn();
-
-		void dispatchInt(int trigger);
-		::Dynamic dispatchInt_dyn();
-
-		void mapInstance( ::Dynamic trigger,hx::Class command);
-		::Dynamic mapInstance_dyn();
-
-		void unmapInstance( ::Dynamic trigger,hx::Class command);
-		::Dynamic unmapInstance_dyn();
-
-		void dispatchInstance( ::Dynamic trigger);
-		::Dynamic dispatchInstance_dyn();
-
-		void invokeCommand( ::Dynamic trigger,hx::Class triggerClass,hx::Class commandClass);
-		::Dynamic invokeCommand_dyn();
-
-		bool isClass( ::Dynamic source);
-		::Dynamic isClass_dyn();
-
-		bool isString( ::Dynamic source);
-		::Dynamic isString_dyn();
-
-		bool isEnumValue( ::Dynamic source);
-		::Dynamic isEnumValue_dyn();
-
-		bool isInt( ::Dynamic source);
-		::Dynamic isInt_dyn();
-
-		bool isClassInstance( ::Dynamic source);
-		::Dynamic isClassInstance_dyn();
-
 };
 
 } // end namespace mmvc

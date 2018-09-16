@@ -68,9 +68,6 @@ HXLINE( 606)		( ( ::snow::types::WindowEvent)(__this) )->type = 0;
 		int window_id;
 		 ::Dynamic x;
 		 ::Dynamic y;
-		void set(int _type,Float _timestamp,int _window_id, ::Dynamic _x, ::Dynamic _y);
-		::Dynamic set_dyn();
-
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

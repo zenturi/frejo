@@ -4,6 +4,8 @@ import snow.modules.opengl.GL;
 import msignal.Signal;
 import snow.types.Types;
 
+
+@:keepSub
 class Application extends snow.App {
 	public var window_width:Int = 640;
 	public var window_height:Int = 320;
@@ -78,7 +80,7 @@ class Application extends snow.App {
 	// draw views
 	function draw() {
 		GL.viewport(0, 0, render_width, render_height);
-		GL.clearColor(1.0/2, 1.0/3, 1.0, 1.0);
+		GL.clearColor(0.7, 0.7, 0.7, 0.3);
 		GL.clear(GL.COLOR_BUFFER_BIT | GL.DEPTH_BUFFER_BIT | GL.STENCIL_BUFFER_BIT);
 
 		applicationView.draw();

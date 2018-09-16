@@ -5,26 +5,11 @@
 #define INCLUDED_92958f0660df95c6
 #include "linc_sdl.h"
 #endif
-#ifndef INCLUDED_Std
-#include <Std.h>
-#endif
 #ifndef INCLUDED_haxe_Log
 #include <haxe/Log.h>
 #endif
-#ifndef INCLUDED_haxe_crypto_Base64
-#include <haxe/crypto/Base64.h>
-#endif
-#ifndef INCLUDED_haxe_io_Bytes
-#include <haxe/io/Bytes.h>
-#endif
-#ifndef INCLUDED_haxe_io_Path
-#include <haxe/io/Path.h>
-#endif
 #ifndef INCLUDED_snow_Snow
 #include <snow/Snow.h>
-#endif
-#ifndef INCLUDED_snow_api_DebugError
-#include <snow/api/DebugError.h>
 #endif
 #ifndef INCLUDED_snow_api_Promise
 #include <snow/api/Promise.h>
@@ -32,17 +17,11 @@
 #ifndef INCLUDED_snow_api_buffers_ArrayBufferView
 #include <snow/api/buffers/ArrayBufferView.h>
 #endif
-#ifndef INCLUDED_snow_api_buffers_TAError
-#include <snow/api/buffers/TAError.h>
-#endif
 #ifndef INCLUDED_snow_core_native_io_IO
 #include <snow/core/native/io/IO.h>
 #endif
 #ifndef INCLUDED_snow_modules_interfaces_IO
 #include <snow/modules/interfaces/IO.h>
-#endif
-#ifndef INCLUDED_snow_systems_io_IO
-#include <snow/systems/io/IO.h>
 #endif
 #ifndef INCLUDED_snow_types_Error
 #include <snow/types/Error.h>
@@ -50,29 +29,14 @@
 #ifndef INCLUDED_snow_types_SystemEvent
 #include <snow/types/SystemEvent.h>
 #endif
-#ifndef INCLUDED_sys_FileSystem
-#include <sys/FileSystem.h>
-#endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_bf53fb0d01996642_21_new,"snow.core.native.io.IO","new",0xa08f838d,"snow.core.native.io.IO.new","snow/core/native/io/IO.hx",21,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_22_shutdown,"snow.core.native.io.IO","shutdown",0xf496a649,"snow.core.native.io.IO.shutdown","snow/core/native/io/IO.hx",22,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_23_onevent,"snow.core.native.io.IO","onevent",0xf56e4448,"snow.core.native.io.IO.onevent","snow/core/native/io/IO.hx",23,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_27_app_path,"snow.core.native.io.IO","app_path",0x2c6746f6,"snow.core.native.io.IO.app_path","snow/core/native/io/IO.hx",27,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_33_app_path_prefs,"snow.core.native.io.IO","app_path_prefs",0x8c2f72e7,"snow.core.native.io.IO.app_path_prefs","snow/core/native/io/IO.hx",33,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_40_url_open,"snow.core.native.io.IO","url_open",0x5d77cb8d,"snow.core.native.io.IO.url_open","snow/core/native/io/IO.hx",40,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_50_data_load,"snow.core.native.io.IO","data_load",0x7d549a88,"snow.core.native.io.IO.data_load","snow/core/native/io/IO.hx",50,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_44_data_load,"snow.core.native.io.IO","data_load",0x7d549a88,"snow.core.native.io.IO.data_load","snow/core/native/io/IO.hx",44,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_65_data_save,"snow.core.native.io.IO","data_save",0x81ea8b9f,"snow.core.native.io.IO.data_save","snow/core/native/io/IO.hx",65,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_84_string_save_path,"snow.core.native.io.IO","string_save_path",0xb8b4e1ac,"snow.core.native.io.IO.string_save_path","snow/core/native/io/IO.hx",84,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_95_string_slot_destroy,"snow.core.native.io.IO","string_slot_destroy",0x9973ab14,"snow.core.native.io.IO.string_slot_destroy","snow/core/native/io/IO.hx",95,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_112_string_slot_save,"snow.core.native.io.IO","string_slot_save",0x0c1f98e3,"snow.core.native.io.IO.string_slot_save","snow/core/native/io/IO.hx",112,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_121_string_slot_load,"snow.core.native.io.IO","string_slot_load",0x0789a7cc,"snow.core.native.io.IO.string_slot_load","snow/core/native/io/IO.hx",121,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_133_string_slot_encode,"snow.core.native.io.IO","string_slot_encode",0xdc91353c,"snow.core.native.io.IO.string_slot_encode","snow/core/native/io/IO.hx",133,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_143_string_slot_decode,"snow.core.native.io.IO","string_slot_decode",0x479aa054,"snow.core.native.io.IO.string_slot_decode","snow/core/native/io/IO.hx",143,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_155_file_handle,"snow.core.native.io.IO","file_handle",0xa073f678,"snow.core.native.io.IO.file_handle","snow/core/native/io/IO.hx",155,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_162_file_handle_from_mem,"snow.core.native.io.IO","file_handle_from_mem",0xe4ec6767,"snow.core.native.io.IO.file_handle_from_mem","snow/core/native/io/IO.hx",162,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_169_file_read,"snow.core.native.io.IO","file_read",0x3d7c6a26,"snow.core.native.io.IO.file_read","snow/core/native/io/IO.hx",169,0x990c4183)
-HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_176_file_write,"snow.core.native.io.IO","file_write",0x78ff440f,"snow.core.native.io.IO.file_write","snow/core/native/io/IO.hx",176,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_183_file_seek,"snow.core.native.io.IO","file_seek",0x3e25a448,"snow.core.native.io.IO.file_seek","snow/core/native/io/IO.hx",183,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_190_file_tell,"snow.core.native.io.IO","file_tell",0x3ecee101,"snow.core.native.io.IO.file_tell","snow/core/native/io/IO.hx",190,0x990c4183)
 HX_LOCAL_STACK_FRAME(_hx_pos_bf53fb0d01996642_197_file_close,"snow.core.native.io.IO","file_close",0xf108eee8,"snow.core.native.io.IO.file_close","snow/core/native/io/IO.hx",197,0x990c4183)
@@ -104,19 +68,6 @@ bool IO_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::snow::modules::interfaces::IO_obj _hx_snow_core_native_io_IO__hx_snow_modules_interfaces_IO= {
-	( void (hx::Object::*)( ::snow::types::SystemEvent))&::snow::core::native::io::IO_obj::onevent,
-	( void (hx::Object::*)())&::snow::core::native::io::IO_obj::shutdown,
-	( void (hx::Object::*)(::String))&::snow::core::native::io::IO_obj::url_open,
-	(  ::snow::api::Promise (hx::Object::*)(::String, ::Dynamic))&::snow::core::native::io::IO_obj::data_load,
-	( bool (hx::Object::*)(::String, ::snow::api::buffers::ArrayBufferView, ::Dynamic))&::snow::core::native::io::IO_obj::data_save,
-	( ::String (hx::Object::*)())&::snow::core::native::io::IO_obj::app_path,
-	( ::String (hx::Object::*)())&::snow::core::native::io::IO_obj::app_path_prefs,
-	( ::String (hx::Object::*)( ::Dynamic))&::snow::core::native::io::IO_obj::string_save_path,
-	( ::String (hx::Object::*)( ::Dynamic))&::snow::core::native::io::IO_obj::string_slot_load,
-	( ::String (hx::Object::*)(::String))&::snow::core::native::io::IO_obj::string_slot_encode,
-	( ::String (hx::Object::*)(::String))&::snow::core::native::io::IO_obj::string_slot_decode,
-	( bool (hx::Object::*)( ::Dynamic,::String))&::snow::core::native::io::IO_obj::string_slot_save,
-	( bool (hx::Object::*)( ::Dynamic))&::snow::core::native::io::IO_obj::string_slot_destroy,
 };
 
 void *IO_obj::_hx_getInterface(int inHash) {
@@ -143,31 +94,6 @@ void IO_obj::onevent( ::snow::types::SystemEvent _event){
 
 
 HX_DEFINE_DYNAMIC_FUNC1(IO_obj,onevent,(void))
-
-::String IO_obj::app_path(){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_27_app_path)
-HXDLIN(  27)		return HX_("./",41,28,00,00);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(IO_obj,app_path,return )
-
-::String IO_obj::app_path_prefs(){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_33_app_path_prefs)
-HXDLIN(  33)		return HX_("./",41,28,00,00);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(IO_obj,app_path_prefs,return )
-
-void IO_obj::url_open(::String _url){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_40_url_open)
-HXDLIN(  40)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN(  40)		_hx_tmp((HX_("       i / io / ",83,07,f6,c7) + (HX_("native url_open / ",8e,77,8c,59) + _url)),hx::SourceInfo(HX_("snow/core/native/io/IO.hx",83,41,0c,99),40,HX_("snow.core.native.io.IO",1b,b9,31,68),HX_("url_open",da,21,ed,d3)));
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,url_open,(void))
 
  ::snow::api::Promise IO_obj::data_load(::String _path, ::Dynamic _options){
             		HX_BEGIN_LOCAL_FUNC_S3(hx::LocalFunc,_hx_Closure_0, ::snow::core::native::io::IO,_gthis,::String,_path, ::Dynamic,_options) HXARGC(2)
@@ -200,145 +126,6 @@ HXLINE(  50)		return  ::snow::api::Promise_obj::__alloc( HX_CTX , ::Dynamic(new 
 
 HX_DEFINE_DYNAMIC_FUNC2(IO_obj,data_load,return )
 
-bool IO_obj::data_save(::String _path, ::snow::api::buffers::ArrayBufferView _data, ::Dynamic _options){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_65_data_save)
-HXLINE(  67)		bool _binary;
-HXDLIN(  67)		if (hx::IsNotNull( _options )) {
-HXLINE(  67)			_binary = ( (bool)(_options->__Field(HX_("binary",01,bc,0b,ed),hx::paccDynamic)) );
-            		}
-            		else {
-HXLINE(  67)			_binary = false;
-            		}
-HXLINE(  68)		::String _file;
-HXDLIN(  68)		if (_binary) {
-HXLINE(  68)			_file = HX_("wb",0b,68,00,00);
-            		}
-            		else {
-HXLINE(  68)			_file = HX_("w",77,00,00,00);
-            		}
-HXDLIN(  68)		::cpp::Pointer<  SDL_RWops > _file1 = this->file_handle(_path,_file);
-HXLINE(  70)		if (hx::IsNotNull( _file1 )) {
-HXLINE(  72)			::cpp::Pointer<  SDL_RWops > tmp = _file1;
-HXDLIN(  72)			int count = this->file_write(tmp,_data,_data->length,1);
-HXLINE(  74)			::cpp::Pointer<  SDL_RWops > tmp1 = _file1;
-HXDLIN(  74)			this->file_close(tmp1);
-HXLINE(  76)			return (count == 1);
-            		}
-HXLINE(  80)		return false;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC3(IO_obj,data_save,return )
-
-::String IO_obj::string_save_path( ::Dynamic __o__slot){
- ::Dynamic _slot = __o__slot.Default(0);
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_84_string_save_path)
-HXLINE(  86)		::String _pref_path = this->app_path_prefs();
-HXLINE(  87)		::String _path = ::haxe::io::Path_obj::join(::Array_obj< ::String >::__new(2)->init(0,_pref_path)->init(1,(((HX_("",00,00,00,00) + this->app->io->string_save_prefix) + HX_(".",2e,00,00,00)) + _slot)));
-HXLINE(  89)		return ::haxe::io::Path_obj::normalize(_path);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,string_save_path,return )
-
-bool IO_obj::string_slot_destroy( ::Dynamic __o__slot){
- ::Dynamic _slot = __o__slot.Default(0);
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_95_string_slot_destroy)
-HXLINE(  97)		::String _path = this->string_save_path(_slot);
-HXLINE(  98)		bool _result = true;
-HXLINE( 102)		try {
-            			HX_STACK_CATCHABLE( ::Dynamic, 0);
-HXLINE( 103)			::sys::FileSystem_obj::deleteFile(_path);
-            		}
-            		catch( ::Dynamic _hx_e){
-            			if (_hx_e.IsClass<  ::Dynamic >() ){
-            				HX_STACK_BEGIN_CATCH
-            				 ::Dynamic e = _hx_e;
-HXLINE( 105)				_result = false;
-            			}
-            			else {
-            				HX_STACK_DO_THROW(_hx_e);
-            			}
-            		}
-HXLINE( 108)		return _result;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,string_slot_destroy,return )
-
-bool IO_obj::string_slot_save( ::Dynamic __o__slot,::String _contents){
- ::Dynamic _slot = __o__slot.Default(0);
-            	HX_GC_STACKFRAME(&_hx_pos_bf53fb0d01996642_112_string_slot_save)
-HXLINE( 114)		::String _path = this->string_save_path(_slot);
-HXLINE( 115)		 ::haxe::io::Bytes _bytes = ::haxe::io::Bytes_obj::ofString(_contents);
-HXDLIN( 115)		 ::Dynamic _byteLength = null();
-HXDLIN( 115)		if (hx::IsNull( _byteLength )) {
-HXLINE( 115)			_byteLength = _bytes->length;
-            		}
-HXDLIN( 115)		::Array< unsigned char > _buffer = _bytes->b;
-HXDLIN( 115)		int _byteOffset = 0;
-HXDLIN( 115)		int _byteLength1 = ( (int)(_byteLength) );
-HXDLIN( 115)		 ::snow::api::buffers::ArrayBufferView _view =  ::snow::api::buffers::ArrayBufferView_obj::__alloc( HX_CTX ,4);
-HXDLIN( 115)		int _bytes_per_elem = _view->bytesPerElement;
-HXDLIN( 115)		if ((_byteOffset < 0)) {
-HXLINE( 115)			HX_STACK_DO_THROW(::snow::api::buffers::TAError_obj::RangeError(HX_("fromBuffer: byte offset must be positive (> 0)",07,9d,c2,39)));
-            		}
-HXDLIN( 115)		if ((hx::Mod(_byteOffset,_bytes_per_elem) != 0)) {
-HXLINE( 115)			HX_STACK_DO_THROW(::snow::api::buffers::TAError_obj::RangeError(HX_("fromBuffer: byte offset must be aligned with the bytes per element",e2,98,67,08)));
-            		}
-HXDLIN( 115)		int _src_bytelen = _buffer->length;
-HXDLIN( 115)		int _new_range = (_byteOffset + _byteLength1);
-HXDLIN( 115)		if ((_new_range > _src_bytelen)) {
-HXLINE( 115)			HX_STACK_DO_THROW(::snow::api::buffers::TAError_obj::RangeError(HX_("fromBuffer: specified range would exceed the source buffer",98,6f,a0,be)));
-            		}
-HXDLIN( 115)		_view->buffer = _buffer;
-HXDLIN( 115)		_view->byteOffset = _byteOffset;
-HXDLIN( 115)		_view->byteLength = _byteLength1;
-HXDLIN( 115)		_view->length = ::Std_obj::_hx_int((( (Float)(_byteLength1) ) / ( (Float)(_bytes_per_elem) )));
-HXDLIN( 115)		 ::snow::api::buffers::ArrayBufferView _data = _view;
-HXLINE( 117)		return this->data_save(_path,_data,null());
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(IO_obj,string_slot_save,return )
-
-::String IO_obj::string_slot_load( ::Dynamic __o__slot){
- ::Dynamic _slot = __o__slot.Default(0);
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_121_string_slot_load)
-HXLINE( 123)		 ::snow::api::buffers::ArrayBufferView _data = this->_data_load(this->string_save_path(_slot),null());
-HXLINE( 125)		if (hx::IsNull( _data )) {
-HXLINE( 126)			return null();
-            		}
-HXLINE( 129)		return ::haxe::io::Bytes_obj::ofData(_data->buffer)->toString();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,string_slot_load,return )
-
-::String IO_obj::string_slot_encode(::String _string){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_133_string_slot_encode)
-HXLINE( 135)		if (hx::IsNull( _string )) {
-HXLINE( 135)			HX_STACK_DO_THROW(::snow::api::DebugError_obj::null_assertion(HX_("_string was null",8e,d0,63,3a)));
-            		}
-HXLINE( 137)		 ::haxe::io::Bytes _bytes = ::haxe::io::Bytes_obj::ofString(_string);
-HXLINE( 139)		return ::haxe::crypto::Base64_obj::encode(_bytes,null());
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,string_slot_encode,return )
-
-::String IO_obj::string_slot_decode(::String _string){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_143_string_slot_decode)
-HXLINE( 145)		if (hx::IsNull( _string )) {
-HXLINE( 145)			HX_STACK_DO_THROW(::snow::api::DebugError_obj::null_assertion(HX_("_string was null",8e,d0,63,3a)));
-            		}
-HXLINE( 147)		 ::haxe::io::Bytes _bytes = ::haxe::crypto::Base64_obj::decode(_string,null());
-HXLINE( 149)		return _bytes->toString();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(IO_obj,string_slot_decode,return )
-
 ::cpp::Pointer<  SDL_RWops > IO_obj::file_handle(::String _path,::String __o__mode){
 ::String _mode = __o__mode.Default(HX_("rb",b0,63,00,00));
             	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_155_file_handle)
@@ -350,16 +137,6 @@ HXLINE( 158)		return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(IO_obj,file_handle,return )
 
-::cpp::Pointer<  SDL_RWops > IO_obj::file_handle_from_mem( ::snow::api::buffers::ArrayBufferView mem,int size){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_162_file_handle_from_mem)
-HXLINE( 164)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN( 164)		_hx_tmp((HX_("       i / io / ",83,07,f6,c7) + HX_("file_handle_from_mem in code module does nothing.",98,0b,b6,71)),hx::SourceInfo(HX_("snow/core/native/io/IO.hx",83,41,0c,99),164,HX_("snow.core.native.io.IO",1b,b9,31,68),HX_("file_handle_from_mem",34,7d,f0,5b)));
-HXLINE( 165)		return null();
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(IO_obj,file_handle_from_mem,return )
-
 int IO_obj::file_read(::cpp::Pointer<  SDL_RWops > handle, ::snow::api::buffers::ArrayBufferView dest,int size,int maxnum){
             	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_169_file_read)
 HXLINE( 171)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
@@ -369,16 +146,6 @@ HXLINE( 172)		return -1;
 
 
 HX_DEFINE_DYNAMIC_FUNC4(IO_obj,file_read,return )
-
-int IO_obj::file_write(::cpp::Pointer<  SDL_RWops > handle, ::snow::api::buffers::ArrayBufferView src,int size,int num){
-            	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_176_file_write)
-HXLINE( 178)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN( 178)		_hx_tmp((HX_("       i / io / ",83,07,f6,c7) + HX_("file_write in code module does nothing.",30,50,4e,05)),hx::SourceInfo(HX_("snow/core/native/io/IO.hx",83,41,0c,99),178,HX_("snow.core.native.io.IO",1b,b9,31,68),HX_("file_write",9c,87,30,78)));
-HXLINE( 179)		return -1;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC4(IO_obj,file_write,return )
 
 int IO_obj::file_seek(::cpp::Pointer<  SDL_RWops > handle,int offset,int whence){
             	HX_STACKFRAME(&_hx_pos_bf53fb0d01996642_183_file_seek)
@@ -517,42 +284,20 @@ hx::Val IO_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"shutdown") ) { return hx::Val( shutdown_dyn() ); }
-		if (HX_FIELD_EQ(inName,"app_path") ) { return hx::Val( app_path_dyn() ); }
-		if (HX_FIELD_EQ(inName,"url_open") ) { return hx::Val( url_open_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"data_load") ) { return hx::Val( data_load_dyn() ); }
-		if (HX_FIELD_EQ(inName,"data_save") ) { return hx::Val( data_save_dyn() ); }
 		if (HX_FIELD_EQ(inName,"file_read") ) { return hx::Val( file_read_dyn() ); }
 		if (HX_FIELD_EQ(inName,"file_seek") ) { return hx::Val( file_seek_dyn() ); }
 		if (HX_FIELD_EQ(inName,"file_tell") ) { return hx::Val( file_tell_dyn() ); }
 		if (HX_FIELD_EQ(inName,"file_size") ) { return hx::Val( file_size_dyn() ); }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"file_write") ) { return hx::Val( file_write_dyn() ); }
 		if (HX_FIELD_EQ(inName,"file_close") ) { return hx::Val( file_close_dyn() ); }
 		if (HX_FIELD_EQ(inName,"_data_load") ) { return hx::Val( _data_load_dyn() ); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"file_handle") ) { return hx::Val( file_handle_dyn() ); }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"app_path_prefs") ) { return hx::Val( app_path_prefs_dyn() ); }
-		break;
-	case 16:
-		if (HX_FIELD_EQ(inName,"string_save_path") ) { return hx::Val( string_save_path_dyn() ); }
-		if (HX_FIELD_EQ(inName,"string_slot_save") ) { return hx::Val( string_slot_save_dyn() ); }
-		if (HX_FIELD_EQ(inName,"string_slot_load") ) { return hx::Val( string_slot_load_dyn() ); }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"string_slot_encode") ) { return hx::Val( string_slot_encode_dyn() ); }
-		if (HX_FIELD_EQ(inName,"string_slot_decode") ) { return hx::Val( string_slot_decode_dyn() ); }
-		break;
-	case 19:
-		if (HX_FIELD_EQ(inName,"string_slot_destroy") ) { return hx::Val( string_slot_destroy_dyn() ); }
-		break;
-	case 20:
-		if (HX_FIELD_EQ(inName,"file_handle_from_mem") ) { return hx::Val( file_handle_from_mem_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -584,21 +329,9 @@ static ::String IO_obj_sMemberFields[] = {
 	HX_("app",a1,fc,49,00),
 	HX_("shutdown",96,fc,0b,6b),
 	HX_("onevent",9b,f6,d4,78),
-	HX_("app_path",43,9d,dc,a2),
-	HX_("app_path_prefs",f4,00,3e,80),
-	HX_("url_open",da,21,ed,d3),
 	HX_("data_load",9b,c7,8a,ad),
-	HX_("data_save",b2,b8,20,b2),
-	HX_("string_save_path",f9,cc,0c,b8),
-	HX_("string_slot_destroy",e7,0d,86,12),
-	HX_("string_slot_save",30,84,77,0b),
-	HX_("string_slot_load",19,93,e1,06),
-	HX_("string_slot_encode",c9,4d,34,52),
-	HX_("string_slot_decode",e1,b8,3d,bd),
 	HX_("file_handle",4b,ce,5d,ec),
-	HX_("file_handle_from_mem",34,7d,f0,5b),
 	HX_("file_read",39,97,b2,6d),
-	HX_("file_write",9c,87,30,78),
 	HX_("file_seek",5b,d1,5b,6e),
 	HX_("file_tell",14,0e,05,6f),
 	HX_("file_close",75,32,3a,f0),

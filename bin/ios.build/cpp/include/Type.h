@@ -7,7 +7,6 @@
 #endif
 
 HX_DECLARE_CLASS0(Type)
-HX_DECLARE_CLASS0(ValueType)
 
 
 
@@ -59,32 +58,14 @@ class HXCPP_CLASS_ATTRIBUTES Type_obj : public hx::Object
 		static ::String getClassName(hx::Class c);
 		static ::Dynamic getClassName_dyn();
 
-		static ::String getEnumName(hx::Class e);
-		static ::Dynamic getEnumName_dyn();
-
 		static hx::Class resolveClass(::String name);
 		static ::Dynamic resolveClass_dyn();
-
-		static hx::Class resolveEnum(::String name);
-		static ::Dynamic resolveEnum_dyn();
 
 		static  ::Dynamic createInstance(hx::Class cl,::cpp::VirtualArray args);
 		static ::Dynamic createInstance_dyn();
 
 		static  ::Dynamic createEmptyInstance(hx::Class cl);
 		static ::Dynamic createEmptyInstance_dyn();
-
-		static  ::Dynamic createEnum(hx::Class e,::String constr,::cpp::VirtualArray params);
-		static ::Dynamic createEnum_dyn();
-
-		static ::Array< ::String > getEnumConstructs(hx::Class e);
-		static ::Dynamic getEnumConstructs_dyn();
-
-		static  ::ValueType _hx_typeof( ::Dynamic v);
-		static ::Dynamic _hx_typeof_dyn();
-
-		static ::cpp::VirtualArray enumParameters( ::Dynamic e);
-		static ::Dynamic enumParameters_dyn();
 
 };
 

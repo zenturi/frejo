@@ -24,14 +24,15 @@
     //HAH
 
     build : {
-      flags:['-dce std'],
+      flags:['-dce full'],
       dependencies : {
         snow : '*',
         "linc_nanovg": "*",
         "linc_yoga": "*",
         "mmvc": "*",
         "minject": "*",
-        "msignal": "*"
+        "msignal": "*",
+        "actuate": "*"
       },
       
       // define opengl version

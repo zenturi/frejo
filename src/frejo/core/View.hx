@@ -15,6 +15,7 @@ import snow.types.Types;
  *  - Manages basic display lifecycle
  *  - Manages event signals
  */
+@:keepSub
 class View {
 	/**
 	 * Unique Identifier for this view

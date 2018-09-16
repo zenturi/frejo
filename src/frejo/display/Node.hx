@@ -13,6 +13,7 @@ using frejo.display.Color;
 /**
  * Base node for display objects
  */
+@:keepSub
 class Node {
 	var vg:VG;
 	@:unreflective
@@ -68,9 +69,9 @@ class Node {
 		flexNode = Yoga.newNodeWithConfig(flexConfig);
 		layout = flexNode.getLayout();
 		bgColor = {
-			r: 28,
-			g: 30,
-			b: 34,
+			r: 255,
+			g: 255,
+			b: 255,
 			a: 255
 		};
 		width = app.window_width;

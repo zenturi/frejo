@@ -60,7 +60,6 @@
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_137_from_file,"snow.core.native.audio.OGG","from_file",0x14a07c87,"snow.core.native.audio.OGG.from_file","snow/core/native/audio/AudioDataOGG.hx",137,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_148_from_bytes,"snow.core.native.audio.OGG","from_bytes",0xb4cba400,"snow.core.native.audio.OGG.from_bytes","snow/core/native/audio/AudioDataOGG.hx",148,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_158_from_file_handle,"snow.core.native.audio.OGG","from_file_handle",0x7eb5c7a0,"snow.core.native.audio.OGG.from_file_handle","snow/core/native/audio/AudioDataOGG.hx",158,0x186b83e2)
-HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_249_code,"snow.core.native.audio.OGG","code",0x6aafa917,"snow.core.native.audio.OGG.code","snow/core/native/audio/AudioDataOGG.hx",249,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_274_ogg_read,"snow.core.native.audio.OGG","ogg_read",0x50730970,"snow.core.native.audio.OGG.ogg_read","snow/core/native/audio/AudioDataOGG.hx",274,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_295_ogg_seek,"snow.core.native.audio.OGG","ogg_seek",0x511c4392,"snow.core.native.audio.OGG.ogg_seek","snow/core/native/audio/AudioDataOGG.hx",295,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_e078ddc651cfcb00_310_ogg_tell,"snow.core.native.audio.OGG","ogg_tell",0x51c5804b,"snow.core.native.audio.OGG.ogg_tell","snow/core/native/audio/AudioDataOGG.hx",310,0x186b83e2)
@@ -246,75 +245,6 @@ HXLINE( 241)		return _ogg;
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC4(OGG_obj,from_file_handle,return )
 
-::String OGG_obj::code(int _code){
-            	HX_STACKFRAME(&_hx_pos_e078ddc651cfcb00_249_code)
-HXDLIN( 249)		switch((int)(_code)){
-            			case (int)-138: {
-HXLINE( 256)				return HX_("OV_ENOSEEK",e6,e5,a4,86);
-            			}
-            			break;
-            			case (int)-137: {
-HXLINE( 251)				return HX_("OV_EBADLINK",d2,7b,44,1f);
-            			}
-            			break;
-            			case (int)-136: {
-HXLINE( 252)				return HX_("OV_EBADPACKET",60,45,2c,cd);
-            			}
-            			break;
-            			case (int)-135: {
-HXLINE( 257)				return HX_("OV_ENOTAUDIO",d0,0f,66,49);
-            			}
-            			break;
-            			case (int)-134: {
-HXLINE( 261)				return HX_("OV_EVERSION",ab,d2,9b,0c);
-            			}
-            			break;
-            			case (int)-133: {
-HXLINE( 250)				return HX_("OV_EBADHEADER",65,f7,93,e6);
-            			}
-            			break;
-            			case (int)-132: {
-HXLINE( 258)				return HX_("OV_ENOTVORBIS",f9,86,3a,ea);
-            			}
-            			break;
-            			case (int)-131: {
-HXLINE( 255)				return HX_("OV_EINVAL",ef,2c,99,90);
-            			}
-            			break;
-            			case (int)-130: {
-HXLINE( 254)				return HX_("OV_EIMPL",4d,b1,cf,85);
-            			}
-            			break;
-            			case (int)-129: {
-HXLINE( 253)				return HX_("OV_EFAULT",b5,f0,cc,cd);
-            			}
-            			break;
-            			case (int)-128: {
-HXLINE( 260)				return HX_("OV_EREAD",c3,7d,bc,8b);
-            			}
-            			break;
-            			case (int)-3: {
-HXLINE( 263)				return HX_("OV_HOLE",98,5a,b5,1a);
-            			}
-            			break;
-            			case (int)-2: {
-HXLINE( 259)				return HX_("OV_EOF",44,4a,a7,59);
-            			}
-            			break;
-            			case (int)-1: {
-HXLINE( 262)				return HX_("OV_FALSE",2b,d1,eb,13);
-            			}
-            			break;
-            			default:{
-HXLINE( 264)				return (HX_("",00,00,00,00) + _code);
-            			}
-            		}
-HXLINE( 249)		return null();
-            	}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(OGG_obj,code,return )
-
 int OGG_obj::ogg_read( ::snow::core::native::audio::AudioDataOGG _ogg,int size,int nmemb,::Array< unsigned char > data){
             	HX_GC_STACKFRAME(&_hx_pos_e078ddc651cfcb00_274_ogg_read)
 HXLINE( 276)		int _total = (size * nmemb);
@@ -390,9 +320,6 @@ OGG_obj::OGG_obj()
 bool OGG_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"code") ) { outValue = code_dyn(); return true; }
-		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"ogg_read") ) { outValue = ogg_read_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"ogg_seek") ) { outValue = ogg_seek_dyn(); return true; }
@@ -421,7 +348,6 @@ static ::String OGG_obj_sStaticFields[] = {
 	HX_("from_file",b1,64,28,18),
 	HX_("from_bytes",96,e0,2e,c8),
 	HX_("from_file_handle",b6,98,c1,23),
-	HX_("code",2d,b1,c4,41),
 	HX_("ogg_read",86,d4,7c,b5),
 	HX_("ogg_seek",a8,0e,26,b6),
 	HX_("ogg_tell",61,4b,cf,b6),

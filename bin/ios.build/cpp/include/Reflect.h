@@ -70,20 +70,11 @@ class HXCPP_CLASS_ATTRIBUTES Reflect_obj : public hx::Object
 		static bool isFunction( ::Dynamic f);
 		static ::Dynamic isFunction_dyn();
 
-		static int compare( ::Dynamic a, ::Dynamic b);
-		static ::Dynamic compare_dyn();
-
 		static bool compareMethods( ::Dynamic f1, ::Dynamic f2);
 		static ::Dynamic compareMethods_dyn();
 
 		static bool isObject( ::Dynamic v);
 		static ::Dynamic isObject_dyn();
-
-		static bool isEnumValue( ::Dynamic v);
-		static ::Dynamic isEnumValue_dyn();
-
-		static  ::Dynamic makeVarArgs( ::Dynamic f);
-		static ::Dynamic makeVarArgs_dyn();
 
 };
 

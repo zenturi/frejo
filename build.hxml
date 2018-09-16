@@ -22,6 +22,7 @@
 -D linc_ogg
 -D linc_sdl
 -D linc_opengl
+-D actuate
 -cp bin/mac64.build/haxe
 -cp src/
 -lib hxcpp
@@ -38,6 +39,7 @@
 -lib linc_stb
 -lib linc_timestamp
 -lib linc_openal
+-lib actuate
 -lib snow
 --macro snow.Set.assets("snow.core.native.assets.Assets")
 --macro snow.Set.runtime("snow.modules.sdl.Runtime")

@@ -55,12 +55,6 @@ class HXCPP_CLASS_ATTRIBUTES InjecteeSet_obj : public hx::Object
 		void remove( ::Dynamic value);
 		::Dynamic remove_dyn();
 
-		void _hx_delete( ::Dynamic value);
-		::Dynamic _hx_delete_dyn();
-
-		 ::Dynamic iterator();
-		::Dynamic iterator_dyn();
-
 };
 
 } // end namespace minject

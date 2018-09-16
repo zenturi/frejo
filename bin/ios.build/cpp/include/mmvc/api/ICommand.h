@@ -18,10 +18,6 @@ class HXCPP_CLASS_ATTRIBUTES ICommand_obj {
 		HX_DO_INTERFACE_RTTI;
 
 		static void __boot();
-		void (hx::Object :: *_hx_execute)(); 
-		static inline void execute( ::Dynamic _hx_) {
-			(_hx_.mPtr->*( static_cast< ::mmvc::api::ICommand_obj *>(_hx_.mPtr->_hx_getInterface(0x4203b52f)))->_hx_execute)();
-		}
 };
 
 } // end namespace mmvc

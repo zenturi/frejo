@@ -49,20 +49,14 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_8e74d60c669900c9_55_new,"mmvc.base.MediatorMap","new",0x10d20e9f,"mmvc.base.MediatorMap.new","mmvc/base/MediatorMap.hx",55,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_67_mapView,"mmvc.base.MediatorMap","mapView",0x78feb0e0,"mmvc.base.MediatorMap.mapView","mmvc/base/MediatorMap.hx",67,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_119_unmapView,"mmvc.base.MediatorMap","unmapView",0x20d5e567,"mmvc.base.MediatorMap.unmapView","mmvc/base/MediatorMap.hx",119,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_138_createMediator,"mmvc.base.MediatorMap","createMediator",0x34d08370,"mmvc.base.MediatorMap.createMediator","mmvc/base/MediatorMap.hx",138,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_142_registerMediator,"mmvc.base.MediatorMap","registerMediator",0x4e090c17,"mmvc.base.MediatorMap.registerMediator","mmvc/base/MediatorMap.hx",142,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_151_removeMediator,"mmvc.base.MediatorMap","removeMediator",0xacec40b8,"mmvc.base.MediatorMap.removeMediator","mmvc/base/MediatorMap.hx",151,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_165_removeMediatorByView,"mmvc.base.MediatorMap","removeMediatorByView",0xaf3bfab4,"mmvc.base.MediatorMap.removeMediatorByView","mmvc/base/MediatorMap.hx",165,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_173_retrieveMediator,"mmvc.base.MediatorMap","retrieveMediator",0x94c7c130,"mmvc.base.MediatorMap.retrieveMediator","mmvc/base/MediatorMap.hx",173,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_177_hasMapping,"mmvc.base.MediatorMap","hasMapping",0x357dfa75,"mmvc.base.MediatorMap.hasMapping","mmvc/base/MediatorMap.hx",177,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_184_hasMediatorForView,"mmvc.base.MediatorMap","hasMediatorForView",0xc4eff882,"mmvc.base.MediatorMap.hasMediatorForView","mmvc/base/MediatorMap.hx",184,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_188_hasMediator,"mmvc.base.MediatorMap","hasMediator",0x65b782ec,"mmvc.base.MediatorMap.hasMediator","mmvc/base/MediatorMap.hx",188,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_202_addListeners,"mmvc.base.MediatorMap","addListeners",0x3e0008ff,"mmvc.base.MediatorMap.addListeners","mmvc/base/MediatorMap.hx",202,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_211_removeListeners,"mmvc.base.MediatorMap","removeListeners",0xd2ef215a,"mmvc.base.MediatorMap.removeListeners","mmvc/base/MediatorMap.hx",211,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_219_onViewAdded,"mmvc.base.MediatorMap","onViewAdded",0x9e703c3b,"mmvc.base.MediatorMap.onViewAdded","mmvc/base/MediatorMap.hx",219,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_236_onViewRemoved,"mmvc.base.MediatorMap","onViewRemoved",0xa6b19bdb,"mmvc.base.MediatorMap.onViewRemoved","mmvc/base/MediatorMap.hx",236,0x619f2e11)
-HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_246_removeMediatorLater,"mmvc.base.MediatorMap","removeMediatorLater",0x67404ab4,"mmvc.base.MediatorMap.removeMediatorLater","mmvc/base/MediatorMap.hx",246,0x619f2e11)
 HX_LOCAL_STACK_FRAME(_hx_pos_8e74d60c669900c9_261_createMediatorUsing,"mmvc.base.MediatorMap","createMediatorUsing",0x1ecfebb4,"mmvc.base.MediatorMap.createMediatorUsing","mmvc/base/MediatorMap.hx",261,0x619f2e11)
 namespace mmvc{
 namespace base{
@@ -98,18 +92,7 @@ bool MediatorMap_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::mmvc::api::IMediatorMap_obj _hx_mmvc_base_MediatorMap__hx_mmvc_api_IMediatorMap= {
-	( bool (hx::Object::*)(bool))&::mmvc::base::MediatorMap_obj::set_enabled,
-	( ::Dynamic (hx::Object::*)(::Dynamic))&::mmvc::base::MediatorMap_obj::set_contextView,
 	( void (hx::Object::*)( ::Dynamic,hx::Class, ::Dynamic, ::Dynamic, ::Dynamic))&::mmvc::base::MediatorMap_obj::mapView,
-	( void (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::unmapView,
-	( ::Dynamic (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::createMediator,
-	( void (hx::Object::*)( ::Dynamic,::Dynamic))&::mmvc::base::MediatorMap_obj::registerMediator,
-	( ::Dynamic (hx::Object::*)(::Dynamic))&::mmvc::base::MediatorMap_obj::removeMediator,
-	( ::Dynamic (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::removeMediatorByView,
-	( ::Dynamic (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::retrieveMediator,
-	( bool (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::hasMapping,
-	( bool (hx::Object::*)(::Dynamic))&::mmvc::base::MediatorMap_obj::hasMediator,
-	( bool (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorMap_obj::hasMediatorForView,
 };
 
 void *MediatorMap_obj::_hx_getInterface(int inHash) {
@@ -185,42 +168,6 @@ HXLINE( 114)			this->createMediatorUsing(this->contextView,viewClassName,config)
 
 HX_DEFINE_DYNAMIC_FUNC5(MediatorMap_obj,mapView,(void))
 
-void MediatorMap_obj::unmapView( ::Dynamic viewClassOrName){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_119_unmapView)
-HXLINE( 120)		::String viewClassName = this->reflector->getFQCN(viewClassOrName);
-HXLINE( 121)		 ::mmvc::base::MappingConfig config = ( ( ::mmvc::base::MappingConfig)(this->mappingConfigByViewClassName->get(viewClassName)) );
-HXLINE( 123)		bool _hx_tmp;
-HXDLIN( 123)		if (hx::IsNotNull( config )) {
-HXLINE( 123)			if (!(config->autoCreate)) {
-HXLINE( 123)				_hx_tmp = config->autoRemove;
-            			}
-            			else {
-HXLINE( 123)				_hx_tmp = true;
-            			}
-            		}
-            		else {
-HXLINE( 123)			_hx_tmp = false;
-            		}
-HXDLIN( 123)		if (_hx_tmp) {
-HXLINE( 125)			this->viewListenerCount--;
-HXLINE( 127)			if ((this->viewListenerCount == 0)) {
-HXLINE( 129)				this->removeListeners();
-            			}
-            		}
-HXLINE( 133)		this->mappingConfigByViewClassName->remove(viewClassName);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,unmapView,(void))
-
-::Dynamic MediatorMap_obj::createMediator( ::Dynamic viewComponent){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_138_createMediator)
-HXDLIN( 138)		return this->createMediatorUsing(viewComponent,null(),null());
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,createMediator,return )
-
 void MediatorMap_obj::registerMediator( ::Dynamic viewComponent,::Dynamic mediator){
             	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_142_registerMediator)
 HXLINE( 143)		this->mediatorByView->set(viewComponent,mediator);
@@ -266,40 +213,6 @@ HXDLIN( 173)		return this->mediatorByView->get(viewComponent);
 
 
 HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,retrieveMediator,return )
-
-bool MediatorMap_obj::hasMapping( ::Dynamic viewClassOrName){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_177_hasMapping)
-HXLINE( 178)		::String viewClassName = this->reflector->getFQCN(viewClassOrName);
-HXLINE( 179)		return this->mappingConfigByViewClassName->exists(viewClassName);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,hasMapping,return )
-
-bool MediatorMap_obj::hasMediatorForView( ::Dynamic viewComponent){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_184_hasMediatorForView)
-HXDLIN( 184)		return this->mediatorByView->exists(viewComponent);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,hasMediatorForView,return )
-
-bool MediatorMap_obj::hasMediator(::Dynamic mediator){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_188_hasMediator)
-HXLINE( 189)		{
-HXLINE( 189)			 ::Dynamic key = this->mediatorByView->keys();
-HXDLIN( 189)			while(( (bool)(key->__Field(HX_("hasNext",6d,a5,46,18),hx::paccDynamic)()) )){
-HXLINE( 189)				 ::Dynamic key1 = key->__Field(HX_("next",f3,84,02,49),hx::paccDynamic)();
-HXLINE( 191)				if (hx::IsEq( this->mediatorByView->get(key1),mediator )) {
-HXLINE( 193)					return true;
-            				}
-            			}
-            		}
-HXLINE( 197)		return false;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,hasMediator,return )
 
 void MediatorMap_obj::addListeners(){
             	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_202_addListeners)
@@ -347,6 +260,8 @@ HXLINE( 231)			this->createMediatorUsing(view,viewClassName,config);
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,onViewAdded,(void))
+
 void MediatorMap_obj::onViewRemoved( ::Dynamic view){
             	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_236_onViewRemoved)
 HXLINE( 237)		 ::mmvc::base::MappingConfig config = ( ( ::mmvc::base::MappingConfig)(this->mappingConfigByView->get(view)) );
@@ -363,23 +278,7 @@ HXLINE( 241)			this->removeMediatorByView(view);
             	}
 
 
-void MediatorMap_obj::removeMediatorLater(){
-            	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_246_removeMediatorLater)
-HXLINE( 247)		{
-HXLINE( 247)			 ::Dynamic view = this->mediatorsMarkedForRemoval->iterator();
-HXDLIN( 247)			while(( (bool)(view->__Field(HX_("hasNext",6d,a5,46,18),hx::paccDynamic)()) )){
-HXLINE( 247)				 ::Dynamic view1 = view->__Field(HX_("next",f3,84,02,49),hx::paccDynamic)();
-HXLINE( 249)				if (!(::mmvc::api::IViewContainer_obj::isAdded(this->contextView,view1))) {
-HXLINE( 251)					this->removeMediatorByView(view1);
-            				}
-HXLINE( 253)				this->mediatorsMarkedForRemoval->remove(view1);
-            			}
-            		}
-HXLINE( 256)		this->hasMediatorsMarkedForRemoval = false;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(MediatorMap_obj,removeMediatorLater,(void))
+HX_DEFINE_DYNAMIC_FUNC1(MediatorMap_obj,onViewRemoved,(void))
 
 ::Dynamic MediatorMap_obj::createMediatorUsing( ::Dynamic viewComponent,::String viewClassName, ::mmvc::base::MappingConfig config){
             	HX_STACKFRAME(&_hx_pos_8e74d60c669900c9_261_createMediatorUsing)
@@ -470,13 +369,8 @@ hx::Val MediatorMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"reflector") ) { return hx::Val( reflector ); }
-		if (HX_FIELD_EQ(inName,"unmapView") ) { return hx::Val( unmapView_dyn() ); }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"hasMapping") ) { return hx::Val( hasMapping_dyn() ); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"hasMediator") ) { return hx::Val( hasMediator_dyn() ); }
 		if (HX_FIELD_EQ(inName,"onViewAdded") ) { return hx::Val( onViewAdded_dyn() ); }
 		break;
 	case 12:
@@ -487,7 +381,6 @@ hx::Val MediatorMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"mediatorByView") ) { return hx::Val( mediatorByView ); }
-		if (HX_FIELD_EQ(inName,"createMediator") ) { return hx::Val( createMediator_dyn() ); }
 		if (HX_FIELD_EQ(inName,"removeMediator") ) { return hx::Val( removeMediator_dyn() ); }
 		break;
 	case 15:
@@ -497,12 +390,8 @@ hx::Val MediatorMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 		if (HX_FIELD_EQ(inName,"registerMediator") ) { return hx::Val( registerMediator_dyn() ); }
 		if (HX_FIELD_EQ(inName,"retrieveMediator") ) { return hx::Val( retrieveMediator_dyn() ); }
 		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"hasMediatorForView") ) { return hx::Val( hasMediatorForView_dyn() ); }
-		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"mappingConfigByView") ) { return hx::Val( mappingConfigByView ); }
-		if (HX_FIELD_EQ(inName,"removeMediatorLater") ) { return hx::Val( removeMediatorLater_dyn() ); }
 		if (HX_FIELD_EQ(inName,"createMediatorUsing") ) { return hx::Val( createMediatorUsing_dyn() ); }
 		break;
 	case 20:
@@ -572,20 +461,14 @@ static ::String MediatorMap_obj_sMemberFields[] = {
 	HX_("hasMediatorsMarkedForRemoval",35,bb,d3,f9),
 	HX_("reflector",a0,2e,c1,a9),
 	HX_("mapView",21,e7,4a,33),
-	HX_("unmapView",e8,ed,4c,2f),
-	HX_("createMediator",4f,07,e6,c5),
 	HX_("registerMediator",b6,85,6e,72),
 	HX_("removeMediator",97,c4,01,3e),
 	HX_("removeMediatorByView",d3,2f,08,73),
 	HX_("retrieveMediator",cf,3a,2d,b9),
-	HX_("hasMapping",d4,62,2e,cf),
-	HX_("hasMediatorForView",e1,57,de,e8),
-	HX_("hasMediator",ad,6d,62,46),
 	HX_("addListeners",1e,87,e2,f2),
 	HX_("removeListeners",9b,00,ad,34),
 	HX_("onViewAdded",fc,26,1b,7f),
 	HX_("onViewRemoved",dc,78,fd,37),
-	HX_("removeMediatorLater",75,5e,e5,b3),
 	HX_("createMediatorUsing",75,ff,74,6b),
 	::String(null()) };
 

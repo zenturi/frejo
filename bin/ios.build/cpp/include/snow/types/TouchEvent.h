@@ -64,9 +64,6 @@ class HXCPP_CLASS_ATTRIBUTES TouchEvent_obj : public hx::Object
 		Float y;
 		Float dx;
 		Float dy;
-		void set(int _type,int _id,Float _x,Float _y,Float _dx,Float _dy);
-		::Dynamic set_dyn();
-
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

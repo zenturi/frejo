@@ -22,17 +22,9 @@ class HXCPP_CLASS_ATTRIBUTES IMediator_obj {
 		static inline void preRegister( ::Dynamic _hx_) {
 			(_hx_.mPtr->*( static_cast< ::mmvc::api::IMediator_obj *>(_hx_.mPtr->_hx_getInterface(0x3690abcf)))->_hx_preRegister)();
 		}
-		void (hx::Object :: *_hx_onRegister)(); 
-		static inline void onRegister( ::Dynamic _hx_) {
-			(_hx_.mPtr->*( static_cast< ::mmvc::api::IMediator_obj *>(_hx_.mPtr->_hx_getInterface(0x3690abcf)))->_hx_onRegister)();
-		}
 		void (hx::Object :: *_hx_preRemove)(); 
 		static inline void preRemove( ::Dynamic _hx_) {
 			(_hx_.mPtr->*( static_cast< ::mmvc::api::IMediator_obj *>(_hx_.mPtr->_hx_getInterface(0x3690abcf)))->_hx_preRemove)();
-		}
-		void (hx::Object :: *_hx_onRemove)(); 
-		static inline void onRemove( ::Dynamic _hx_) {
-			(_hx_.mPtr->*( static_cast< ::mmvc::api::IMediator_obj *>(_hx_.mPtr->_hx_getInterface(0x3690abcf)))->_hx_onRemove)();
 		}
 		 ::Dynamic (hx::Object :: *_hx_getViewComponent)(); 
 		static inline  ::Dynamic getViewComponent( ::Dynamic _hx_) {

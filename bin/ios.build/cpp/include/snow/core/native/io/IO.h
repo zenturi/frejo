@@ -66,50 +66,14 @@ class HXCPP_CLASS_ATTRIBUTES IO_obj : public hx::Object
 		void onevent( ::snow::types::SystemEvent _event);
 		::Dynamic onevent_dyn();
 
-		virtual ::String app_path();
-		::Dynamic app_path_dyn();
-
-		virtual ::String app_path_prefs();
-		::Dynamic app_path_prefs_dyn();
-
-		void url_open(::String _url);
-		::Dynamic url_open_dyn();
-
 		 ::snow::api::Promise data_load(::String _path, ::Dynamic _options);
 		::Dynamic data_load_dyn();
-
-		bool data_save(::String _path, ::snow::api::buffers::ArrayBufferView _data, ::Dynamic _options);
-		::Dynamic data_save_dyn();
-
-		::String string_save_path( ::Dynamic _slot);
-		::Dynamic string_save_path_dyn();
-
-		bool string_slot_destroy( ::Dynamic _slot);
-		::Dynamic string_slot_destroy_dyn();
-
-		bool string_slot_save( ::Dynamic _slot,::String _contents);
-		::Dynamic string_slot_save_dyn();
-
-		::String string_slot_load( ::Dynamic _slot);
-		::Dynamic string_slot_load_dyn();
-
-		::String string_slot_encode(::String _string);
-		::Dynamic string_slot_encode_dyn();
-
-		::String string_slot_decode(::String _string);
-		::Dynamic string_slot_decode_dyn();
 
 		virtual ::cpp::Pointer<  SDL_RWops > file_handle(::String _path,::String _mode);
 		::Dynamic file_handle_dyn();
 
-		virtual ::cpp::Pointer<  SDL_RWops > file_handle_from_mem( ::snow::api::buffers::ArrayBufferView mem,int size);
-		::Dynamic file_handle_from_mem_dyn();
-
 		virtual int file_read(::cpp::Pointer<  SDL_RWops > handle, ::snow::api::buffers::ArrayBufferView dest,int size,int maxnum);
 		::Dynamic file_read_dyn();
-
-		virtual int file_write(::cpp::Pointer<  SDL_RWops > handle, ::snow::api::buffers::ArrayBufferView src,int size,int num);
-		::Dynamic file_write_dyn();
 
 		virtual int file_seek(::cpp::Pointer<  SDL_RWops > handle,int offset,int whence);
 		::Dynamic file_seek_dyn();

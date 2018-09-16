@@ -64,23 +64,23 @@
 #include <snow/types/SystemEvent.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_19a1259070094d70_7_new,"frejo.app.Application","new",0x589f0485,"frejo.app.Application.new","frejo/app/Application.hx",7,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_34_ready,"frejo.app.Application","ready",0x4f56e7c8,"frejo.app.Application.ready","frejo/app/Application.hx",34,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_53_config,"frejo.app.Application","config",0xe7f487bd,"frejo.app.Application.config","frejo/app/Application.hx",53,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_71_update,"frejo.app.Application","update",0xa727b704,"frejo.app.Application.update","frejo/app/Application.hx",71,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_75_tick,"frejo.app.Application","tick",0x367f2f98,"frejo.app.Application.tick","frejo/app/Application.hx",75,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_79_draw,"frejo.app.Application","draw",0x2bf2983f,"frejo.app.Application.draw","frejo/app/Application.hx",79,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_87_onevent,"frejo.app.Application","onevent",0x769da140,"frejo.app.Application.onevent","frejo/app/Application.hx",87,0x86ea668d)
-HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_23_getInstance,"frejo.app.Application","getInstance",0x21584370,"frejo.app.Application.getInstance","frejo/app/Application.hx",23,0x86ea668d)
+HX_DEFINE_STACK_FRAME(_hx_pos_19a1259070094d70_9_new,"frejo.app.Application","new",0x589f0485,"frejo.app.Application.new","frejo/app/Application.hx",9,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_36_ready,"frejo.app.Application","ready",0x4f56e7c8,"frejo.app.Application.ready","frejo/app/Application.hx",36,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_55_config,"frejo.app.Application","config",0xe7f487bd,"frejo.app.Application.config","frejo/app/Application.hx",55,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_73_update,"frejo.app.Application","update",0xa727b704,"frejo.app.Application.update","frejo/app/Application.hx",73,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_77_tick,"frejo.app.Application","tick",0x367f2f98,"frejo.app.Application.tick","frejo/app/Application.hx",77,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_81_draw,"frejo.app.Application","draw",0x2bf2983f,"frejo.app.Application.draw","frejo/app/Application.hx",81,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_89_onevent,"frejo.app.Application","onevent",0x769da140,"frejo.app.Application.onevent","frejo/app/Application.hx",89,0x86ea668d)
+HX_LOCAL_STACK_FRAME(_hx_pos_19a1259070094d70_25_getInstance,"frejo.app.Application","getInstance",0x21584370,"frejo.app.Application.getInstance","frejo/app/Application.hx",25,0x86ea668d)
 namespace frejo{
 namespace app{
 
 void Application_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_7_new)
-HXLINE(   9)		this->window_height = 320;
-HXLINE(   8)		this->window_width = 640;
-HXLINE(  30)		super::__construct();
-HXLINE(  31)		::frejo::app::Application_obj::instance = hx::ObjectPtr<OBJ_>(this);
+            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_9_new)
+HXLINE(  11)		this->window_height = 320;
+HXLINE(  10)		this->window_width = 640;
+HXLINE(  32)		super::__construct();
+HXLINE(  33)		::frejo::app::Application_obj::instance = hx::ObjectPtr<OBJ_>(this);
             	}
 
 Dynamic Application_obj::__CreateEmpty() { return new Application_obj; }
@@ -103,152 +103,158 @@ bool Application_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void Application_obj::ready(){
-            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_34_ready)
-HXLINE(  35)		this->pixelRatio = this->app->runtime->window_device_pixel_ratio();
-HXLINE(  36)		this->render_width = this->app->runtime->window_w;
-HXLINE(  37)		this->render_height = this->app->runtime->window_h;
-HXLINE(  40)		this->window_width = ::Math_obj::floor((( (Float)(this->render_width) ) / this->pixelRatio));
-HXLINE(  41)		this->window_height = ::Math_obj::floor((( (Float)(this->render_height) ) / this->pixelRatio));
-HXLINE(  43)		this->app->runtime->window_fullscreen(false,false);
-HXLINE(  45)		this->applicationView =  ::frejo::app::View_obj::__alloc( HX_CTX );
-HXLINE(  46)		this->applicationView->app = hx::ObjectPtr<OBJ_>(this);
-HXLINE(  47)		this->applicationView->init();
-HXLINE(  49)		this->signal->add(this->applicationView->system_event_dyn()).StaticCast<  ::msignal::Slot1 >();
-HXLINE(  50)		this->applicationContext =  ::frejo::app::Context_obj::__alloc( HX_CTX ,this->applicationView);
+            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_36_ready)
+HXLINE(  37)		this->pixelRatio = this->app->runtime->window_device_pixel_ratio();
+HXLINE(  38)		this->render_width = this->app->runtime->window_w;
+HXLINE(  39)		this->render_height = this->app->runtime->window_h;
+HXLINE(  42)		this->window_width = ::Math_obj::floor((( (Float)(this->render_width) ) / this->pixelRatio));
+HXLINE(  43)		this->window_height = ::Math_obj::floor((( (Float)(this->render_height) ) / this->pixelRatio));
+HXLINE(  45)		this->app->runtime->window_fullscreen(false,false);
+HXLINE(  47)		this->applicationView =  ::frejo::app::View_obj::__alloc( HX_CTX );
+HXLINE(  48)		this->applicationView->app = hx::ObjectPtr<OBJ_>(this);
+HXLINE(  49)		this->applicationView->init();
+HXLINE(  51)		this->signal->add(this->applicationView->system_event_dyn()).StaticCast<  ::msignal::Slot1 >();
+HXLINE(  52)		this->applicationContext =  ::frejo::app::Context_obj::__alloc( HX_CTX ,this->applicationView);
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC0(Application_obj,ready,(void))
 
  ::Dynamic Application_obj::config( ::Dynamic config){
-            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_53_config)
-HXLINE(  54)		this->render_width = ( (int)( ::Dynamic(config->__Field(HX_("window",f0,93,8c,52),hx::paccDynamic))->__Field(HX_("width",06,b6,62,ca),hx::paccDynamic)) );
-HXLINE(  55)		this->render_height = ( (int)( ::Dynamic(config->__Field(HX_("window",f0,93,8c,52),hx::paccDynamic))->__Field(HX_("height",e7,07,4c,02),hx::paccDynamic)) );
-HXLINE(  60)		 ::Dynamic( ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__Field(HX_("opengl",6f,64,94,21),hx::paccDynamic))->__SetField(HX_("profile",29,49,49,f3),2,hx::paccDynamic);
-HXLINE(  64)		 ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__SetField(HX_("stencil",fc,bd,03,80),8,hx::paccDynamic);
-HXLINE(  65)		 ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__SetField(HX_("depth",03,f1,29,d7),24,hx::paccDynamic);
-HXLINE(  67)		return config;
+            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_55_config)
+HXLINE(  56)		this->render_width = ( (int)( ::Dynamic(config->__Field(HX_("window",f0,93,8c,52),hx::paccDynamic))->__Field(HX_("width",06,b6,62,ca),hx::paccDynamic)) );
+HXLINE(  57)		this->render_height = ( (int)( ::Dynamic(config->__Field(HX_("window",f0,93,8c,52),hx::paccDynamic))->__Field(HX_("height",e7,07,4c,02),hx::paccDynamic)) );
+HXLINE(  62)		 ::Dynamic( ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__Field(HX_("opengl",6f,64,94,21),hx::paccDynamic))->__SetField(HX_("profile",29,49,49,f3),2,hx::paccDynamic);
+HXLINE(  66)		 ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__SetField(HX_("stencil",fc,bd,03,80),8,hx::paccDynamic);
+HXLINE(  67)		 ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynamic))->__SetField(HX_("depth",03,f1,29,d7),24,hx::paccDynamic);
+HXLINE(  69)		return config;
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC1(Application_obj,config,return )
+
 void Application_obj::update(Float dt){
-            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_71_update)
-HXDLIN(  71)		this->applicationView->update(dt);
+            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_73_update)
+HXDLIN(  73)		this->applicationView->update(dt);
             	}
 
 
 void Application_obj::tick(Float dt){
-            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_75_tick)
-HXDLIN(  75)		this->draw();
+            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_77_tick)
+HXDLIN(  77)		this->draw();
             	}
 
 
 void Application_obj::draw(){
-            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_79_draw)
-HXLINE(  80)		glViewport(0,0,this->render_width,this->render_height);
-HXLINE(  81)		glClearColor(( (float)(((Float)0.5)) ),( (float)(((Float)0.333333333333333315)) ),( (float)(((Float)1.0)) ),( (float)(((Float)1.0)) ));
-HXLINE(  82)		glClear(17664);
-HXLINE(  84)		this->applicationView->draw();
+            	HX_STACKFRAME(&_hx_pos_19a1259070094d70_81_draw)
+HXLINE(  82)		glViewport(0,0,this->render_width,this->render_height);
+HXLINE(  83)		glClearColor(( (float)(((Float)0.7)) ),( (float)(((Float)0.7)) ),( (float)(((Float)0.7)) ),( (float)(((Float)0.3)) ));
+HXLINE(  84)		glClear(17664);
+HXLINE(  86)		this->applicationView->draw();
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Application_obj,draw,(void))
 
 void Application_obj::onevent( ::snow::types::SystemEvent event){
-            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_87_onevent)
-HXLINE(  88)		if ((event->type != 3)) {
-HXLINE(  89)			 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN(  89)			int this1 = event->type;
-HXDLIN(  89)			::String _hx_tmp1;
-HXDLIN(  89)			switch((int)(this1)){
+            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_89_onevent)
+HXLINE(  90)		if ((event->type != 3)) {
+HXLINE(  91)			 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
+HXDLIN(  91)			int this1 = event->type;
+HXDLIN(  91)			::String _hx_tmp1;
+HXDLIN(  91)			switch((int)(this1)){
             				case (int)0: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_unknown",9d,c3,e5,b5);
+HXLINE(  91)					_hx_tmp1 = HX_("se_unknown",9d,c3,e5,b5);
             				}
             				break;
             				case (int)1: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_init",1d,21,fc,08);
+HXLINE(  91)					_hx_tmp1 = HX_("se_init",1d,21,fc,08);
             				}
             				break;
             				case (int)2: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_ready",b6,05,43,fc);
+HXLINE(  91)					_hx_tmp1 = HX_("se_ready",b6,05,43,fc);
             				}
             				break;
             				case (int)3: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_tick",6a,a9,3d,10);
+HXLINE(  91)					_hx_tmp1 = HX_("se_tick",6a,a9,3d,10);
             				}
             				break;
             				case (int)4: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_freeze",a4,cd,f4,70);
+HXLINE(  91)					_hx_tmp1 = HX_("se_freeze",a4,cd,f4,70);
             				}
             				break;
             				case (int)5: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_unfreeze",fd,29,4d,ba);
+HXLINE(  91)					_hx_tmp1 = HX_("se_unfreeze",fd,29,4d,ba);
             				}
             				break;
             				case (int)7: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_shutdown",23,6d,ed,73);
+HXLINE(  91)					_hx_tmp1 = HX_("se_shutdown",23,6d,ed,73);
             				}
             				break;
             				case (int)8: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_window",3d,d7,5c,14);
+HXLINE(  91)					_hx_tmp1 = HX_("se_window",3d,d7,5c,14);
             				}
             				break;
             				case (int)9: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_input",5d,29,a6,d3);
+HXLINE(  91)					_hx_tmp1 = HX_("se_input",5d,29,a6,d3);
             				}
             				break;
             				case (int)10: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_quit",dc,25,4b,0e);
+HXLINE(  91)					_hx_tmp1 = HX_("se_quit",dc,25,4b,0e);
             				}
             				break;
             				case (int)11: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_terminating",13,b9,f1,1d);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_terminating",13,b9,f1,1d);
             				}
             				break;
             				case (int)12: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_lowmemory",8a,22,cd,92);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_lowmemory",8a,22,cd,92);
             				}
             				break;
             				case (int)13: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_willenterbackground",69,64,7f,c1);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_willenterbackground",69,64,7f,c1);
             				}
             				break;
             				case (int)14: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_didenterbackground",12,ce,28,14);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_didenterbackground",12,ce,28,14);
             				}
             				break;
             				case (int)15: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_willenterforeground",3e,e9,50,ac);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_willenterforeground",3e,e9,50,ac);
             				}
             				break;
             				case (int)16: {
-HXLINE(  89)					_hx_tmp1 = HX_("se_app_didenterforeground",e7,52,fa,fe);
+HXLINE(  91)					_hx_tmp1 = HX_("se_app_didenterforeground",e7,52,fa,fe);
             				}
             				break;
             				default:{
-HXLINE(  89)					_hx_tmp1 = (HX_("",00,00,00,00) + this1);
+HXLINE(  91)					_hx_tmp1 = (HX_("",00,00,00,00) + this1);
             				}
             			}
-HXDLIN(  89)			_hx_tmp((HX_("System Event: ",0f,53,59,ac) + _hx_tmp1),hx::SourceInfo(HX_("src/frejo/app/Application.hx",58,90,20,70),89,HX_("frejo.app.Application",13,5e,3f,93),HX_("onevent",9b,f6,d4,78)));
+HXDLIN(  91)			_hx_tmp((HX_("System Event: ",0f,53,59,ac) + _hx_tmp1),hx::SourceInfo(HX_("src/frejo/app/Application.hx",58,90,20,70),91,HX_("frejo.app.Application",13,5e,3f,93),HX_("onevent",9b,f6,d4,78)));
             		}
-HXLINE(  90)		if (hx::IsNull( this->signal )) {
-HXLINE(  91)			this->signal =  ::msignal::Signal1_obj::__alloc( HX_CTX ,null());
+HXLINE(  92)		if (hx::IsNull( this->signal )) {
+HXLINE(  93)			this->signal =  ::msignal::Signal1_obj::__alloc( HX_CTX ,null());
             		}
-HXLINE(  93)		if ((event->type != 3)) {
-HXLINE(  94)			this->signal->dispatch(event);
+HXLINE(  95)		if ((event->type != 3)) {
+HXLINE(  96)			this->signal->dispatch(event);
             		}
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC1(Application_obj,onevent,(void))
+
  ::frejo::app::Application Application_obj::instance;
 
  ::frejo::app::Application Application_obj::getInstance(){
-            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_23_getInstance)
-HXDLIN(  23)		if (hx::IsNull( ::frejo::app::Application_obj::instance )) {
-HXLINE(  24)			return  ::frejo::app::Application_obj::__alloc( HX_CTX );
+            	HX_GC_STACKFRAME(&_hx_pos_19a1259070094d70_25_getInstance)
+HXDLIN(  25)		if (hx::IsNull( ::frejo::app::Application_obj::instance )) {
+HXLINE(  26)			return  ::frejo::app::Application_obj::__alloc( HX_CTX );
             		}
             		else {
-HXLINE(  26)			return ::frejo::app::Application_obj::instance;
+HXLINE(  28)			return ::frejo::app::Application_obj::instance;
             		}
-HXLINE(  23)		return null();
+HXLINE(  25)		return null();
             	}
 
 

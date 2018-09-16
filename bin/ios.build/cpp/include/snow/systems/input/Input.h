@@ -68,45 +68,6 @@ class HXCPP_CLASS_ATTRIBUTES Input_obj : public hx::Object
 		void shutdown();
 		::Dynamic shutdown_dyn();
 
-		bool keypressed(int _code);
-		::Dynamic keypressed_dyn();
-
-		bool keyreleased(int _code);
-		::Dynamic keyreleased_dyn();
-
-		bool keydown(int _code);
-		::Dynamic keydown_dyn();
-
-		bool scanpressed(int _code);
-		::Dynamic scanpressed_dyn();
-
-		bool scanreleased(int _code);
-		::Dynamic scanreleased_dyn();
-
-		bool scandown(int _code);
-		::Dynamic scandown_dyn();
-
-		bool mousepressed(int _button);
-		::Dynamic mousepressed_dyn();
-
-		bool mousereleased(int _button);
-		::Dynamic mousereleased_dyn();
-
-		bool mousedown(int _button);
-		::Dynamic mousedown_dyn();
-
-		bool gamepadpressed(int _gamepad,int _button);
-		::Dynamic gamepadpressed_dyn();
-
-		bool gamepadreleased(int _gamepad,int _button);
-		::Dynamic gamepadreleased_dyn();
-
-		bool gamepaddown(int _gamepad,int _button);
-		::Dynamic gamepaddown_dyn();
-
-		Float gamepadaxis(int _gamepad,int _axis);
-		::Dynamic gamepadaxis_dyn();
-
 		void dispatch_key_down_event(int keycode,int scancode,bool repeat, ::snow::types::ModState mod,Float timestamp,int window_id);
 		::Dynamic dispatch_key_down_event_dyn();
 

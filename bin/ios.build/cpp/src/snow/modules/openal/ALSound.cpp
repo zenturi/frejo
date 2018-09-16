@@ -57,8 +57,6 @@ HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_77_position,"snow.modules.openal.A
 HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_83_position_of,"snow.modules.openal.ALSound","position_of",0xde7a28bc,"snow.modules.openal.ALSound.position_of","snow/modules/openal/ALSound.hx",83,0x9aca6660)
 HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_87_destroy,"snow.modules.openal.ALSound","destroy",0x2b633c09,"snow.modules.openal.ALSound.destroy","snow/modules/openal/ALSound.hx",87,0x9aca6660)
 HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_111_tick,"snow.modules.openal.ALSound","tick",0xf51e44ee,"snow.modules.openal.ALSound.tick","snow/modules/openal/ALSound.hx",111,0x9aca6660)
-HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_120_new_source,"snow.modules.openal.ALSound","new_source",0xe5ba426b,"snow.modules.openal.ALSound.new_source","snow/modules/openal/ALSound.hx",120,0x9aca6660)
-HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_131_err,"snow.modules.openal.ALSound","err",0xc9f3a2f4,"snow.modules.openal.ALSound.err","snow/modules/openal/ALSound.hx",131,0x9aca6660)
 HX_LOCAL_STACK_FRAME(_hx_pos_bd5817ab043a2d9b_134_source_format,"snow.modules.openal.ALSound","source_format",0x2ae5d5aa,"snow.modules.openal.ALSound.source_format","snow/modules/openal/ALSound.hx",134,0x9aca6660)
 namespace snow{
 namespace modules{
@@ -205,37 +203,6 @@ HXDLIN( 114)		_hx_tmp->current_time = (_hx_tmp->current_time + this->module->app
 
 HX_DEFINE_DYNAMIC_FUNC0(ALSound_obj,tick,(void))
 
-int ALSound_obj::new_source(){
-            	HX_STACKFRAME(&_hx_pos_bd5817ab043a2d9b_120_new_source)
-HXLINE( 121)		int _source = linc::openal::genSource();
-HXLINE( 122)		alSourcef(_source,4106,((Float)1.0));
-HXLINE( 123)		alSourcei(_source,4103,0);
-HXLINE( 124)		alSourcef(_source,4099,((Float)1.0));
-HXLINE( 125)		alSource3f(_source,4100,((Float)0.0),((Float)0.0),((Float)0.0));
-HXLINE( 126)		alSource3f(_source,4102,((Float)0.0),((Float)0.0),((Float)0.0));
-HXLINE( 127)		return _source;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(ALSound_obj,new_source,return )
-
-void ALSound_obj::err(::String reason){
-            	HX_STACKFRAME(&_hx_pos_bd5817ab043a2d9b_131_err)
-HXDLIN( 131)		{
-HXDLIN( 131)			 ::snow::modules::openal::Audio _this = this->module;
-HXDLIN( 131)			int _err = alGetError();
-HXDLIN( 131)			if ((_err != 0)) {
-HXDLIN( 131)				::String _s = (((((HX_("",00,00,00,00) + _err) + HX_(" / ",31,71,18,00)) + reason) + HX_(": failed with ",5d,20,68,1b)) + ::openal::ALError_obj::desc(_err));
-HXDLIN( 131)				::haxe::Log_obj::trace(_s,hx::SourceInfo(HX_("snow/modules/openal/Audio.hx",4e,6f,2b,04),441,HX_("snow.modules.openal.Audio",0f,19,56,ac),HX_("err",65,07,4d,00)));
-HXDLIN( 131)				HX_STACK_DO_THROW(_s);
-            			}
-            		}
-HXDLIN( 131)		return;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(ALSound_obj,err,(void))
-
 int ALSound_obj::source_format(){
             	HX_STACKFRAME(&_hx_pos_bd5817ab043a2d9b_134_source_format)
 HXLINE( 136)		int _format = 4353;
@@ -310,7 +277,6 @@ hx::Val ALSound_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPro
 	switch(inName.length) {
 	case 3:
 		if (HX_FIELD_EQ(inName,"pan") ) { return hx::Val( pan ); }
-		if (HX_FIELD_EQ(inName,"err") ) { return hx::Val( err_dyn() ); }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"init") ) { return hx::Val( init_dyn() ); }
@@ -329,9 +295,6 @@ hx::Val ALSound_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPro
 		if (HX_FIELD_EQ(inName,"alsource") ) { return hx::Val( alsource ); }
 		if (HX_FIELD_EQ(inName,"alformat") ) { return hx::Val( alformat ); }
 		if (HX_FIELD_EQ(inName,"position") ) { return hx::Val( position_dyn() ); }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"new_source") ) { return hx::Val( new_source_dyn() ); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"position_of") ) { return hx::Val( position_of_dyn() ); }
@@ -411,8 +374,6 @@ static ::String ALSound_obj_sMemberFields[] = {
 	HX_("position_of",2d,e6,66,ff),
 	HX_("destroy",fa,2c,86,24),
 	HX_("tick",5d,c3,fc,4c),
-	HX_("new_source",1a,be,59,10),
-	HX_("err",65,07,4d,00),
 	HX_("source_format",5b,91,91,ee),
 	::String(null()) };
 

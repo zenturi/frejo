@@ -150,11 +150,15 @@ HXDLIN(  96)		this->create_window();
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC0(Runtime_obj,ready,(void))
+
 bool Runtime_obj::run(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_106_run)
 HXDLIN( 106)		return this->run_loop();
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC0(Runtime_obj,run,return )
 
 void Runtime_obj::shutdown( ::Dynamic __o__immediate){
  ::Dynamic _immediate = __o__immediate.Default(false);
@@ -165,6 +169,8 @@ HXDLIN( 113)			SDL_Quit();
             		}
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC1(Runtime_obj,shutdown,(void))
 
 bool Runtime_obj::window_grab(bool enable){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_121_window_grab)
@@ -179,6 +185,8 @@ HXDLIN( 123)		int res = SDL_SetRelativeMouseMode((SDL_bool)_enable);
 HXLINE( 125)		return (res == 0);
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC1(Runtime_obj,window_grab,return )
 
 void Runtime_obj::window_swap(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_131_window_swap)
@@ -214,17 +222,23 @@ HXDLIN( 143)		return (SDL_SetWindowFullscreen(tmp,flag) == 0);
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC2(Runtime_obj,window_fullscreen,return )
+
 int Runtime_obj::window_width(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_147_window_width)
 HXDLIN( 147)		return this->window_w;
             	}
 
 
+HX_DEFINE_DYNAMIC_FUNC0(Runtime_obj,window_width,return )
+
 int Runtime_obj::window_height(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_148_window_height)
 HXDLIN( 148)		return this->window_h;
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC0(Runtime_obj,window_height,return )
 
 Float Runtime_obj::window_device_pixel_ratio(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_152_window_device_pixel_ratio)
@@ -237,6 +251,8 @@ HXLINE( 158)		int _device_height = ( (int)(this->_size->__Field(HX_("w",77,00,00
 HXLINE( 160)		return (( (Float)(_pixel_height) ) / ( (Float)(_device_height) ));
             	}
 
+
+HX_DEFINE_DYNAMIC_FUNC0(Runtime_obj,window_device_pixel_ratio,return )
 
 bool Runtime_obj::run_loop(){
             	HX_STACKFRAME(&_hx_pos_14dae8750fecc33e_173_run_loop)

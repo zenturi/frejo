@@ -12,7 +12,6 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_72a40c520091a669_639_new,"snow.types.KeyEvent","new",0xa103b8ad,"snow.types.KeyEvent.new","snow/types/Types.hx",639,0x72b41ce7)
-HX_LOCAL_STACK_FRAME(_hx_pos_72a40c520091a669_641_set,"snow.types.KeyEvent","set",0xa10783ef,"snow.types.KeyEvent.set","snow/types/Types.hx",641,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_72a40c520091a669_649_toString,"snow.types.KeyEvent","toString",0x5290b13f,"snow.types.KeyEvent.toString","snow/types/Types.hx",649,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -35,18 +34,6 @@ Dynamic KeyEvent_obj::__Create(hx::DynamicArray inArgs)
 bool KeyEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x5522cb0d;
 }
-
-void KeyEvent_obj::set(int _type,int _keycode,int _scancode,bool _repeat, ::snow::types::ModState _mod){
-            	HX_STACKFRAME(&_hx_pos_72a40c520091a669_641_set)
-HXLINE( 642)		this->type = _type;
-HXLINE( 643)		this->keycode = _keycode;
-HXLINE( 644)		this->scancode = _scancode;
-HXLINE( 645)		this->repeat = _repeat;
-HXLINE( 646)		this->mod = _mod;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC5(KeyEvent_obj,set,(void))
 
 ::String KeyEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_72a40c520091a669_649_toString)
@@ -120,7 +107,6 @@ hx::Val KeyEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPr
 	switch(inName.length) {
 	case 3:
 		if (HX_FIELD_EQ(inName,"mod") ) { return hx::Val( mod ); }
-		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"type") ) { return hx::Val( type ); }
@@ -187,7 +173,6 @@ static ::String KeyEvent_obj_sMemberFields[] = {
 	HX_("scancode",2a,b1,ec,26),
 	HX_("repeat",5b,97,7c,06),
 	HX_("mod",c2,16,53,00),
-	HX_("set",a2,9b,57,00),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 
