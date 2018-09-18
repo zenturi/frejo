@@ -10,10 +10,6 @@ namespace mmvc{
 namespace api{
 
 
-static ::String ICommand_obj_sMemberFields[] = {
-	HX_("execute",35,0a,0d,cc),
-	::String(null()) };
-
 hx::Class ICommand_obj::__mClass;
 
 void ICommand_obj::__register()
@@ -21,7 +17,7 @@ void ICommand_obj::__register()
 	hx::Static(__mClass) = new hx::Class_obj();
 	__mClass->mName = HX_("mmvc.api.ICommand",d7,fc,cf,bd);
 	__mClass->mSuper = &super::__SGetClass();
-	__mClass->mMembers = hx::Class_obj::dupFunctions(ICommand_obj_sMemberFields);
+	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);
 	__mClass->mCanCast = hx::TIsInterface< (int)0x4203b52f >;
 	hx::_hx_RegisterClass(__mClass->mName, __mClass);
 }

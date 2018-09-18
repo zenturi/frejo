@@ -64,9 +64,6 @@ class HXCPP_CLASS_ATTRIBUTES TextEvent_obj : public hx::Object
 		::String text;
 		 ::Dynamic start;
 		 ::Dynamic length;
-		void set(int _type,::String _text,int _start,int _length);
-		::Dynamic set_dyn();
-
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

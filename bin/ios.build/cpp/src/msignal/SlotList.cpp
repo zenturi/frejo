@@ -15,10 +15,8 @@ HX_DEFINE_STACK_FRAME(_hx_pos_fc02bad902711957_51_new,"msignal.SlotList","new",0
 HX_LOCAL_STACK_FRAME(_hx_pos_73078aebd0efd453_28___init__,"::msignal::SlotList_obj","__init__",0x475fc875,"::msignal::SlotList_obj.__init__","msignal/SlotList.hx",28,0xabc95ce8)
 HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_82_get_length,"msignal.SlotList","get_length",0x330cf9e8,"msignal.SlotList.get_length","msignal/SlotList.hx",82,0xabc95ce8)
 HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_109_prepend,"msignal.SlotList","prepend",0x68f61435,"msignal.SlotList.prepend","msignal/SlotList.hx",109,0xabc95ce8)
-HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_121_append,"msignal.SlotList","append",0x520e8693,"msignal.SlotList.append","msignal/SlotList.hx",121,0xabc95ce8)
 HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_155_insertWithPriority,"msignal.SlotList","insertWithPriority",0xe3d67a9c,"msignal.SlotList.insertWithPriority","msignal/SlotList.hx",155,0xabc95ce8)
 HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_193_filterNot,"msignal.SlotList","filterNot",0xa0af6922,"msignal.SlotList.filterNot","msignal/SlotList.hx",193,0xabc95ce8)
-HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_225_contains,"msignal.SlotList","contains",0xee335f18,"msignal.SlotList.contains","msignal/SlotList.hx",225,0xabc95ce8)
 HX_LOCAL_STACK_FRAME(_hx_pos_fc02bad902711957_246_find,"msignal.SlotList","find",0x727da4b2,"msignal.SlotList.find","msignal/SlotList.hx",246,0xabc95ce8)
 namespace msignal{
 
@@ -106,31 +104,6 @@ HXDLIN( 109)		return  ::msignal::SlotList_obj::__alloc( HX_CTX ,slot,hx::ObjectP
 
 HX_DEFINE_DYNAMIC_FUNC1(SlotList_obj,prepend,return )
 
- ::msignal::SlotList SlotList_obj::append( ::Dynamic slot){
-            	HX_GC_STACKFRAME(&_hx_pos_fc02bad902711957_121_append)
-HXLINE( 122)		if (hx::IsNull( slot )) {
-HXLINE( 122)			return hx::ObjectPtr<OBJ_>(this);
-            		}
-HXLINE( 123)		if (!(this->nonEmpty)) {
-HXLINE( 123)			return  ::msignal::SlotList_obj::__alloc( HX_CTX ,slot,null());
-            		}
-HXLINE( 126)		if (hx::IsEq( this->tail,::msignal::SlotList_obj::NIL )) {
-HXLINE( 128)			return  ::msignal::SlotList_obj::__alloc( HX_CTX ,slot,null())->prepend(this->head);
-            		}
-HXLINE( 133)		 ::msignal::SlotList wholeClone =  ::msignal::SlotList_obj::__alloc( HX_CTX ,this->head,null());
-HXLINE( 134)		 ::msignal::SlotList subClone = wholeClone;
-HXLINE( 135)		 ::msignal::SlotList current = this->tail;
-HXLINE( 137)		while(current->nonEmpty){
-HXLINE( 139)			subClone = (subClone->tail =  ::msignal::SlotList_obj::__alloc( HX_CTX ,current->head,null()));
-HXLINE( 140)			current = current->tail;
-            		}
-HXLINE( 144)		subClone->tail =  ::msignal::SlotList_obj::__alloc( HX_CTX ,slot,null());
-HXLINE( 145)		return wholeClone;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(SlotList_obj,append,return )
-
  ::msignal::SlotList SlotList_obj::insertWithPriority( ::Dynamic slot){
             	HX_GC_STACKFRAME(&_hx_pos_fc02bad902711957_155_insertWithPriority)
 HXLINE( 156)		if (!(this->nonEmpty)) {
@@ -190,24 +163,6 @@ HXLINE( 217)		return hx::ObjectPtr<OBJ_>(this);
 
 HX_DEFINE_DYNAMIC_FUNC1(SlotList_obj,filterNot,return )
 
-bool SlotList_obj::contains( ::Dynamic listener){
-            	HX_STACKFRAME(&_hx_pos_fc02bad902711957_225_contains)
-HXLINE( 226)		if (!(this->nonEmpty)) {
-HXLINE( 226)			return false;
-            		}
-HXLINE( 228)		 ::msignal::SlotList p = hx::ObjectPtr<OBJ_>(this);
-HXLINE( 229)		while(p->nonEmpty){
-HXLINE( 231)			if (::Reflect_obj::compareMethods(( ( ::msignal::Slot)(p->head) )->get_listener(),listener)) {
-HXLINE( 231)				return true;
-            			}
-HXLINE( 232)			p = p->tail;
-            		}
-HXLINE( 235)		return false;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(SlotList_obj,contains,return )
-
  ::Dynamic SlotList_obj::find( ::Dynamic listener){
             	HX_STACKFRAME(&_hx_pos_fc02bad902711957_246_find)
 HXLINE( 247)		if (!(this->nonEmpty)) {
@@ -252,7 +207,6 @@ void SlotList_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(head,"head");
 	HX_MARK_MEMBER_NAME(tail,"tail");
 	HX_MARK_MEMBER_NAME(nonEmpty,"nonEmpty");
-	HX_MARK_MEMBER_NAME(length,"length");
 	HX_MARK_END_CLASS();
 }
 
@@ -261,7 +215,6 @@ void SlotList_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(head,"head");
 	HX_VISIT_MEMBER_NAME(tail,"tail");
 	HX_VISIT_MEMBER_NAME(nonEmpty,"nonEmpty");
-	HX_VISIT_MEMBER_NAME(length,"length");
 }
 
 hx::Val SlotList_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
@@ -272,16 +225,11 @@ hx::Val SlotList_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPr
 		if (HX_FIELD_EQ(inName,"tail") ) { return hx::Val( tail ); }
 		if (HX_FIELD_EQ(inName,"find") ) { return hx::Val( find_dyn() ); }
 		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { return hx::Val( inCallProp == hx::paccAlways ? get_length() : length ); }
-		if (HX_FIELD_EQ(inName,"append") ) { return hx::Val( append_dyn() ); }
-		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"prepend") ) { return hx::Val( prepend_dyn() ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"nonEmpty") ) { return hx::Val( nonEmpty ); }
-		if (HX_FIELD_EQ(inName,"contains") ) { return hx::Val( contains_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"filterNot") ) { return hx::Val( filterNot_dyn() ); }
@@ -311,9 +259,6 @@ hx::Val SlotList_obj::__SetField(const ::String &inName,const hx::Val &inValue,h
 		if (HX_FIELD_EQ(inName,"head") ) { head=inValue.Cast<  ::Dynamic >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"tail") ) { tail=inValue.Cast<  ::msignal::SlotList >(); return inValue; }
 		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { length=inValue.Cast< int >(); return inValue; }
-		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"nonEmpty") ) { nonEmpty=inValue.Cast< bool >(); return inValue; }
 	}
@@ -334,7 +279,6 @@ void SlotList_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("head",20,29,0b,45));
 	outFields->push(HX_("tail",90,b6,f6,4c));
 	outFields->push(HX_("nonEmpty",40,e2,c4,99));
-	outFields->push(HX_("length",e6,94,07,9f));
 	super::__GetFields(outFields);
 };
 
@@ -343,7 +287,6 @@ static hx::StorageInfo SlotList_obj_sMemberStorageInfo[] = {
 	{hx::fsObject /*Dynamic*/ ,(int)offsetof(SlotList_obj,head),HX_("head",20,29,0b,45)},
 	{hx::fsObject /*::msignal::SlotList*/ ,(int)offsetof(SlotList_obj,tail),HX_("tail",90,b6,f6,4c)},
 	{hx::fsBool,(int)offsetof(SlotList_obj,nonEmpty),HX_("nonEmpty",40,e2,c4,99)},
-	{hx::fsInt,(int)offsetof(SlotList_obj,length),HX_("length",e6,94,07,9f)},
 	{ hx::fsUnknown, 0, null()}
 };
 static hx::StaticInfo SlotList_obj_sStaticStorageInfo[] = {
@@ -356,13 +299,10 @@ static ::String SlotList_obj_sMemberFields[] = {
 	HX_("head",20,29,0b,45),
 	HX_("tail",90,b6,f6,4c),
 	HX_("nonEmpty",40,e2,c4,99),
-	HX_("length",e6,94,07,9f),
 	HX_("get_length",af,04,8f,8f),
 	HX_("prepend",0e,97,e0,37),
-	HX_("append",da,e1,d3,8f),
 	HX_("insertWithPriority",63,24,1b,fa),
 	HX_("filterNot",3b,14,63,e1),
-	HX_("contains",1f,5a,7b,2c),
 	HX_("find",39,d0,bb,43),
 	::String(null()) };
 

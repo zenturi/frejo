@@ -6,7 +6,6 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_CLASS2(mmvc,api,ICommandMap)
 HX_DECLARE_CLASS2(mmvc,api,IContext)
 
 namespace mmvc{
@@ -19,10 +18,6 @@ class HXCPP_CLASS_ATTRIBUTES IContext_obj {
 		HX_DO_INTERFACE_RTTI;
 
 		static void __boot();
-		::Dynamic (hx::Object :: *_hx_get_commandMap)(); 
-		static inline ::Dynamic get_commandMap( ::Dynamic _hx_) {
-			return (_hx_.mPtr->*( static_cast< ::mmvc::api::IContext_obj *>(_hx_.mPtr->_hx_getInterface(0xda0dd9d3)))->_hx_get_commandMap)();
-		}
 };
 
 } // end namespace mmvc

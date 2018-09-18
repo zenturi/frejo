@@ -61,15 +61,6 @@ class HXCPP_CLASS_ATTRIBUTES Snow_obj : public hx::Object
 		::String __ToString() const { return HX_("Snow",a3,8e,30,37); }
 
 		static void __boot();
-		static void next( ::Dynamic func);
-		static ::Dynamic next_dyn();
-
-		static void defer( ::Dynamic func);
-		static ::Dynamic defer_dyn();
-
-		static Float get_timestamp();
-		static ::Dynamic get_timestamp_dyn();
-
 		static ::Array< ::Dynamic> next_queue;
 		static ::Array< ::Dynamic> defer_queue;
 		 ::Main host;
@@ -83,7 +74,6 @@ class HXCPP_CLASS_ATTRIBUTES Snow_obj : public hx::Object
 		 ::snow::systems::assets::Assets assets;
 		::String platform;
 		::String os;
-		bool debug;
 		bool shutting_down;
 		bool has_shutdown;
 		::Array< ::Dynamic> extensions;
@@ -107,24 +97,9 @@ class HXCPP_CLASS_ATTRIBUTES Snow_obj : public hx::Object
 		void onevent( ::snow::types::SystemEvent _event);
 		::Dynamic onevent_dyn();
 
-		Float get_time();
-		::Dynamic get_time_dyn();
-
-		::String get_uniqueid();
-		::Dynamic get_uniqueid_dyn();
-
 		bool had_ready_event;
-		void on_ready_event();
-		::Dynamic on_ready_event_dyn();
-
-		void on_tick_event();
-		::Dynamic on_tick_event_dyn();
-
 		 ::snow::api::Promise setup_configs();
 		::Dynamic setup_configs_dyn();
-
-		void setup_host_config();
-		::Dynamic setup_host_config_dyn();
 
 		 ::snow::api::Promise default_user_config();
 		::Dynamic default_user_config_dyn();
@@ -137,24 +112,6 @@ class HXCPP_CLASS_ATTRIBUTES Snow_obj : public hx::Object
 
 		 ::Dynamic default_window_config();
 		::Dynamic default_window_config_dyn();
-
-		bool set_freeze(bool _freeze);
-		::Dynamic set_freeze_dyn();
-
-		void step();
-		::Dynamic step_dyn();
-
-		void cycle_next_queue();
-		::Dynamic cycle_next_queue_dyn();
-
-		void cycle_defer_queue();
-		::Dynamic cycle_defer_queue_dyn();
-
-		 ::Dynamic copy_window_config( ::Dynamic _config);
-		::Dynamic copy_window_config_dyn();
-
-		 ::Dynamic copy_render_config( ::Dynamic _config);
-		::Dynamic copy_render_config_dyn();
 
 		::String make_uniqueid( ::Dynamic val);
 		::Dynamic make_uniqueid_dyn();

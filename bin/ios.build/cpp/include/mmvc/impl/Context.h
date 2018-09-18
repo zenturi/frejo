@@ -67,9 +67,6 @@ class HXCPP_CLASS_ATTRIBUTES Context_obj : public hx::Object
 		virtual void startup();
 		::Dynamic startup_dyn();
 
-		virtual void shutdown();
-		::Dynamic shutdown_dyn();
-
 		::Dynamic set_contextView(::Dynamic value);
 		::Dynamic set_contextView_dyn();
 

@@ -13,7 +13,6 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_d11d6f47989ab043_30_new,"minject.Reflector","new",0x30f5d5c2,"minject.Reflector.new","minject/Reflector.hx",30,0xc1f4156f)
 HX_LOCAL_STACK_FRAME(_hx_pos_d11d6f47989ab043_40_classExtendsOrImplements,"minject.Reflector","classExtendsOrImplements",0x0899dd72,"minject.Reflector.classExtendsOrImplements","minject/Reflector.hx",40,0xc1f4156f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d11d6f47989ab043_75_getClass,"minject.Reflector","getClass",0xe414bf20,"minject.Reflector.getClass","minject/Reflector.hx",75,0xc1f4156f)
 HX_LOCAL_STACK_FRAME(_hx_pos_d11d6f47989ab043_87_getFQCN,"minject.Reflector","getFQCN",0xadf982ae,"minject.Reflector.getFQCN","minject/Reflector.hx",87,0xc1f4156f)
 namespace minject{
 
@@ -72,17 +71,6 @@ HXLINE(  65)		return ::Std_obj::is(classInstance,superClass);
 
 HX_DEFINE_DYNAMIC_FUNC2(Reflector_obj,classExtendsOrImplements,return )
 
-hx::Class Reflector_obj::getClass( ::Dynamic value){
-            	HX_STACKFRAME(&_hx_pos_d11d6f47989ab043_75_getClass)
-HXLINE(  76)		if (::Std_obj::is(value,hx::ClassOf< ::hx::Class >())) {
-HXLINE(  76)			return value;
-            		}
-HXLINE(  77)		return ::Type_obj::getClass(value);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Reflector_obj,getClass,return )
-
 ::String Reflector_obj::getFQCN( ::Dynamic value){
             	HX_STACKFRAME(&_hx_pos_d11d6f47989ab043_87_getFQCN)
 HXLINE(  88)		::String fqcn;
@@ -119,9 +107,6 @@ hx::Val Reflector_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 	case 7:
 		if (HX_FIELD_EQ(inName,"getFQCN") ) { return hx::Val( getFQCN_dyn() ); }
 		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"getClass") ) { return hx::Val( getClass_dyn() ); }
-		break;
 	case 24:
 		if (HX_FIELD_EQ(inName,"classExtendsOrImplements") ) { return hx::Val( classExtendsOrImplements_dyn() ); }
 	}
@@ -135,7 +120,6 @@ static hx::StaticInfo *Reflector_obj_sStaticStorageInfo = 0;
 
 static ::String Reflector_obj_sMemberFields[] = {
 	HX_("classExtendsOrImplements",14,8a,0f,7b),
-	HX_("getClass",c2,87,2f,a8),
 	HX_("getFQCN",4c,24,2c,16),
 	::String(null()) };
 

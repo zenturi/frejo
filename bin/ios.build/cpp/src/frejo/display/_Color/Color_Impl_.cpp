@@ -14,9 +14,6 @@
 
 HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_27_vg,"frejo.display._Color.Color_Impl_","vg",0x4297904a,"frejo.display._Color.Color_Impl_.vg","frejo/display/Color.hx",27,0x4ae7cfd9)
 HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_30__new,"frejo.display._Color.Color_Impl_","_new",0xb4a576ba,"frejo.display._Color.Color_Impl_._new","frejo/display/Color.hx",30,0x4ae7cfd9)
-HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_39_boot,"frejo.display._Color.Color_Impl_","boot",0xb6a1e58b,"frejo.display._Color.Color_Impl_.boot","frejo/display/Color.hx",39,0x4ae7cfd9)
-HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_40_boot,"frejo.display._Color.Color_Impl_","boot",0xb6a1e58b,"frejo.display._Color.Color_Impl_.boot","frejo/display/Color.hx",40,0x4ae7cfd9)
-HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_41_boot,"frejo.display._Color.Color_Impl_","boot",0xb6a1e58b,"frejo.display._Color.Color_Impl_.boot","frejo/display/Color.hx",41,0x4ae7cfd9)
 HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_42_boot,"frejo.display._Color.Color_Impl_","boot",0xb6a1e58b,"frejo.display._Color.Color_Impl_.boot","frejo/display/Color.hx",42,0x4ae7cfd9)
 HX_LOCAL_STACK_FRAME(_hx_pos_99c7e5ddd47a3d17_43_boot,"frejo.display._Color.Color_Impl_","boot",0xb6a1e58b,"frejo.display._Color.Color_Impl_.boot","frejo/display/Color.hx",43,0x4ae7cfd9)
 namespace frejo{
@@ -59,12 +56,6 @@ HXDLIN(  30)		return this1;
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC4(Color_Impl__obj,_new,return )
 
- ::Dynamic Color_Impl__obj::PRIMARY;
-
- ::Dynamic Color_Impl__obj::SECONDARY;
-
- ::Dynamic Color_Impl__obj::DANGER;
-
  ::Dynamic Color_Impl__obj::LIGHT;
 
  ::Dynamic Color_Impl__obj::TRANSPARENT;
@@ -86,9 +77,6 @@ bool Color_Impl__obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx:
 #ifdef HXCPP_SCRIPTABLE
 static hx::StorageInfo *Color_Impl__obj_sMemberStorageInfo = 0;
 static hx::StaticInfo Color_Impl__obj_sStaticStorageInfo[] = {
-	{hx::fsObject /*Dynamic*/ ,(void *) &Color_Impl__obj::PRIMARY,HX_("PRIMARY",a2,13,50,03)},
-	{hx::fsObject /*Dynamic*/ ,(void *) &Color_Impl__obj::SECONDARY,HX_("SECONDARY",54,bf,92,5d)},
-	{hx::fsObject /*Dynamic*/ ,(void *) &Color_Impl__obj::DANGER,HX_("DANGER",e3,fe,14,d1)},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Color_Impl__obj::LIGHT,HX_("LIGHT",b6,c8,ea,f2)},
 	{hx::fsObject /*Dynamic*/ ,(void *) &Color_Impl__obj::TRANSPARENT,HX_("TRANSPARENT",32,37,f6,f8)},
 	{ hx::fsUnknown, 0, null()}
@@ -96,18 +84,12 @@ static hx::StaticInfo Color_Impl__obj_sStaticStorageInfo[] = {
 #endif
 
 static void Color_Impl__obj_sMarkStatics(HX_MARK_PARAMS) {
-	HX_MARK_MEMBER_NAME(Color_Impl__obj::PRIMARY,"PRIMARY");
-	HX_MARK_MEMBER_NAME(Color_Impl__obj::SECONDARY,"SECONDARY");
-	HX_MARK_MEMBER_NAME(Color_Impl__obj::DANGER,"DANGER");
 	HX_MARK_MEMBER_NAME(Color_Impl__obj::LIGHT,"LIGHT");
 	HX_MARK_MEMBER_NAME(Color_Impl__obj::TRANSPARENT,"TRANSPARENT");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
 static void Color_Impl__obj_sVisitStatics(HX_VISIT_PARAMS) {
-	HX_VISIT_MEMBER_NAME(Color_Impl__obj::PRIMARY,"PRIMARY");
-	HX_VISIT_MEMBER_NAME(Color_Impl__obj::SECONDARY,"SECONDARY");
-	HX_VISIT_MEMBER_NAME(Color_Impl__obj::DANGER,"DANGER");
 	HX_VISIT_MEMBER_NAME(Color_Impl__obj::LIGHT,"LIGHT");
 	HX_VISIT_MEMBER_NAME(Color_Impl__obj::TRANSPARENT,"TRANSPARENT");
 };
@@ -118,9 +100,6 @@ hx::Class Color_Impl__obj::__mClass;
 
 static ::String Color_Impl__obj_sStaticFields[] = {
 	HX_("_new",61,15,1f,3f),
-	HX_("PRIMARY",a2,13,50,03),
-	HX_("SECONDARY",54,bf,92,5d),
-	HX_("DANGER",e3,fe,14,d1),
 	HX_("LIGHT",b6,c8,ea,f2),
 	HX_("TRANSPARENT",32,37,f6,f8),
 	::String(null())
@@ -155,18 +134,6 @@ void Color_Impl__obj::__register()
 
 void Color_Impl__obj::__boot()
 {
-{
-            	HX_STACKFRAME(&_hx_pos_99c7e5ddd47a3d17_39_boot)
-HXDLIN(  39)		PRIMARY = ::frejo::display::_Color::Color_Impl__obj::_new(72,138,255,255);
-            	}
-{
-            	HX_STACKFRAME(&_hx_pos_99c7e5ddd47a3d17_40_boot)
-HXDLIN(  40)		SECONDARY = ::frejo::display::_Color::Color_Impl__obj::_new(50,219,100,255);
-            	}
-{
-            	HX_STACKFRAME(&_hx_pos_99c7e5ddd47a3d17_41_boot)
-HXDLIN(  41)		DANGER = ::frejo::display::_Color::Color_Impl__obj::_new(245,61,61,255);
-            	}
 {
             	HX_STACKFRAME(&_hx_pos_99c7e5ddd47a3d17_42_boot)
 HXDLIN(  42)		LIGHT = ::frejo::display::_Color::Color_Impl__obj::_new(244,244,244,255);

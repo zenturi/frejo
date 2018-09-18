@@ -7,12 +7,8 @@
 #endif
 
 HX_DECLARE_CLASS1(snow,Snow)
-HX_DECLARE_CLASS2(snow,api,Promise)
-HX_DECLARE_CLASS3(snow,api,buffers,ArrayBufferView)
 HX_DECLARE_CLASS4(snow,core,native,assets,Assets)
 HX_DECLARE_CLASS3(snow,modules,interfaces,Assets)
-HX_DECLARE_CLASS3(snow,systems,assets,Asset)
-HX_DECLARE_CLASS3(snow,systems,assets,AssetImage)
 HX_DECLARE_CLASS3(snow,systems,assets,Assets)
 
 namespace snow{
@@ -57,33 +53,6 @@ class HXCPP_CLASS_ATTRIBUTES Assets_obj : public hx::Object
 		 ::snow::Snow app;
 		void shutdown();
 		::Dynamic shutdown_dyn();
-
-		::String path(::String _id);
-		::Dynamic path_dyn();
-
-		 ::snow::api::Promise bytes(::String _id);
-		::Dynamic bytes_dyn();
-
-		 ::snow::api::Promise text(::String _id);
-		::Dynamic text_dyn();
-
-		 ::snow::api::Promise json(::String _id);
-		::Dynamic json_dyn();
-
-		 ::snow::api::Promise image(::String _id);
-		::Dynamic image_dyn();
-
-		 ::snow::api::Promise image_from_bytes(::String _id, ::snow::api::buffers::ArrayBufferView _bytes);
-		::Dynamic image_from_bytes_dyn();
-
-		 ::snow::systems::assets::AssetImage image_from_pixels(::String _id,int _width,int _height, ::snow::api::buffers::ArrayBufferView _pixels);
-		::Dynamic image_from_pixels_dyn();
-
-		 ::snow::api::Promise audio(::String _id, ::Dynamic _is_stream);
-		::Dynamic audio_dyn();
-
-		 ::snow::api::Promise audio_from_bytes(::String _id, ::snow::api::buffers::ArrayBufferView _bytes, ::Dynamic _format);
-		::Dynamic audio_from_bytes_dyn();
 
 };
 

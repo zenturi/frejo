@@ -81,7 +81,7 @@ class Node {
 		width = app.window_width;
 		height = app.window_height;
 
-		// draw default graphics
+		// draw default node as rect
 		graphics.rect(position.x, position.y, width, height);
 	}
 

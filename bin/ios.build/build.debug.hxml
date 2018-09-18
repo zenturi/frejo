@@ -48,5 +48,6 @@
 --macro snow.Set.runtime("snow.modules.sdl.Runtime")
 --macro snow.Set.audio("snow.modules.openal.Audio")
 --macro snow.Set.io("snow.modules.sdl.IO")
+-dce full
 -debug
 bin/ios.build/snow.hxml

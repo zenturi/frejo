@@ -48,8 +48,6 @@ class HXCPP_CLASS_ATTRIBUTES Context_obj : public  ::mmvc::impl::Context_obj
 
 		void startup();
 
-		void shutdown();
-
 };
 
 } // end namespace frejo

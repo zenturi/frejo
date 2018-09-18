@@ -6,6 +6,7 @@
 #include <hxcpp.h>
 #endif
 
+HX_DECLARE_STACK_FRAME(_hx_pos_8664b18ab865b55e_12_new)
 HX_DECLARE_CLASS3(snow,api,buffers,ArrayBufferView)
 
 namespace snow{
@@ -28,8 +29,69 @@ class HXCPP_CLASS_ATTRIBUTES ArrayBufferView_obj : public hx::Object
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return hx::Object::operator new(inSize+extra,true,"snow.api.buffers.ArrayBufferView"); }
-		static hx::ObjectPtr< ArrayBufferView_obj > __new(int in_type);
-		static hx::ObjectPtr< ArrayBufferView_obj > __alloc(hx::Ctx *_hx_ctx,int in_type);
+
+		hx::ObjectPtr< ArrayBufferView_obj > __new(int in_type) {
+			hx::ObjectPtr< ArrayBufferView_obj > __this = new ArrayBufferView_obj();
+			__this->__construct(in_type);
+			return __this;
+		}
+
+		static hx::ObjectPtr< ArrayBufferView_obj > __alloc(hx::Ctx *_hx_ctx,int in_type) {
+			ArrayBufferView_obj *__this = (ArrayBufferView_obj*)(hx::Ctx::alloc(_hx_ctx, sizeof(ArrayBufferView_obj), true, "snow.api.buffers.ArrayBufferView"));
+			*(void **)__this = ArrayBufferView_obj::_hx_vtable;
+{
+            	HX_STACKFRAME(&_hx_pos_8664b18ab865b55e_12_new)
+HXLINE(  21)		( ( ::snow::api::buffers::ArrayBufferView)(__this) )->bytesPerElement = 0;
+HXLINE(  14)		( ( ::snow::api::buffers::ArrayBufferView)(__this) )->type = 0;
+HXLINE(  27)		( ( ::snow::api::buffers::ArrayBufferView)(__this) )->type = in_type;
+HXLINE(  28)		int _hx_tmp;
+HXDLIN(  28)		switch((int)(( ( ::snow::api::buffers::ArrayBufferView)(__this) )->type)){
+            			case (int)1: {
+HXLINE(  28)				_hx_tmp = 1;
+            			}
+            			break;
+            			case (int)2: {
+HXLINE(  28)				_hx_tmp = 2;
+            			}
+            			break;
+            			case (int)3: {
+HXLINE(  28)				_hx_tmp = 4;
+            			}
+            			break;
+            			case (int)4: {
+HXLINE(  28)				_hx_tmp = 1;
+            			}
+            			break;
+            			case (int)5: {
+HXLINE(  28)				_hx_tmp = 1;
+            			}
+            			break;
+            			case (int)6: {
+HXLINE(  28)				_hx_tmp = 2;
+            			}
+            			break;
+            			case (int)7: {
+HXLINE(  28)				_hx_tmp = 4;
+            			}
+            			break;
+            			case (int)8: {
+HXLINE(  28)				_hx_tmp = 4;
+            			}
+            			break;
+            			case (int)9: {
+HXLINE(  28)				_hx_tmp = 8;
+            			}
+            			break;
+            			default:{
+HXLINE(  28)				_hx_tmp = 1;
+            			}
+            		}
+HXDLIN(  28)		( ( ::snow::api::buffers::ArrayBufferView)(__this) )->bytesPerElement = _hx_tmp;
+            	}
+		
+			return __this;
+		}
+
 		static void * _hx_vtable;
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
@@ -37,7 +99,6 @@ class HXCPP_CLASS_ATTRIBUTES ArrayBufferView_obj : public hx::Object
 
 		HX_DO_RTTI_ALL;
 		hx::Val __Field(const ::String &inString, hx::PropertyAccess inCallProp);
-		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		hx::Val __SetField(const ::String &inString,const hx::Val &inValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
@@ -46,69 +107,12 @@ class HXCPP_CLASS_ATTRIBUTES ArrayBufferView_obj : public hx::Object
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("ArrayBufferView",5e,6e,84,fd); }
 
-		static  ::snow::api::buffers::ArrayBufferView fromElements(int _type,int _elements);
-		static ::Dynamic fromElements_dyn();
-
-		static  ::snow::api::buffers::ArrayBufferView fromView(int _type, ::snow::api::buffers::ArrayBufferView _other);
-		static ::Dynamic fromView_dyn();
-
-		static  ::snow::api::buffers::ArrayBufferView fromBuffer(int _type,::Array< unsigned char > _buffer,int _byte_offset,int _byte_length);
-		static ::Dynamic fromBuffer_dyn();
-
-		static  ::snow::api::buffers::ArrayBufferView fromArray(int _type,::Array< Float > _array);
-		static ::Dynamic fromArray_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Int32Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Int32Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Float32Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Float32Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Uint8Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Uint8Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Int8Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Int8Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Uint8ClampedArray(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Uint8ClampedArray_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Int16Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Int16Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Uint16Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Uint16Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Uint32Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Uint32Array_dyn();
-
-		 ::snow::api::buffers::ArrayBufferView subarray_snow_api_buffers_Float64Array(int begin, ::Dynamic end);
-		::Dynamic subarray_snow_api_buffers_Float64Array_dyn();
-
 		int type;
 		::Array< unsigned char > buffer;
 		int byteOffset;
 		int byteLength;
 		int length;
 		int bytesPerElement;
-		void set( ::snow::api::buffers::ArrayBufferView view,::Array< Float > array,hx::Null< int >  offset);
-		::Dynamic set_dyn();
-
-		void cloneBuffer(::Array< unsigned char > src,hx::Null< int >  srcByteOffset);
-		::Dynamic cloneBuffer_dyn();
-
-		int bytesForType(int type);
-		::Dynamic bytesForType_dyn();
-
-		virtual ::String toString();
-		::Dynamic toString_dyn();
-
-		int toByteLength(int elemCount);
-		::Dynamic toByteLength_dyn();
-
-		void copyFromArray(::Array< Float > array, ::Dynamic offset);
-		::Dynamic copyFromArray_dyn();
-
 };
 
 } // end namespace snow

@@ -62,9 +62,6 @@ class HXCPP_CLASS_ATTRIBUTES Color_Impl__obj : public hx::Object
 		static  ::Dynamic _new(int r,int g,int b,int a);
 		static ::Dynamic _new_dyn();
 
-		static  ::Dynamic PRIMARY;
-		static  ::Dynamic SECONDARY;
-		static  ::Dynamic DANGER;
 		static  ::Dynamic LIGHT;
 		static  ::Dynamic TRANSPARENT;
 };

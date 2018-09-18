@@ -42,7 +42,6 @@ class HXCPP_CLASS_ATTRIBUTES Runtime_obj : public hx::Object
 
 		HX_DO_RTTI_ALL;
 		hx::Val __Field(const ::String &inString, hx::PropertyAccess inCallProp);
-		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		hx::Val __SetField(const ::String &inString,const hx::Val &inValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
@@ -52,35 +51,8 @@ class HXCPP_CLASS_ATTRIBUTES Runtime_obj : public hx::Object
 		void *_hx_getInterface(int inHash);
 		::String __ToString() const { return HX_("Runtime",b8,dc,b1,bc); }
 
-		static Float timestamp();
-		static ::Dynamic timestamp_dyn();
-
 		::String name;
 		 ::snow::Snow app;
-		virtual bool run();
-		::Dynamic run_dyn();
-
-		virtual void ready();
-		::Dynamic ready_dyn();
-
-		virtual void shutdown( ::Dynamic _immediate);
-		::Dynamic shutdown_dyn();
-
-		virtual bool window_grab(bool enable);
-		::Dynamic window_grab_dyn();
-
-		virtual bool window_fullscreen(bool enable, ::Dynamic true_fullscreen);
-		::Dynamic window_fullscreen_dyn();
-
-		virtual Float window_device_pixel_ratio();
-		::Dynamic window_device_pixel_ratio_dyn();
-
-		virtual int window_width();
-		::Dynamic window_width_dyn();
-
-		virtual int window_height();
-		::Dynamic window_height_dyn();
-
 };
 
 } // end namespace snow

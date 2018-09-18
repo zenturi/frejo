@@ -12,7 +12,6 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_28668287f4db9634_45_new,"haxe.ds.List","new",0x82be24e7,"haxe.ds.List.new","/usr/local/lib/haxe/std/haxe/ds/List.hx",45,0x54f95eac)
-HX_LOCAL_STACK_FRAME(_hx_pos_28668287f4db9634_53_add,"haxe.ds.List","add",0x82b446a8,"haxe.ds.List.add","/usr/local/lib/haxe/std/haxe/ds/List.hx",53,0x54f95eac)
 HX_LOCAL_STACK_FRAME(_hx_pos_28668287f4db9634_68_push,"haxe.ds.List","push",0xe500b373,"haxe.ds.List.push","/usr/local/lib/haxe/std/haxe/ds/List.hx",68,0x54f95eac)
 HX_LOCAL_STACK_FRAME(_hx_pos_28668287f4db9634_138_remove,"haxe.ds.List","remove",0x3f86961d,"haxe.ds.List.remove","/usr/local/lib/haxe/std/haxe/ds/List.hx",138,0x54f95eac)
 HX_LOCAL_STACK_FRAME(_hx_pos_28668287f4db9634_162_iterator,"haxe.ds.List","iterator",0x056d2c07,"haxe.ds.List.iterator","/usr/local/lib/haxe/std/haxe/ds/List.hx",162,0x54f95eac)
@@ -38,22 +37,6 @@ Dynamic List_obj::__Create(hx::DynamicArray inArgs)
 bool List_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x57bbda73;
 }
-
-void List_obj::add( ::Dynamic item){
-            	HX_GC_STACKFRAME(&_hx_pos_28668287f4db9634_53_add)
-HXLINE(  54)		 ::haxe::ds::_List::ListNode x =  ::haxe::ds::_List::ListNode_obj::__alloc( HX_CTX ,item,null());
-HXLINE(  55)		if (hx::IsNull( this->h )) {
-HXLINE(  56)			this->h = x;
-            		}
-            		else {
-HXLINE(  58)			this->q->next = x;
-            		}
-HXLINE(  59)		this->q = x;
-HXLINE(  60)		this->length++;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(List_obj,add,(void))
 
 void List_obj::push( ::Dynamic item){
             	HX_GC_STACKFRAME(&_hx_pos_28668287f4db9634_68_push)
@@ -144,9 +127,6 @@ hx::Val List_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		if (HX_FIELD_EQ(inName,"h") ) { return hx::Val( h ); }
 		if (HX_FIELD_EQ(inName,"q") ) { return hx::Val( q ); }
 		break;
-	case 3:
-		if (HX_FIELD_EQ(inName,"add") ) { return hx::Val( add_dyn() ); }
-		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"push") ) { return hx::Val( push_dyn() ); }
 		break;
@@ -195,7 +175,6 @@ static ::String List_obj_sMemberFields[] = {
 	HX_("h",68,00,00,00),
 	HX_("q",71,00,00,00),
 	HX_("length",e6,94,07,9f),
-	HX_("add",21,f2,49,00),
 	HX_("push",da,11,61,4a),
 	HX_("remove",44,9c,88,04),
 	HX_("iterator",ee,49,9a,93),

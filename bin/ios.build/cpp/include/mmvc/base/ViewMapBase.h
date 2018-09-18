@@ -62,12 +62,6 @@ class HXCPP_CLASS_ATTRIBUTES ViewMapBase_obj : public hx::Object
 		virtual void removeListeners();
 		::Dynamic removeListeners_dyn();
 
-		virtual void onViewAdded( ::Dynamic view);
-		::Dynamic onViewAdded_dyn();
-
-		virtual void onViewRemoved( ::Dynamic view);
-		::Dynamic onViewRemoved_dyn();
-
 };
 
 } // end namespace mmvc

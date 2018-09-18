@@ -32,17 +32,11 @@
 #ifndef INCLUDED_snow_types_ModState
 #include <snow/types/ModState.h>
 #endif
-#ifndef INCLUDED_snow_types_SystemEvent
-#include <snow/types/SystemEvent.h>
-#endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_2e7544c48b16306f_10_new,"snow.App","new",0x90aac908,"snow.App.new","snow/App.hx",10,0xf7b8a629)
-HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_70_config,"snow.App","config",0xed32371a,"snow.App.config","snow/App.hx",70,0xf7b8a629)
-HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_72_ready,"snow.App","ready",0x753f130b,"snow.App.ready","snow/App.hx",72,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_74_update,"snow.App","update",0xac656661,"snow.App.update","snow/App.hx",74,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_76_tick,"snow.App","tick",0x08bf5db5,"snow.App.tick","snow/App.hx",76,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_78_ondestroy,"snow.App","ondestroy",0xb8d6a463,"snow.App.ondestroy","snow/App.hx",78,0xf7b8a629)
-HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_80_onevent,"snow.App","onevent",0x07596343,"snow.App.onevent","snow/App.hx",80,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_83_ontickstart,"snow.App","ontickstart",0x0f08438e,"snow.App.ontickstart","snow/App.hx",83,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_85_ontickend,"snow.App","ontickend",0xaf357007,"snow.App.ontickend","snow/App.hx",85,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_88_onkeydown,"snow.App","onkeydown",0x45beb4ea,"snow.App.onkeydown","snow/App.hx",88,0xf7b8a629)
@@ -62,7 +56,6 @@ HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_118_ongamepaddevice,"snow.App","on
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_121_internal_init,"snow.App","internal_init",0x2c38ed3a,"snow.App.internal_init","snow/App.hx",121,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_136_internal_tick,"snow.App","internal_tick",0x337a7587,"snow.App.internal_tick","snow/App.hx",136,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_161_internal_tick_default,"snow.App","internal_tick_default",0xa54206c9,"snow.App.internal_tick_default","snow/App.hx",161,0xf7b8a629)
-HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_190_internal_tick_fixed_timestep,"snow.App","internal_tick_fixed_timestep",0x5966903c,"snow.App.internal_tick_fixed_timestep","snow/App.hx",190,0xf7b8a629)
 HX_LOCAL_STACK_FRAME(_hx_pos_2e7544c48b16306f_224_main,"snow.App","main",0x0418d291,"snow.App.main","snow/App.hx",224,0xf7b8a629)
 namespace snow{
 
@@ -102,21 +95,6 @@ bool App_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x7e2b5c5e;
 }
 
- ::Dynamic App_obj::config( ::Dynamic _config){
-            	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_70_config)
-HXDLIN(  70)		return _config;
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(App_obj,config,return )
-
-void App_obj::ready(){
-            	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_72_ready)
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(App_obj,ready,(void))
-
 void App_obj::update(Float dt){
             	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_74_update)
             	}
@@ -137,13 +115,6 @@ void App_obj::ondestroy(){
 
 
 HX_DEFINE_DYNAMIC_FUNC0(App_obj,ondestroy,(void))
-
-void App_obj::onevent( ::snow::types::SystemEvent event){
-            	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_80_onevent)
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(App_obj,onevent,(void))
 
 void App_obj::ontickstart(){
             	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_83_ontickstart)
@@ -352,33 +323,6 @@ HXLINE( 186)		this->update(_used_delta);
 
 HX_DEFINE_DYNAMIC_FUNC0(App_obj,internal_tick_default,(void))
 
-void App_obj::internal_tick_fixed_timestep(){
-            	HX_STACKFRAME(&_hx_pos_2e7544c48b16306f_190_internal_tick_fixed_timestep)
-HXLINE( 192)		 ::snow::Snow _this = this->app;
-HXDLIN( 192)		Float _hx_tmp = linc::timestamp::now();
-HXDLIN( 192)		this->frame_start = (_hx_tmp - ::snow::modules::sdl::Runtime_obj::timestamp_start);
-HXLINE( 193)		this->frame_delta = (this->frame_start - this->frame_start_prev);
-HXLINE( 194)		this->frame_start_prev = this->frame_start;
-HXLINE( 196)		this->sim_delta = (this->frame_delta * this->timescale);
-HXLINE( 197)		if ((this->sim_delta > this->frame_max_delta)) {
-HXLINE( 198)			this->sim_delta = this->frame_max_delta;
-            		}
-HXLINE( 201)		 ::snow::App _hx_tmp1 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 201)		_hx_tmp1->fixed_overflow = (_hx_tmp1->fixed_overflow + this->sim_delta);
-HXLINE( 203)		Float _slice = (this->fixed_frame_time * this->timescale);
-HXLINE( 204)		while((this->fixed_overflow >= this->fixed_frame_time)){
-HXLINE( 206)			this->update(_slice);
-HXLINE( 207)			 ::snow::App _hx_tmp2 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 207)			_hx_tmp2->sim_time = (_hx_tmp2->sim_time + _slice);
-HXLINE( 208)			 ::snow::App _hx_tmp3 = hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 208)			_hx_tmp3->fixed_overflow = (_hx_tmp3->fixed_overflow - _slice);
-            		}
-HXLINE( 212)		this->fixed_alpha = (this->fixed_overflow / this->fixed_frame_time);
-            	}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(App_obj,internal_tick_fixed_timestep,(void))
-
 void App_obj::main(){
             	HX_GC_STACKFRAME(&_hx_pos_2e7544c48b16306f_224_main)
 HXDLIN( 224)		 ::snow::Snow_obj::__alloc( HX_CTX , ::Main_obj::__alloc( HX_CTX ));
@@ -460,15 +404,10 @@ hx::Val App_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 	case 4:
 		if (HX_FIELD_EQ(inName,"tick") ) { return hx::Val( tick_dyn() ); }
 		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"ready") ) { return hx::Val( ready_dyn() ); }
-		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"config") ) { return hx::Val( config_dyn() ); }
 		if (HX_FIELD_EQ(inName,"update") ) { return hx::Val( update_dyn() ); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"onevent") ) { return hx::Val( onevent_dyn() ); }
 		if (HX_FIELD_EQ(inName,"onkeyup") ) { return hx::Val( onkeyup_dyn() ); }
 		break;
 	case 8:
@@ -526,9 +465,6 @@ hx::Val App_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		break;
 	case 21:
 		if (HX_FIELD_EQ(inName,"internal_tick_default") ) { return hx::Val( internal_tick_default_dyn() ); }
-		break;
-	case 28:
-		if (HX_FIELD_EQ(inName,"internal_tick_fixed_timestep") ) { return hx::Val( internal_tick_fixed_timestep_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -649,12 +585,9 @@ static ::String App_obj_sMemberFields[] = {
 	HX_("fixed_frame_time",ca,cc,ec,0f),
 	HX_("fixed_overflow",ad,12,67,7c),
 	HX_("next_tick",69,89,25,14),
-	HX_("config",c2,56,d2,c7),
-	HX_("ready",63,a0,ba,e6),
 	HX_("update",09,86,05,87),
 	HX_("tick",5d,c3,fc,4c),
 	HX_("ondestroy",bb,bd,df,2e),
-	HX_("onevent",9b,f6,d4,78),
 	HX_("ontickstart",e6,62,8c,ec),
 	HX_("ontickend",5f,89,3e,25),
 	HX_("onkeydown",42,ce,c7,bb),
@@ -674,7 +607,6 @@ static ::String App_obj_sMemberFields[] = {
 	HX_("internal_init",92,92,85,8a),
 	HX_("internal_tick",df,1a,c7,91),
 	HX_("internal_tick_default",21,c4,37,4b),
-	HX_("internal_tick_fixed_timestep",e4,ad,a9,73),
 	::String(null()) };
 
 hx::Class App_obj::__mClass;

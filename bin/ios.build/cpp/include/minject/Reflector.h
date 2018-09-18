@@ -42,9 +42,6 @@ class HXCPP_CLASS_ATTRIBUTES Reflector_obj : public hx::Object
 		bool classExtendsOrImplements( ::Dynamic classOrClassName,hx::Class superClass);
 		::Dynamic classExtendsOrImplements_dyn();
 
-		hx::Class getClass( ::Dynamic value);
-		::Dynamic getClass_dyn();
-
 		::String getFQCN( ::Dynamic value);
 		::Dynamic getFQCN_dyn();
 

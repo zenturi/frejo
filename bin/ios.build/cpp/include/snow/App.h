@@ -9,7 +9,6 @@
 HX_DECLARE_CLASS1(snow,App)
 HX_DECLARE_CLASS1(snow,Snow)
 HX_DECLARE_CLASS2(snow,types,ModState)
-HX_DECLARE_CLASS2(snow,types,SystemEvent)
 
 namespace snow{
 
@@ -68,12 +67,6 @@ class HXCPP_CLASS_ATTRIBUTES App_obj : public hx::Object
 		Float fixed_frame_time;
 		Float fixed_overflow;
 		Float next_tick;
-		virtual  ::Dynamic config( ::Dynamic _config);
-		::Dynamic config_dyn();
-
-		virtual void ready();
-		::Dynamic ready_dyn();
-
 		virtual void update(Float dt);
 		::Dynamic update_dyn();
 
@@ -82,9 +75,6 @@ class HXCPP_CLASS_ATTRIBUTES App_obj : public hx::Object
 
 		void ondestroy();
 		::Dynamic ondestroy_dyn();
-
-		virtual void onevent( ::snow::types::SystemEvent event);
-		::Dynamic onevent_dyn();
 
 		void ontickstart();
 		::Dynamic ontickstart_dyn();
@@ -142,9 +132,6 @@ class HXCPP_CLASS_ATTRIBUTES App_obj : public hx::Object
 
 		void internal_tick_default();
 		::Dynamic internal_tick_default_dyn();
-
-		void internal_tick_fixed_timestep();
-		::Dynamic internal_tick_fixed_timestep_dyn();
 
 };
 
