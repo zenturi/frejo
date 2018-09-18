@@ -1,8 +1,6 @@
 package frejo.display;
 
-import nanovg.Nvg.NvgPaint;
 using nanovg.Nvg;
-import haxe.Constraints.Function;
 import frejo.core.VG;
 import frejo.display.Color;
 import cpp.*;
@@ -15,6 +13,9 @@ typedef DrawCommand = {
 
 /**
  * Graphics class for drawing objects
+ * 
+ * Here each draw command is stored in an array so that we can design a graphics from anywhere 
+ * and not restricted to doing that inside of a draw() function.
  */
 class Graphics {
     /**
