@@ -49,6 +49,15 @@
 #ifndef INCLUDED_minject_point_PropertyInjectionPoint
 #include <minject/point/PropertyInjectionPoint.h>
 #endif
+#ifndef INCLUDED_minject_result_InjectClassResult
+#include <minject/result/InjectClassResult.h>
+#endif
+#ifndef INCLUDED_minject_result_InjectOtherRuleResult
+#include <minject/result/InjectOtherRuleResult.h>
+#endif
+#ifndef INCLUDED_minject_result_InjectSingletonResult
+#include <minject/result/InjectSingletonResult.h>
+#endif
 #ifndef INCLUDED_minject_result_InjectValueResult
 #include <minject/result/InjectValueResult.h>
 #endif
@@ -58,12 +67,17 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_738cdc6e32f3b607_58_new,"minject.Injector","new",0xcf0b7cb6,"minject.Injector.new","minject/Injector.hx",58,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_77_mapValue,"minject.Injector","mapValue",0xe7a4cb1f,"minject.Injector.mapValue","minject/Injector.hx",77,0x21627919)
+HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_96_mapClass,"minject.Injector","mapClass",0xfe44c3e6,"minject.Injector.mapClass","minject/Injector.hx",96,0x21627919)
+HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_115_mapSingleton,"minject.Injector","mapSingleton",0x10a67fb9,"minject.Injector.mapSingleton","minject/Injector.hx",115,0x21627919)
+HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_132_mapSingletonOf,"minject.Injector","mapSingletonOf",0x6710e530,"minject.Injector.mapSingletonOf","minject/Injector.hx",132,0x21627919)
+HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_152_mapRule,"minject.Injector","mapRule",0x9722bd0e,"minject.Injector.mapRule","minject/Injector.hx",152,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_159_getMapping,"minject.Injector","getMapping",0x35a42b82,"minject.Injector.getMapping","minject/Injector.hx",159,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_180_injectInto,"minject.Injector","injectInto",0xcb4e023b,"minject.Injector.injectInto","minject/Injector.hx",180,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_218_construct,"minject.Injector","construct",0xe5a3e8ed,"minject.Injector.construct","minject/Injector.hx",218,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_250_instantiate,"minject.Injector","instantiate",0xe2f4b500,"minject.Injector.instantiate","minject/Injector.hx",250,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_263_unmap,"minject.Injector","unmap",0x54264fb9,"minject.Injector.unmap","minject/Injector.hx",263,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_282_hasMapping,"minject.Injector","hasMapping",0x70f68d3e,"minject.Injector.hasMapping","minject/Injector.hx",282,0x21627919)
+HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_301_getInstance,"minject.Injector","getInstance",0x6d31d4a1,"minject.Injector.getInstance","minject/Injector.hx",301,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_318_createChildInjector,"minject.Injector","createChildInjector",0xa4e7076a,"minject.Injector.createChildInjector","minject/Injector.hx",318,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_329_getAncestorMapping,"minject.Injector","getAncestorMapping",0x5a1ce36f,"minject.Injector.getAncestorMapping","minject/Injector.hx",329,0x21627919)
 HX_LOCAL_STACK_FRAME(_hx_pos_738cdc6e32f3b607_348_getInjectionPoints,"minject.Injector","getInjectionPoints",0x3746b9ce,"minject.Injector.getInjectionPoints","minject/Injector.hx",348,0x21627919)
@@ -106,6 +120,48 @@ HXLINE(  80)		return config;
 
 
 HX_DEFINE_DYNAMIC_FUNC3(Injector_obj,mapValue,return )
+
+ ::Dynamic Injector_obj::mapClass(hx::Class whenAskedFor,hx::Class instantiateClass,::String __o_named){
+::String named = __o_named.Default(HX_("",00,00,00,00));
+            	HX_GC_STACKFRAME(&_hx_pos_738cdc6e32f3b607_96_mapClass)
+HXLINE(  97)		 ::minject::InjectionConfig config = this->getMapping(whenAskedFor,named);
+HXLINE(  98)		config->setResult( ::minject::result::InjectClassResult_obj::__alloc( HX_CTX ,instantiateClass));
+HXLINE(  99)		return config;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(Injector_obj,mapClass,return )
+
+ ::Dynamic Injector_obj::mapSingleton(hx::Class whenAskedFor,::String __o_named){
+::String named = __o_named.Default(HX_("",00,00,00,00));
+            	HX_STACKFRAME(&_hx_pos_738cdc6e32f3b607_115_mapSingleton)
+HXDLIN( 115)		return this->mapSingletonOf(whenAskedFor,whenAskedFor,named);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Injector_obj,mapSingleton,return )
+
+ ::Dynamic Injector_obj::mapSingletonOf(hx::Class whenAskedFor,hx::Class useSingletonOf,::String __o_named){
+::String named = __o_named.Default(HX_("",00,00,00,00));
+            	HX_GC_STACKFRAME(&_hx_pos_738cdc6e32f3b607_132_mapSingletonOf)
+HXLINE( 133)		 ::minject::InjectionConfig config = this->getMapping(whenAskedFor,named);
+HXLINE( 134)		config->setResult( ::minject::result::InjectSingletonResult_obj::__alloc( HX_CTX ,useSingletonOf));
+HXLINE( 135)		return config;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(Injector_obj,mapSingletonOf,return )
+
+ ::Dynamic Injector_obj::mapRule(hx::Class whenAskedFor, ::Dynamic useRule,::String __o_named){
+::String named = __o_named.Default(HX_("",00,00,00,00));
+            	HX_GC_STACKFRAME(&_hx_pos_738cdc6e32f3b607_152_mapRule)
+HXLINE( 153)		 ::minject::InjectionConfig config = this->getMapping(whenAskedFor,named);
+HXLINE( 154)		config->setResult( ::minject::result::InjectOtherRuleResult_obj::__alloc( HX_CTX ,( ( ::minject::InjectionConfig)(useRule) )));
+HXLINE( 155)		return useRule;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(Injector_obj,mapRule,return )
 
  ::minject::InjectionConfig Injector_obj::getMapping(hx::Class forClass,::String __o_named){
 ::String named = __o_named.Default(HX_("",00,00,00,00));
@@ -207,6 +263,26 @@ HXLINE( 290)		return mapping->hasResponse(hx::ObjectPtr<OBJ_>(this));
 
 
 HX_DEFINE_DYNAMIC_FUNC2(Injector_obj,hasMapping,return )
+
+ ::Dynamic Injector_obj::getInstance(hx::Class ofClass,::String __o_named){
+::String named = __o_named.Default(HX_("",00,00,00,00));
+            	HX_STACKFRAME(&_hx_pos_738cdc6e32f3b607_301_getInstance)
+HXLINE( 302)		 ::minject::InjectionConfig mapping = this->getConfigurationForRequest(ofClass,named,null());
+HXLINE( 304)		bool _hx_tmp;
+HXDLIN( 304)		if (hx::IsNotNull( mapping )) {
+HXLINE( 304)			_hx_tmp = !(mapping->hasResponse(hx::ObjectPtr<OBJ_>(this)));
+            		}
+            		else {
+HXLINE( 304)			_hx_tmp = true;
+            		}
+HXDLIN( 304)		if (_hx_tmp) {
+HXLINE( 306)			HX_STACK_DO_THROW(((((HX_("Error while getting mapping response: No mapping defined for class ",eb,a8,3f,f8) + this->getClassName(ofClass)) + HX_(", named \"",07,1c,5f,14)) + named) + HX_("\"",22,00,00,00)));
+            		}
+HXLINE( 309)		return mapping->getResponse(hx::ObjectPtr<OBJ_>(this));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Injector_obj,getInstance,return )
 
  ::minject::Injector Injector_obj::createChildInjector(){
             	HX_GC_STACKFRAME(&_hx_pos_738cdc6e32f3b607_318_createChildInjector)
@@ -469,8 +545,12 @@ hx::Val Injector_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPr
 	case 5:
 		if (HX_FIELD_EQ(inName,"unmap") ) { return hx::Val( unmap_dyn() ); }
 		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"mapRule") ) { return hx::Val( mapRule_dyn() ); }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"mapValue") ) { return hx::Val( mapValue_dyn() ); }
+		if (HX_FIELD_EQ(inName,"mapClass") ) { return hx::Val( mapClass_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"construct") ) { return hx::Val( construct_dyn() ); }
@@ -483,12 +563,15 @@ hx::Val Injector_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPr
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"instantiate") ) { return hx::Val( instantiate_dyn() ); }
+		if (HX_FIELD_EQ(inName,"getInstance") ) { return hx::Val( getInstance_dyn() ); }
 		break;
 	case 12:
+		if (HX_FIELD_EQ(inName,"mapSingleton") ) { return hx::Val( mapSingleton_dyn() ); }
 		if (HX_FIELD_EQ(inName,"getClassName") ) { return hx::Val( getClassName_dyn() ); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"parentInjector") ) { return hx::Val( parentInjector ); }
+		if (HX_FIELD_EQ(inName,"mapSingletonOf") ) { return hx::Val( mapSingletonOf_dyn() ); }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"injectionConfigs") ) { return hx::Val( injectionConfigs ); }
@@ -555,12 +638,17 @@ static ::String Injector_obj_sMemberFields[] = {
 	HX_("injectionConfigs",5a,00,d5,6f),
 	HX_("injecteeDescriptions",c8,ce,cd,f1),
 	HX_("mapValue",35,ef,fa,a8),
+	HX_("mapClass",fc,e7,9a,bf),
+	HX_("mapSingleton",cf,66,af,4c),
+	HX_("mapSingletonOf",c6,3d,72,64),
+	HX_("mapRule",b8,2d,af,30),
 	HX_("getMapping",18,01,dc,93),
 	HX_("injectInto",d1,d7,85,29),
 	HX_("construct",17,58,ad,4f),
 	HX_("instantiate",aa,c2,97,f5),
 	HX_("unmap",e3,61,ea,a6),
 	HX_("hasMapping",d4,62,2e,cf),
+	HX_("getInstance",4b,e2,d4,7f),
 	HX_("createChildInjector",14,cf,2e,e9),
 	HX_("getAncestorMapping",05,3f,25,bd),
 	HX_("getInjectionPoints",64,15,4f,9a),

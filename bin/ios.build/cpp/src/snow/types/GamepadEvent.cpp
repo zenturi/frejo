@@ -6,6 +6,9 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_a466dc0cfb2adbcf_739_new,"snow.types.GamepadEvent","new",0x2f4e916b,"snow.types.GamepadEvent.new","snow/types/Types.hx",739,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_a466dc0cfb2adbcf_741_set_axis,"snow.types.GamepadEvent","set_axis",0xfbe7c8b3,"snow.types.GamepadEvent.set_axis","snow/types/Types.hx",741,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_a466dc0cfb2adbcf_752_set_button,"snow.types.GamepadEvent","set_button",0x4f5fb684,"snow.types.GamepadEvent.set_button","snow/types/Types.hx",752,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_a466dc0cfb2adbcf_763_set_device,"snow.types.GamepadEvent","set_device",0xe6f73128,"snow.types.GamepadEvent.set_device","snow/types/Types.hx",763,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_a466dc0cfb2adbcf_774_toString,"snow.types.GamepadEvent","toString",0xc5c567c1,"snow.types.GamepadEvent.toString","snow/types/Types.hx",774,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -28,6 +31,48 @@ Dynamic GamepadEvent_obj::__Create(hx::DynamicArray inArgs)
 bool GamepadEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x658a88e7;
 }
+
+void GamepadEvent_obj::set_axis(int _gamepad,int _axis,Float _value){
+            	HX_STACKFRAME(&_hx_pos_a466dc0cfb2adbcf_741_set_axis)
+HXLINE( 742)		this->button = null();
+HXLINE( 743)		this->device_id = null();
+HXLINE( 744)		this->device_event = null();
+HXLINE( 746)		this->axis = _axis;
+HXLINE( 747)		this->value = _value;
+HXLINE( 748)		this->type = 1;
+HXLINE( 749)		this->gamepad = _gamepad;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(GamepadEvent_obj,set_axis,(void))
+
+void GamepadEvent_obj::set_button(int _type,int _gamepad,int _button,Float _value){
+            	HX_STACKFRAME(&_hx_pos_a466dc0cfb2adbcf_752_set_button)
+HXLINE( 753)		this->axis = null();
+HXLINE( 754)		this->device_id = null();
+HXLINE( 755)		this->device_event = null();
+HXLINE( 757)		this->type = _type;
+HXLINE( 758)		this->value = _value;
+HXLINE( 759)		this->button = _button;
+HXLINE( 760)		this->gamepad = _gamepad;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(GamepadEvent_obj,set_button,(void))
+
+void GamepadEvent_obj::set_device(int _gamepad,::String _id,int _event){
+            	HX_STACKFRAME(&_hx_pos_a466dc0cfb2adbcf_763_set_device)
+HXLINE( 764)		this->axis = null();
+HXLINE( 765)		this->value = null();
+HXLINE( 766)		this->button = null();
+HXLINE( 768)		this->device_id = _id;
+HXLINE( 769)		this->device_event = _event;
+HXLINE( 770)		this->gamepad = _gamepad;
+HXLINE( 771)		this->type = 4;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(GamepadEvent_obj,set_device,(void))
 
 ::String GamepadEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_a466dc0cfb2adbcf_774_toString)
@@ -134,10 +179,15 @@ hx::Val GamepadEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCa
 		if (HX_FIELD_EQ(inName,"gamepad") ) { return hx::Val( gamepad ); }
 		break;
 	case 8:
+		if (HX_FIELD_EQ(inName,"set_axis") ) { return hx::Val( set_axis_dyn() ); }
 		if (HX_FIELD_EQ(inName,"toString") ) { return hx::Val( toString_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"device_id") ) { return hx::Val( device_id ); }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"set_button") ) { return hx::Val( set_button_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_device") ) { return hx::Val( set_device_dyn() ); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"device_event") ) { return hx::Val( device_event ); }
@@ -204,6 +254,9 @@ static ::String GamepadEvent_obj_sMemberFields[] = {
 	HX_("value",71,7f,b8,31),
 	HX_("device_id",24,17,48,61),
 	HX_("device_event",71,80,04,a6),
+	HX_("set_axis",9e,31,91,6e),
+	HX_("set_button",2f,70,e5,cd),
+	HX_("set_device",d3,ea,7c,65),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

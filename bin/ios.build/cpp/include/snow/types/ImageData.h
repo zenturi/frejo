@@ -55,6 +55,12 @@ class HXCPP_CLASS_ATTRIBUTES ImageData_obj : public hx::Object
 		int bpp;
 		int bpp_source;
 		 ::snow::api::buffers::ArrayBufferView pixels;
+		void destroy();
+		::Dynamic destroy_dyn();
+
+		virtual ::String toString();
+		::Dynamic toString_dyn();
+
 };
 
 } // end namespace snow

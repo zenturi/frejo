@@ -137,6 +137,28 @@ bool Audio_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::snow::modules::interfaces::Audio_obj _hx_snow_modules_openal_Audio__hx_snow_modules_interfaces_Audio= {
+	( void (hx::Object::*)( ::snow::types::SystemEvent))&::snow::modules::openal::Audio_obj::onevent,
+	( void (hx::Object::*)())&::snow::modules::openal::Audio_obj::shutdown,
+	(  ::snow::api::Promise (hx::Object::*)(::String, ::Dynamic, ::Dynamic))&::snow::modules::openal::Audio_obj::data_from_load,
+	(  ::snow::api::Promise (hx::Object::*)(::String, ::snow::api::buffers::ArrayBufferView, ::Dynamic))&::snow::modules::openal::Audio_obj::data_from_bytes,
+	(  ::Dynamic (hx::Object::*)( ::snow::systems::audio::AudioSource,Float,bool))&::snow::modules::openal::Audio_obj::play,
+	(  ::Dynamic (hx::Object::*)( ::snow::systems::audio::AudioSource,Float,bool))&::snow::modules::openal::Audio_obj::loop,
+	( void (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::pause,
+	( void (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::unpause,
+	( void (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::stop,
+	( void (hx::Object::*)( ::Dynamic,Float))&::snow::modules::openal::Audio_obj::volume,
+	( void (hx::Object::*)( ::Dynamic,Float))&::snow::modules::openal::Audio_obj::pan,
+	( void (hx::Object::*)( ::Dynamic,Float))&::snow::modules::openal::Audio_obj::pitch,
+	( void (hx::Object::*)( ::Dynamic,Float))&::snow::modules::openal::Audio_obj::position,
+	( Float (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::volume_of,
+	( Float (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::pan_of,
+	( Float (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::pitch_of,
+	( Float (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::position_of,
+	( int (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::state_of,
+	( bool (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::loop_of,
+	(  ::snow::systems::audio::AudioInstance (hx::Object::*)( ::Dynamic))&::snow::modules::openal::Audio_obj::instance_of,
+	( void (hx::Object::*)())&::snow::modules::openal::Audio_obj::suspend,
+	( void (hx::Object::*)())&::snow::modules::openal::Audio_obj::resume,
 };
 
 void *Audio_obj::_hx_getInterface(int inHash) {

@@ -46,6 +46,7 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_0d6c449d19558aa9_69_new,"mmvc.impl.Context","new",0x37bd22b4,"mmvc.impl.Context.new","mmvc/impl/Context.hx",69,0x54ef439c)
 HX_LOCAL_STACK_FRAME(_hx_pos_0d6c449d19558aa9_77_startup,"mmvc.impl.Context","startup",0x0e3e4391,"mmvc.impl.Context.startup","mmvc/impl/Context.hx",77,0x54ef439c)
+HX_LOCAL_STACK_FRAME(_hx_pos_0d6c449d19558aa9_82_shutdown,"mmvc.impl.Context","shutdown",0x9093b9c2,"mmvc.impl.Context.shutdown","mmvc/impl/Context.hx",82,0x54ef439c)
 HX_LOCAL_STACK_FRAME(_hx_pos_0d6c449d19558aa9_85_set_contextView,"mmvc.impl.Context","set_contextView",0xa445cceb,"mmvc.impl.Context.set_contextView","mmvc/impl/Context.hx",85,0x54ef439c)
 HX_LOCAL_STACK_FRAME(_hx_pos_0d6c449d19558aa9_105_get_injector,"mmvc.impl.Context","get_injector",0xda64a929,"mmvc.impl.Context.get_injector","mmvc/impl/Context.hx",105,0x54ef439c)
 HX_LOCAL_STACK_FRAME(_hx_pos_0d6c449d19558aa9_118_get_reflector,"mmvc.impl.Context","get_reflector",0xe72405cb,"mmvc.impl.Context.get_reflector","mmvc/impl/Context.hx",118,0x54ef439c)
@@ -83,6 +84,7 @@ bool Context_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::mmvc::api::IContext_obj _hx_mmvc_impl_Context__hx_mmvc_api_IContext= {
+	( ::Dynamic (hx::Object::*)())&::mmvc::impl::Context_obj::get_commandMap,
 };
 
 void *Context_obj::_hx_getInterface(int inHash) {
@@ -102,6 +104,13 @@ void Context_obj::startup(){
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Context_obj,startup,(void))
+
+void Context_obj::shutdown(){
+            	HX_STACKFRAME(&_hx_pos_0d6c449d19558aa9_82_shutdown)
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Context_obj,shutdown,(void))
 
 ::Dynamic Context_obj::set_contextView(::Dynamic value){
             	HX_STACKFRAME(&_hx_pos_0d6c449d19558aa9_85_set_contextView)
@@ -296,6 +305,7 @@ hx::Val Context_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPro
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"injector") ) { return hx::Val( inCallProp == hx::paccAlways ? get_injector() : injector ); }
+		if (HX_FIELD_EQ(inName,"shutdown") ) { return hx::Val( shutdown_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"reflector") ) { return hx::Val( inCallProp == hx::paccAlways ? get_reflector() : reflector ); }
@@ -397,6 +407,7 @@ static ::String Context_obj_sMemberFields[] = {
 	HX_("viewMap",37,5d,b9,9c),
 	HX_("triggerMap",44,80,e2,e3),
 	HX_("startup",3d,37,1b,35),
+	HX_("shutdown",96,fc,0b,6b),
 	HX_("set_contextView",97,4c,00,e8),
 	HX_("get_injector",fd,e5,18,d4),
 	HX_("get_reflector",77,02,25,6b),

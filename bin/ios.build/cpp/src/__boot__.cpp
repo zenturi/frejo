@@ -7,14 +7,71 @@
 #ifndef INCLUDED_snow_api_buffers_TAError
 #include <snow/api/buffers/TAError.h>
 #endif
+#ifndef INCLUDED_snow_api_PromiseError
+#include <snow/api/PromiseError.h>
+#endif
 #ifndef INCLUDED_snow_api_DebugError
 #include <snow/api/DebugError.h>
+#endif
+#ifndef INCLUDED_snow_api__Debug_LogError
+#include <snow/api/_Debug/LogError.h>
 #endif
 #ifndef INCLUDED_haxe_io_Error
 #include <haxe/io/Error.h>
 #endif
+#ifndef INCLUDED_ValueType
+#include <ValueType.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_InputEventType_Impl_
+#include <snow/types/_Types/InputEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_WindowEventType_Impl_
+#include <snow/types/_Types/WindowEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_SystemEventType_Impl_
+#include <snow/types/_Types/SystemEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_GamepadDeviceEventType_Impl_
+#include <snow/types/_Types/GamepadDeviceEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_TextEventType_Impl_
+#include <snow/types/_Types/TextEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_GamepadEventType_Impl_
+#include <snow/types/_Types/GamepadEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_TouchEventType_Impl_
+#include <snow/types/_Types/TouchEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_MouseEventType_Impl_
+#include <snow/types/_Types/MouseEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_KeyEventType_Impl_
+#include <snow/types/_Types/KeyEventType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_OpenGLProfile_Impl_
+#include <snow/types/_Types/OpenGLProfile_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_AudioState_Impl_
+#include <snow/types/_Types/AudioState_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_AudioEvent_Impl_
+#include <snow/types/_Types/AudioEvent_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_AudioFormatType_Impl_
+#include <snow/types/_Types/AudioFormatType_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_types__Types_AssetType_Impl_
+#include <snow/types/_Types/AssetType_Impl_.h>
+#endif
 #ifndef INCLUDED_snow_types_Config
 #include <snow/types/Config.h>
+#endif
+#ifndef INCLUDED_snow_systems_input_Scancodes
+#include <snow/systems/input/Scancodes.h>
+#endif
+#ifndef INCLUDED_snow_systems_input_Keycodes
+#include <snow/systems/input/Keycodes.h>
 #endif
 #ifndef INCLUDED_snow_modules_sdl_Runtime
 #include <snow/modules/sdl/Runtime.h>
@@ -40,11 +97,41 @@
 #ifndef INCLUDED_snow_modules_interfaces_Audio
 #include <snow/modules/interfaces/Audio.h>
 #endif
+#ifndef INCLUDED_snow_api_buffers__Uint8ClampedArray_Uint8ClampedArray_Impl_
+#include <snow/api/buffers/_Uint8ClampedArray/Uint8ClampedArray_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Uint8Array_Uint8Array_Impl_
+#include <snow/api/buffers/_Uint8Array/Uint8Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Uint32Array_Uint32Array_Impl_
+#include <snow/api/buffers/_Uint32Array/Uint32Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Uint16Array_Uint16Array_Impl_
+#include <snow/api/buffers/_Uint16Array/Uint16Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Int8Array_Int8Array_Impl_
+#include <snow/api/buffers/_Int8Array/Int8Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Int32Array_Int32Array_Impl_
+#include <snow/api/buffers/_Int32Array/Int32Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Int16Array_Int16Array_Impl_
+#include <snow/api/buffers/_Int16Array/Int16Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Float64Array_Float64Array_Impl_
+#include <snow/api/buffers/_Float64Array/Float64Array_Impl_.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__Float32Array_Float32Array_Impl_
+#include <snow/api/buffers/_Float32Array/Float32Array_Impl_.h>
+#endif
 #ifndef INCLUDED_snow_api_Timer
 #include <snow/api/Timer.h>
 #endif
 #ifndef INCLUDED_snow_api_Promises
 #include <snow/api/Promises.h>
+#endif
+#ifndef INCLUDED_snow_api_Debug
+#include <snow/api/Debug.h>
 #endif
 #ifndef INCLUDED_snow_Snow
 #include <snow/Snow.h>
@@ -52,11 +139,35 @@
 #ifndef INCLUDED_sdl__SDL_SDL_helper
 #include <sdl/_SDL/SDL_helper.h>
 #endif
+#ifndef INCLUDED_openal_ALCError
+#include <openal/ALCError.h>
+#endif
 #ifndef INCLUDED_openal_ALError
 #include <openal/ALError.h>
 #endif
 #ifndef INCLUDED_ogg__Ogg_Ogg_helper
 #include <ogg/_Ogg/Ogg_helper.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgImageFlags
+#include <nanovg/NvgImageFlags.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgAlign
+#include <nanovg/NvgAlign.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgPatternRepeat
+#include <nanovg/NvgPatternRepeat.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgLineCap
+#include <nanovg/NvgLineCap.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgSolidity
+#include <nanovg/NvgSolidity.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgWinding
+#include <nanovg/NvgWinding.h>
+#endif
+#ifndef INCLUDED_nanovg_NvgMode
+#include <nanovg/NvgMode.h>
 #endif
 #ifndef INCLUDED_msignal_SlotList
 #include <msignal/SlotList.h>
@@ -82,6 +193,15 @@
 #ifndef INCLUDED_minject_point_InjectionPoint
 #include <minject/point/InjectionPoint.h>
 #endif
+#ifndef INCLUDED_haxe_crypto_Base64
+#include <haxe/crypto/Base64.h>
+#endif
+#ifndef INCLUDED_haxe_Unserializer
+#include <haxe/Unserializer.h>
+#endif
+#ifndef INCLUDED_haxe_Serializer
+#include <haxe/Serializer.h>
+#endif
 #ifndef INCLUDED_haxe_Log
 #include <haxe/Log.h>
 #endif
@@ -91,8 +211,8 @@
 #ifndef INCLUDED_haxe_IMap
 #include <haxe/IMap.h>
 #endif
-#ifndef INCLUDED_frejo_display_Color
-#include <frejo/display/Color.h>
+#ifndef INCLUDED_frejo_display__Color_Color_Impl_
+#include <frejo/display/_Color/Color_Impl_.h>
 #endif
 #ifndef INCLUDED_mmvc_impl_Mediator
 #include <mmvc/impl/Mediator.h>
@@ -108,6 +228,12 @@
 #endif
 #ifndef INCLUDED_mmvc_api_IContext
 #include <mmvc/api/IContext.h>
+#endif
+#ifndef INCLUDED_facebook_yoga_Enums
+#include <facebook/yoga/Enums.h>
+#endif
+#ifndef INCLUDED_sys_FileSystem
+#include <sys/FileSystem.h>
 #endif
 #ifndef INCLUDED_snow_types_ModState
 #include <snow/types/ModState.h>
@@ -139,6 +265,9 @@
 #ifndef INCLUDED_snow_types_ImageData
 #include <snow/types/ImageData.h>
 #endif
+#ifndef INCLUDED_snow_types__Types_ExtensionsInit
+#include <snow/types/_Types/ExtensionsInit.h>
+#endif
 #ifndef INCLUDED_snow_systems_io_IO
 #include <snow/systems/io/IO.h>
 #endif
@@ -159,6 +288,18 @@
 #endif
 #ifndef INCLUDED_snow_systems_assets_AssetJSON
 #include <snow/systems/assets/AssetJSON.h>
+#endif
+#ifndef INCLUDED_snow_systems_assets_AssetText
+#include <snow/systems/assets/AssetText.h>
+#endif
+#ifndef INCLUDED_snow_systems_assets_AssetBytes
+#include <snow/systems/assets/AssetBytes.h>
+#endif
+#ifndef INCLUDED_snow_systems_assets_AssetAudio
+#include <snow/systems/assets/AssetAudio.h>
+#endif
+#ifndef INCLUDED_snow_systems_assets_AssetImage
+#include <snow/systems/assets/AssetImage.h>
 #endif
 #ifndef INCLUDED_snow_systems_assets_Asset
 #include <snow/systems/assets/Asset.h>
@@ -202,14 +343,53 @@
 #ifndef INCLUDED_snow_core_native_Runtime
 #include <snow/core/native/Runtime.h>
 #endif
+#ifndef INCLUDED_snow_core_Audio
+#include <snow/core/Audio.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers_DataView
+#include <snow/api/buffers/DataView.h>
+#endif
 #ifndef INCLUDED_snow_api_buffers_ArrayBufferView
 #include <snow/api/buffers/ArrayBufferView.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers_ArrayBufferIO
+#include <snow/api/buffers/ArrayBufferIO.h>
+#endif
+#ifndef INCLUDED_snow_api_buffers__ArrayBuffer_ArrayBuffer_Impl_
+#include <snow/api/buffers/_ArrayBuffer/ArrayBuffer_Impl_.h>
 #endif
 #ifndef INCLUDED_snow_api_Promise
 #include <snow/api/Promise.h>
 #endif
 #ifndef INCLUDED_snow_api_Emitter
 #include <snow/api/Emitter.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLUniformLocation_Impl_
+#include <opengl/_WebGL/GLUniformLocation_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLTexture_Impl_
+#include <opengl/_WebGL/GLTexture_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLShader_Impl_
+#include <opengl/_WebGL/GLShader_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLRenderbuffer_Impl_
+#include <opengl/_WebGL/GLRenderbuffer_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLProgram_Impl_
+#include <opengl/_WebGL/GLProgram_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLFramebuffer_Impl_
+#include <opengl/_WebGL/GLFramebuffer_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl__WebGL_GLBuffer_Impl_
+#include <opengl/_WebGL/GLBuffer_Impl_.h>
+#endif
+#ifndef INCLUDED_opengl_GLObject
+#include <opengl/GLObject.h>
+#endif
+#ifndef INCLUDED_opengl__GL_IntRef_Impl_
+#include <opengl/_GL/IntRef_Impl_.h>
 #endif
 #ifndef INCLUDED_msignal_Slot2
 #include <msignal/Slot2.h>
@@ -259,6 +439,15 @@
 #ifndef INCLUDED_minject_result_InjectValueResult
 #include <minject/result/InjectValueResult.h>
 #endif
+#ifndef INCLUDED_minject_result_InjectSingletonResult
+#include <minject/result/InjectSingletonResult.h>
+#endif
+#ifndef INCLUDED_minject_result_InjectOtherRuleResult
+#include <minject/result/InjectOtherRuleResult.h>
+#endif
+#ifndef INCLUDED_minject_result_InjectClassResult
+#include <minject/result/InjectClassResult.h>
+#endif
 #ifndef INCLUDED_minject_result_InjectionResult
 #include <minject/result/InjectionResult.h>
 #endif
@@ -292,6 +481,15 @@
 #ifndef INCLUDED_minject_InjectionConfig
 #include <minject/InjectionConfig.h>
 #endif
+#ifndef INCLUDED_hxcpp_StaticZlib
+#include <hxcpp/StaticZlib.h>
+#endif
+#ifndef INCLUDED_hxcpp_StaticStd
+#include <hxcpp/StaticStd.h>
+#endif
+#ifndef INCLUDED_hxcpp_StaticRegexp
+#include <hxcpp/StaticRegexp.h>
+#endif
 #ifndef INCLUDED_haxe_rtti_Meta
 #include <haxe/rtti/Meta.h>
 #endif
@@ -319,8 +517,26 @@
 #ifndef INCLUDED_haxe_ds_IntMap
 #include <haxe/ds/IntMap.h>
 #endif
+#ifndef INCLUDED_haxe_ds_EnumValueMap
+#include <haxe/ds/EnumValueMap.h>
+#endif
+#ifndef INCLUDED_haxe_ds_TreeNode
+#include <haxe/ds/TreeNode.h>
+#endif
+#ifndef INCLUDED_haxe_ds_BalancedTree
+#include <haxe/ds/BalancedTree.h>
+#endif
+#ifndef INCLUDED_haxe_crypto_BaseCode
+#include <haxe/crypto/BaseCode.h>
+#endif
 #ifndef INCLUDED_haxe_io_Bytes
 #include <haxe/io/Bytes.h>
+#endif
+#ifndef INCLUDED_haxe_Utf8
+#include <haxe/Utf8.h>
+#endif
+#ifndef INCLUDED_haxe__Unserializer_DefaultResolver
+#include <haxe/_Unserializer/DefaultResolver.h>
 #endif
 #ifndef INCLUDED_haxe_MainLoop
 #include <haxe/MainLoop.h>
@@ -330,6 +546,9 @@
 #endif
 #ifndef INCLUDED_frejo_display_Node
 #include <frejo/display/Node.h>
+#endif
+#ifndef INCLUDED_frejo_display_Graphics
+#include <frejo/display/Graphics.h>
 #endif
 #ifndef INCLUDED_frejo_core_VG
 #include <frejo/core/VG.h>
@@ -364,6 +583,9 @@
 #ifndef INCLUDED_Sys
 #include <Sys.h>
 #endif
+#ifndef INCLUDED_StringTools
+#include <StringTools.h>
+#endif
 #ifndef INCLUDED_StringBuf
 #include <StringBuf.h>
 #endif
@@ -382,6 +604,9 @@
 #ifndef INCLUDED_snow_App
 #include <snow/App.h>
 #endif
+#ifndef INCLUDED_Date
+#include <Date.h>
+#endif
 
 void __files__boot();
 
@@ -391,9 +616,28 @@ __files__boot();
 hx::RegisterResources( hx::GetResources() );
 ::snow::types::Error_obj::__register();
 ::snow::api::buffers::TAError_obj::__register();
+::snow::api::PromiseError_obj::__register();
 ::snow::api::DebugError_obj::__register();
+::snow::api::_Debug::LogError_obj::__register();
 ::haxe::io::Error_obj::__register();
+::ValueType_obj::__register();
+::snow::types::_Types::InputEventType_Impl__obj::__register();
+::snow::types::_Types::WindowEventType_Impl__obj::__register();
+::snow::types::_Types::SystemEventType_Impl__obj::__register();
+::snow::types::_Types::GamepadDeviceEventType_Impl__obj::__register();
+::snow::types::_Types::TextEventType_Impl__obj::__register();
+::snow::types::_Types::GamepadEventType_Impl__obj::__register();
+::snow::types::_Types::TouchEventType_Impl__obj::__register();
+::snow::types::_Types::MouseEventType_Impl__obj::__register();
+::snow::types::_Types::KeyEventType_Impl__obj::__register();
+::snow::types::_Types::OpenGLProfile_Impl__obj::__register();
+::snow::types::_Types::AudioState_Impl__obj::__register();
+::snow::types::_Types::AudioEvent_Impl__obj::__register();
+::snow::types::_Types::AudioFormatType_Impl__obj::__register();
+::snow::types::_Types::AssetType_Impl__obj::__register();
 ::snow::types::Config_obj::__register();
+::snow::systems::input::Scancodes_obj::__register();
+::snow::systems::input::Keycodes_obj::__register();
 ::snow::modules::sdl::Runtime_obj::__register();
 ::snow::modules::openal::Audio_obj::__register();
 ::snow::modules::interfaces::IO_obj::__register();
@@ -402,12 +646,30 @@ hx::RegisterResources( hx::GetResources() );
 ::snow::core::Runtime_obj::__register();
 ::snow::core::Extension_obj::__register();
 ::snow::modules::interfaces::Audio_obj::__register();
+::snow::api::buffers::_Uint8ClampedArray::Uint8ClampedArray_Impl__obj::__register();
+::snow::api::buffers::_Uint8Array::Uint8Array_Impl__obj::__register();
+::snow::api::buffers::_Uint32Array::Uint32Array_Impl__obj::__register();
+::snow::api::buffers::_Uint16Array::Uint16Array_Impl__obj::__register();
+::snow::api::buffers::_Int8Array::Int8Array_Impl__obj::__register();
+::snow::api::buffers::_Int32Array::Int32Array_Impl__obj::__register();
+::snow::api::buffers::_Int16Array::Int16Array_Impl__obj::__register();
+::snow::api::buffers::_Float64Array::Float64Array_Impl__obj::__register();
+::snow::api::buffers::_Float32Array::Float32Array_Impl__obj::__register();
 ::snow::api::Timer_obj::__register();
 ::snow::api::Promises_obj::__register();
+::snow::api::Debug_obj::__register();
 ::snow::Snow_obj::__register();
 ::sdl::_SDL::SDL_helper_obj::__register();
+::openal::ALCError_obj::__register();
 ::openal::ALError_obj::__register();
 ::ogg::_Ogg::Ogg_helper_obj::__register();
+::nanovg::NvgImageFlags_obj::__register();
+::nanovg::NvgAlign_obj::__register();
+::nanovg::NvgPatternRepeat_obj::__register();
+::nanovg::NvgLineCap_obj::__register();
+::nanovg::NvgSolidity_obj::__register();
+::nanovg::NvgWinding_obj::__register();
+::nanovg::NvgMode_obj::__register();
 ::msignal::SlotList_obj::__register();
 ::mmvc::impl::TriggerCommand_obj::__register();
 ::mmvc::api::IViewMap_obj::__register();
@@ -416,15 +678,20 @@ hx::RegisterResources( hx::GetResources() );
 ::mmvc::api::ICommandMap_obj::__register();
 ::mmvc::api::ICommand_obj::__register();
 ::minject::point::InjectionPoint_obj::__register();
+::haxe::crypto::Base64_obj::__register();
+::haxe::Unserializer_obj::__register();
+::haxe::Serializer_obj::__register();
 ::haxe::Log_obj::__register();
 ::haxe::EntryPoint_obj::__register();
 ::haxe::IMap_obj::__register();
-::frejo::display::Color_obj::__register();
+::frejo::display::_Color::Color_Impl__obj::__register();
 ::mmvc::impl::Mediator_obj::__register();
 ::mmvc::api::IMediator_obj::__register();
 ::mmvc::api::IViewContainer_obj::__register();
 ::frejo::core::View_obj::__register();
 ::mmvc::api::IContext_obj::__register();
+::facebook::yoga::Enums_obj::__register();
+::sys::FileSystem_obj::__register();
 ::snow::types::ModState_obj::__register();
 ::snow::types::InputEvent_obj::__register();
 ::snow::types::GamepadEvent_obj::__register();
@@ -435,6 +702,7 @@ hx::RegisterResources( hx::GetResources() );
 ::snow::types::WindowEvent_obj::__register();
 ::snow::types::SystemEvent_obj::__register();
 ::snow::types::ImageData_obj::__register();
+::snow::types::_Types::ExtensionsInit_obj::__register();
 ::snow::systems::io::IO_obj::__register();
 ::snow::systems::input::Input_obj::__register();
 ::snow::systems::audio::AudioSource_obj::__register();
@@ -442,6 +710,10 @@ hx::RegisterResources( hx::GetResources() );
 ::snow::systems::audio::Audio_obj::__register();
 ::snow::systems::assets::Assets_obj::__register();
 ::snow::systems::assets::AssetJSON_obj::__register();
+::snow::systems::assets::AssetText_obj::__register();
+::snow::systems::assets::AssetBytes_obj::__register();
+::snow::systems::assets::AssetAudio_obj::__register();
+::snow::systems::assets::AssetImage_obj::__register();
 ::snow::systems::assets::Asset_obj::__register();
 ::snow::modules::sdl::IO_obj::__register();
 ::snow::modules::openal::ALStream_obj::__register();
@@ -456,9 +728,22 @@ hx::RegisterResources( hx::GetResources() );
 ::snow::types::AudioData_obj::__register();
 ::snow::core::native::assets::Assets_obj::__register();
 ::snow::core::native::Runtime_obj::__register();
+::snow::core::Audio_obj::__register();
+::snow::api::buffers::DataView_obj::__register();
 ::snow::api::buffers::ArrayBufferView_obj::__register();
+::snow::api::buffers::ArrayBufferIO_obj::__register();
+::snow::api::buffers::_ArrayBuffer::ArrayBuffer_Impl__obj::__register();
 ::snow::api::Promise_obj::__register();
 ::snow::api::Emitter_obj::__register();
+::opengl::_WebGL::GLUniformLocation_Impl__obj::__register();
+::opengl::_WebGL::GLTexture_Impl__obj::__register();
+::opengl::_WebGL::GLShader_Impl__obj::__register();
+::opengl::_WebGL::GLRenderbuffer_Impl__obj::__register();
+::opengl::_WebGL::GLProgram_Impl__obj::__register();
+::opengl::_WebGL::GLFramebuffer_Impl__obj::__register();
+::opengl::_WebGL::GLBuffer_Impl__obj::__register();
+::opengl::GLObject_obj::__register();
+::opengl::_GL::IntRef_Impl__obj::__register();
 ::msignal::Slot2_obj::__register();
 ::msignal::Slot1_obj::__register();
 ::msignal::Slot0_obj::__register();
@@ -475,6 +760,9 @@ hx::RegisterResources( hx::GetResources() );
 ::mmvc::base::ContextError_obj::__register();
 ::mmvc::base::CommandMap_obj::__register();
 ::minject::result::InjectValueResult_obj::__register();
+::minject::result::InjectSingletonResult_obj::__register();
+::minject::result::InjectOtherRuleResult_obj::__register();
+::minject::result::InjectClassResult_obj::__register();
 ::minject::result::InjectionResult_obj::__register();
 ::minject::point::PropertyInjectionPoint_obj::__register();
 ::minject::point::PostConstructInjectionPoint_obj::__register();
@@ -486,6 +774,9 @@ hx::RegisterResources( hx::GetResources() );
 ::minject::InjecteeSet_obj::__register();
 ::minject::Injector_obj::__register();
 ::minject::InjectionConfig_obj::__register();
+::hxcpp::StaticZlib_obj::__register();
+::hxcpp::StaticStd_obj::__register();
+::hxcpp::StaticRegexp_obj::__register();
 ::haxe::rtti::Meta_obj::__register();
 ::haxe::io::Path_obj::__register();
 ::haxe::format::JsonParser_obj::__register();
@@ -495,10 +786,17 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::ds::_List::ListNode_obj::__register();
 ::haxe::ds::List_obj::__register();
 ::haxe::ds::IntMap_obj::__register();
+::haxe::ds::EnumValueMap_obj::__register();
+::haxe::ds::TreeNode_obj::__register();
+::haxe::ds::BalancedTree_obj::__register();
+::haxe::crypto::BaseCode_obj::__register();
 ::haxe::io::Bytes_obj::__register();
+::haxe::Utf8_obj::__register();
+::haxe::_Unserializer::DefaultResolver_obj::__register();
 ::haxe::MainLoop_obj::__register();
 ::haxe::MainEvent_obj::__register();
 ::frejo::display::Node_obj::__register();
+::frejo::display::Graphics_obj::__register();
 ::frejo::core::VG_obj::__register();
 ::frejo::app::ViewMediator_obj::__register();
 ::mmvc::base::MediatorBase_obj::__register();
@@ -510,26 +808,35 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::vm::Lock_obj::__register();
 ::Type_obj::__register();
 ::Sys_obj::__register();
+::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
 ::Reflect_obj::__register();
 ::Main_obj::__register();
 ::frejo::app::Application_obj::__register();
 ::snow::App_obj::__register();
+::Date_obj::__register();
 ::snow::types::Error_obj::__boot();
 ::snow::api::buffers::TAError_obj::__boot();
+::snow::api::PromiseError_obj::__boot();
 ::snow::api::DebugError_obj::__boot();
+::snow::api::_Debug::LogError_obj::__boot();
 ::haxe::io::Error_obj::__boot();
+::ValueType_obj::__boot();
 ::msignal::SlotList_obj::__init__();
 ::haxe::Log_obj::__boot();
+::facebook::yoga::Enums_obj::__boot();
 ::mmvc::api::IContext_obj::__boot();
 ::frejo::core::View_obj::__boot();
 ::mmvc::api::IViewContainer_obj::__boot();
 ::mmvc::api::IMediator_obj::__boot();
 ::mmvc::impl::Mediator_obj::__boot();
-::frejo::display::Color_obj::__boot();
+::frejo::display::_Color::Color_Impl__obj::__boot();
 ::haxe::IMap_obj::__boot();
 ::haxe::EntryPoint_obj::__boot();
+::haxe::Serializer_obj::__boot();
+::haxe::Unserializer_obj::__boot();
+::haxe::crypto::Base64_obj::__boot();
 ::minject::point::InjectionPoint_obj::__boot();
 ::mmvc::api::ICommand_obj::__boot();
 ::mmvc::api::ICommandMap_obj::__boot();
@@ -538,12 +845,30 @@ hx::RegisterResources( hx::GetResources() );
 ::mmvc::api::IViewMap_obj::__boot();
 ::mmvc::impl::TriggerCommand_obj::__boot();
 ::msignal::SlotList_obj::__boot();
+::nanovg::NvgMode_obj::__boot();
+::nanovg::NvgWinding_obj::__boot();
+::nanovg::NvgSolidity_obj::__boot();
+::nanovg::NvgLineCap_obj::__boot();
+::nanovg::NvgPatternRepeat_obj::__boot();
+::nanovg::NvgAlign_obj::__boot();
+::nanovg::NvgImageFlags_obj::__boot();
 ::ogg::_Ogg::Ogg_helper_obj::__boot();
 ::openal::ALError_obj::__boot();
+::openal::ALCError_obj::__boot();
 ::sdl::_SDL::SDL_helper_obj::__boot();
 ::snow::Snow_obj::__boot();
+::snow::api::Debug_obj::__boot();
 ::snow::api::Promises_obj::__boot();
 ::snow::api::Timer_obj::__boot();
+::snow::api::buffers::_Float32Array::Float32Array_Impl__obj::__boot();
+::snow::api::buffers::_Float64Array::Float64Array_Impl__obj::__boot();
+::snow::api::buffers::_Int16Array::Int16Array_Impl__obj::__boot();
+::snow::api::buffers::_Int32Array::Int32Array_Impl__obj::__boot();
+::snow::api::buffers::_Int8Array::Int8Array_Impl__obj::__boot();
+::snow::api::buffers::_Uint16Array::Uint16Array_Impl__obj::__boot();
+::snow::api::buffers::_Uint32Array::Uint32Array_Impl__obj::__boot();
+::snow::api::buffers::_Uint8Array::Uint8Array_Impl__obj::__boot();
+::snow::api::buffers::_Uint8ClampedArray::Uint8ClampedArray_Impl__obj::__boot();
 ::snow::modules::interfaces::Audio_obj::__boot();
 ::snow::core::Extension_obj::__boot();
 ::snow::core::Runtime_obj::__boot();
@@ -552,6 +877,22 @@ hx::RegisterResources( hx::GetResources() );
 ::snow::modules::interfaces::IO_obj::__boot();
 ::snow::modules::openal::Audio_obj::__boot();
 ::snow::modules::sdl::Runtime_obj::__boot();
+::snow::systems::input::Keycodes_obj::__boot();
+::snow::systems::input::Scancodes_obj::__boot();
 ::snow::types::Config_obj::__boot();
+::snow::types::_Types::AssetType_Impl__obj::__boot();
+::snow::types::_Types::AudioFormatType_Impl__obj::__boot();
+::snow::types::_Types::AudioEvent_Impl__obj::__boot();
+::snow::types::_Types::AudioState_Impl__obj::__boot();
+::snow::types::_Types::OpenGLProfile_Impl__obj::__boot();
+::snow::types::_Types::KeyEventType_Impl__obj::__boot();
+::snow::types::_Types::MouseEventType_Impl__obj::__boot();
+::snow::types::_Types::TouchEventType_Impl__obj::__boot();
+::snow::types::_Types::GamepadEventType_Impl__obj::__boot();
+::snow::types::_Types::TextEventType_Impl__obj::__boot();
+::snow::types::_Types::GamepadDeviceEventType_Impl__obj::__boot();
+::snow::types::_Types::SystemEventType_Impl__obj::__boot();
+::snow::types::_Types::WindowEventType_Impl__obj::__boot();
+::snow::types::_Types::InputEventType_Impl__obj::__boot();
 }
 

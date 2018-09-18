@@ -12,8 +12,11 @@ HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_47_setProperty,"Reflect","setPrope
 HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_51_callMethod,"Reflect","callMethod",0xb49e52d0,"Reflect.callMethod","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",51,0x1c2422c3)
 HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_61_fields,"Reflect","fields",0xc593a6aa,"Reflect.fields","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",61,0x1c2422c3)
 HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_69_isFunction,"Reflect","isFunction",0x0f1541d3,"Reflect.isFunction","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",69,0x1c2422c3)
+HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_73_compare,"Reflect","compare",0xa2d92b54,"Reflect.compare","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",73,0x1c2422c3)
 HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_76_compareMethods,"Reflect","compareMethods",0x8b8ddd7e,"Reflect.compareMethods","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",76,0x1c2422c3)
 HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_84_isObject,"Reflect","isObject",0xd04960ba,"Reflect.isObject","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",84,0x1c2422c3)
+HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_92_isEnumValue,"Reflect","isEnumValue",0x97884d95,"Reflect.isEnumValue","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",92,0x1c2422c3)
+HX_LOCAL_STACK_FRAME(_hx_pos_7b3988d9963d5a21_113_makeVarArgs,"Reflect","makeVarArgs",0x978955c5,"Reflect.makeVarArgs","/usr/local/lib/haxe/std/cpp/_std/Reflect.hx",113,0x1c2422c3)
 
 void Reflect_obj::__construct() { }
 
@@ -107,6 +110,14 @@ HXDLIN(  69)		return (hx::IsNotNull( f ) && hx::IsEq( f->__GetType(),6 ));
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isFunction,return )
 
+int Reflect_obj::compare( ::Dynamic a, ::Dynamic b){
+            	HX_STACKFRAME(&_hx_pos_7b3988d9963d5a21_73_compare)
+HXDLIN(  73)		return hx::IsEq( a,b ) ? 0 : hx::IsGreater( a,b ) ? 1 : -1;
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,compare,return )
+
 bool Reflect_obj::compareMethods( ::Dynamic f1, ::Dynamic f2){
             	HX_STACKFRAME(&_hx_pos_7b3988d9963d5a21_76_compareMethods)
 HXLINE(  77)		if (hx::IsEq( f1,f2 )) {
@@ -133,6 +144,22 @@ HXLINE(  87)		return ((((t == 4) || (t == 8)) || (t == 3)) || (t == 5));
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isObject,return )
 
+bool Reflect_obj::isEnumValue( ::Dynamic v){
+            	HX_STACKFRAME(&_hx_pos_7b3988d9963d5a21_92_isEnumValue)
+HXDLIN(  92)		return (hx::IsNotNull( v ) && hx::IsEq( v->__GetType(),7 ));
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isEnumValue,return )
+
+ ::Dynamic Reflect_obj::makeVarArgs( ::Dynamic f){
+            	HX_STACKFRAME(&_hx_pos_7b3988d9963d5a21_113_makeVarArgs)
+HXDLIN( 113)		return  ::__hxcpp_create_var_args(f);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,makeVarArgs,return )
+
 
 Reflect_obj::Reflect_obj()
 {
@@ -147,6 +174,9 @@ bool Reflect_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Pro
 	case 6:
 		if (HX_FIELD_EQ(inName,"fields") ) { outValue = fields_dyn(); return true; }
 		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"compare") ) { outValue = compare_dyn(); return true; }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"hasField") ) { outValue = hasField_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"setField") ) { outValue = setField_dyn(); return true; }
@@ -158,6 +188,8 @@ bool Reflect_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Pro
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"setProperty") ) { outValue = setProperty_dyn(); return true; }
+		if (HX_FIELD_EQ(inName,"isEnumValue") ) { outValue = isEnumValue_dyn(); return true; }
+		if (HX_FIELD_EQ(inName,"makeVarArgs") ) { outValue = makeVarArgs_dyn(); return true; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"compareMethods") ) { outValue = compareMethods_dyn(); return true; }
@@ -180,8 +212,11 @@ static ::String Reflect_obj_sStaticFields[] = {
 	HX_("callMethod",1f,ce,8a,34),
 	HX_("fields",79,8e,8e,80),
 	HX_("isFunction",22,bd,01,8f),
+	HX_("compare",a5,18,69,83),
 	HX_("compareMethods",4d,ac,7b,37),
 	HX_("isObject",49,1a,a9,6d),
+	HX_("isEnumValue",66,b7,87,06),
+	HX_("makeVarArgs",96,bf,88,06),
 	::String(null())
 };
 

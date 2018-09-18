@@ -92,6 +92,11 @@ bool Assets_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::snow::modules::interfaces::Assets_obj _hx_snow_core_native_assets_Assets__hx_snow_modules_interfaces_Assets= {
+	( void (hx::Object::*)( ::snow::types::SystemEvent))&::snow::core::native::assets::Assets_obj::onevent,
+	( void (hx::Object::*)())&::snow::core::native::assets::Assets_obj::shutdown,
+	(  ::snow::api::Promise (hx::Object::*)(::String, ::Dynamic))&::snow::core::native::assets::Assets_obj::image_info_from_load,
+	(  ::snow::api::Promise (hx::Object::*)(::String, ::snow::api::buffers::ArrayBufferView, ::Dynamic))&::snow::core::native::assets::Assets_obj::image_info_from_bytes,
+	(  ::snow::types::ImageData (hx::Object::*)(::String,int,int, ::snow::api::buffers::ArrayBufferView, ::Dynamic))&::snow::core::native::assets::Assets_obj::image_info_from_pixels,
 };
 
 void *Assets_obj::_hx_getInterface(int inHash) {

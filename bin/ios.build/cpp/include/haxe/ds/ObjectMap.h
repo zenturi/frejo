@@ -62,6 +62,9 @@ class HXCPP_CLASS_ATTRIBUTES ObjectMap_obj : public hx::Object
 		bool remove( ::Dynamic key);
 		::Dynamic remove_dyn();
 
+		 ::Dynamic keys();
+		::Dynamic keys_dyn();
+
 		 ::Dynamic iterator();
 		::Dynamic iterator_dyn();
 

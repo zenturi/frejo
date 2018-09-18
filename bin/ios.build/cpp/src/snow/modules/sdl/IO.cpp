@@ -75,8 +75,6 @@ HXLINE(  20)		return _path;
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC0(IO_obj,app_path,return )
-
 ::String IO_obj::app_path_prefs(){
             	HX_STACKFRAME(&_hx_pos_6bce894b434f82ad_24_app_path_prefs)
 HXLINE(  26)		::Array< ::String > _parts = ::snow::types::Config_obj::app_ident.split(HX_(".",2e,00,00,00));
@@ -85,8 +83,6 @@ HXLINE(  28)		::String _org = _parts->join(HX_(".",2e,00,00,00));
 HXLINE(  30)		return linc::sdl::getPrefPath(_org,_appname);
             	}
 
-
-HX_DEFINE_DYNAMIC_FUNC0(IO_obj,app_path_prefs,return )
 
 ::cpp::Pointer<  SDL_RWops > IO_obj::file_handle(::String _path,::String __o__mode){
 ::String _mode = __o__mode.Default(HX_("rb",b0,63,00,00));
@@ -100,8 +96,6 @@ HXDLIN(  38)		return SDL_RWFromFile(_path,_mode);
 HXDLIN(  44)		return linc::sdl::RWFromMem(mem->buffer,size);
             	}
 
-
-HX_DEFINE_DYNAMIC_FUNC2(IO_obj,file_handle_from_mem,return )
 
 int IO_obj::file_read(::cpp::Pointer<  SDL_RWops > file, ::snow::api::buffers::ArrayBufferView dest,int size,int maxnum){
             	HX_STACKFRAME(&_hx_pos_6bce894b434f82ad_48_file_read)
@@ -122,8 +116,6 @@ HXLINE(  60)		::cpp::Pointer<  SDL_RWops > tmp = file;
 HXDLIN(  60)		return linc::sdl::RWwrite(tmp,src->buffer,size,num);
             	}
 
-
-HX_DEFINE_DYNAMIC_FUNC4(IO_obj,file_write,return )
 
 int IO_obj::file_seek(::cpp::Pointer<  SDL_RWops > file,int offset,int whence){
             	HX_STACKFRAME(&_hx_pos_6bce894b434f82ad_64_file_seek)

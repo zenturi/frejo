@@ -4,6 +4,7 @@ import nanovg.Nvg;
 
 import cpp.*;
 
+
 /**
  * Main NanoVG wrapper
  */
@@ -241,11 +242,11 @@ class VG {
     }
 
 	public function scissor(x:Float, y:Float, w:Float, h:Float):Void {
-        return Nvg.scissor(context, x, y, w, h);
+        Nvg.scissor(context, x, y, w, h);
     }
 
 	public function intersectScissor(x:Float, y:Float, w:Float, h:Float):Void {
-        return Nvg.intersectScissor(context, x, y, w, h);
+        Nvg.intersectScissor(context, x, y, w, h);
     }
 
 	public function resetScissor():Void {

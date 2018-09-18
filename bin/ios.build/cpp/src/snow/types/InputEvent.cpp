@@ -24,6 +24,12 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_779_new,"snow.types.InputEvent","new",0xde34e8e2,"snow.types.InputEvent.new","snow/types/Types.hx",779,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_800_reset,"snow.types.InputEvent","reset",0xd18206d1,"snow.types.InputEvent.reset","snow/types/Types.hx",800,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_813_set_key,"snow.types.InputEvent","set_key",0x742c64c4,"snow.types.InputEvent.set_key","snow/types/Types.hx",813,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_818_set_text,"snow.types.InputEvent","set_text",0x389eb1e8,"snow.types.InputEvent.set_text","snow/types/Types.hx",818,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_823_set_mouse,"snow.types.InputEvent","set_mouse",0x5108c48a,"snow.types.InputEvent.set_mouse","snow/types/Types.hx",823,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_828_set_touch,"snow.types.InputEvent","set_touch",0x58d6c624,"snow.types.InputEvent.set_touch","snow/types/Types.hx",828,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_833_set_gamepad,"snow.types.InputEvent","set_gamepad",0x013db246,"snow.types.InputEvent.set_gamepad","snow/types/Types.hx",833,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_0ea9dcc6afa5a3bc_838_toString,"snow.types.InputEvent","toString",0xf5fba0ea,"snow.types.InputEvent.toString","snow/types/Types.hx",838,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -48,6 +54,111 @@ Dynamic InputEvent_obj::__Create(hx::DynamicArray inArgs)
 bool InputEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x32cb4926;
 }
+
+void InputEvent_obj::reset(int _type,int _window_id,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_800_reset)
+HXLINE( 802)		this->type = _type;
+HXLINE( 803)		this->key = null();
+HXLINE( 804)		this->text = null();
+HXLINE( 805)		this->mouse = null();
+HXLINE( 806)		this->touch = null();
+HXLINE( 807)		this->gamepad = null();
+HXLINE( 808)		this->window_id = _window_id;
+HXLINE( 809)		this->timestamp = _timestamp;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(InputEvent_obj,reset,(void))
+
+void InputEvent_obj::set_key( ::snow::types::KeyEvent _event,int _window_id,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_813_set_key)
+HXLINE( 814)		{
+HXLINE( 814)			this->type = 1;
+HXDLIN( 814)			this->key = null();
+HXDLIN( 814)			this->text = null();
+HXDLIN( 814)			this->mouse = null();
+HXDLIN( 814)			this->touch = null();
+HXDLIN( 814)			this->gamepad = null();
+HXDLIN( 814)			this->window_id = _window_id;
+HXDLIN( 814)			this->timestamp = _timestamp;
+            		}
+HXLINE( 815)		this->key = _event;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(InputEvent_obj,set_key,(void))
+
+void InputEvent_obj::set_text( ::snow::types::TextEvent _event,int _window_id,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_818_set_text)
+HXLINE( 819)		{
+HXLINE( 819)			this->type = 2;
+HXDLIN( 819)			this->key = null();
+HXDLIN( 819)			this->text = null();
+HXDLIN( 819)			this->mouse = null();
+HXDLIN( 819)			this->touch = null();
+HXDLIN( 819)			this->gamepad = null();
+HXDLIN( 819)			this->window_id = _window_id;
+HXDLIN( 819)			this->timestamp = _timestamp;
+            		}
+HXLINE( 820)		this->text = _event;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(InputEvent_obj,set_text,(void))
+
+void InputEvent_obj::set_mouse( ::snow::types::MouseEvent _event,int _window_id,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_823_set_mouse)
+HXLINE( 824)		{
+HXLINE( 824)			this->type = 3;
+HXDLIN( 824)			this->key = null();
+HXDLIN( 824)			this->text = null();
+HXDLIN( 824)			this->mouse = null();
+HXDLIN( 824)			this->touch = null();
+HXDLIN( 824)			this->gamepad = null();
+HXDLIN( 824)			this->window_id = _window_id;
+HXDLIN( 824)			this->timestamp = _timestamp;
+            		}
+HXLINE( 825)		this->mouse = _event;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(InputEvent_obj,set_mouse,(void))
+
+void InputEvent_obj::set_touch( ::snow::types::TouchEvent _event,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_828_set_touch)
+HXLINE( 829)		{
+HXLINE( 829)			this->type = 4;
+HXDLIN( 829)			this->key = null();
+HXDLIN( 829)			this->text = null();
+HXDLIN( 829)			this->mouse = null();
+HXDLIN( 829)			this->touch = null();
+HXDLIN( 829)			this->gamepad = null();
+HXDLIN( 829)			this->window_id = 0;
+HXDLIN( 829)			this->timestamp = _timestamp;
+            		}
+HXLINE( 830)		this->touch = _event;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(InputEvent_obj,set_touch,(void))
+
+void InputEvent_obj::set_gamepad( ::snow::types::GamepadEvent _event,Float _timestamp){
+            	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_833_set_gamepad)
+HXLINE( 834)		{
+HXLINE( 834)			this->type = 5;
+HXDLIN( 834)			this->key = null();
+HXDLIN( 834)			this->text = null();
+HXDLIN( 834)			this->mouse = null();
+HXDLIN( 834)			this->touch = null();
+HXDLIN( 834)			this->gamepad = null();
+HXDLIN( 834)			this->window_id = 0;
+HXDLIN( 834)			this->timestamp = _timestamp;
+            		}
+HXLINE( 835)		this->gamepad = _event;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(InputEvent_obj,set_gamepad,(void))
 
 ::String InputEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_0ea9dcc6afa5a3bc_838_toString)
@@ -166,16 +277,24 @@ hx::Val InputEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	case 5:
 		if (HX_FIELD_EQ(inName,"mouse") ) { return hx::Val( mouse ); }
 		if (HX_FIELD_EQ(inName,"touch") ) { return hx::Val( touch ); }
+		if (HX_FIELD_EQ(inName,"reset") ) { return hx::Val( reset_dyn() ); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"gamepad") ) { return hx::Val( gamepad ); }
+		if (HX_FIELD_EQ(inName,"set_key") ) { return hx::Val( set_key_dyn() ); }
 		break;
 	case 8:
+		if (HX_FIELD_EQ(inName,"set_text") ) { return hx::Val( set_text_dyn() ); }
 		if (HX_FIELD_EQ(inName,"toString") ) { return hx::Val( toString_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"timestamp") ) { return hx::Val( timestamp ); }
 		if (HX_FIELD_EQ(inName,"window_id") ) { return hx::Val( window_id ); }
+		if (HX_FIELD_EQ(inName,"set_mouse") ) { return hx::Val( set_mouse_dyn() ); }
+		if (HX_FIELD_EQ(inName,"set_touch") ) { return hx::Val( set_touch_dyn() ); }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"set_gamepad") ) { return hx::Val( set_gamepad_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -241,6 +360,12 @@ static ::String InputEvent_obj_sMemberFields[] = {
 	HX_("mouse",25,16,65,0c),
 	HX_("touch",bf,17,33,14),
 	HX_("gamepad",a1,e0,85,89),
+	HX_("reset",cf,49,c8,e6),
+	HX_("set_key",42,e3,c7,19),
+	HX_("set_text",aa,e1,11,7b),
+	HX_("set_mouse",88,5e,5f,33),
+	HX_("set_touch",22,60,2d,3b),
+	HX_("set_gamepad",c4,47,ed,19),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

@@ -57,6 +57,8 @@ class HXCPP_CLASS_ATTRIBUTES AudioDataPCM_obj : public  ::snow::types::AudioData
 		::String __ToString() const { return HX_("AudioDataPCM",fa,b0,63,e5); }
 
 		::cpp::Pointer<  SDL_RWops > handle;
+		void destroy();
+
 		bool seek(int _to);
 
 		::Array< int > portion( ::snow::api::buffers::ArrayBufferView _into,int _start,int _len,::Array< int > _into_result);

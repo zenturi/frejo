@@ -12,8 +12,10 @@
 HX_DECLARE_CLASS1(haxe,IMap)
 HX_DECLARE_CLASS2(haxe,ds,ObjectMap)
 HX_DECLARE_CLASS1(minject,Injector)
+HX_DECLARE_CLASS2(mmvc,api,ICommand)
 HX_DECLARE_CLASS2(mmvc,api,ICommandMap)
 HX_DECLARE_CLASS2(mmvc,base,CommandMap)
+HX_DECLARE_CLASS1(msignal,Signal)
 
 namespace mmvc{
 namespace base{
@@ -56,6 +58,48 @@ class HXCPP_CLASS_ATTRIBUTES CommandMap_obj : public hx::Object
 		 ::haxe::ds::ObjectMap signalMap;
 		 ::haxe::ds::ObjectMap signalClassMap;
 		 ::haxe::ds::ObjectMap detainedCommands;
+		 ::msignal::Signal mapSignalClass(hx::Class signalClass,hx::Class commandClass, ::Dynamic oneShot);
+		::Dynamic mapSignalClass_dyn();
+
+		void mapSignal( ::msignal::Signal signal,hx::Class commandClass, ::Dynamic oneShot);
+		::Dynamic mapSignal_dyn();
+
+		void unmapSignalClass(hx::Class signalClass,hx::Class commandClass);
+		::Dynamic unmapSignalClass_dyn();
+
+		void unmapSignal( ::msignal::Signal signal,hx::Class commandClass);
+		::Dynamic unmapSignal_dyn();
+
+		 ::msignal::Signal getSignalClassInstance(hx::Class signalClass);
+		::Dynamic getSignalClassInstance_dyn();
+
+		 ::msignal::Signal createSignalClassInstance(hx::Class signalClass);
+		::Dynamic createSignalClassInstance_dyn();
+
+		bool hasCommand( ::msignal::Signal signal);
+		::Dynamic hasCommand_dyn();
+
+		bool hasSignalCommand( ::msignal::Signal signal,hx::Class commandClass);
+		::Dynamic hasSignalCommand_dyn();
+
+		void routeSignalToCommand( ::msignal::Signal signal,::cpp::VirtualArray valueObjects,hx::Class commandClass,bool oneshot);
+		::Dynamic routeSignalToCommand_dyn();
+
+		::Dynamic createCommandInstance(hx::Class commandClass);
+		::Dynamic createCommandInstance_dyn();
+
+		void mapSignalValues(::cpp::VirtualArray valueClasses,::cpp::VirtualArray valueObjects);
+		::Dynamic mapSignalValues_dyn();
+
+		void unmapSignalValues(::cpp::VirtualArray valueClasses,::cpp::VirtualArray valueObjects);
+		::Dynamic unmapSignalValues_dyn();
+
+		void detain(::Dynamic command);
+		::Dynamic detain_dyn();
+
+		void release(::Dynamic command);
+		::Dynamic release_dyn();
+
 };
 
 } // end namespace mmvc

@@ -53,6 +53,9 @@ HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_32_init,"snow.modules.openal.ALStr
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_50_destroy,"snow.modules.openal.ALStream","destroy",0x1e62a19e,"snow.modules.openal.ALStream.destroy","snow/modules/openal/ALStream.hx",50,0x4d99680d)
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_81_position_of,"snow.modules.openal.ALStream","position_of",0x00447cd1,"snow.modules.openal.ALStream.position_of","snow/modules/openal/ALStream.hx",81,0x4d99680d)
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_85_position,"snow.modules.openal.ALStream","position",0x72043b85,"snow.modules.openal.ALStream.position","snow/modules/openal/ALStream.hx",85,0x4d99680d)
+HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_115_state_str,"snow.modules.openal.ALStream","state_str",0xb84f25e7,"snow.modules.openal.ALStream.state_str","snow/modules/openal/ALStream.hx",115,0x4d99680d)
+HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_125_state_now,"snow.modules.openal.ALStream","state_now",0xb84b564c,"snow.modules.openal.ALStream.state_now","snow/modules/openal/ALStream.hx",125,0x4d99680d)
+HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_129_state_is,"snow.modules.openal.ALStream","state_is",0x0690f774,"snow.modules.openal.ALStream.state_is","snow/modules/openal/ALStream.hx",129,0x4d99680d)
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_134_init_queue,"snow.modules.openal.ALStream","init_queue",0xda4dc5be,"snow.modules.openal.ALStream.init_queue","snow/modules/openal/ALStream.hx",134,0x4d99680d)
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_152_flush_queue,"snow.modules.openal.ALStream","flush_queue",0xd16f393a,"snow.modules.openal.ALStream.flush_queue","snow/modules/openal/ALStream.hx",152,0x4d99680d)
 HX_LOCAL_STACK_FRAME(_hx_pos_b73c3b8a9b75c967_169_fill_buffer,"snow.modules.openal.ALStream","fill_buffer",0x9633bd20,"snow.modules.openal.ALStream.fill_buffer","snow/modules/openal/ALStream.hx",169,0x4d99680d)
@@ -237,6 +240,52 @@ HXLINE( 107)			alSourcePlay(this->alsource);
             		}
             	}
 
+
+::String ALStream_obj::state_str(){
+            	HX_STACKFRAME(&_hx_pos_b73c3b8a9b75c967_115_state_str)
+HXDLIN( 115)		int _g = linc::openal::getSourcei(this->alsource,4112);
+HXDLIN( 115)		switch((int)(_g)){
+            			case (int)4113: {
+HXLINE( 116)				return HX_("INITIAL",64,e4,72,4b);
+            			}
+            			break;
+            			case (int)4114: {
+HXLINE( 117)				return HX_("PLAYING",4e,e3,eb,09);
+            			}
+            			break;
+            			case (int)4115: {
+HXLINE( 118)				return HX_("PAUSED",ae,ec,06,a2);
+            			}
+            			break;
+            			case (int)4116: {
+HXLINE( 119)				return HX_("STOPPED",ed,a5,35,c3);
+            			}
+            			break;
+            			default:{
+HXLINE( 120)				return HX_("UNKNOWN",6a,f7,4e,61);
+            			}
+            		}
+HXLINE( 115)		return null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ALStream_obj,state_str,return )
+
+int ALStream_obj::state_now(){
+            	HX_STACKFRAME(&_hx_pos_b73c3b8a9b75c967_125_state_now)
+HXDLIN( 125)		return linc::openal::getSourcei(this->alsource,4112);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ALStream_obj,state_now,return )
+
+bool ALStream_obj::state_is(int _state){
+            	HX_STACKFRAME(&_hx_pos_b73c3b8a9b75c967_129_state_is)
+HXDLIN( 129)		return (_state == linc::openal::getSourcei(this->alsource,4112));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ALStream_obj,state_is,return )
 
 void ALStream_obj::init_queue( ::Dynamic __o__start){
  ::Dynamic _start = __o__start.Default(-1);
@@ -521,6 +570,11 @@ hx::Val ALStream_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPr
 	case 8:
 		if (HX_FIELD_EQ(inName,"duration") ) { return hx::Val( duration ); }
 		if (HX_FIELD_EQ(inName,"position") ) { return hx::Val( position_dyn() ); }
+		if (HX_FIELD_EQ(inName,"state_is") ) { return hx::Val( state_is_dyn() ); }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"state_str") ) { return hx::Val( state_str_dyn() ); }
+		if (HX_FIELD_EQ(inName,"state_now") ) { return hx::Val( state_now_dyn() ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"init_queue") ) { return hx::Val( init_queue_dyn() ); }
@@ -592,6 +646,9 @@ static ::String ALStream_obj_sMemberFields[] = {
 	HX_("destroy",fa,2c,86,24),
 	HX_("position_of",2d,e6,66,ff),
 	HX_("position",a9,a0,fa,ca),
+	HX_("state_str",43,40,f1,36),
+	HX_("state_now",a8,70,ed,36),
+	HX_("state_is",98,5c,87,5f),
 	HX_("init_queue",e2,bb,82,29),
 	HX_("flush_queue",96,a2,91,d0),
 	HX_("data_get_result",db,0b,4e,46),

@@ -70,6 +70,9 @@ class HXCPP_CLASS_ATTRIBUTES OGG_obj : public hx::Object
 		static  ::snow::types::AudioData from_file_handle( ::snow::Snow app,::cpp::Pointer<  SDL_RWops > _handle,::String _path,bool _is_stream);
 		static ::Dynamic from_file_handle_dyn();
 
+		static ::String code(int _code);
+		static ::Dynamic code_dyn();
+
 		static int ogg_read( ::snow::core::native::audio::AudioDataOGG _ogg,int size,int nmemb,::Array< unsigned char > data);
 		static ::Dynamic ogg_read_dyn();
 

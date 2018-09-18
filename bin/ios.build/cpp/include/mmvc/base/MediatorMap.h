@@ -70,6 +70,12 @@ class HXCPP_CLASS_ATTRIBUTES MediatorMap_obj : public  ::mmvc::base::ViewMapBase
 		void mapView( ::Dynamic viewClassOrName,hx::Class mediatorClass, ::Dynamic injectViewAs, ::Dynamic autoCreate, ::Dynamic autoRemove);
 		::Dynamic mapView_dyn();
 
+		void unmapView( ::Dynamic viewClassOrName);
+		::Dynamic unmapView_dyn();
+
+		::Dynamic createMediator( ::Dynamic viewComponent);
+		::Dynamic createMediator_dyn();
+
 		void registerMediator( ::Dynamic viewComponent,::Dynamic mediator);
 		::Dynamic registerMediator_dyn();
 
@@ -82,15 +88,25 @@ class HXCPP_CLASS_ATTRIBUTES MediatorMap_obj : public  ::mmvc::base::ViewMapBase
 		::Dynamic retrieveMediator( ::Dynamic viewComponent);
 		::Dynamic retrieveMediator_dyn();
 
+		bool hasMapping( ::Dynamic viewClassOrName);
+		::Dynamic hasMapping_dyn();
+
+		bool hasMediatorForView( ::Dynamic viewComponent);
+		::Dynamic hasMediatorForView_dyn();
+
+		bool hasMediator(::Dynamic mediator);
+		::Dynamic hasMediator_dyn();
+
 		void addListeners();
 
 		void removeListeners();
 
 		void onViewAdded( ::Dynamic view);
-		::Dynamic onViewAdded_dyn();
 
 		void onViewRemoved( ::Dynamic view);
-		::Dynamic onViewRemoved_dyn();
+
+		void removeMediatorLater();
+		::Dynamic removeMediatorLater_dyn();
 
 		::Dynamic createMediatorUsing( ::Dynamic viewComponent,::String viewClassName, ::mmvc::base::MappingConfig config);
 		::Dynamic createMediatorUsing_dyn();

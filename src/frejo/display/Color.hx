@@ -1,4 +1,6 @@
 package frejo.display;
+import nanovg.Nvg;
+import frejo.core.VG;
 
 typedef ColorRGBA = {
     r:Int,
@@ -19,11 +21,25 @@ typedef ColorHSLA = {
 /**
  * 
  */
-class Color {
-    public static var  PRIMARY:ColorRGBA = {r:72, g:138, b:255, a:255};
-    public static var  SECONDARY:ColorRGBA = {r:50, g:219, b:100, a:255};
-    public static var  DANGER:ColorRGBA = {r:245, g:61, b:61, a:255};
-    public static var  LIGHT:ColorRGBA = {r:244, g:244, b:244, a:255};
-    public static var  TRANSPARENT:ColorRGBA = {r:0, g:0, b:0, a:0};
+abstract Color(ColorRGBA) from ColorRGBA to ColorRGBA {
+
+    public function vg():NvgColor {
+        return VG.getInstance().rgba(this.r, this.g, this.b, this.a);
+    }
+    
+    public function new (r, g, b, a){
+        this  = {
+            r:r,
+            g:g,
+            b:b,
+            a:a
+        };
+    }
+
+    public static var  PRIMARY = new Color(72, 138, 255, 255);
+    public static var  SECONDARY= new Color(50, 219, 100, 255);
+    public static var  DANGER = new Color(245, 61, 61, 255);
+    public static var  LIGHT = new Color(244, 244, 244, 255);
+    public static var  TRANSPARENT = new Color(0, 0, 0, 0);
 }
 

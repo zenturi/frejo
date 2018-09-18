@@ -58,6 +58,8 @@ class HXCPP_CLASS_ATTRIBUTES AudioDataWAV_obj : public  ::snow::types::AudioData
 
 		int data_offset;
 		::cpp::Pointer<  SDL_RWops > handle;
+		void destroy();
+
 		bool seek(int _to);
 
 		::Array< int > portion( ::snow::api::buffers::ArrayBufferView _into,int _start,int _len,::Array< int > _into_result);

@@ -52,6 +52,7 @@ class HXCPP_CLASS_ATTRIBUTES AudioSource_obj : public hx::Object
 		 ::snow::types::AudioData data;
 		int stream_buffer_length;
 		int stream_buffer_count;
+		bool destroyed;
 		::String source_id;
 		::Array< ::Dynamic> instances;
 		 ::snow::systems::audio::AudioInstance instance( ::Dynamic _handle);
@@ -65,6 +66,9 @@ class HXCPP_CLASS_ATTRIBUTES AudioSource_obj : public hx::Object
 
 		Float duration();
 		::Dynamic duration_dyn();
+
+		void destroy();
+		::Dynamic destroy_dyn();
 
 		void instance_killed( ::snow::systems::audio::AudioInstance _instance);
 		::Dynamic instance_killed_dyn();

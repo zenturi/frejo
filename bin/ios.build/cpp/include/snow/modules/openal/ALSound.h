@@ -72,6 +72,12 @@ class HXCPP_CLASS_ATTRIBUTES ALSound_obj : public hx::Object
 		virtual void tick();
 		::Dynamic tick_dyn();
 
+		int new_source();
+		::Dynamic new_source_dyn();
+
+		void err(::String reason);
+		::Dynamic err_dyn();
+
 		int source_format();
 		::Dynamic source_format_dyn();
 

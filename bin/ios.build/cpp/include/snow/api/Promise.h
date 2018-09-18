@@ -45,6 +45,12 @@ class HXCPP_CLASS_ATTRIBUTES Promise_obj : public hx::Object
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("Promise",7b,f5,3a,c5); }
 
+		static  ::snow::api::Promise all(::Array< ::Dynamic> list);
+		static ::Dynamic all_dyn();
+
+		static  ::snow::api::Promise race(::Array< ::Dynamic> list);
+		static ::Dynamic race_dyn();
+
 		static  ::snow::api::Promise reject( ::Dynamic reason);
 		static ::Dynamic reject_dyn();
 
@@ -63,14 +69,26 @@ class HXCPP_CLASS_ATTRIBUTES Promise_obj : public hx::Object
 		 ::snow::api::Promise error( ::Dynamic on_rejected);
 		::Dynamic error_dyn();
 
+		virtual ::String toString();
+		::Dynamic toString_dyn();
+
 		void add_settle( ::Dynamic f);
 		::Dynamic add_settle_dyn();
 
 		 ::snow::api::Promise new_linked_promise();
 		::Dynamic new_linked_promise_dyn();
 
+		 ::snow::api::Promise new_linked_resolve();
+		::Dynamic new_linked_resolve_dyn();
+
+		 ::snow::api::Promise new_linked_reject();
+		::Dynamic new_linked_reject_dyn();
+
 		 ::snow::api::Promise new_linked_resolve_empty();
 		::Dynamic new_linked_resolve_empty_dyn();
+
+		 ::snow::api::Promise new_linked_reject_empty();
+		::Dynamic new_linked_reject_empty_dyn();
 
 		void add_fulfill( ::Dynamic f);
 		::Dynamic add_fulfill_dyn();
@@ -86,6 +104,12 @@ class HXCPP_CLASS_ATTRIBUTES Promise_obj : public hx::Object
 
 		void onsettle();
 		::Dynamic onsettle_dyn();
+
+		void onexception( ::Dynamic err);
+		::Dynamic onexception_dyn();
+
+		::String state_string();
+		::Dynamic state_string_dyn();
 
 };
 

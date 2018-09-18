@@ -16,6 +16,8 @@ HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_55_set_contextView,"mmvc.base.View
 HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_66_set_enabled,"mmvc.base.ViewMapBase","set_enabled",0x482ae022,"mmvc.base.ViewMapBase.set_enabled","mmvc/base/ViewMapBase.hx",66,0xb326b2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_76_addListeners,"mmvc.base.ViewMapBase","addListeners",0x197600e0,"mmvc.base.ViewMapBase.addListeners","mmvc/base/ViewMapBase.hx",76,0xb326b2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_77_removeListeners,"mmvc.base.ViewMapBase","removeListeners",0xa7068c19,"mmvc.base.ViewMapBase.removeListeners","mmvc/base/ViewMapBase.hx",77,0xb326b2b2)
+HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_79_onViewAdded,"mmvc.base.ViewMapBase","onViewAdded",0xb8ad9b7a,"mmvc.base.ViewMapBase.onViewAdded","mmvc/base/ViewMapBase.hx",79,0xb326b2b2)
+HX_LOCAL_STACK_FRAME(_hx_pos_79311e293f9adffc_80_onViewRemoved,"mmvc.base.ViewMapBase","onViewRemoved",0xd27488da,"mmvc.base.ViewMapBase.onViewRemoved","mmvc/base/ViewMapBase.hx",80,0xb326b2b2)
 namespace mmvc{
 namespace base{
 
@@ -86,6 +88,20 @@ void ViewMapBase_obj::removeListeners(){
 
 HX_DEFINE_DYNAMIC_FUNC0(ViewMapBase_obj,removeListeners,(void))
 
+void ViewMapBase_obj::onViewAdded( ::Dynamic view){
+            	HX_STACKFRAME(&_hx_pos_79311e293f9adffc_79_onViewAdded)
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMapBase_obj,onViewAdded,(void))
+
+void ViewMapBase_obj::onViewRemoved( ::Dynamic view){
+            	HX_STACKFRAME(&_hx_pos_79311e293f9adffc_80_onViewRemoved)
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMapBase_obj,onViewRemoved,(void))
+
 
 hx::ObjectPtr< ViewMapBase_obj > ViewMapBase_obj::__new(::Dynamic contextView, ::minject::Injector injector) {
 	hx::ObjectPtr< ViewMapBase_obj > __this = new ViewMapBase_obj();
@@ -134,9 +150,13 @@ hx::Val ViewMapBase_obj::__Field(const ::String &inName,hx::PropertyAccess inCal
 	case 11:
 		if (HX_FIELD_EQ(inName,"contextView") ) { return hx::Val( contextView ); }
 		if (HX_FIELD_EQ(inName,"set_enabled") ) { return hx::Val( set_enabled_dyn() ); }
+		if (HX_FIELD_EQ(inName,"onViewAdded") ) { return hx::Val( onViewAdded_dyn() ); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"addListeners") ) { return hx::Val( addListeners_dyn() ); }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"onViewRemoved") ) { return hx::Val( onViewRemoved_dyn() ); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"set_contextView") ) { return hx::Val( set_contextView_dyn() ); }
@@ -195,6 +215,8 @@ static ::String ViewMapBase_obj_sMemberFields[] = {
 	HX_("set_enabled",a4,6b,98,0e),
 	HX_("addListeners",1e,87,e2,f2),
 	HX_("removeListeners",9b,00,ad,34),
+	HX_("onViewAdded",fc,26,1b,7f),
+	HX_("onViewRemoved",dc,78,fd,37),
 	::String(null()) };
 
 hx::Class ViewMapBase_obj::__mClass;

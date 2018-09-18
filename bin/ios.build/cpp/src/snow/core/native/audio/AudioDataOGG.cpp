@@ -25,11 +25,24 @@
 #ifndef INCLUDED_snow_core_native_audio_AudioDataOGG
 #include <snow/core/native/audio/AudioDataOGG.h>
 #endif
+#ifndef INCLUDED_snow_core_native_io_IO
+#include <snow/core/native/io/IO.h>
+#endif
+#ifndef INCLUDED_snow_modules_interfaces_IO
+#include <snow/modules/interfaces/IO.h>
+#endif
+#ifndef INCLUDED_snow_modules_sdl_IO
+#include <snow/modules/sdl/IO.h>
+#endif
+#ifndef INCLUDED_snow_systems_io_IO
+#include <snow/systems/io/IO.h>
+#endif
 #ifndef INCLUDED_snow_types_AudioData
 #include <snow/types/AudioData.h>
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_6ad2d5d9ab296747_15_new,"snow.core.native.audio.AudioDataOGG","new",0xf4ea1cec,"snow.core.native.audio.AudioDataOGG.new","snow/core/native/audio/AudioDataOGG.hx",15,0x186b83e2)
+HX_LOCAL_STACK_FRAME(_hx_pos_6ad2d5d9ab296747_24_destroy,"snow.core.native.audio.AudioDataOGG","destroy",0x2c4baf86,"snow.core.native.audio.AudioDataOGG.destroy","snow/core/native/audio/AudioDataOGG.hx",24,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_6ad2d5d9ab296747_38_seek,"snow.core.native.audio.AudioDataOGG","seek",0x5b3d336c,"snow.core.native.audio.AudioDataOGG.seek","snow/core/native/audio/AudioDataOGG.hx",38,0x186b83e2)
 HX_LOCAL_STACK_FRAME(_hx_pos_6ad2d5d9ab296747_49_portion,"snow.core.native.audio.AudioDataOGG","portion",0x8b717373,"snow.core.native.audio.AudioDataOGG.portion","snow/core/native/audio/AudioDataOGG.hx",49,0x186b83e2)
 namespace snow{
@@ -62,6 +75,20 @@ bool AudioDataOGG_obj::_hx_isInstanceOf(int inClassId) {
 		return inClassId==(int)0x491fc56a;
 	}
 }
+
+void AudioDataOGG_obj::destroy(){
+            	HX_STACKFRAME(&_hx_pos_6ad2d5d9ab296747_24_destroy)
+HXLINE(  26)		if (hx::IsNotNull( this->handle )) {
+HXLINE(  27)			::cpp::Pointer<  SDL_RWops > tmp = this->handle;
+HXDLIN(  27)			this->app->io->module->file_close(tmp);
+            		}
+HXLINE(  30)		this->handle = null();
+HXLINE(  31)		::cpp::Pointer<  OggVorbis_File > tmp1 = this->oggfile;
+HXDLIN(  31)		ov_clear(tmp1);
+HXLINE(  32)		this->oggfile = null();
+HXLINE(  34)		this->super::destroy();
+            	}
+
 
 bool AudioDataOGG_obj::seek(int _to){
             	HX_STACKFRAME(&_hx_pos_6ad2d5d9ab296747_38_seek)
@@ -177,6 +204,7 @@ hx::Val AudioDataOGG_obj::__Field(const ::String &inName,hx::PropertyAccess inCa
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"oggfile") ) { return hx::Val( oggfile ); }
+		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
 		if (HX_FIELD_EQ(inName,"portion") ) { return hx::Val( portion_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
@@ -213,6 +241,7 @@ static hx::StaticInfo *AudioDataOGG_obj_sStaticStorageInfo = 0;
 static ::String AudioDataOGG_obj_sMemberFields[] = {
 	HX_("handle",a8,83,fd,b7),
 	HX_("oggfile",4b,36,92,c8),
+	HX_("destroy",fa,2c,86,24),
 	HX_("seek",78,85,50,4c),
 	HX_("portion",e7,f0,ab,83),
 	::String(null()) };

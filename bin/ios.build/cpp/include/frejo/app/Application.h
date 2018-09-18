@@ -72,10 +72,8 @@ class HXCPP_CLASS_ATTRIBUTES Application_obj : public  ::snow::App_obj
 		int render_height;
 		 ::msignal::Signal1 signal;
 		void ready();
-		::Dynamic ready_dyn();
 
 		 ::Dynamic config( ::Dynamic config);
-		::Dynamic config_dyn();
 
 		void update(Float dt);
 
@@ -85,7 +83,6 @@ class HXCPP_CLASS_ATTRIBUTES Application_obj : public  ::snow::App_obj
 		::Dynamic draw_dyn();
 
 		void onevent( ::snow::types::SystemEvent event);
-		::Dynamic onevent_dyn();
 
 };
 

@@ -71,33 +71,25 @@ class HXCPP_CLASS_ATTRIBUTES Runtime_obj : public  ::snow::core::native::Runtime
 		 ::haxe::ds::IntMap gamepads;
 		 ::haxe::ds::IntMap joysticks;
 		void ready();
-		::Dynamic ready_dyn();
 
 		bool run();
-		::Dynamic run_dyn();
 
 		void shutdown( ::Dynamic _immediate);
-		::Dynamic shutdown_dyn();
 
 		bool window_grab(bool enable);
-		::Dynamic window_grab_dyn();
 
 		void window_swap();
 		::Dynamic window_swap_dyn();
 
 		bool window_fullscreen(bool enable, ::Dynamic true_fullscreen);
-		::Dynamic window_fullscreen_dyn();
 
 		int window_width();
-		::Dynamic window_width_dyn();
 
 		int window_height();
-		::Dynamic window_height_dyn();
 
 		 ::Dynamic _size;
 		Float window_dpr;
 		Float window_device_pixel_ratio();
-		::Dynamic window_device_pixel_ratio_dyn();
 
 		bool run_loop();
 		::Dynamic run_loop_dyn();

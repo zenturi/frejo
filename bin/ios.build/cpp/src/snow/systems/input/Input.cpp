@@ -52,6 +52,19 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_f93f5881806d28d4_11_new,"snow.systems.input.Input","new",0x974ccfc3,"snow.systems.input.Input.new","snow/systems/input/Input.hx",11,0x9abd6a90)
 HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_79_shutdown,"snow.systems.input.Input","shutdown",0x276b5653,"snow.systems.input.Input.shutdown","snow/systems/input/Input.hx",79,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_90_keypressed,"snow.systems.input.Input","keypressed",0xf1544de0,"snow.systems.input.Input.keypressed","snow/systems/input/Input.hx",90,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_95_keyreleased,"snow.systems.input.Input","keyreleased",0x3f45e3bf,"snow.systems.input.Input.keyreleased","snow/systems/input/Input.hx",95,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_100_keydown,"snow.systems.input.Input","keydown",0x52fe2a64,"snow.systems.input.Input.keydown","snow/systems/input/Input.hx",100,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_105_scanpressed,"snow.systems.input.Input","scanpressed",0x55aec928,"snow.systems.input.Input.scanpressed","snow/systems/input/Input.hx",105,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_110_scanreleased,"snow.systems.input.Input","scanreleased",0xaa174777,"snow.systems.input.Input.scanreleased","snow/systems/input/Input.hx",110,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_115_scandown,"snow.systems.input.Input","scandown",0xe3f5521c,"snow.systems.input.Input.scandown","snow/systems/input/Input.hx",115,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_122_mousepressed,"snow.systems.input.Input","mousepressed",0xa276775a,"snow.systems.input.Input.mousepressed","snow/systems/input/Input.hx",122,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_127_mousereleased,"snow.systems.input.Input","mousereleased",0x8c080505,"snow.systems.input.Input.mousereleased","snow/systems/input/Input.hx",127,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_132_mousedown,"snow.systems.input.Input","mousedown",0x1af8b0aa,"snow.systems.input.Input.mousedown","snow/systems/input/Input.hx",132,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_138_gamepadpressed,"snow.systems.input.Input","gamepadpressed",0xaed77d9e,"snow.systems.input.Input.gamepadpressed","snow/systems/input/Input.hx",138,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_146_gamepadreleased,"snow.systems.input.Input","gamepadreleased",0x548c7a41,"snow.systems.input.Input.gamepadreleased","snow/systems/input/Input.hx",146,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_154_gamepaddown,"snow.systems.input.Input","gamepaddown",0x41d2d7e6,"snow.systems.input.Input.gamepaddown","snow/systems/input/Input.hx",154,0x9abd6a90)
+HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_162_gamepadaxis,"snow.systems.input.Input","gamepadaxis",0x3fddfc25,"snow.systems.input.Input.gamepadaxis","snow/systems/input/Input.hx",162,0x9abd6a90)
 HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_177_dispatch_key_down_event,"snow.systems.input.Input","dispatch_key_down_event",0x6350b525,"snow.systems.input.Input.dispatch_key_down_event","snow/systems/input/Input.hx",177,0x9abd6a90)
 HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_203_dispatch_key_up_event,"snow.systems.input.Input","dispatch_key_up_event",0x220e19de,"snow.systems.input.Input.dispatch_key_up_event","snow/systems/input/Input.hx",203,0x9abd6a90)
 HX_LOCAL_STACK_FRAME(_hx_pos_f93f5881806d28d4_228_dispatch_text_event,"snow.systems.input.Input","dispatch_text_event",0xa5cbb5d0,"snow.systems.input.Input.dispatch_text_event","snow/systems/input/Input.hx",228,0x9abd6a90)
@@ -148,6 +161,137 @@ void Input_obj::shutdown(){
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Input_obj,shutdown,(void))
+
+bool Input_obj::keypressed(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_90_keypressed)
+HXDLIN(  90)		return this->key_code_pressed->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,keypressed,return )
+
+bool Input_obj::keyreleased(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_95_keyreleased)
+HXDLIN(  95)		return this->key_code_released->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,keyreleased,return )
+
+bool Input_obj::keydown(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_100_keydown)
+HXDLIN( 100)		return this->key_code_down->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,keydown,return )
+
+bool Input_obj::scanpressed(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_105_scanpressed)
+HXDLIN( 105)		return this->scan_code_pressed->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,scanpressed,return )
+
+bool Input_obj::scanreleased(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_110_scanreleased)
+HXDLIN( 110)		return this->scan_code_released->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,scanreleased,return )
+
+bool Input_obj::scandown(int _code){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_115_scandown)
+HXDLIN( 115)		return this->scan_code_down->exists(_code);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,scandown,return )
+
+bool Input_obj::mousepressed(int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_122_mousepressed)
+HXDLIN( 122)		return this->mouse_button_pressed->exists(_button);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,mousepressed,return )
+
+bool Input_obj::mousereleased(int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_127_mousereleased)
+HXDLIN( 127)		return this->mouse_button_released->exists(_button);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,mousereleased,return )
+
+bool Input_obj::mousedown(int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_132_mousedown)
+HXDLIN( 132)		return this->mouse_button_down->exists(_button);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(Input_obj,mousedown,return )
+
+bool Input_obj::gamepadpressed(int _gamepad,int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_138_gamepadpressed)
+HXLINE( 140)		 ::haxe::ds::IntMap _gamepad_state = ( ( ::haxe::ds::IntMap)(this->gamepad_button_pressed->get(_gamepad)) );
+HXLINE( 141)		if (hx::IsNotNull( _gamepad_state )) {
+HXLINE( 141)			return _gamepad_state->exists(_button);
+            		}
+            		else {
+HXLINE( 141)			return false;
+            		}
+HXDLIN( 141)		return false;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Input_obj,gamepadpressed,return )
+
+bool Input_obj::gamepadreleased(int _gamepad,int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_146_gamepadreleased)
+HXLINE( 148)		 ::haxe::ds::IntMap _gamepad_state = ( ( ::haxe::ds::IntMap)(this->gamepad_button_released->get(_gamepad)) );
+HXLINE( 149)		if (hx::IsNotNull( _gamepad_state )) {
+HXLINE( 149)			return _gamepad_state->exists(_button);
+            		}
+            		else {
+HXLINE( 149)			return false;
+            		}
+HXDLIN( 149)		return false;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Input_obj,gamepadreleased,return )
+
+bool Input_obj::gamepaddown(int _gamepad,int _button){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_154_gamepaddown)
+HXLINE( 156)		 ::haxe::ds::IntMap _gamepad_state = ( ( ::haxe::ds::IntMap)(this->gamepad_button_down->get(_gamepad)) );
+HXLINE( 157)		if (hx::IsNotNull( _gamepad_state )) {
+HXLINE( 157)			return _gamepad_state->exists(_button);
+            		}
+            		else {
+HXLINE( 157)			return false;
+            		}
+HXDLIN( 157)		return false;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Input_obj,gamepaddown,return )
+
+Float Input_obj::gamepadaxis(int _gamepad,int _axis){
+            	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_162_gamepadaxis)
+HXLINE( 164)		 ::haxe::ds::IntMap _gamepad_state = ( ( ::haxe::ds::IntMap)(this->gamepad_axis_values->get(_gamepad)) );
+HXLINE( 165)		if (hx::IsNotNull( _gamepad_state )) {
+HXLINE( 166)			if (_gamepad_state->exists(_axis)) {
+HXLINE( 167)				return ( (Float)(_gamepad_state->get(_axis)) );
+            			}
+            		}
+HXLINE( 171)		return ( (Float)(0) );
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(Input_obj,gamepadaxis,return )
 
 void Input_obj::dispatch_key_down_event(int keycode,int scancode,bool repeat, ::snow::types::ModState mod,Float timestamp,int window_id){
             	HX_STACKFRAME(&_hx_pos_f93f5881806d28d4_177_dispatch_key_down_event)
@@ -873,32 +1017,47 @@ hx::Val Input_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 		if (HX_FIELD_EQ(inName,"event") ) { return hx::Val( event ); }
 		break;
 	case 7:
+		if (HX_FIELD_EQ(inName,"keydown") ) { return hx::Val( keydown_dyn() ); }
 		if (HX_FIELD_EQ(inName,"onevent") ) { return hx::Val( onevent_dyn() ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"shutdown") ) { return hx::Val( shutdown_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scandown") ) { return hx::Val( scandown_dyn() ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"key_event") ) { return hx::Val( key_event ); }
 		if (HX_FIELD_EQ(inName,"mod_state") ) { return hx::Val( mod_state ); }
+		if (HX_FIELD_EQ(inName,"mousedown") ) { return hx::Val( mousedown_dyn() ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"text_event") ) { return hx::Val( text_event ); }
+		if (HX_FIELD_EQ(inName,"keypressed") ) { return hx::Val( keypressed_dyn() ); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"mouse_event") ) { return hx::Val( mouse_event ); }
 		if (HX_FIELD_EQ(inName,"touch_event") ) { return hx::Val( touch_event ); }
+		if (HX_FIELD_EQ(inName,"keyreleased") ) { return hx::Val( keyreleased_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scanpressed") ) { return hx::Val( scanpressed_dyn() ); }
+		if (HX_FIELD_EQ(inName,"gamepaddown") ) { return hx::Val( gamepaddown_dyn() ); }
+		if (HX_FIELD_EQ(inName,"gamepadaxis") ) { return hx::Val( gamepadaxis_dyn() ); }
 		if (HX_FIELD_EQ(inName,"touch_count") ) { return hx::Val( touch_count ); }
 		break;
 	case 12:
+		if (HX_FIELD_EQ(inName,"scanreleased") ) { return hx::Val( scanreleased_dyn() ); }
+		if (HX_FIELD_EQ(inName,"mousepressed") ) { return hx::Val( mousepressed_dyn() ); }
 		if (HX_FIELD_EQ(inName,"touches_down") ) { return hx::Val( touches_down ); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"gamepad_event") ) { return hx::Val( gamepad_event ); }
+		if (HX_FIELD_EQ(inName,"mousereleased") ) { return hx::Val( mousereleased_dyn() ); }
 		if (HX_FIELD_EQ(inName,"key_code_down") ) { return hx::Val( key_code_down ); }
 		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"gamepadpressed") ) { return hx::Val( gamepadpressed_dyn() ); }
 		if (HX_FIELD_EQ(inName,"scan_code_down") ) { return hx::Val( scan_code_down ); }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"gamepadreleased") ) { return hx::Val( gamepadreleased_dyn() ); }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"_update_keystate") ) { return hx::Val( _update_keystate_dyn() ); }
@@ -1093,6 +1252,19 @@ static ::String Input_obj_sMemberFields[] = {
 	HX_("gamepad_event",bc,9e,d9,5b),
 	HX_("mod_state",94,51,fe,5b),
 	HX_("shutdown",96,fc,0b,6b),
+	HX_("keypressed",e3,4a,1d,db),
+	HX_("keyreleased",5c,49,5a,e5),
+	HX_("keydown",81,3d,6e,b1),
+	HX_("scanpressed",c5,2e,c3,fb),
+	HX_("scanreleased",3a,cb,db,55),
+	HX_("scandown",5f,f8,95,27),
+	HX_("mousepressed",1d,fb,3a,4e),
+	HX_("mousereleased",e2,cb,36,2c),
+	HX_("mousedown",07,85,e9,03),
+	HX_("gamepadpressed",21,b8,96,37),
+	HX_("gamepadreleased",5e,72,20,73),
+	HX_("gamepaddown",83,3d,e7,e7),
+	HX_("gamepadaxis",c2,61,f2,e5),
 	HX_("dispatch_key_down_event",42,92,f5,8f),
 	HX_("dispatch_key_up_event",bb,85,da,71),
 	HX_("dispatch_text_event",6d,80,5a,1c),

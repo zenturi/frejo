@@ -56,6 +56,18 @@ class HXCPP_CLASS_ATTRIBUTES Injector_obj : public hx::Object
 		 ::Dynamic mapValue(hx::Class whenAskedFor, ::Dynamic useValue,::String named);
 		::Dynamic mapValue_dyn();
 
+		 ::Dynamic mapClass(hx::Class whenAskedFor,hx::Class instantiateClass,::String named);
+		::Dynamic mapClass_dyn();
+
+		 ::Dynamic mapSingleton(hx::Class whenAskedFor,::String named);
+		::Dynamic mapSingleton_dyn();
+
+		 ::Dynamic mapSingletonOf(hx::Class whenAskedFor,hx::Class useSingletonOf,::String named);
+		::Dynamic mapSingletonOf_dyn();
+
+		 ::Dynamic mapRule(hx::Class whenAskedFor, ::Dynamic useRule,::String named);
+		::Dynamic mapRule_dyn();
+
 		 ::minject::InjectionConfig getMapping(hx::Class forClass,::String named);
 		::Dynamic getMapping_dyn();
 
@@ -73,6 +85,9 @@ class HXCPP_CLASS_ATTRIBUTES Injector_obj : public hx::Object
 
 		bool hasMapping(hx::Class forClass,::String named);
 		::Dynamic hasMapping_dyn();
+
+		 ::Dynamic getInstance(hx::Class ofClass,::String named);
+		::Dynamic getInstance_dyn();
 
 		 ::minject::Injector createChildInjector();
 		::Dynamic createChildInjector_dyn();

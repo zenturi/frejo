@@ -6,6 +6,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_22e9f99bc46f541a_713_new,"snow.types.TouchEvent","new",0xb703f68d,"snow.types.TouchEvent.new","snow/types/Types.hx",713,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_22e9f99bc46f541a_715_set,"snow.types.TouchEvent","set",0xb707c1cf,"snow.types.TouchEvent.set","snow/types/Types.hx",715,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_22e9f99bc46f541a_724_toString,"snow.types.TouchEvent","toString",0xd184275f,"snow.types.TouchEvent.toString","snow/types/Types.hx",724,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -28,6 +29,19 @@ Dynamic TouchEvent_obj::__Create(hx::DynamicArray inArgs)
 bool TouchEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x3db07d89;
 }
+
+void TouchEvent_obj::set(int _type,int _id,Float _x,Float _y,Float _dx,Float _dy){
+            	HX_STACKFRAME(&_hx_pos_22e9f99bc46f541a_715_set)
+HXLINE( 716)		this->type = _type;
+HXLINE( 717)		this->touch_id = _id;
+HXLINE( 718)		this->x = _x;
+HXLINE( 719)		this->y = _y;
+HXLINE( 720)		this->dx = _dx;
+HXLINE( 721)		this->dy = _dy;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(TouchEvent_obj,set,(void))
 
 ::String TouchEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_22e9f99bc46f541a_724_toString)
@@ -75,6 +89,9 @@ hx::Val TouchEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	case 2:
 		if (HX_FIELD_EQ(inName,"dx") ) { return hx::Val( dx ); }
 		if (HX_FIELD_EQ(inName,"dy") ) { return hx::Val( dy ); }
+		break;
+	case 3:
+		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"type") ) { return hx::Val( type ); }
@@ -137,6 +154,7 @@ static ::String TouchEvent_obj_sMemberFields[] = {
 	HX_("y",79,00,00,00),
 	HX_("dx",94,57,00,00),
 	HX_("dy",95,57,00,00),
+	HX_("set",a2,9b,57,00),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

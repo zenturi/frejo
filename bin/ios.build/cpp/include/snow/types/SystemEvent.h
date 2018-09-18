@@ -49,6 +49,9 @@ class HXCPP_CLASS_ATTRIBUTES SystemEvent_obj : public hx::Object
 		int type;
 		 ::snow::types::WindowEvent window;
 		 ::snow::types::InputEvent input;
+		void set(int _type, ::snow::types::WindowEvent _window, ::snow::types::InputEvent _input);
+		::Dynamic set_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

@@ -53,8 +53,13 @@ class HXCPP_CLASS_ATTRIBUTES Config_obj : public hx::Object
 		::String __ToString() const { return HX_("Config",e2,ca,66,fc); }
 
 		static void __boot();
+		static ::String app_runtime;
 		static ::String app_config;
 		static ::String app_ident;
+		static ::String app_main;
+		static ::String module_assets;
+		static ::String module_audio;
+		static ::String module_io;
 		static ::Array< ::String > extensions;
 };
 

@@ -12,6 +12,8 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_d018edaf7228e0b6_159_new,"snow.types.ImageData","new",0xeecb2a57,"snow.types.ImageData.new","snow/types/Types.hx",159,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_d018edaf7228e0b6_196_destroy,"snow.types.ImageData","destroy",0xfc174e71,"snow.types.ImageData.destroy","snow/types/Types.hx",196,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_d018edaf7228e0b6_204_toString,"snow.types.ImageData","toString",0xffdaf755,"snow.types.ImageData.toString","snow/types/Types.hx",204,0x72b41ce7)
 namespace snow{
 namespace types{
 
@@ -56,6 +58,24 @@ Dynamic ImageData_obj::__Create(hx::DynamicArray inArgs)
 bool ImageData_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x0b9e926f;
 }
+
+void ImageData_obj::destroy(){
+            	HX_STACKFRAME(&_hx_pos_d018edaf7228e0b6_196_destroy)
+HXLINE( 198)		this->id = null();
+HXLINE( 199)		this->pixels->buffer = null();
+HXLINE( 200)		this->pixels = null();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ImageData_obj,destroy,(void))
+
+::String ImageData_obj::toString(){
+            	HX_STACKFRAME(&_hx_pos_d018edaf7228e0b6_204_toString)
+HXDLIN( 204)		return ((((((((((((((HX_("{ \"ImageData\":true, \"id\":",13,91,35,15) + this->id) + HX_(", \"width\":",f0,c3,ad,34)) + this->width) + HX_(", \"height\":",ad,8a,e4,66)) + this->height) + HX_(", \"width_actual\":",2d,6c,e5,85)) + this->width_actual) + HX_(", \"height_actual\":",10,a7,f1,e4)) + this->height_actual) + HX_(", \"bpp\":",4c,93,1e,57)) + this->bpp) + HX_(", \"bpp_source\":",de,d3,df,8f)) + this->bpp_source) + HX_(" }",5d,1c,00,00));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(ImageData_obj,toString,return )
 
 
 hx::ObjectPtr< ImageData_obj > ImageData_obj::__new( ::snow::Snow _app, ::Dynamic _options) {
@@ -119,6 +139,12 @@ hx::Val ImageData_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 	case 6:
 		if (HX_FIELD_EQ(inName,"height") ) { return hx::Val( height ); }
 		if (HX_FIELD_EQ(inName,"pixels") ) { return hx::Val( pixels ); }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"toString") ) { return hx::Val( toString_dyn() ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"bpp_source") ) { return hx::Val( bpp_source ); }
@@ -201,6 +227,8 @@ static ::String ImageData_obj_sMemberFields[] = {
 	HX_("bpp",e2,be,4a,00),
 	HX_("bpp_source",d8,83,da,8c),
 	HX_("pixels",2d,ef,a9,8c),
+	HX_("destroy",fa,2c,86,24),
+	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 
 hx::Class ImageData_obj::__mClass;

@@ -18,6 +18,10 @@ class HXCPP_CLASS_ATTRIBUTES IViewContainer_obj {
 		HX_DO_INTERFACE_RTTI;
 
 		static void __boot();
+		bool (hx::Object :: *_hx_isAdded)( ::Dynamic view); 
+		static inline bool isAdded( ::Dynamic _hx_, ::Dynamic view) {
+			return (_hx_.mPtr->*( static_cast< ::mmvc::api::IViewContainer_obj *>(_hx_.mPtr->_hx_getInterface(0x362a7500)))->_hx_isAdded)(view);
+		}
 };
 
 } // end namespace mmvc

@@ -9,20 +9,102 @@
 #include <frejo/core/VG.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_9b09dd08190ad881_24_new,"frejo.core.VG","new",0xe4ef1202,"frejo.core.VG.new","frejo/core/VG.hx",24,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_32_beginFrame,"frejo.core.VG","beginFrame",0x31f79fe2,"frejo.core.VG.beginFrame","frejo/core/VG.hx",32,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_36_endFrame,"frejo.core.VG","endFrame",0x864a9d70,"frejo.core.VG.endFrame","frejo/core/VG.hx",36,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_48_rgba,"frejo.core.VG","rgba",0x6ee6fcd2,"frejo.core.VG.rgba","frejo/core/VG.hx",48,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_96_fillColor,"frejo.core.VG","fillColor",0x279abf02,"frejo.core.VG.fillColor","frejo/core/VG.hx",96,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_288_rect,"frejo.core.VG","rect",0x6ee57942,"frejo.core.VG.rect","frejo/core/VG.hx",288,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_304_fill,"frejo.core.VG","fill",0x66f9faa1,"frejo.core.VG.fill","frejo/core/VG.hx",304,0xc25e6b4e)
-HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_15_getInstance,"frejo.core.VG","getInstance",0xbfdd95ed,"frejo.core.VG.getInstance","frejo/core/VG.hx",15,0xc25e6b4e)
+HX_DEFINE_STACK_FRAME(_hx_pos_9b09dd08190ad881_25_new,"frejo.core.VG","new",0xe4ef1202,"frejo.core.VG.new","frejo/core/VG.hx",25,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_29_delete,"frejo.core.VG","delete",0x7b10afc9,"frejo.core.VG.delete","frejo/core/VG.hx",29,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_33_beginFrame,"frejo.core.VG","beginFrame",0x31f79fe2,"frejo.core.VG.beginFrame","frejo/core/VG.hx",33,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_37_endFrame,"frejo.core.VG","endFrame",0x864a9d70,"frejo.core.VG.endFrame","frejo/core/VG.hx",37,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_41_rgb,"frejo.core.VG","rgb",0xe4f21caf,"frejo.core.VG.rgb","frejo/core/VG.hx",41,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_45_rgbf,"frejo.core.VG","rgbf",0x6ee6fcd7,"frejo.core.VG.rgbf","frejo/core/VG.hx",45,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_49_rgba,"frejo.core.VG","rgba",0x6ee6fcd2,"frejo.core.VG.rgba","frejo/core/VG.hx",49,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_53_rgbaf,"frejo.core.VG","rgbaf",0x9b363b54,"frejo.core.VG.rgbaf","frejo/core/VG.hx",53,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_57_lerpRgba,"frejo.core.VG","lerpRgba",0x531ba9e9,"frejo.core.VG.lerpRgba","frejo/core/VG.hx",57,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_61_transRgba,"frejo.core.VG","transRgba",0x46ebf01e,"frejo.core.VG.transRgba","frejo/core/VG.hx",61,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_65_transRgbaf,"frejo.core.VG","transRgbaf",0xc7862a88,"frejo.core.VG.transRgbaf","frejo/core/VG.hx",65,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_69_hsl,"frejo.core.VG","hsl",0xe4ea90a3,"frejo.core.VG.hsl","frejo/core/VG.hx",69,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_73_hsla,"frejo.core.VG","hsla",0x6853fe5e,"frejo.core.VG.hsla","frejo/core/VG.hx",73,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_77_save,"frejo.core.VG","save",0x6f8bb75b,"frejo.core.VG.save","frejo/core/VG.hx",77,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_81_restore,"frejo.core.VG","restore",0x8b6a21f0,"frejo.core.VG.restore","frejo/core/VG.hx",81,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_85_reset,"frejo.core.VG","reset",0x99f0b7f1,"frejo.core.VG.reset","frejo/core/VG.hx",85,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_89_strokeColor,"frejo.core.VG","strokeColor",0xa31f662d,"frejo.core.VG.strokeColor","frejo/core/VG.hx",89,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_93_strokePaint,"frejo.core.VG","strokePaint",0x1611ac68,"frejo.core.VG.strokePaint","frejo/core/VG.hx",93,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_97_fillColor,"frejo.core.VG","fillColor",0x279abf02,"frejo.core.VG.fillColor","frejo/core/VG.hx",97,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_101_fillPaint,"frejo.core.VG","fillPaint",0x9a8d053d,"frejo.core.VG.fillPaint","frejo/core/VG.hx",101,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_105_miterLimit,"frejo.core.VG","miterLimit",0x0a157394,"frejo.core.VG.miterLimit","frejo/core/VG.hx",105,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_109_strokeWidth,"frejo.core.VG","strokeWidth",0x2325aad0,"frejo.core.VG.strokeWidth","frejo/core/VG.hx",109,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_113_lineCap,"frejo.core.VG","lineCap",0x404a3f20,"frejo.core.VG.lineCap","frejo/core/VG.hx",113,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_117_lineJoin,"frejo.core.VG","lineJoin",0x0558151c,"frejo.core.VG.lineJoin","frejo/core/VG.hx",117,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_121_globalAlpha,"frejo.core.VG","globalAlpha",0x39ddb29d,"frejo.core.VG.globalAlpha","frejo/core/VG.hx",121,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_125_resetTransform,"frejo.core.VG","resetTransform",0xd1414f3b,"frejo.core.VG.resetTransform","frejo/core/VG.hx",125,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_129_transform,"frejo.core.VG","transform",0x542a548e,"frejo.core.VG.transform","frejo/core/VG.hx",129,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_133_translate,"frejo.core.VG","translate",0x5816fe70,"frejo.core.VG.translate","frejo/core/VG.hx",133,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_137_rotate,"frejo.core.VG","rotate",0xdb5835f9,"frejo.core.VG.rotate","frejo/core/VG.hx",137,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_141_skewX,"frejo.core.VG","skewX",0x31440430,"frejo.core.VG.skewX","frejo/core/VG.hx",141,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_145_skewY,"frejo.core.VG","skewY",0x31440431,"frejo.core.VG.skewY","frejo/core/VG.hx",145,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_149_scale,"frejo.core.VG","scale",0x2bf73cac,"frejo.core.VG.scale","frejo/core/VG.hx",149,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_153_currentTransform,"frejo.core.VG","currentTransform",0x83228311,"frejo.core.VG.currentTransform","frejo/core/VG.hx",153,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_157_transformIdentity,"frejo.core.VG","transformIdentity",0x596793ec,"frejo.core.VG.transformIdentity","frejo/core/VG.hx",157,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_161_transformTranslate,"frejo.core.VG","transformTranslate",0xda8c60e0,"frejo.core.VG.transformTranslate","frejo/core/VG.hx",161,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_165_transformScale,"frejo.core.VG","transformScale",0x208ea71c,"frejo.core.VG.transformScale","frejo/core/VG.hx",165,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_169_transformRotate,"frejo.core.VG","transformRotate",0xeb3ded89,"frejo.core.VG.transformRotate","frejo/core/VG.hx",169,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_173_transformSkewX,"frejo.core.VG","transformSkewX",0x25db6ea0,"frejo.core.VG.transformSkewX","frejo/core/VG.hx",173,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_177_transformSkewY,"frejo.core.VG","transformSkewY",0x25db6ea1,"frejo.core.VG.transformSkewY","frejo/core/VG.hx",177,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_181_transformMultiply,"frejo.core.VG","transformMultiply",0x3ac530d2,"frejo.core.VG.transformMultiply","frejo/core/VG.hx",181,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_185_transformPremultiply,"frejo.core.VG","transformPremultiply",0x2ab32f59,"frejo.core.VG.transformPremultiply","frejo/core/VG.hx",185,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_189_transformInverse,"frejo.core.VG","transformInverse",0x37c5ecc2,"frejo.core.VG.transformInverse","frejo/core/VG.hx",189,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_193_transformPoint,"frejo.core.VG","transformPoint",0x6e4f8ce2,"frejo.core.VG.transformPoint","frejo/core/VG.hx",193,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_197_degToRad,"frejo.core.VG","degToRad",0x177e2292,"frejo.core.VG.degToRad","frejo/core/VG.hx",197,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_201_radToDeg,"frejo.core.VG","radToDeg",0x5ecdd414,"frejo.core.VG.radToDeg","frejo/core/VG.hx",201,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_205_createImage,"frejo.core.VG","createImage",0x26ed0a61,"frejo.core.VG.createImage","frejo/core/VG.hx",205,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_209_createImageMem,"frejo.core.VG","createImageMem",0x07adae34,"frejo.core.VG.createImageMem","frejo/core/VG.hx",209,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_213_createImageRGBA,"frejo.core.VG","createImageRGBA",0xb381e795,"frejo.core.VG.createImageRGBA","frejo/core/VG.hx",213,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_217_updateImage,"frejo.core.VG","updateImage",0xe30a3c34,"frejo.core.VG.updateImage","frejo/core/VG.hx",217,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_221_imageSize,"frejo.core.VG","imageSize",0x3d1f5cde,"frejo.core.VG.imageSize","frejo/core/VG.hx",221,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_225_deleteImage,"frejo.core.VG","deleteImage",0x8d6706d2,"frejo.core.VG.deleteImage","frejo/core/VG.hx",225,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_229_linearGradient,"frejo.core.VG","linearGradient",0xd5faf293,"frejo.core.VG.linearGradient","frejo/core/VG.hx",229,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_233_boxGradient,"frejo.core.VG","boxGradient",0xda91eabd,"frejo.core.VG.boxGradient","frejo/core/VG.hx",233,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_237_radialGradient,"frejo.core.VG","radialGradient",0xb85de98d,"frejo.core.VG.radialGradient","frejo/core/VG.hx",237,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_241_imagePattern,"frejo.core.VG","imagePattern",0xc8d3fa53,"frejo.core.VG.imagePattern","frejo/core/VG.hx",241,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_245_scissor,"frejo.core.VG","scissor",0x25a0e2be,"frejo.core.VG.scissor","frejo/core/VG.hx",245,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_249_intersectScissor,"frejo.core.VG","intersectScissor",0x15b39a1b,"frejo.core.VG.intersectScissor","frejo/core/VG.hx",249,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_253_resetScissor,"frejo.core.VG","resetScissor",0x3e59e82b,"frejo.core.VG.resetScissor","frejo/core/VG.hx",253,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_257_beginPath,"frejo.core.VG","beginPath",0xa1c2eb90,"frejo.core.VG.beginPath","frejo/core/VG.hx",257,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_261_moveTo,"frejo.core.VG","moveTo",0xdce4c28a,"frejo.core.VG.moveTo","frejo/core/VG.hx",261,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_265_lineTo,"frejo.core.VG","lineTo",0xfcd8362d,"frejo.core.VG.lineTo","frejo/core/VG.hx",265,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_269_bezierTo,"frejo.core.VG","bezierTo",0x4ec76298,"frejo.core.VG.bezierTo","frejo/core/VG.hx",269,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_273_arcTo,"frejo.core.VG","arcTo",0xd8ac6e8f,"frejo.core.VG.arcTo","frejo/core/VG.hx",273,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_277_closePath,"frejo.core.VG","closePath",0x22b78c9f,"frejo.core.VG.closePath","frejo/core/VG.hx",277,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_281_pathWinding,"frejo.core.VG","pathWinding",0x05326d97,"frejo.core.VG.pathWinding","frejo/core/VG.hx",281,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_285_arc,"frejo.core.VG","arc",0xe4e53ff4,"frejo.core.VG.arc","frejo/core/VG.hx",285,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_289_rect,"frejo.core.VG","rect",0x6ee57942,"frejo.core.VG.rect","frejo/core/VG.hx",289,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_293_roundedRect,"frejo.core.VG","roundedRect",0x6a60c793,"frejo.core.VG.roundedRect","frejo/core/VG.hx",293,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_297_ellipse,"frejo.core.VG","ellipse",0x2c3ffb80,"frejo.core.VG.ellipse","frejo/core/VG.hx",297,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_301_circle,"frejo.core.VG","circle",0x664561ae,"frejo.core.VG.circle","frejo/core/VG.hx",301,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_305_fill,"frejo.core.VG","fill",0x66f9faa1,"frejo.core.VG.fill","frejo/core/VG.hx",305,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_309_stroke,"frejo.core.VG","stroke",0x216ca356,"frejo.core.VG.stroke","frejo/core/VG.hx",309,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_313_createFont,"frejo.core.VG","createFont",0x0bf93589,"frejo.core.VG.createFont","frejo/core/VG.hx",313,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_317_createFontMem,"frejo.core.VG","createFontMem",0x58beec0c,"frejo.core.VG.createFontMem","frejo/core/VG.hx",317,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_321_findFont,"frejo.core.VG","findFont",0x181dfdc6,"frejo.core.VG.findFont","frejo/core/VG.hx",321,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_325_fontSize,"frejo.core.VG","fontSize",0x509b514e,"frejo.core.VG.fontSize","frejo/core/VG.hx",325,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_329_fontBlur,"frejo.core.VG","fontBlur",0x4560f334,"frejo.core.VG.fontBlur","frejo/core/VG.hx",329,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_333_textLetterSpacing,"frejo.core.VG","textLetterSpacing",0xfe922b72,"frejo.core.VG.textLetterSpacing","frejo/core/VG.hx",333,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_337_textLineHeight,"frejo.core.VG","textLineHeight",0xf0e20ba6,"frejo.core.VG.textLineHeight","frejo/core/VG.hx",337,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_341_textAlign,"frejo.core.VG","textAlign",0xc9160dfa,"frejo.core.VG.textAlign","frejo/core/VG.hx",341,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_345_fontFaceId,"frejo.core.VG","fontFaceId",0x4e00c3a5,"frejo.core.VG.fontFaceId","frejo/core/VG.hx",345,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_349_fontFace,"frejo.core.VG","fontFace",0x47fd652a,"frejo.core.VG.fontFace","frejo/core/VG.hx",349,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_353_text,"frejo.core.VG","text",0x7037f8cb,"frejo.core.VG.text","frejo/core/VG.hx",353,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_357_textBox,"frejo.core.VG","textBox",0xbf73ce00,"frejo.core.VG.textBox","frejo/core/VG.hx",357,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_361_textBounds,"frejo.core.VG","textBounds",0x52b91da0,"frejo.core.VG.textBounds","frejo/core/VG.hx",361,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_365_textBoxBounds,"frejo.core.VG","textBoxBounds",0x37f44895,"frejo.core.VG.textBoxBounds","frejo/core/VG.hx",365,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_369_textGlyphPositions,"frejo.core.VG","textGlyphPositions",0x1937fa89,"frejo.core.VG.textGlyphPositions","frejo/core/VG.hx",369,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_373_textMetrics,"frejo.core.VG","textMetrics",0x485d50b8,"frejo.core.VG.textMetrics","frejo/core/VG.hx",373,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_377_textBreakLines,"frejo.core.VG","textBreakLines",0xc8d89d6b,"frejo.core.VG.textBreakLines","frejo/core/VG.hx",377,0xc25e6b4e)
+HX_LOCAL_STACK_FRAME(_hx_pos_9b09dd08190ad881_16_getInstance,"frejo.core.VG","getInstance",0xbfdd95ed,"frejo.core.VG.getInstance","frejo/core/VG.hx",16,0xc25e6b4e)
 namespace frejo{
 namespace core{
 
 void VG_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_24_new)
-HXDLIN(  24)		this->context = nanovg::nvgCreateGL(3);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_25_new)
+HXDLIN(  25)		this->context = nanovg::nvgCreateGL(3);
             	}
 
 Dynamic VG_obj::__CreateEmpty() { return new VG_obj; }
@@ -40,64 +122,781 @@ bool VG_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x10a229ae;
 }
 
+void VG_obj::_hx_delete(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_29_delete)
+HXDLIN(  29)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  29)		nanovg::nvgDeleteGL(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,_hx_delete,(void))
+
 void VG_obj::beginFrame(int windowWidth,int windowHeight,Float devicePixelRatio){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_32_beginFrame)
-HXDLIN(  32)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN(  32)		::nvgBeginFrame(tmp,windowWidth,windowHeight,devicePixelRatio);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_33_beginFrame)
+HXDLIN(  33)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  33)		::nvgBeginFrame(tmp,windowWidth,windowHeight,devicePixelRatio);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC3(VG_obj,beginFrame,(void))
 
 void VG_obj::endFrame(){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_36_endFrame)
-HXDLIN(  36)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN(  36)		::nvgEndFrame(tmp);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_37_endFrame)
+HXDLIN(  37)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  37)		::nvgEndFrame(tmp);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(VG_obj,endFrame,(void))
 
+ NVGcolor VG_obj::rgb(unsigned char r,unsigned char g,unsigned char b){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_41_rgb)
+HXDLIN(  41)		return ::nvgRGB(r,g,b);
+            	}
+
+
+ NVGcolor VG_obj::rgbf(Float r,Float g,Float b){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_45_rgbf)
+HXDLIN(  45)		return ::nvgRGBf(r,g,b);
+            	}
+
+
  NVGcolor VG_obj::rgba(unsigned char r,unsigned char g,unsigned char b,unsigned char a){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_48_rgba)
-HXDLIN(  48)		return ::nvgRGBA(r,g,b,a);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_49_rgba)
+HXDLIN(  49)		return ::nvgRGBA(r,g,b,a);
+            	}
+
+
+ NVGcolor VG_obj::rgbaf(Float r,Float g,Float b,Float a){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_53_rgbaf)
+HXDLIN(  53)		return ::nvgRGBAf(r,g,b,a);
+            	}
+
+
+ NVGcolor VG_obj::lerpRgba( NVGcolor c0, NVGcolor c1,Float u){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_57_lerpRgba)
+HXDLIN(  57)		return ::nvgLerpRGBA(c0,c1,u);
+            	}
+
+
+ NVGcolor VG_obj::transRgba( NVGcolor c0,unsigned char a){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_61_transRgba)
+HXDLIN(  61)		return ::nvgTransRGBA(c0,a);
+            	}
+
+
+ NVGcolor VG_obj::transRgbaf( NVGcolor c0,Float a){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_65_transRgbaf)
+HXDLIN(  65)		return ::nvgTransRGBAf(c0,a);
+            	}
+
+
+ NVGcolor VG_obj::hsl(Float h,Float s,Float l){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_69_hsl)
+HXDLIN(  69)		return ::nvgHSL(h,s,l);
+            	}
+
+
+ NVGcolor VG_obj::hsla(Float h,Float s,Float l,unsigned char a){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_73_hsla)
+HXDLIN(  73)		return ::nvgHSLA(h,s,l,a);
+            	}
+
+
+void VG_obj::save(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_77_save)
+HXDLIN(  77)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  77)		::nvgSave(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,save,(void))
+
+void VG_obj::restore(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_81_restore)
+HXDLIN(  81)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  81)		::nvgRestore(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,restore,(void))
+
+void VG_obj::reset(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_85_reset)
+HXDLIN(  85)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  85)		::nvgReset(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,reset,(void))
+
+void VG_obj::strokeColor( NVGcolor color){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_89_strokeColor)
+HXDLIN(  89)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  89)		::nvgStrokeColor(tmp,color);
+            	}
+
+
+void VG_obj::strokePaint( NVGpaint paint){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_93_strokePaint)
+HXDLIN(  93)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  93)		::nvgStrokePaint(tmp,paint);
             	}
 
 
 void VG_obj::fillColor( NVGcolor color){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_96_fillColor)
-HXDLIN(  96)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN(  96)		::nvgFillColor(tmp,color);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_97_fillColor)
+HXDLIN(  97)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN(  97)		::nvgFillColor(tmp,color);
             	}
 
 
+void VG_obj::fillPaint( NVGpaint paint){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_101_fillPaint)
+HXDLIN( 101)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 101)		::nvgFillPaint(tmp,paint);
+            	}
+
+
+void VG_obj::miterLimit(Float limit){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_105_miterLimit)
+HXDLIN( 105)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 105)		::nvgMiterLimit(tmp,limit);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,miterLimit,(void))
+
+void VG_obj::strokeWidth(Float size){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_109_strokeWidth)
+HXDLIN( 109)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 109)		::nvgStrokeWidth(tmp,size);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,strokeWidth,(void))
+
+void VG_obj::lineCap(int cap){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_113_lineCap)
+HXDLIN( 113)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 113)		::nvgLineCap(tmp,cap);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,lineCap,(void))
+
+void VG_obj::lineJoin(int join){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_117_lineJoin)
+HXDLIN( 117)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 117)		::nvgLineJoin(tmp,join);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,lineJoin,(void))
+
+void VG_obj::globalAlpha(Float alpha){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_121_globalAlpha)
+HXDLIN( 121)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 121)		::nvgGlobalAlpha(tmp,alpha);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,globalAlpha,(void))
+
+void VG_obj::resetTransform(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_125_resetTransform)
+HXDLIN( 125)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 125)		::nvgResetTransform(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,resetTransform,(void))
+
+void VG_obj::transform(Float a,Float b,Float c,Float d,Float e,Float f){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_129_transform)
+HXDLIN( 129)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 129)		::nvgTransform(tmp,a,b,c,d,e,f);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(VG_obj,transform,(void))
+
+void VG_obj::translate(Float x,Float y){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_133_translate)
+HXDLIN( 133)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 133)		::nvgTranslate(tmp,x,y);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,translate,(void))
+
+void VG_obj::rotate(Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_137_rotate)
+HXDLIN( 137)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 137)		::nvgRotate(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,rotate,(void))
+
+void VG_obj::skewX(Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_141_skewX)
+HXDLIN( 141)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 141)		::nvgSkewX(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,skewX,(void))
+
+void VG_obj::skewY(Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_145_skewY)
+HXDLIN( 145)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 145)		::nvgSkewY(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,skewY,(void))
+
+void VG_obj::scale(Float x,Float y){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_149_scale)
+HXDLIN( 149)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 149)		::nvgScale(tmp,x,y);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,scale,(void))
+
+void VG_obj::currentTransform(::cpp::Pointer< float > xForm){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_153_currentTransform)
+HXDLIN( 153)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 153)		::cpp::Pointer< float > tmp1 = xForm;
+HXDLIN( 153)		::nvgCurrentTransform(tmp,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,currentTransform,(void))
+
+void VG_obj::transformIdentity(::cpp::Pointer< float > dst){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_157_transformIdentity)
+HXDLIN( 157)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 157)		::nvgTransformIdentity(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,transformIdentity,(void))
+
+void VG_obj::transformTranslate(::cpp::Pointer< float > dst,Float tx,Float ty){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_161_transformTranslate)
+HXDLIN( 161)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 161)		::nvgTransformTranslate(tmp,tx,ty);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,transformTranslate,(void))
+
+void VG_obj::transformScale(::cpp::Pointer< float > dst,Float sx,Float sy){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_165_transformScale)
+HXDLIN( 165)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 165)		::nvgTransformScale(tmp,sx,sy);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,transformScale,(void))
+
+void VG_obj::transformRotate(::cpp::Pointer< float > dst,Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_169_transformRotate)
+HXDLIN( 169)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 169)		::nvgTransformRotate(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformRotate,(void))
+
+void VG_obj::transformSkewX(::cpp::Pointer< float > dst,Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_173_transformSkewX)
+HXDLIN( 173)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 173)		::nvgTransformSkewX(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformSkewX,(void))
+
+void VG_obj::transformSkewY(::cpp::Pointer< float > dst,Float angle){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_177_transformSkewY)
+HXDLIN( 177)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 177)		::nvgTransformSkewY(tmp,angle);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformSkewY,(void))
+
+void VG_obj::transformMultiply(::cpp::Pointer< float > dst,::cpp::Pointer< float > src){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_181_transformMultiply)
+HXDLIN( 181)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 181)		::cpp::Pointer< float > tmp1 = src;
+HXDLIN( 181)		::nvgTransformMultiply(tmp,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformMultiply,(void))
+
+void VG_obj::transformPremultiply(::cpp::Pointer< float > dst,::cpp::Pointer< float > src){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_185_transformPremultiply)
+HXDLIN( 185)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 185)		::cpp::Pointer< float > tmp1 = src;
+HXDLIN( 185)		::nvgTransformPremultiply(tmp,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformPremultiply,(void))
+
+void VG_obj::transformInverse(::cpp::Pointer< float > dst,::cpp::Pointer< float > src){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_189_transformInverse)
+HXDLIN( 189)		::cpp::Pointer< float > tmp = dst;
+HXDLIN( 189)		::cpp::Pointer< float > tmp1 = src;
+HXDLIN( 189)		::nvgTransformInverse(tmp,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,transformInverse,(void))
+
+void VG_obj::transformPoint(::cpp::Pointer< float > dstx,::cpp::Pointer< float > dsty,::cpp::Pointer< float > xform,Float srcx,Float srcy){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_193_transformPoint)
+HXDLIN( 193)		::cpp::Pointer< float > tmp = dstx;
+HXDLIN( 193)		::cpp::Pointer< float > tmp1 = dsty;
+HXDLIN( 193)		::cpp::Pointer< float > tmp2 = xform;
+HXDLIN( 193)		::nvgTransformPoint(tmp,tmp1,tmp2,srcx,srcy);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,transformPoint,(void))
+
+Float VG_obj::degToRad(Float deg){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_197_degToRad)
+HXDLIN( 197)		return ::nvgDegToRad(deg);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,degToRad,return )
+
+Float VG_obj::radToDeg(Float rad){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_201_radToDeg)
+HXDLIN( 201)		return ::nvgRadToDeg(rad);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,radToDeg,return )
+
+int VG_obj::createImage(::String filename,int imageFlags){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_205_createImage)
+HXDLIN( 205)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 205)		return ::nvgCreateImage(tmp,filename,imageFlags);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,createImage,return )
+
+int VG_obj::createImageMem(int imageFlags,::cpp::Pointer< unsigned char > data,int ndata){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_209_createImageMem)
+HXDLIN( 209)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 209)		::cpp::Pointer< unsigned char > tmp1 = data;
+HXDLIN( 209)		return ::nvgCreateImageMem(tmp,imageFlags,tmp1,ndata);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,createImageMem,return )
+
+int VG_obj::createImageRGBA(int w,int h,int imageFlags,::cpp::Pointer< unsigned char > data){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_213_createImageRGBA)
+HXDLIN( 213)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 213)		::cpp::Pointer< unsigned char > tmp1 = data;
+HXDLIN( 213)		return ::nvgCreateImageRGBA(tmp,w,h,imageFlags,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,createImageRGBA,return )
+
+void VG_obj::updateImage(int image,::cpp::Pointer< unsigned char > data){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_217_updateImage)
+HXDLIN( 217)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 217)		::cpp::Pointer< unsigned char > tmp1 = data;
+HXDLIN( 217)		::nvgUpdateImage(tmp,image,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,updateImage,(void))
+
+void VG_obj::imageSize(int image,::cpp::Pointer< int > w,::cpp::Pointer< int > h){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_221_imageSize)
+HXDLIN( 221)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 221)		::cpp::Pointer< int > tmp1 = w;
+HXDLIN( 221)		::cpp::Pointer< int > tmp2 = h;
+HXDLIN( 221)		::nvgImageSize(tmp,image,tmp1,tmp2);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,imageSize,(void))
+
+void VG_obj::deleteImage(int image){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_225_deleteImage)
+HXDLIN( 225)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 225)		::nvgDeleteImage(tmp,image);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,deleteImage,(void))
+
+ NVGpaint VG_obj::linearGradient(Float sx,Float sy,Float ex,Float ey, NVGcolor icol, NVGcolor ocol){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_229_linearGradient)
+HXDLIN( 229)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 229)		return ::nvgLinearGradient(tmp,sx,sy,ex,ey,icol,ocol);
+            	}
+
+
+ NVGpaint VG_obj::boxGradient(Float x,Float y,Float w,Float h,Float r,Float f, NVGcolor icol, NVGcolor ocol){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_233_boxGradient)
+HXDLIN( 233)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 233)		return ::nvgBoxGradient(tmp,x,y,w,h,r,f,icol,ocol);
+            	}
+
+
+ NVGpaint VG_obj::radialGradient(Float cx,Float cy,Float inr,Float outr, NVGcolor icol, NVGcolor ocol){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_237_radialGradient)
+HXDLIN( 237)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 237)		return ::nvgRadialGradient(tmp,cx,cy,inr,outr,icol,ocol);
+            	}
+
+
+ NVGpaint VG_obj::imagePattern(Float ox,Float oy,Float ex,Float ey,Float angle,int image,Float alpha){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_241_imagePattern)
+HXDLIN( 241)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 241)		return ::nvgImagePattern(tmp,ox,oy,ex,ey,angle,image,alpha);
+            	}
+
+
+void VG_obj::scissor(Float x,Float y,Float w,Float h){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_245_scissor)
+HXDLIN( 245)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 245)		::nvgScissor(tmp,x,y,w,h);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,scissor,(void))
+
+void VG_obj::intersectScissor(Float x,Float y,Float w,Float h){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_249_intersectScissor)
+HXDLIN( 249)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 249)		::nvgIntersectScissor(tmp,x,y,w,h);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,intersectScissor,(void))
+
+void VG_obj::resetScissor(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_253_resetScissor)
+HXDLIN( 253)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 253)		::nvgResetScissor(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,resetScissor,(void))
+
+void VG_obj::beginPath(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_257_beginPath)
+HXDLIN( 257)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 257)		::nvgBeginPath(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,beginPath,(void))
+
+void VG_obj::moveTo(Float x,Float y){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_261_moveTo)
+HXDLIN( 261)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 261)		::nvgMoveTo(tmp,x,y);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,moveTo,(void))
+
+void VG_obj::lineTo(Float x,Float y){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_265_lineTo)
+HXDLIN( 265)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 265)		::nvgLineTo(tmp,x,y);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,lineTo,(void))
+
+void VG_obj::bezierTo(Float c1x,Float c1y,Float c2x,Float c2y,Float x,Float y){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_269_bezierTo)
+HXDLIN( 269)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 269)		::nvgBezierTo(tmp,c1x,c1y,c2x,c2y,x,y);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(VG_obj,bezierTo,(void))
+
+void VG_obj::arcTo(Float x1,Float y1,Float x2,Float y2,Float radius){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_273_arcTo)
+HXDLIN( 273)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 273)		::nvgArcTo(tmp,x1,y1,x2,y2,radius);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,arcTo,(void))
+
+void VG_obj::closePath(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_277_closePath)
+HXDLIN( 277)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 277)		::nvgClosePath(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,closePath,(void))
+
+void VG_obj::pathWinding(int dir){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_281_pathWinding)
+HXDLIN( 281)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 281)		::nvgPathWinding(tmp,dir);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,pathWinding,(void))
+
+void VG_obj::arc(Float cx,Float cy,Float r,Float a0,Float a1,int dir){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_285_arc)
+HXDLIN( 285)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 285)		::nvgArc(tmp,cx,cy,r,a0,a1,dir);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(VG_obj,arc,(void))
+
 void VG_obj::rect(Float x,Float y,Float w,Float h){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_288_rect)
-HXDLIN( 288)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN( 288)		::nvgRect(tmp,x,y,w,h);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_289_rect)
+HXDLIN( 289)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 289)		::nvgRect(tmp,x,y,w,h);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC4(VG_obj,rect,(void))
 
+void VG_obj::roundedRect(Float x,Float y,Float w,Float h,Float r){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_293_roundedRect)
+HXDLIN( 293)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 293)		::nvgRoundedRect(tmp,x,y,w,h,r);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,roundedRect,(void))
+
+void VG_obj::ellipse(Float cx,Float cy,Float rx,Float ry){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_297_ellipse)
+HXDLIN( 297)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 297)		::nvgEllipse(tmp,cx,cy,rx,ry);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,ellipse,(void))
+
+void VG_obj::circle(Float cx,Float cy,Float r){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_301_circle)
+HXDLIN( 301)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 301)		::nvgCircle(tmp,cx,cy,r);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,circle,(void))
+
 void VG_obj::fill(){
-            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_304_fill)
-HXDLIN( 304)		::cpp::Pointer<  NVGcontext > tmp = this->context;
-HXDLIN( 304)		::nvgFill(tmp);
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_305_fill)
+HXDLIN( 305)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 305)		::nvgFill(tmp);
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC0(VG_obj,fill,(void))
 
+void VG_obj::stroke(){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_309_stroke)
+HXDLIN( 309)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 309)		::nvgStroke(tmp);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(VG_obj,stroke,(void))
+
+int VG_obj::createFont(::String name,::String filename){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_313_createFont)
+HXDLIN( 313)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 313)		return ::nvgCreateFont(tmp,name,filename);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(VG_obj,createFont,return )
+
+int VG_obj::createFontMem(::String name,::cpp::Pointer< unsigned char > data,int ndata,int freeData){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_317_createFontMem)
+HXDLIN( 317)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 317)		::cpp::Pointer< unsigned char > tmp1 = data;
+HXDLIN( 317)		return ::nvgCreateFontMem(tmp,name,tmp1,ndata,freeData);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,createFontMem,return )
+
+int VG_obj::findFont(::String name){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_321_findFont)
+HXDLIN( 321)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 321)		return ::nvgFindFont(tmp,name);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,findFont,return )
+
+void VG_obj::fontSize(Float size){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_325_fontSize)
+HXDLIN( 325)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 325)		::nvgFontSize(tmp,size);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,fontSize,(void))
+
+void VG_obj::fontBlur(Float blur){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_329_fontBlur)
+HXDLIN( 329)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 329)		::nvgFontBlur(tmp,blur);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,fontBlur,(void))
+
+void VG_obj::textLetterSpacing(Float spacing){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_333_textLetterSpacing)
+HXDLIN( 333)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 333)		::nvgTextLetterSpacing(tmp,spacing);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,textLetterSpacing,(void))
+
+void VG_obj::textLineHeight(Float lineHeight){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_337_textLineHeight)
+HXDLIN( 337)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 337)		::nvgTextLineHeight(tmp,lineHeight);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,textLineHeight,(void))
+
+void VG_obj::textAlign(int align){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_341_textAlign)
+HXDLIN( 341)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 341)		::nvgTextAlign(tmp,align);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,textAlign,(void))
+
+void VG_obj::fontFaceId(int font){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_345_fontFaceId)
+HXDLIN( 345)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 345)		::nvgFontFaceId(tmp,font);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,fontFaceId,(void))
+
+void VG_obj::fontFace(::String font){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_349_fontFace)
+HXDLIN( 349)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 349)		::nvgFontFace(tmp,font);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(VG_obj,fontFace,(void))
+
+Float VG_obj::text(Float x,Float y,::String string,::String end){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_353_text)
+HXDLIN( 353)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 353)		return ::nvgText(tmp,x,y,string,end);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(VG_obj,text,return )
+
+void VG_obj::textBox(Float x,Float y,Float breakRowWidth,::String string,::String end){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_357_textBox)
+HXDLIN( 357)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 357)		::nvgTextBox(tmp,x,y,breakRowWidth,string,end);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,textBox,(void))
+
+Float VG_obj::textBounds(Float x,Float y,::String string,::String end,::cpp::Pointer< float > bounds){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_361_textBounds)
+HXDLIN( 361)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 361)		::cpp::Pointer< float > tmp1 = bounds;
+HXDLIN( 361)		return ::nvgTextBounds(tmp,x,y,string,end,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,textBounds,return )
+
+void VG_obj::textBoxBounds(Float x,Float y,Float breakRowWidth,::String string,::String end,::cpp::Pointer< float > bounds){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_365_textBoxBounds)
+HXDLIN( 365)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 365)		::cpp::Pointer< float > tmp1 = bounds;
+HXDLIN( 365)		::nvgTextBoxBounds(tmp,x,y,breakRowWidth,string,end,tmp1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(VG_obj,textBoxBounds,(void))
+
+int VG_obj::textGlyphPositions(Float x,Float y,::String string,::String end,::cpp::Pointer<  NVGglyphPosition > positions,int maxPositions){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_369_textGlyphPositions)
+HXDLIN( 369)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 369)		::cpp::Pointer<  NVGglyphPosition > tmp1 = positions;
+HXDLIN( 369)		return ::nvgTextGlyphPositions(tmp,x,y,string,end,tmp1,maxPositions);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC6(VG_obj,textGlyphPositions,return )
+
+void VG_obj::textMetrics(::cpp::Pointer< float > ascender,::cpp::Pointer< float > descender,::cpp::Pointer< float > lineh){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_373_textMetrics)
+HXDLIN( 373)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 373)		::cpp::Pointer< float > tmp1 = ascender;
+HXDLIN( 373)		::cpp::Pointer< float > tmp2 = descender;
+HXDLIN( 373)		::cpp::Pointer< float > tmp3 = lineh;
+HXDLIN( 373)		::nvgTextMetrics(tmp,tmp1,tmp2,tmp3);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC3(VG_obj,textMetrics,(void))
+
+int VG_obj::textBreakLines(::String string,::String end,Float breakRowWidth,::cpp::Pointer<  NVGtextRow > rows,int maxRows){
+            	HX_STACKFRAME(&_hx_pos_9b09dd08190ad881_377_textBreakLines)
+HXDLIN( 377)		::cpp::Pointer<  NVGcontext > tmp = this->context;
+HXDLIN( 377)		::cpp::Pointer<  NVGtextRow > tmp1 = rows;
+HXDLIN( 377)		return ::nvgTextBreakLines(tmp,string,end,breakRowWidth,tmp1,maxRows);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC5(VG_obj,textBreakLines,return )
+
  ::frejo::core::VG VG_obj::vg;
 
  ::frejo::core::VG VG_obj::getInstance(){
-            	HX_GC_STACKFRAME(&_hx_pos_9b09dd08190ad881_15_getInstance)
-HXLINE(  16)		if (hx::IsNull( ::frejo::core::VG_obj::vg )) {
-HXLINE(  17)			::frejo::core::VG_obj::vg =  ::frejo::core::VG_obj::__alloc( HX_CTX );
-HXLINE(  18)			return ::frejo::core::VG_obj::vg;
+            	HX_GC_STACKFRAME(&_hx_pos_9b09dd08190ad881_16_getInstance)
+HXLINE(  17)		if (hx::IsNull( ::frejo::core::VG_obj::vg )) {
+HXLINE(  18)			::frejo::core::VG_obj::vg =  ::frejo::core::VG_obj::__alloc( HX_CTX );
+HXLINE(  19)			return ::frejo::core::VG_obj::vg;
             		}
-HXLINE(  20)		return ::frejo::core::VG_obj::vg;
+HXLINE(  21)		return ::frejo::core::VG_obj::vg;
             	}
 
 
@@ -136,18 +935,111 @@ void VG_obj::__Visit(HX_VISIT_PARAMS)
 hx::Val VG_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 3:
+		if (HX_FIELD_EQ(inName,"arc") ) { return hx::Val( arc_dyn() ); }
+		break;
 	case 4:
+		if (HX_FIELD_EQ(inName,"save") ) { return hx::Val( save_dyn() ); }
 		if (HX_FIELD_EQ(inName,"rect") ) { return hx::Val( rect_dyn() ); }
 		if (HX_FIELD_EQ(inName,"fill") ) { return hx::Val( fill_dyn() ); }
+		if (HX_FIELD_EQ(inName,"text") ) { return hx::Val( text_dyn() ); }
+		break;
+	case 5:
+		if (HX_FIELD_EQ(inName,"reset") ) { return hx::Val( reset_dyn() ); }
+		if (HX_FIELD_EQ(inName,"skewX") ) { return hx::Val( skewX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"skewY") ) { return hx::Val( skewY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scale") ) { return hx::Val( scale_dyn() ); }
+		if (HX_FIELD_EQ(inName,"arcTo") ) { return hx::Val( arcTo_dyn() ); }
+		break;
+	case 6:
+		if (HX_FIELD_EQ(inName,"delete") ) { return hx::Val( _hx_delete_dyn() ); }
+		if (HX_FIELD_EQ(inName,"rotate") ) { return hx::Val( rotate_dyn() ); }
+		if (HX_FIELD_EQ(inName,"moveTo") ) { return hx::Val( moveTo_dyn() ); }
+		if (HX_FIELD_EQ(inName,"lineTo") ) { return hx::Val( lineTo_dyn() ); }
+		if (HX_FIELD_EQ(inName,"circle") ) { return hx::Val( circle_dyn() ); }
+		if (HX_FIELD_EQ(inName,"stroke") ) { return hx::Val( stroke_dyn() ); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"context") ) { return hx::Val( context ); }
+		if (HX_FIELD_EQ(inName,"restore") ) { return hx::Val( restore_dyn() ); }
+		if (HX_FIELD_EQ(inName,"lineCap") ) { return hx::Val( lineCap_dyn() ); }
+		if (HX_FIELD_EQ(inName,"scissor") ) { return hx::Val( scissor_dyn() ); }
+		if (HX_FIELD_EQ(inName,"ellipse") ) { return hx::Val( ellipse_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textBox") ) { return hx::Val( textBox_dyn() ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"endFrame") ) { return hx::Val( endFrame_dyn() ); }
+		if (HX_FIELD_EQ(inName,"lineJoin") ) { return hx::Val( lineJoin_dyn() ); }
+		if (HX_FIELD_EQ(inName,"degToRad") ) { return hx::Val( degToRad_dyn() ); }
+		if (HX_FIELD_EQ(inName,"radToDeg") ) { return hx::Val( radToDeg_dyn() ); }
+		if (HX_FIELD_EQ(inName,"bezierTo") ) { return hx::Val( bezierTo_dyn() ); }
+		if (HX_FIELD_EQ(inName,"findFont") ) { return hx::Val( findFont_dyn() ); }
+		if (HX_FIELD_EQ(inName,"fontSize") ) { return hx::Val( fontSize_dyn() ); }
+		if (HX_FIELD_EQ(inName,"fontBlur") ) { return hx::Val( fontBlur_dyn() ); }
+		if (HX_FIELD_EQ(inName,"fontFace") ) { return hx::Val( fontFace_dyn() ); }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"transform") ) { return hx::Val( transform_dyn() ); }
+		if (HX_FIELD_EQ(inName,"translate") ) { return hx::Val( translate_dyn() ); }
+		if (HX_FIELD_EQ(inName,"imageSize") ) { return hx::Val( imageSize_dyn() ); }
+		if (HX_FIELD_EQ(inName,"beginPath") ) { return hx::Val( beginPath_dyn() ); }
+		if (HX_FIELD_EQ(inName,"closePath") ) { return hx::Val( closePath_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textAlign") ) { return hx::Val( textAlign_dyn() ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"beginFrame") ) { return hx::Val( beginFrame_dyn() ); }
+		if (HX_FIELD_EQ(inName,"miterLimit") ) { return hx::Val( miterLimit_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createFont") ) { return hx::Val( createFont_dyn() ); }
+		if (HX_FIELD_EQ(inName,"fontFaceId") ) { return hx::Val( fontFaceId_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textBounds") ) { return hx::Val( textBounds_dyn() ); }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"strokeWidth") ) { return hx::Val( strokeWidth_dyn() ); }
+		if (HX_FIELD_EQ(inName,"globalAlpha") ) { return hx::Val( globalAlpha_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createImage") ) { return hx::Val( createImage_dyn() ); }
+		if (HX_FIELD_EQ(inName,"updateImage") ) { return hx::Val( updateImage_dyn() ); }
+		if (HX_FIELD_EQ(inName,"deleteImage") ) { return hx::Val( deleteImage_dyn() ); }
+		if (HX_FIELD_EQ(inName,"pathWinding") ) { return hx::Val( pathWinding_dyn() ); }
+		if (HX_FIELD_EQ(inName,"roundedRect") ) { return hx::Val( roundedRect_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textMetrics") ) { return hx::Val( textMetrics_dyn() ); }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"resetScissor") ) { return hx::Val( resetScissor_dyn() ); }
+		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"createFontMem") ) { return hx::Val( createFontMem_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textBoxBounds") ) { return hx::Val( textBoxBounds_dyn() ); }
+		break;
+	case 14:
+		if (HX_FIELD_EQ(inName,"resetTransform") ) { return hx::Val( resetTransform_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformScale") ) { return hx::Val( transformScale_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformSkewX") ) { return hx::Val( transformSkewX_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformSkewY") ) { return hx::Val( transformSkewY_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformPoint") ) { return hx::Val( transformPoint_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createImageMem") ) { return hx::Val( createImageMem_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textLineHeight") ) { return hx::Val( textLineHeight_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textBreakLines") ) { return hx::Val( textBreakLines_dyn() ); }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"transformRotate") ) { return hx::Val( transformRotate_dyn() ); }
+		if (HX_FIELD_EQ(inName,"createImageRGBA") ) { return hx::Val( createImageRGBA_dyn() ); }
+		break;
+	case 16:
+		if (HX_FIELD_EQ(inName,"currentTransform") ) { return hx::Val( currentTransform_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformInverse") ) { return hx::Val( transformInverse_dyn() ); }
+		if (HX_FIELD_EQ(inName,"intersectScissor") ) { return hx::Val( intersectScissor_dyn() ); }
+		break;
+	case 17:
+		if (HX_FIELD_EQ(inName,"transformIdentity") ) { return hx::Val( transformIdentity_dyn() ); }
+		if (HX_FIELD_EQ(inName,"transformMultiply") ) { return hx::Val( transformMultiply_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textLetterSpacing") ) { return hx::Val( textLetterSpacing_dyn() ); }
+		break;
+	case 18:
+		if (HX_FIELD_EQ(inName,"transformTranslate") ) { return hx::Val( transformTranslate_dyn() ); }
+		if (HX_FIELD_EQ(inName,"textGlyphPositions") ) { return hx::Val( textGlyphPositions_dyn() ); }
+		break;
+	case 20:
+		if (HX_FIELD_EQ(inName,"transformPremultiply") ) { return hx::Val( transformPremultiply_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -201,10 +1093,77 @@ static hx::StaticInfo VG_obj_sStaticStorageInfo[] = {
 
 static ::String VG_obj_sMemberFields[] = {
 	HX_("context",ef,95,77,19),
+	HX_("delete",2b,c0,d8,6a),
 	HX_("beginFrame",44,89,4c,7c),
 	HX_("endFrame",52,0a,81,04),
+	HX_("save",3d,8b,4d,4c),
+	HX_("restore",4e,67,b0,6a),
+	HX_("reset",cf,49,c8,e6),
+	HX_("miterLimit",f6,5c,6a,54),
+	HX_("strokeWidth",2e,f7,1c,e3),
+	HX_("lineCap",7e,84,90,1f),
+	HX_("lineJoin",fe,81,8e,83),
+	HX_("globalAlpha",fb,fe,d4,f9),
+	HX_("resetTransform",9d,91,03,a0),
+	HX_("transform",6c,2d,93,45),
+	HX_("translate",4e,d7,7f,49),
+	HX_("rotate",5b,46,20,cb),
+	HX_("skewX",0e,96,1b,7e),
+	HX_("skewY",0f,96,1b,7e),
+	HX_("scale",8a,ce,ce,78),
+	HX_("currentTransform",f3,a1,c3,38),
+	HX_("transformIdentity",ca,7a,c1,90),
+	HX_("transformTranslate",42,7c,dc,11),
+	HX_("transformScale",7e,e9,50,ef),
+	HX_("transformRotate",e7,c0,75,06),
+	HX_("transformSkewX",02,b1,9d,f4),
+	HX_("transformSkewY",03,b1,9d,f4),
+	HX_("transformMultiply",b0,17,1f,72),
+	HX_("transformPremultiply",3b,67,ca,ea),
+	HX_("transformInverse",a4,0b,67,ed),
+	HX_("transformPoint",44,cf,11,3d),
+	HX_("degToRad",74,8f,b4,95),
+	HX_("radToDeg",f6,40,04,dd),
+	HX_("createImage",bf,56,e4,e6),
+	HX_("createImageMem",96,f0,6f,d6),
+	HX_("createImageRGBA",f3,ba,b9,ce),
+	HX_("updateImage",92,88,01,a3),
+	HX_("imageSize",bc,35,88,2e),
+	HX_("deleteImage",30,53,5e,4d),
+	HX_("scissor",1c,28,e7,04),
+	HX_("intersectScissor",fd,b8,54,cb),
+	HX_("resetScissor",0d,6e,c5,76),
+	HX_("beginPath",6e,c4,2b,93),
+	HX_("moveTo",ec,d2,ac,cc),
+	HX_("lineTo",8f,46,a0,ec),
+	HX_("bezierTo",7a,cf,fd,cc),
+	HX_("arcTo",6d,00,84,25),
+	HX_("closePath",7d,65,20,14),
+	HX_("pathWinding",f5,b9,29,c5),
+	HX_("arc",52,fe,49,00),
 	HX_("rect",24,4d,a7,4b),
+	HX_("roundedRect",f1,13,58,2a),
+	HX_("ellipse",de,40,86,0b),
+	HX_("circle",10,72,0d,56),
 	HX_("fill",83,ce,bb,43),
+	HX_("stroke",b8,b3,34,11),
+	HX_("createFont",eb,1e,4e,56),
+	HX_("createFontMem",ea,8b,68,7e),
+	HX_("findFont",a8,6a,54,96),
+	HX_("fontSize",30,be,d1,ce),
+	HX_("fontBlur",16,60,97,c3),
+	HX_("textLetterSpacing",50,12,ec,35),
+	HX_("textLineHeight",08,4e,a4,bf),
+	HX_("textAlign",d8,e6,7e,ba),
+	HX_("fontFaceId",07,ad,55,98),
+	HX_("fontFace",0c,d2,33,c6),
+	HX_("text",ad,cc,f9,4c),
+	HX_("textBox",5e,13,ba,9e),
+	HX_("textBounds",02,07,0e,9d),
+	HX_("textBoxBounds",73,e8,9d,5d),
+	HX_("textGlyphPositions",eb,15,88,50),
+	HX_("textMetrics",16,9d,54,08),
+	HX_("textBreakLines",cd,df,9a,97),
 	::String(null()) };
 
 static void VG_obj_sMarkStatics(HX_MARK_PARAMS) {

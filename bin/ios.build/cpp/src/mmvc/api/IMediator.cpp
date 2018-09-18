@@ -12,7 +12,9 @@ namespace api{
 
 static ::String IMediator_obj_sMemberFields[] = {
 	HX_("preRegister",a6,1d,08,e6),
+	HX_("onRegister",a2,7a,56,ae),
 	HX_("preRemove",c7,ac,29,63),
+	HX_("onRemove",c3,92,35,e4),
 	HX_("getViewComponent",22,53,e3,73),
 	HX_("setViewComponent",96,40,25,ca),
 	::String(null()) };

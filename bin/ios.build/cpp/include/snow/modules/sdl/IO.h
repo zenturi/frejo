@@ -53,20 +53,16 @@ class HXCPP_CLASS_ATTRIBUTES IO_obj : public  ::snow::core::native::io::IO_obj
 		::String __ToString() const { return HX_("IO",e6,3f,00,00); }
 
 		::String app_path();
-		::Dynamic app_path_dyn();
 
 		::String app_path_prefs();
-		::Dynamic app_path_prefs_dyn();
 
 		::cpp::Pointer<  SDL_RWops > file_handle(::String _path,::String _mode);
 
 		::cpp::Pointer<  SDL_RWops > file_handle_from_mem( ::snow::api::buffers::ArrayBufferView mem,int size);
-		::Dynamic file_handle_from_mem_dyn();
 
 		int file_read(::cpp::Pointer<  SDL_RWops > file, ::snow::api::buffers::ArrayBufferView dest,int size,int maxnum);
 
 		int file_write(::cpp::Pointer<  SDL_RWops > file, ::snow::api::buffers::ArrayBufferView src,int size,int num);
-		::Dynamic file_write_dyn();
 
 		int file_seek(::cpp::Pointer<  SDL_RWops > file,int offset,int whence);
 

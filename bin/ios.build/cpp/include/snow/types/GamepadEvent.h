@@ -67,6 +67,15 @@ class HXCPP_CLASS_ATTRIBUTES GamepadEvent_obj : public hx::Object
 		 ::Dynamic value;
 		::String device_id;
 		 ::Dynamic device_event;
+		void set_axis(int _gamepad,int _axis,Float _value);
+		::Dynamic set_axis_dyn();
+
+		void set_button(int _type,int _gamepad,int _button,Float _value);
+		::Dynamic set_button_dyn();
+
+		void set_device(int _gamepad,::String _id,int _event);
+		::Dynamic set_device_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

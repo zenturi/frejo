@@ -55,11 +55,18 @@ class HXCPP_CLASS_ATTRIBUTES AudioData_obj : public hx::Object
 		int bits_per_sample;
 		 ::Dynamic format;
 		bool is_stream;
+		bool destroyed;
+		virtual void destroy();
+		::Dynamic destroy_dyn();
+
 		virtual bool seek(int _to);
 		::Dynamic seek_dyn();
 
 		virtual ::Array< int > portion( ::snow::api::buffers::ArrayBufferView _into,int _start,int _len,::Array< int > _into_result);
 		::Dynamic portion_dyn();
+
+		virtual ::String toString();
+		::Dynamic toString_dyn();
 
 };
 

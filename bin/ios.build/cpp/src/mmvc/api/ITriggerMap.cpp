@@ -10,6 +10,12 @@ namespace mmvc{
 namespace api{
 
 
+static ::String ITriggerMap_obj_sMemberFields[] = {
+	HX_("map",9c,0a,53,00),
+	HX_("unmap",e3,61,ea,a6),
+	HX_("dispatch",ba,ce,63,1e),
+	::String(null()) };
+
 hx::Class ITriggerMap_obj::__mClass;
 
 void ITriggerMap_obj::__register()
@@ -17,7 +23,7 @@ void ITriggerMap_obj::__register()
 	hx::Static(__mClass) = new hx::Class_obj();
 	__mClass->mName = HX_("mmvc.api.ITriggerMap",38,b4,f2,4d);
 	__mClass->mSuper = &super::__SGetClass();
-	__mClass->mMembers = hx::Class_obj::dupFunctions(0 /* sMemberFields */);
+	__mClass->mMembers = hx::Class_obj::dupFunctions(ITriggerMap_obj_sMemberFields);
 	__mClass->mCanCast = hx::TIsInterface< (int)0x050cc2e0 >;
 	hx::_hx_RegisterClass(__mClass->mName, __mClass);
 }

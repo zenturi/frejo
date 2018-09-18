@@ -6,6 +6,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_26d41b97c9893cda_661_new,"snow.types.TextEvent","new",0x3654bb5f,"snow.types.TextEvent.new","snow/types/Types.hx",661,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_26d41b97c9893cda_664_set,"snow.types.TextEvent","set",0x365886a1,"snow.types.TextEvent.set","snow/types/Types.hx",664,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_26d41b97c9893cda_671_toString,"snow.types.TextEvent","toString",0xb9dea94d,"snow.types.TextEvent.toString","snow/types/Types.hx",671,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -28,6 +29,17 @@ Dynamic TextEvent_obj::__Create(hx::DynamicArray inArgs)
 bool TextEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x098f6adb;
 }
+
+void TextEvent_obj::set(int _type,::String _text,int _start,int _length){
+            	HX_STACKFRAME(&_hx_pos_26d41b97c9893cda_664_set)
+HXLINE( 665)		this->type = _type;
+HXLINE( 666)		this->text = _text;
+HXLINE( 667)		this->start = _start;
+HXLINE( 668)		this->length = _length;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC4(TextEvent_obj,set,(void))
 
 ::String TextEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_26d41b97c9893cda_671_toString)
@@ -82,6 +94,9 @@ void TextEvent_obj::__Visit(HX_VISIT_PARAMS)
 hx::Val TextEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 3:
+		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
+		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"type") ) { return hx::Val( type ); }
 		if (HX_FIELD_EQ(inName,"text") ) { return hx::Val( text ); }
@@ -139,6 +154,7 @@ static ::String TextEvent_obj_sMemberFields[] = {
 	HX_("text",ad,cc,f9,4c),
 	HX_("start",62,74,0b,84),
 	HX_("length",e6,94,07,9f),
+	HX_("set",a2,9b,57,00),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

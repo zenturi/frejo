@@ -11,6 +11,7 @@ HX_DECLARE_CLASS2(snow,api,Emitter)
 HX_DECLARE_CLASS3(snow,modules,interfaces,Audio)
 HX_DECLARE_CLASS3(snow,modules,openal,Audio)
 HX_DECLARE_CLASS3(snow,systems,audio,Audio)
+HX_DECLARE_CLASS3(snow,systems,audio,AudioInstance)
 HX_DECLARE_CLASS3(snow,systems,audio,AudioSource)
 HX_DECLARE_CLASS2(snow,types,SystemEvent)
 
@@ -51,6 +52,9 @@ class HXCPP_CLASS_ATTRIBUTES Audio_obj : public hx::Object
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("Audio",b6,e8,ad,ba); }
 
+		void emit_snow_systems_audio_AudioSource(int _event, ::snow::systems::audio::AudioSource _data);
+		::Dynamic emit_snow_systems_audio_AudioSource_dyn();
+
 		bool off_snow_systems_audio_AudioSource(int _event, ::Dynamic _handler);
 		::Dynamic off_snow_systems_audio_AudioSource_dyn();
 
@@ -70,8 +74,53 @@ class HXCPP_CLASS_ATTRIBUTES Audio_obj : public hx::Object
 		 ::snow::modules::openal::Audio module;
 		bool active;
 		 ::snow::api::Emitter emitter;
+		 ::Dynamic play( ::snow::systems::audio::AudioSource _source, ::Dynamic _volume, ::Dynamic _paused);
+		::Dynamic play_dyn();
+
+		 ::Dynamic loop( ::snow::systems::audio::AudioSource _source, ::Dynamic _volume, ::Dynamic _paused);
+		::Dynamic loop_dyn();
+
+		void pause( ::Dynamic _handle);
+		::Dynamic pause_dyn();
+
+		void unpause( ::Dynamic _handle);
+		::Dynamic unpause_dyn();
+
+		void stop( ::Dynamic _handle);
+		::Dynamic stop_dyn();
+
+		void volume( ::Dynamic _handle,Float _volume);
+		::Dynamic volume_dyn();
+
+		void pan( ::Dynamic _handle,Float _pan);
+		::Dynamic pan_dyn();
+
+		void pitch( ::Dynamic _handle,Float _pitch);
+		::Dynamic pitch_dyn();
+
+		void position( ::Dynamic _handle,Float _position);
+		::Dynamic position_dyn();
+
 		int state_of( ::Dynamic _handle);
 		::Dynamic state_of_dyn();
+
+		bool loop_of( ::Dynamic _handle);
+		::Dynamic loop_of_dyn();
+
+		 ::snow::systems::audio::AudioInstance instance_of( ::Dynamic _handle);
+		::Dynamic instance_of_dyn();
+
+		Float volume_of( ::Dynamic _handle);
+		::Dynamic volume_of_dyn();
+
+		Float pan_of( ::Dynamic _handle);
+		::Dynamic pan_of_dyn();
+
+		Float pitch_of( ::Dynamic _handle);
+		::Dynamic pitch_of_dyn();
+
+		Float position_of( ::Dynamic _handle);
+		::Dynamic position_of_dyn();
 
 		void suspend();
 		::Dynamic suspend_dyn();

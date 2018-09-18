@@ -1,6 +1,7 @@
 package frejo.display;
 
 
+import nanovg.Nvg.NvgColor;
 import frejo.app.Application;
 import frejo.core.VG;
 import msignal.Signal;
@@ -29,10 +30,12 @@ class Node {
 
 	var app:Application;
 
+	public var graphics:Graphics;
+
 	/**
 	 * default background color;
 	 */
-	public var background:ColorRGBA;
+	public var background(default, set):Color;
 
 	@:isVar public var style(get, set):facebook.yoga.Style;
 	public var layout:facebook.yoga.Layout;
@@ -67,6 +70,7 @@ class Node {
 
 	private function init() {
 		app = Application.getInstance();
+		graphics = new Graphics();
 		children = new Array<Node>();
 		name = Type.getClassName(Type.getClass(this)).split(".").pop();
 		vg = VG.getInstance();
@@ -76,6 +80,17 @@ class Node {
 		background = Color.TRANSPARENT;
 		width = app.window_width;
 		height = app.window_height;
+
+		// draw default graphics
+		graphics.rect(position.x, position.y, width, height);
+	}
+
+
+	function set_background(color:Color):Color {
+		background = color;
+		graphics.fillColor(background)
+				.fill();
+		return background;
 	}
 
 	function set_position(p:Point):Point {
@@ -197,16 +212,11 @@ class Node {
 	 * Draw the node
 	 */
 	public function draw(?tick:Float) {
-		var bgColor = background;
 		vg.beginFrame(app.window_width, app.window_height, app.pixelRatio);
-		vg.rect(position.x, position.y, width, height);
-		vg.fillColor(vg.rgba(bgColor.r, bgColor.g, bgColor.b, bgColor.a));
-		vg.fill();
-
+		graphics.render();
 		for (child in children) {
 			child.draw(tick);
 		}
-
 		vg.endFrame();
 	}
 

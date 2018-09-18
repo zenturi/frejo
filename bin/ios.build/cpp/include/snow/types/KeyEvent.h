@@ -50,6 +50,9 @@ class HXCPP_CLASS_ATTRIBUTES KeyEvent_obj : public hx::Object
 		 ::Dynamic scancode;
 		 ::Dynamic repeat;
 		 ::snow::types::ModState mod;
+		void set(int _type,int _keycode,int _scancode,bool _repeat, ::snow::types::ModState _mod);
+		::Dynamic set_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

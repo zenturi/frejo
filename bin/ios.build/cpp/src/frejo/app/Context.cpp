@@ -37,6 +37,7 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_aca11dcef2e6fc40_10_new,"frejo.app.Context","new",0x79e70d24,"frejo.app.Context.new","frejo/app/Context.hx",10,0xef5dedce)
 HX_LOCAL_STACK_FRAME(_hx_pos_aca11dcef2e6fc40_15_startup,"frejo.app.Context","startup",0x59862601,"frejo.app.Context.startup","frejo/app/Context.hx",15,0xef5dedce)
+HX_LOCAL_STACK_FRAME(_hx_pos_aca11dcef2e6fc40_18_shutdown,"frejo.app.Context","shutdown",0x2431f952,"frejo.app.Context.shutdown","frejo/app/Context.hx",18,0xef5dedce)
 namespace frejo{
 namespace app{
 
@@ -70,6 +71,11 @@ HXDLIN(  15)		::mmvc::api::IMediatorMap_obj::mapView(this->get_mediatorMap(),hx:
             	}
 
 
+void Context_obj::shutdown(){
+            	HX_STACKFRAME(&_hx_pos_aca11dcef2e6fc40_18_shutdown)
+            	}
+
+
 
 hx::ObjectPtr< Context_obj > Context_obj::__new(::Dynamic contextView) {
 	hx::ObjectPtr< Context_obj > __this = new Context_obj();
@@ -93,6 +99,9 @@ hx::Val Context_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPro
 	switch(inName.length) {
 	case 7:
 		if (HX_FIELD_EQ(inName,"startup") ) { return hx::Val( startup_dyn() ); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"shutdown") ) { return hx::Val( shutdown_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -104,6 +113,7 @@ static hx::StaticInfo *Context_obj_sStaticStorageInfo = 0;
 
 static ::String Context_obj_sMemberFields[] = {
 	HX_("startup",3d,37,1b,35),
+	HX_("shutdown",96,fc,0b,6b),
 	::String(null()) };
 
 hx::Class Context_obj::__mClass;

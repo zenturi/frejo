@@ -6,12 +6,17 @@
 #include <hxcpp.h>
 #endif
 
+HX_DECLARE_CLASS1(haxe,IMap)
+HX_DECLARE_CLASS2(haxe,ds,IntMap)
+HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS1(snow,Snow)
 HX_DECLARE_CLASS2(snow,api,Promise)
+HX_DECLARE_CLASS3(snow,api,buffers,ArrayBufferView)
 HX_DECLARE_CLASS4(snow,core,native,io,IO)
 HX_DECLARE_CLASS3(snow,modules,interfaces,IO)
 HX_DECLARE_CLASS3(snow,modules,sdl,IO)
 HX_DECLARE_CLASS3(snow,systems,io,IO)
+HX_DECLARE_CLASS2(snow,types,SystemEvent)
 
 namespace snow{
 namespace systems{
@@ -52,11 +57,46 @@ class HXCPP_CLASS_ATTRIBUTES IO_obj : public hx::Object
 
 		 ::snow::Snow app;
 		 ::snow::modules::sdl::IO module;
+		::String string_save_prefix;
+		::String app_path();
+		::Dynamic app_path_dyn();
+
+		::String app_path_prefs();
+		::Dynamic app_path_prefs_dyn();
+
+		void url_open(::String _url);
+		::Dynamic url_open_dyn();
+
+		 ::snow::api::Promise data_load(::String _path, ::Dynamic _options);
+		::Dynamic data_load_dyn();
+
+		bool data_save(::String _path, ::snow::api::buffers::ArrayBufferView _data, ::Dynamic _options);
+		::Dynamic data_save_dyn();
+
 		 ::snow::api::Promise data_flow(::String _id, ::Dynamic _processor, ::Dynamic _provider);
 		::Dynamic data_flow_dyn();
 
+		 ::haxe::ds::IntMap string_slots;
+		::String string_save_path(hx::Null< int >  _slot);
+		::Dynamic string_save_path_dyn();
+
+		bool string_save(::String _key,::String _value,hx::Null< int >  _slot);
+		::Dynamic string_save_dyn();
+
+		::String string_load(::String _key,hx::Null< int >  _slot);
+		::Dynamic string_load_dyn();
+
+		bool string_destroy(hx::Null< int >  _slot);
+		::Dynamic string_destroy_dyn();
+
+		 ::haxe::ds::StringMap string_slots_sync(hx::Null< int >  _slot);
+		::Dynamic string_slots_sync_dyn();
+
 		 ::snow::api::Promise default_provider( ::snow::Snow _app,::String _id);
 		::Dynamic default_provider_dyn();
+
+		void onevent( ::snow::types::SystemEvent _event);
+		::Dynamic onevent_dyn();
 
 		void shutdown();
 		::Dynamic shutdown_dyn();

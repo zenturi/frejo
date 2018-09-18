@@ -24,6 +24,8 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_498fa83298003776_44_new,"mmvc.impl.TriggerCommand","new",0x13a9a972,"mmvc.impl.TriggerCommand.new","mmvc/impl/TriggerCommand.hx",44,0xd54281de)
+HX_LOCAL_STACK_FRAME(_hx_pos_498fa83298003776_45_execute,"mmvc.impl.TriggerCommand","execute",0xfef9d447,"mmvc.impl.TriggerCommand.execute","mmvc/impl/TriggerCommand.hx",45,0xd54281de)
+HX_LOCAL_STACK_FRAME(_hx_pos_498fa83298003776_49_dispatch,"mmvc.impl.TriggerCommand","dispatch",0x7aa7d468,"mmvc.impl.TriggerCommand.dispatch","mmvc/impl/TriggerCommand.hx",49,0xd54281de)
 HX_LOCAL_STACK_FRAME(_hx_pos_498fa83298003776_34_boot,"mmvc.impl.TriggerCommand","boot",0x18e39ae0,"mmvc.impl.TriggerCommand.boot","mmvc/impl/TriggerCommand.hx",34,0xd54281de)
 namespace mmvc{
 namespace impl{
@@ -48,6 +50,7 @@ bool TriggerCommand_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::mmvc::api::ICommand_obj _hx_mmvc_impl_TriggerCommand__hx_mmvc_api_ICommand= {
+	( void (hx::Object::*)())&::mmvc::impl::TriggerCommand_obj::execute,
 };
 
 void *TriggerCommand_obj::_hx_getInterface(int inHash) {
@@ -60,6 +63,21 @@ void *TriggerCommand_obj::_hx_getInterface(int inHash) {
 	return 0;
 	#endif
 }
+
+void TriggerCommand_obj::execute(){
+            	HX_STACKFRAME(&_hx_pos_498fa83298003776_45_execute)
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(TriggerCommand_obj,execute,(void))
+
+void TriggerCommand_obj::dispatch( ::Dynamic trigger){
+            	HX_STACKFRAME(&_hx_pos_498fa83298003776_49_dispatch)
+HXDLIN(  49)		::mmvc::api::ITriggerMap_obj::dispatch(this->triggerMap,trigger);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(TriggerCommand_obj,dispatch,(void))
 
 
 hx::ObjectPtr< TriggerCommand_obj > TriggerCommand_obj::__new() {
@@ -87,6 +105,7 @@ void TriggerCommand_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(injector,"injector");
 	HX_MARK_MEMBER_NAME(mediatorMap,"mediatorMap");
 	HX_MARK_MEMBER_NAME(triggerMap,"triggerMap");
+	HX_MARK_MEMBER_NAME(trigger,"trigger");
 	HX_MARK_END_CLASS();
 }
 
@@ -97,13 +116,19 @@ void TriggerCommand_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(injector,"injector");
 	HX_VISIT_MEMBER_NAME(mediatorMap,"mediatorMap");
 	HX_VISIT_MEMBER_NAME(triggerMap,"triggerMap");
+	HX_VISIT_MEMBER_NAME(trigger,"trigger");
 }
 
 hx::Val TriggerCommand_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"trigger") ) { return hx::Val( trigger ); }
+		if (HX_FIELD_EQ(inName,"execute") ) { return hx::Val( execute_dyn() ); }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"injector") ) { return hx::Val( injector ); }
+		if (HX_FIELD_EQ(inName,"dispatch") ) { return hx::Val( dispatch_dyn() ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"commandMap") ) { return hx::Val( commandMap ); }
@@ -119,6 +144,9 @@ hx::Val TriggerCommand_obj::__Field(const ::String &inName,hx::PropertyAccess in
 hx::Val TriggerCommand_obj::__SetField(const ::String &inName,const hx::Val &inValue,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"trigger") ) { trigger=inValue.Cast<  ::Dynamic >(); return inValue; }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"injector") ) { injector=inValue.Cast<  ::minject::Injector >(); return inValue; }
 		break;
@@ -140,6 +168,7 @@ void TriggerCommand_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("injector",f4,31,ff,1e));
 	outFields->push(HX_("mediatorMap",29,1c,2a,f0));
 	outFields->push(HX_("triggerMap",44,80,e2,e3));
+	outFields->push(HX_("trigger",38,55,df,25));
 	super::__GetFields(outFields);
 };
 
@@ -150,6 +179,7 @@ static hx::StorageInfo TriggerCommand_obj_sMemberStorageInfo[] = {
 	{hx::fsObject /*::minject::Injector*/ ,(int)offsetof(TriggerCommand_obj,injector),HX_("injector",f4,31,ff,1e)},
 	{hx::fsObject /*::mmvc::api::IMediatorMap*/ ,(int)offsetof(TriggerCommand_obj,mediatorMap),HX_("mediatorMap",29,1c,2a,f0)},
 	{hx::fsObject /*::mmvc::api::ITriggerMap*/ ,(int)offsetof(TriggerCommand_obj,triggerMap),HX_("triggerMap",44,80,e2,e3)},
+	{hx::fsObject /*Dynamic*/ ,(int)offsetof(TriggerCommand_obj,trigger),HX_("trigger",38,55,df,25)},
 	{ hx::fsUnknown, 0, null()}
 };
 static hx::StaticInfo *TriggerCommand_obj_sStaticStorageInfo = 0;
@@ -161,6 +191,9 @@ static ::String TriggerCommand_obj_sMemberFields[] = {
 	HX_("injector",f4,31,ff,1e),
 	HX_("mediatorMap",29,1c,2a,f0),
 	HX_("triggerMap",44,80,e2,e3),
+	HX_("trigger",38,55,df,25),
+	HX_("execute",35,0a,0d,cc),
+	HX_("dispatch",ba,ce,63,1e),
 	::String(null()) };
 
 hx::Class TriggerCommand_obj::__mClass;

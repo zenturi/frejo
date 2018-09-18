@@ -52,17 +52,24 @@ class HXCPP_CLASS_ATTRIBUTES SlotList_obj : public hx::Object
 		 ::Dynamic head;
 		 ::msignal::SlotList tail;
 		bool nonEmpty;
+		int length;
 		int get_length();
 		::Dynamic get_length_dyn();
 
 		 ::msignal::SlotList prepend( ::Dynamic slot);
 		::Dynamic prepend_dyn();
 
+		 ::msignal::SlotList append( ::Dynamic slot);
+		::Dynamic append_dyn();
+
 		 ::msignal::SlotList insertWithPriority( ::Dynamic slot);
 		::Dynamic insertWithPriority_dyn();
 
 		 ::msignal::SlotList filterNot( ::Dynamic listener);
 		::Dynamic filterNot_dyn();
+
+		bool contains( ::Dynamic listener);
+		::Dynamic contains_dyn();
 
 		 ::Dynamic find( ::Dynamic listener);
 		::Dynamic find_dyn();

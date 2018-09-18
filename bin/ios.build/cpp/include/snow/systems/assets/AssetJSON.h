@@ -14,6 +14,7 @@ HX_DECLARE_CLASS2(snow,api,Promise)
 HX_DECLARE_CLASS3(snow,api,buffers,ArrayBufferView)
 HX_DECLARE_CLASS3(snow,systems,assets,Asset)
 HX_DECLARE_CLASS3(snow,systems,assets,AssetJSON)
+HX_DECLARE_CLASS3(snow,systems,assets,Assets)
 
 namespace snow{
 namespace systems{
@@ -30,37 +31,43 @@ class HXCPP_CLASS_ATTRIBUTES AssetJSON_obj : public  ::snow::systems::assets::As
 	public:
 		enum { _hx_ClassId = 0x1c62f674 };
 
-		void __construct();
-		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="snow.systems.assets.AssetJSON")
+		void __construct( ::snow::systems::assets::Assets _system,::String _id, ::Dynamic _json);
+		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="snow.systems.assets.AssetJSON")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
-			{ return hx::Object::operator new(inSize+extra,false,"snow.systems.assets.AssetJSON"); }
-
-		hx::ObjectPtr< AssetJSON_obj > __new() {
-			hx::ObjectPtr< AssetJSON_obj > __this = new AssetJSON_obj();
-			__this->__construct();
-			return __this;
-		}
-
-		static hx::ObjectPtr< AssetJSON_obj > __alloc(hx::Ctx *_hx_ctx) {
-			AssetJSON_obj *__this = (AssetJSON_obj*)(hx::Ctx::alloc(_hx_ctx, sizeof(AssetJSON_obj), false, "snow.systems.assets.AssetJSON"));
-			*(void **)__this = AssetJSON_obj::_hx_vtable;
-			return __this;
-		}
-
+			{ return hx::Object::operator new(inSize+extra,true,"snow.systems.assets.AssetJSON"); }
+		static hx::ObjectPtr< AssetJSON_obj > __new( ::snow::systems::assets::Assets _system,::String _id, ::Dynamic _json);
+		static hx::ObjectPtr< AssetJSON_obj > __alloc(hx::Ctx *_hx_ctx, ::snow::systems::assets::Assets _system,::String _id, ::Dynamic _json);
 		static void * _hx_vtable;
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~AssetJSON_obj();
 
 		HX_DO_RTTI_ALL;
+		hx::Val __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
+		hx::Val __SetField(const ::String &inString,const hx::Val &inValue, hx::PropertyAccess inCallProp);
+		void __GetFields(Array< ::String> &outFields);
 		static void __register();
+		void __Mark(HX_MARK_PARAMS);
+		void __Visit(HX_VISIT_PARAMS);
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("AssetJSON",f8,0b,c9,4c); }
 
+		static  ::snow::api::Promise load( ::snow::systems::assets::Assets _system,::String _id);
+		static ::Dynamic load_dyn();
+
 		static  ::snow::api::Promise processor( ::snow::Snow _app,::String _id, ::snow::api::buffers::ArrayBufferView _data);
 		static ::Dynamic processor_dyn();
+
+		 ::Dynamic json;
+		 ::snow::api::Promise reload();
+		::Dynamic reload_dyn();
+
+		void destroy();
+
+		 ::Dynamic set_json( ::Dynamic _json);
+		::Dynamic set_json_dyn();
 
 };
 

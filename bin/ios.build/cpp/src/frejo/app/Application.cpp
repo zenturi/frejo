@@ -118,8 +118,6 @@ HXLINE(  52)		this->applicationContext =  ::frejo::app::Context_obj::__alloc( HX
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC0(Application_obj,ready,(void))
-
  ::Dynamic Application_obj::config( ::Dynamic config){
             	HX_STACKFRAME(&_hx_pos_19a1259070094d70_55_config)
 HXLINE(  56)		this->render_width = ( (int)( ::Dynamic(config->__Field(HX_("window",f0,93,8c,52),hx::paccDynamic))->__Field(HX_("width",06,b6,62,ca),hx::paccDynamic)) );
@@ -130,8 +128,6 @@ HXLINE(  67)		 ::Dynamic(config->__Field(HX_("render",56,6b,29,05),hx::paccDynam
 HXLINE(  69)		return config;
             	}
 
-
-HX_DEFINE_DYNAMIC_FUNC1(Application_obj,config,return )
 
 void Application_obj::update(Float dt){
             	HX_STACKFRAME(&_hx_pos_19a1259070094d70_73_update)
@@ -241,8 +237,6 @@ HXLINE(  96)			this->signal->dispatch(event);
             		}
             	}
 
-
-HX_DEFINE_DYNAMIC_FUNC1(Application_obj,onevent,(void))
 
  ::frejo::app::Application Application_obj::instance;
 

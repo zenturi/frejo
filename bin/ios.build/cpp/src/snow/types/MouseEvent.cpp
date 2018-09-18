@@ -6,6 +6,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_a2208c019f7c5149_686_new,"snow.types.MouseEvent","new",0x314dfb67,"snow.types.MouseEvent.new","snow/types/Types.hx",686,0x72b41ce7)
+HX_LOCAL_STACK_FRAME(_hx_pos_a2208c019f7c5149_688_set,"snow.types.MouseEvent","set",0x3151c6a9,"snow.types.MouseEvent.set","snow/types/Types.hx",688,0x72b41ce7)
 HX_LOCAL_STACK_FRAME(_hx_pos_a2208c019f7c5149_699_toString,"snow.types.MouseEvent","toString",0x62384c45,"snow.types.MouseEvent.toString","snow/types/Types.hx",699,0x72b41ce7)
 namespace snow{
 namespace types{
@@ -28,6 +29,21 @@ Dynamic MouseEvent_obj::__Create(hx::DynamicArray inArgs)
 bool MouseEvent_obj::_hx_isInstanceOf(int inClassId) {
 	return inClassId==(int)0x00000001 || inClassId==(int)0x1a250147;
 }
+
+void MouseEvent_obj::set(int _type,int _x,int _y,int _x_rel,int _y_rel,int _button,Float _wheel_x,Float _wheel_y){
+            	HX_STACKFRAME(&_hx_pos_a2208c019f7c5149_688_set)
+HXLINE( 689)		this->type = _type;
+HXLINE( 690)		this->x = _x;
+HXLINE( 691)		this->y = _y;
+HXLINE( 692)		this->x_rel = _x_rel;
+HXLINE( 693)		this->y_rel = _y_rel;
+HXLINE( 694)		this->button = _button;
+HXLINE( 695)		this->wheel_x = _wheel_x;
+HXLINE( 696)		this->wheel_y = _wheel_y;
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC8(MouseEvent_obj,set,(void))
 
 ::String MouseEvent_obj::toString(){
             	HX_STACKFRAME(&_hx_pos_a2208c019f7c5149_699_toString)
@@ -75,6 +91,9 @@ hx::Val MouseEvent_obj::__Field(const ::String &inName,hx::PropertyAccess inCall
 	case 1:
 		if (HX_FIELD_EQ(inName,"x") ) { return hx::Val( x ); }
 		if (HX_FIELD_EQ(inName,"y") ) { return hx::Val( y ); }
+		break;
+	case 3:
+		if (HX_FIELD_EQ(inName,"set") ) { return hx::Val( set_dyn() ); }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"type") ) { return hx::Val( type ); }
@@ -157,6 +176,7 @@ static ::String MouseEvent_obj_sMemberFields[] = {
 	HX_("button",f2,61,e0,d9),
 	HX_("wheel_x",94,24,25,54),
 	HX_("wheel_y",95,24,25,54),
+	HX_("set",a2,9b,57,00),
 	HX_("toString",ac,d0,6e,38),
 	::String(null()) };
 

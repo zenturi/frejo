@@ -57,6 +57,24 @@ class HXCPP_CLASS_ATTRIBUTES InputEvent_obj : public hx::Object
 		 ::snow::types::MouseEvent mouse;
 		 ::snow::types::TouchEvent touch;
 		 ::snow::types::GamepadEvent gamepad;
+		void reset(int _type,int _window_id,Float _timestamp);
+		::Dynamic reset_dyn();
+
+		void set_key( ::snow::types::KeyEvent _event,int _window_id,Float _timestamp);
+		::Dynamic set_key_dyn();
+
+		void set_text( ::snow::types::TextEvent _event,int _window_id,Float _timestamp);
+		::Dynamic set_text_dyn();
+
+		void set_mouse( ::snow::types::MouseEvent _event,int _window_id,Float _timestamp);
+		::Dynamic set_mouse_dyn();
+
+		void set_touch( ::snow::types::TouchEvent _event,Float _timestamp);
+		::Dynamic set_touch_dyn();
+
+		void set_gamepad( ::snow::types::GamepadEvent _event,Float _timestamp);
+		::Dynamic set_gamepad_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

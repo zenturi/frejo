@@ -30,9 +30,16 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_50_new,"mmvc.base.ViewMap","new",0x13701cad,"mmvc.base.ViewMap.new","mmvc/base/ViewMap.hx",50,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_58_mapPackage,"mmvc.base.ViewMap","mapPackage",0xd8b39b9d,"mmvc.base.ViewMap.mapPackage","mmvc/base/ViewMap.hx",58,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_66_unmapPackage,"mmvc.base.ViewMap","unmapPackage",0xe9b185f6,"mmvc.base.ViewMap.unmapPackage","mmvc/base/ViewMap.hx",66,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_73_mapType,"mmvc.base.ViewMap","mapType",0xcd119e43,"mmvc.base.ViewMap.mapType","mmvc/base/ViewMap.hx",73,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_82_unmapType,"mmvc.base.ViewMap","unmapType",0x5f58b24a,"mmvc.base.ViewMap.unmapType","mmvc/base/ViewMap.hx",82,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_91_hasType,"mmvc.base.ViewMap","hasType",0xb75a0a01,"mmvc.base.ViewMap.hasType","mmvc/base/ViewMap.hx",91,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_96_hasPackage,"mmvc.base.ViewMap","hasPackage",0xc2d69a9f,"mmvc.base.ViewMap.hasPackage","mmvc/base/ViewMap.hx",96,0x1b5f6bc3)
 HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_100_addListeners,"mmvc.base.ViewMap","addListeners",0x8e42c931,"mmvc.base.ViewMap.addListeners","mmvc/base/ViewMap.hx",100,0x1b5f6bc3)
 HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_107_removeListeners,"mmvc.base.ViewMap","removeListeners",0xa1f10c68,"mmvc.base.ViewMap.removeListeners","mmvc/base/ViewMap.hx",107,0x1b5f6bc3)
 HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_114_onViewAdded,"mmvc.base.ViewMap","onViewAdded",0x2c000849,"mmvc.base.ViewMap.onViewAdded","mmvc/base/ViewMap.hx",114,0x1b5f6bc3)
+HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_146_onViewRemoved,"mmvc.base.ViewMap","onViewRemoved",0x90d70769,"mmvc.base.ViewMap.onViewRemoved","mmvc/base/ViewMap.hx",146,0x1b5f6bc3)
 HX_LOCAL_STACK_FRAME(_hx_pos_f02dfc3eb265fe76_151_injectInto,"mmvc.base.ViewMap","injectInto",0x1ff75f24,"mmvc.base.ViewMap.injectInto","mmvc/base/ViewMap.hx",151,0x1b5f6bc3)
 namespace mmvc{
 namespace base{
@@ -65,6 +72,14 @@ bool ViewMap_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 static ::mmvc::api::IViewMap_obj _hx_mmvc_base_ViewMap__hx_mmvc_api_IViewMap= {
+	( bool (hx::Object::*)(bool))&::mmvc::base::ViewMap_obj::set_enabled,
+	( ::Dynamic (hx::Object::*)(::Dynamic))&::mmvc::base::ViewMap_obj::set_contextView,
+	( void (hx::Object::*)(::String))&::mmvc::base::ViewMap_obj::mapPackage,
+	( void (hx::Object::*)(::String))&::mmvc::base::ViewMap_obj::unmapPackage,
+	( bool (hx::Object::*)(::String))&::mmvc::base::ViewMap_obj::hasPackage,
+	( void (hx::Object::*)(hx::Class))&::mmvc::base::ViewMap_obj::mapType,
+	( void (hx::Object::*)(hx::Class))&::mmvc::base::ViewMap_obj::unmapType,
+	( bool (hx::Object::*)(hx::Class))&::mmvc::base::ViewMap_obj::hasType,
 };
 
 void *ViewMap_obj::_hx_getInterface(int inHash) {
@@ -73,6 +88,91 @@ void *ViewMap_obj::_hx_getInterface(int inHash) {
 	}
 	return super::_hx_getInterface(inHash);
 }
+
+void ViewMap_obj::mapPackage(::String packageName){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_58_mapPackage)
+HXLINE(  59)		if ((this->mappedPackages->indexOf(packageName,null()) > -1)) {
+HXLINE(  59)			return;
+            		}
+HXLINE(  60)		this->mappedPackages->push(packageName);
+HXLINE(  61)		this->viewListenerCount++;
+HXLINE(  62)		if ((this->viewListenerCount == 1)) {
+HXLINE(  62)			this->addListeners();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,mapPackage,(void))
+
+void ViewMap_obj::unmapPackage(::String packageName){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_66_unmapPackage)
+HXLINE(  67)		if (!(this->mappedPackages->remove(packageName))) {
+HXLINE(  67)			return;
+            		}
+HXLINE(  68)		this->viewListenerCount--;
+HXLINE(  69)		if ((this->viewListenerCount == 0)) {
+HXLINE(  69)			this->removeListeners();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,unmapPackage,(void))
+
+void ViewMap_obj::mapType(hx::Class type){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_73_mapType)
+HXLINE(  74)		if (this->mappedTypes->exists(type)) {
+HXLINE(  74)			return;
+            		}
+HXLINE(  75)		this->mappedTypes->set(type,type);
+HXLINE(  76)		this->viewListenerCount++;
+HXLINE(  77)		if ((this->viewListenerCount == 1)) {
+HXLINE(  77)			this->addListeners();
+            		}
+HXLINE(  78)		bool _hx_tmp;
+HXDLIN(  78)		if (hx::IsNotNull( this->contextView )) {
+HXLINE(  78)			_hx_tmp = ::Std_obj::is(this->contextView,type);
+            		}
+            		else {
+HXLINE(  78)			_hx_tmp = false;
+            		}
+HXDLIN(  78)		if (_hx_tmp) {
+HXLINE(  78)			this->injectInto(this->contextView);
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,mapType,(void))
+
+void ViewMap_obj::unmapType(hx::Class type){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_82_unmapType)
+HXLINE(  83)		if (!(this->mappedTypes->exists(type))) {
+HXLINE(  83)			return;
+            		}
+HXLINE(  84)		this->mappedTypes->remove(type);
+HXLINE(  85)		this->viewListenerCount--;
+HXLINE(  86)		if ((this->viewListenerCount == 0)) {
+HXLINE(  86)			this->removeListeners();
+            		}
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,unmapType,(void))
+
+bool ViewMap_obj::hasType(hx::Class type){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_91_hasType)
+HXDLIN(  91)		return this->mappedTypes->exists(type);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,hasType,return )
+
+bool ViewMap_obj::hasPackage(::String packageName){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_96_hasPackage)
+HXDLIN(  96)		return (this->mappedPackages->indexOf(packageName,null()) > -1);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,hasPackage,return )
 
 void ViewMap_obj::addListeners(){
             	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_100_addListeners)
@@ -136,7 +236,10 @@ HXLINE( 139)						return;
             	}
 
 
-HX_DEFINE_DYNAMIC_FUNC1(ViewMap_obj,onViewAdded,(void))
+void ViewMap_obj::onViewRemoved( ::Dynamic view){
+            	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_146_onViewRemoved)
+            	}
+
 
 void ViewMap_obj::injectInto( ::Dynamic view){
             	HX_STACKFRAME(&_hx_pos_f02dfc3eb265fe76_151_injectInto)
@@ -186,7 +289,16 @@ void ViewMap_obj::__Visit(HX_VISIT_PARAMS)
 hx::Val ViewMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"mapType") ) { return hx::Val( mapType_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hasType") ) { return hx::Val( hasType_dyn() ); }
+		break;
+	case 9:
+		if (HX_FIELD_EQ(inName,"unmapType") ) { return hx::Val( unmapType_dyn() ); }
+		break;
 	case 10:
+		if (HX_FIELD_EQ(inName,"mapPackage") ) { return hx::Val( mapPackage_dyn() ); }
+		if (HX_FIELD_EQ(inName,"hasPackage") ) { return hx::Val( hasPackage_dyn() ); }
 		if (HX_FIELD_EQ(inName,"injectInto") ) { return hx::Val( injectInto_dyn() ); }
 		break;
 	case 11:
@@ -194,10 +306,12 @@ hx::Val ViewMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCallPro
 		if (HX_FIELD_EQ(inName,"onViewAdded") ) { return hx::Val( onViewAdded_dyn() ); }
 		break;
 	case 12:
+		if (HX_FIELD_EQ(inName,"unmapPackage") ) { return hx::Val( unmapPackage_dyn() ); }
 		if (HX_FIELD_EQ(inName,"addListeners") ) { return hx::Val( addListeners_dyn() ); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"injectedViews") ) { return hx::Val( injectedViews ); }
+		if (HX_FIELD_EQ(inName,"onViewRemoved") ) { return hx::Val( onViewRemoved_dyn() ); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"mappedPackages") ) { return hx::Val( mappedPackages ); }
@@ -245,9 +359,16 @@ static ::String ViewMap_obj_sMemberFields[] = {
 	HX_("mappedPackages",00,e5,7f,cd),
 	HX_("mappedTypes",c6,c3,3b,1c),
 	HX_("injectedViews",1e,df,b7,c1),
+	HX_("mapPackage",4a,14,42,e2),
+	HX_("unmapPackage",e3,43,51,4e),
+	HX_("mapType",76,a7,04,32),
+	HX_("unmapType",3d,ae,06,2e),
+	HX_("hasType",34,13,4d,1c),
+	HX_("hasPackage",4c,13,65,cc),
 	HX_("addListeners",1e,87,e2,f2),
 	HX_("removeListeners",9b,00,ad,34),
 	HX_("onViewAdded",fc,26,1b,7f),
+	HX_("onViewRemoved",dc,78,fd,37),
 	HX_("injectInto",d1,d7,85,29),
 	::String(null()) };
 

@@ -66,6 +66,9 @@ class HXCPP_CLASS_ATTRIBUTES MouseEvent_obj : public hx::Object
 		int button;
 		Float wheel_x;
 		Float wheel_y;
+		void set(int _type,int _x,int _y,int _x_rel,int _y_rel,int _button,Float _wheel_x,Float _wheel_y);
+		::Dynamic set_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

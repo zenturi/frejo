@@ -44,7 +44,9 @@ bool MediatorBase_obj::_hx_isInstanceOf(int inClassId) {
 
 static ::mmvc::api::IMediator_obj _hx_mmvc_base_MediatorBase__hx_mmvc_api_IMediator= {
 	( void (hx::Object::*)())&::mmvc::base::MediatorBase_obj::preRegister,
+	( void (hx::Object::*)())&::mmvc::base::MediatorBase_obj::onRegister,
 	( void (hx::Object::*)())&::mmvc::base::MediatorBase_obj::preRemove,
+	( void (hx::Object::*)())&::mmvc::base::MediatorBase_obj::onRemove,
 	(  ::Dynamic (hx::Object::*)())&::mmvc::base::MediatorBase_obj::getViewComponent,
 	( void (hx::Object::*)( ::Dynamic))&::mmvc::base::MediatorBase_obj::setViewComponent,
 };

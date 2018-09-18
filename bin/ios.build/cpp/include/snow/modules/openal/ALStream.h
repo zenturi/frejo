@@ -66,6 +66,15 @@ class HXCPP_CLASS_ATTRIBUTES ALStream_obj : public  ::snow::modules::openal::ALS
 
 		void position(Float _time);
 
+		::String state_str();
+		::Dynamic state_str_dyn();
+
+		int state_now();
+		::Dynamic state_now_dyn();
+
+		bool state_is(int _state);
+		::Dynamic state_is_dyn();
+
 		void init_queue( ::Dynamic _start);
 		::Dynamic init_queue_dyn();
 

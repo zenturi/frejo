@@ -12,6 +12,7 @@
 #endif
 HX_DECLARE_CLASS2(frejo,app,Application)
 HX_DECLARE_CLASS2(frejo,core,VG)
+HX_DECLARE_CLASS2(frejo,display,Graphics)
 HX_DECLARE_CLASS2(frejo,display,Node)
 HX_DECLARE_CLASS1(msignal,Signal)
 HX_DECLARE_CLASS1(msignal,Signal2)
@@ -57,6 +58,7 @@ class HXCPP_CLASS_ATTRIBUTES Node_obj : public hx::Object
 		 YGNodeRef flexNode;
 		 YGConfigRef flexConfig;
 		 ::frejo::app::Application app;
+		 ::frejo::display::Graphics graphics;
 		 ::Dynamic background;
 		 YGStyle style;
 		 YGLayout layout;
@@ -75,6 +77,9 @@ class HXCPP_CLASS_ATTRIBUTES Node_obj : public hx::Object
 
 		void init();
 		::Dynamic init_dyn();
+
+		 ::Dynamic set_background( ::Dynamic color);
+		::Dynamic set_background_dyn();
 
 		 ::Dynamic set_position( ::Dynamic p);
 		::Dynamic set_position_dyn();

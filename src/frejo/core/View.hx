@@ -107,7 +107,6 @@ class View {
 		
 
 		// compute view style layout
-		//Yoga.nodeStyleSetPositionType(flexNode, PositionType.Absolute);
 		Yoga.nodeStyleSetWidth(flexNode, app.window_width);
 		Yoga.nodeStyleSetHeight(flexNode, app.window_height);
 

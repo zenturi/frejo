@@ -49,6 +49,9 @@ class HXCPP_CLASS_ATTRIBUTES List_obj : public hx::Object
 		 ::haxe::ds::_List::ListNode h;
 		 ::haxe::ds::_List::ListNode q;
 		int length;
+		void add( ::Dynamic item);
+		::Dynamic add_dyn();
+
 		void push( ::Dynamic item);
 		::Dynamic push_dyn();
 

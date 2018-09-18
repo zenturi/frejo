@@ -31,6 +31,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_32d531bfc76ba268_16_new,"snow.core.native.audio.AudioDataWAV","new",0x7e745c49,"snow.core.native.audio.AudioDataWAV.new","snow/core/native/audio/AudioDataWAV.hx",16,0xe0c91f25)
+HX_LOCAL_STACK_FRAME(_hx_pos_32d531bfc76ba268_25_destroy,"snow.core.native.audio.AudioDataWAV","destroy",0x0da56163,"snow.core.native.audio.AudioDataWAV.destroy","snow/core/native/audio/AudioDataWAV.hx",25,0xe0c91f25)
 HX_LOCAL_STACK_FRAME(_hx_pos_32d531bfc76ba268_37_seek,"snow.core.native.audio.AudioDataWAV","seek",0x2aaa656f,"snow.core.native.audio.AudioDataWAV.seek","snow/core/native/audio/AudioDataWAV.hx",37,0xe0c91f25)
 HX_LOCAL_STACK_FRAME(_hx_pos_32d531bfc76ba268_45_portion,"snow.core.native.audio.AudioDataWAV","portion",0x6ccb2550,"snow.core.native.audio.AudioDataWAV.portion","snow/core/native/audio/AudioDataWAV.hx",45,0xe0c91f25)
 namespace snow{
@@ -63,6 +64,17 @@ bool AudioDataWAV_obj::_hx_isInstanceOf(int inClassId) {
 		return inClassId==(int)0x491fc56a;
 	}
 }
+
+void AudioDataWAV_obj::destroy(){
+            	HX_STACKFRAME(&_hx_pos_32d531bfc76ba268_25_destroy)
+HXLINE(  27)		if (hx::IsNotNull( this->handle )) {
+HXLINE(  28)			::cpp::Pointer<  SDL_RWops > tmp = this->handle;
+HXDLIN(  28)			this->app->io->module->file_close(tmp);
+            		}
+HXLINE(  31)		this->handle = null();
+HXLINE(  33)		this->super::destroy();
+            	}
+
 
 bool AudioDataWAV_obj::seek(int _to){
             	HX_STACKFRAME(&_hx_pos_32d531bfc76ba268_37_seek)
@@ -157,6 +169,7 @@ hx::Val AudioDataWAV_obj::__Field(const ::String &inName,hx::PropertyAccess inCa
 		if (HX_FIELD_EQ(inName,"handle") ) { return hx::Val( handle ); }
 		break;
 	case 7:
+		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
 		if (HX_FIELD_EQ(inName,"portion") ) { return hx::Val( portion_dyn() ); }
 		break;
 	case 11:
@@ -196,6 +209,7 @@ static hx::StaticInfo *AudioDataWAV_obj_sStaticStorageInfo = 0;
 static ::String AudioDataWAV_obj_sMemberFields[] = {
 	HX_("data_offset",48,cc,50,43),
 	HX_("handle",a8,83,fd,b7),
+	HX_("destroy",fa,2c,86,24),
 	HX_("seek",78,85,50,4c),
 	HX_("portion",e7,f0,ab,83),
 	::String(null()) };

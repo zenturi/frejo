@@ -37,6 +37,7 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_ddf1f62778d305a1_12_new,"snow.core.native.audio.AudioDataPCM","new",0xf9799d37,"snow.core.native.audio.AudioDataPCM.new","snow/core/native/audio/AudioDataPCM.hx",12,0x3523d5f7)
+HX_LOCAL_STACK_FRAME(_hx_pos_ddf1f62778d305a1_20_destroy,"snow.core.native.audio.AudioDataPCM","destroy",0x9da8b151,"snow.core.native.audio.AudioDataPCM.destroy","snow/core/native/audio/AudioDataPCM.hx",20,0x3523d5f7)
 HX_LOCAL_STACK_FRAME(_hx_pos_ddf1f62778d305a1_34_seek,"snow.core.native.audio.AudioDataPCM","seek",0x543df4c1,"snow.core.native.audio.AudioDataPCM.seek","snow/core/native/audio/AudioDataPCM.hx",34,0x3523d5f7)
 HX_LOCAL_STACK_FRAME(_hx_pos_ddf1f62778d305a1_44_portion,"snow.core.native.audio.AudioDataPCM","portion",0xfcce753e,"snow.core.native.audio.AudioDataPCM.portion","snow/core/native/audio/AudioDataPCM.hx",44,0x3523d5f7)
 namespace snow{
@@ -68,6 +69,19 @@ bool AudioDataPCM_obj::_hx_isInstanceOf(int inClassId) {
 		return inClassId==(int)0x491fc56a;
 	}
 }
+
+void AudioDataPCM_obj::destroy(){
+            	HX_STACKFRAME(&_hx_pos_ddf1f62778d305a1_20_destroy)
+HXLINE(  22)		if (hx::IsNotNull( this->handle )) {
+HXLINE(  23)			::cpp::Pointer<  SDL_RWops > tmp = this->handle;
+HXDLIN(  23)			this->app->io->module->file_close(tmp);
+HXLINE(  24)			this->handle = null();
+            		}
+HXLINE(  27)		this->app = null();
+HXLINE(  28)		this->handle = null();
+HXLINE(  30)		this->super::destroy();
+            	}
+
 
 bool AudioDataPCM_obj::seek(int _to){
             	HX_STACKFRAME(&_hx_pos_ddf1f62778d305a1_34_seek)
@@ -171,6 +185,7 @@ hx::Val AudioDataPCM_obj::__Field(const ::String &inName,hx::PropertyAccess inCa
 		if (HX_FIELD_EQ(inName,"handle") ) { return hx::Val( handle ); }
 		break;
 	case 7:
+		if (HX_FIELD_EQ(inName,"destroy") ) { return hx::Val( destroy_dyn() ); }
 		if (HX_FIELD_EQ(inName,"portion") ) { return hx::Val( portion_dyn() ); }
 	}
 	return super::__Field(inName,inCallProp);
@@ -201,6 +216,7 @@ static hx::StaticInfo *AudioDataPCM_obj_sStaticStorageInfo = 0;
 
 static ::String AudioDataPCM_obj_sMemberFields[] = {
 	HX_("handle",a8,83,fd,b7),
+	HX_("destroy",fa,2c,86,24),
 	HX_("seek",78,85,50,4c),
 	HX_("portion",e7,f0,ab,83),
 	::String(null()) };

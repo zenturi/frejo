@@ -61,6 +61,9 @@ class HXCPP_CLASS_ATTRIBUTES InjectionConfig_obj : public hx::Object
 		void setResult( ::minject::result::InjectionResult result);
 		::Dynamic setResult_dyn();
 
+		void setInjector( ::minject::Injector injector);
+		::Dynamic setInjector_dyn();
+
 		virtual ::String toString();
 		::Dynamic toString_dyn();
 

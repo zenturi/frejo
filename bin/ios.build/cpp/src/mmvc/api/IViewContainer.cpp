@@ -13,6 +13,7 @@ namespace api{
 static ::String IViewContainer_obj_sMemberFields[] = {
 	HX_("viewAdded",1b,44,d8,5c),
 	HX_("viewRemoved",bb,5b,13,d5),
+	HX_("isAdded",76,78,c9,b8),
 	::String(null()) };
 
 hx::Class IViewContainer_obj::__mClass;
